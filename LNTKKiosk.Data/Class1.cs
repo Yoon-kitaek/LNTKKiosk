@@ -10,6 +10,6 @@ namespace LNTKKiosk.Data
     {
 
         //푸쉬합니다
-        
+        //혜림 감사
     }
 }
