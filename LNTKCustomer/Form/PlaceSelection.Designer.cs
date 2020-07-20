@@ -98,6 +98,7 @@
             // 
             // pceAtStore
             // 
+            this.pceAtStore.EditValue = global::LNTKCustomer.Properties.Resources.ForkAndKnife;
             this.pceAtStore.Location = new System.Drawing.Point(628, 145);
             this.pceAtStore.Name = "pceAtStore";
             this.pceAtStore.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
