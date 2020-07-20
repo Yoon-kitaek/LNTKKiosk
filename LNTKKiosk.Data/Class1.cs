@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LNTKKiosk
+namespace LNTKKiosk.Data
 {
     public class Class1
     {
