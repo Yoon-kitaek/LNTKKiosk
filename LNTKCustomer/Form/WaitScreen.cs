@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer
 {
-    public partial class Form1 : Form
+    public partial class WaitScreen : DevExpress.XtraEditors.XtraForm
     {
-        private int test;
-        public Form1()
+        public WaitScreen()
         {
             InitializeComponent();
+        }
+
+        private void imsWaitScreen_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
