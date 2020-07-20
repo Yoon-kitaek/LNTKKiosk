@@ -53,10 +53,10 @@
             // 
             // imsWaitScreen
             // 
-            this.imsWaitScreen.Location = new System.Drawing.Point(12, 14);
+            this.imsWaitScreen.Location = new System.Drawing.Point(12, 12);
             this.imsWaitScreen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.imsWaitScreen.Name = "imsWaitScreen";
-            this.imsWaitScreen.Size = new System.Drawing.Size(776, 512);
+            this.imsWaitScreen.Size = new System.Drawing.Size(776, 516);
             this.imsWaitScreen.StyleController = this.layoutControl1;
             this.imsWaitScreen.TabIndex = 4;
             this.imsWaitScreen.Text = "imageSlider1";
@@ -77,11 +77,11 @@
             this.layoutControlItem1.Control = this.imsWaitScreen;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 516);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 520);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // Form1
+            // WaitScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,8 +90,9 @@
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "WaitScreen";
             this.Text = "대기 화면";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imsWaitScreen)).EndInit();
