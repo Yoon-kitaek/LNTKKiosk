@@ -18,9 +18,5 @@ namespace LNTKCustomer.Form
             InitializeComponent();
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
