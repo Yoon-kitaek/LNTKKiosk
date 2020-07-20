@@ -8,5 +8,8 @@ namespace LNTKKiosk.Data
 {
     public class Class1
     {
+
+
+        
     }
 }
