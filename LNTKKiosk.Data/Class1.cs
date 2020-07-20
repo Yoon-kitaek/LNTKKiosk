@@ -9,7 +9,7 @@ namespace LNTKKiosk.Data
     public class Class1
     {
 
-
+        //푸쉬합니다
         
     }
 }
