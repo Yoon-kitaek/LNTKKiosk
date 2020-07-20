@@ -15,14 +15,9 @@ namespace LNTKCustomer.Form
     {
         public PlaceSelection()
         {
+
             InitializeComponent();
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-    
     }
 }

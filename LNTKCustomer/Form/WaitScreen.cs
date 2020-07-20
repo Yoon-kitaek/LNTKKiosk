@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LNTKCustomer.Form;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace LNTKCustomer
 
         private void imsWaitScreen_Click(object sender, EventArgs e)
         {
-            
+            PlaceSelection placeSelection = new PlaceSelection();
+            placeSelection.Show();
 
         }
     }
