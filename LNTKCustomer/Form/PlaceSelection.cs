@@ -16,6 +16,7 @@ namespace LNTKCustomer.Form
     {
         public PlaceSelection()
         {
+
             InitializeComponent();
         }
 
