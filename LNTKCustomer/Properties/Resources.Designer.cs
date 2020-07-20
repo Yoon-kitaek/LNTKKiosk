@@ -71,31 +71,11 @@ namespace LNTKCustomer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] ForkAndKnife {
-            get {
-                object obj = ResourceManager.GetObject("ForkAndKnife", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
-        /// </summary>
-        internal static DevExpress.Utils.Svg.SvgImage ForkAndKnife1 {
-            get {
-                object obj = ResourceManager.GetObject("ForkAndKnife1", resourceCulture);
-                return ((DevExpress.Utils.Svg.SvgImage)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap KnifeAndFork {
+        internal static System.Drawing.Bitmap ForkAndKnife {
             get {
-                object obj = ResourceManager.GetObject("KnifeAndFork", resourceCulture);
+                object obj = ResourceManager.GetObject("ForkAndKnife", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
