@@ -36,5 +36,11 @@ namespace LNTKKiosk.Data
             return query.FirstOrDefault();
 
         }
+        public List<Product> SearchByCategory(string category)
+        {
+            var context = CreateContext();
+
+            return context.Products.Where(x => x.Name.Contains(category)).ToList();
+        }
     }
 }
