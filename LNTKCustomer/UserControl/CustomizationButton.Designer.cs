@@ -38,7 +38,7 @@
             // 
             // sbtBurgerCustomization
             // 
-            this.sbtBurgerCustomization.Location = new System.Drawing.Point(788, 42);
+            this.sbtBurgerCustomization.Location = new System.Drawing.Point(785, 26);
             this.sbtBurgerCustomization.Name = "sbtBurgerCustomization";
             this.sbtBurgerCustomization.Size = new System.Drawing.Size(142, 68);
             this.sbtBurgerCustomization.TabIndex = 14;
@@ -51,7 +51,7 @@
             this.lbcBurgerCustomization.Appearance.Options.UseTextOptions = true;
             this.lbcBurgerCustomization.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbcBurgerCustomization.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcBurgerCustomization.Location = new System.Drawing.Point(291, 53);
+            this.lbcBurgerCustomization.Location = new System.Drawing.Point(272, 39);
             this.lbcBurgerCustomization.Name = "lbcBurgerCustomization";
             this.lbcBurgerCustomization.Size = new System.Drawing.Size(470, 41);
             this.lbcBurgerCustomization.TabIndex = 13;
@@ -59,7 +59,7 @@
             // 
             // pceBurgerPicture
             // 
-            this.pceBurgerPicture.Location = new System.Drawing.Point(138, 21);
+            this.pceBurgerPicture.Location = new System.Drawing.Point(123, 7);
             this.pceBurgerPicture.Name = "pceBurgerPicture";
             this.pceBurgerPicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pceBurgerPicture.Size = new System.Drawing.Size(126, 110);
@@ -68,7 +68,7 @@
             // pceOne
             // 
             this.pceOne.EditValue = global::LNTKCustomer.Properties.Resources.one;
-            this.pceOne.Location = new System.Drawing.Point(19, 30);
+            this.pceOne.Location = new System.Drawing.Point(15, 16);
             this.pceOne.Name = "pceOne";
             this.pceOne.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pceOne.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
@@ -84,7 +84,7 @@
             this.Controls.Add(this.pceBurgerPicture);
             this.Controls.Add(this.pceOne);
             this.Name = "CustomizationButton";
-            this.Size = new System.Drawing.Size(976, 152);
+            this.Size = new System.Drawing.Size(976, 135);
             ((System.ComponentModel.ISupportInitialize)(this.pceBurgerPicture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceOne.Properties)).EndInit();
             this.ResumeLayout(false);
