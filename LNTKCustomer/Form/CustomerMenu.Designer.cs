@@ -100,10 +100,10 @@
             this.btnDiscountLunch,
             this.accordionControlSeparator5});
             this.accordionControl1.ExpandElementMode = DevExpress.XtraBars.Navigation.ExpandElementMode.Single;
-            this.accordionControl1.Location = new System.Drawing.Point(0, 36);
+            this.accordionControl1.Location = new System.Drawing.Point(12, 85);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
-            this.accordionControl1.Size = new System.Drawing.Size(269, 503);
+            this.accordionControl1.Size = new System.Drawing.Size(269, 454);
             this.accordionControl1.TabIndex = 3;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
@@ -120,6 +120,7 @@
             this.btnRecommended.Name = "btnRecommended";
             this.btnRecommended.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnRecommended.Text = "추천 메뉴";
+            this.btnRecommended.Click += new System.EventHandler(this.btnRecommended_Click);
             // 
             // accordionControlSeparator1
             // 
@@ -135,6 +136,7 @@
             this.btnBurgerSet.Name = "btnBurgerSet";
             this.btnBurgerSet.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnBurgerSet.Text = "버거&세트";
+            this.btnBurgerSet.Click += new System.EventHandler(this.btnBurgerSet_Click);
             // 
             // accordionControlSeparator2
             // 
@@ -150,6 +152,7 @@
             this.btnBeverageCoffee.Name = "btnBeverageCoffee";
             this.btnBeverageCoffee.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnBeverageCoffee.Text = "음료&커피";
+            this.btnBeverageCoffee.Click += new System.EventHandler(this.btnBeverageCoffee_Click);
             // 
             // accordionControlSeparator3
             // 
@@ -165,6 +168,7 @@
             this.btnKingMorning.Name = "btnKingMorning";
             this.btnKingMorning.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnKingMorning.Text = "킹모닝";
+            this.btnKingMorning.Click += new System.EventHandler(this.btnKingMorning_Click);
             // 
             // accordionControlSeparator4
             // 
@@ -180,6 +184,7 @@
             this.btnDiscountLunch.Name = "btnDiscountLunch";
             this.btnDiscountLunch.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnDiscountLunch.Text = "런치할인";
+            this.btnDiscountLunch.Click += new System.EventHandler(this.btnDiscountLunch_Click);
             // 
             // accordionControlSeparator5
             // 

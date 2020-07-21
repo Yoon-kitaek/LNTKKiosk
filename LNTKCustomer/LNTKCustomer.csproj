@@ -72,6 +72,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\BeverageCoffeeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BeverageCoffeeMenu.Designer.cs">
+      <DependentUpon>BeverageCoffeeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BurgerSetMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BurgerSetMenu.Designer.cs">
+      <DependentUpon>BurgerSetMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +97,29 @@
     <Compile Include="Form\Customization.Designer.cs">
       <DependentUpon>Customization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\KingMorningMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\KingMorningMenu.Designer.cs">
+      <DependentUpon>KingMorningMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LunchDiscountMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LunchDiscountMenu.Designer.cs">
+      <DependentUpon>LunchDiscountMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\PlaceSelection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\PlaceSelection.Designer.cs">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RecommendedMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RecommendedMenu.Designer.cs">
+      <DependentUpon>RecommendedMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
@@ -117,12 +147,6 @@
     <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\MenuSelection.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\MenuSelection.Designer.cs">
-      <DependentUpon>MenuSelection.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\FrenchFriesSelection.resx">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\MenuSelection.resx">
-      <DependentUpon>MenuSelection.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />
