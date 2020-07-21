@@ -10,40 +10,23 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
+    public partial class CustomerMenu : DevExpress.XtraBars.ToolbarForm.ToolbarForm
     {
         public CustomerMenu()
         {
             InitializeComponent();
         }
 
-        private void accordionControlElement1_Click(object sender, EventArgs e)
-        {
 
+
+        private void CustomerMenu_Load(object sender, EventArgs e)
+        {
+            
         }
 
-
-        private void btnKingMorning_Click(object sender, EventArgs e)
+        private void beverageSelection1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void accordionControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBurgerSet_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRecommended_Click(object sender, EventArgs e)
-        {
-            //RecommendedMenuImage form = new RecommendedMenuImage();
-            //form.MdiParent = this;
-            //form.WindowState = FormWindowState.Maximized;
-            //form.Show();
         }
     }
 }

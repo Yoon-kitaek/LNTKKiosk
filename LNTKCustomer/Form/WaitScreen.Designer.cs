@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaitScreen));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.imsWaitScreen = new DevExpress.XtraEditors.Controls.ImageSlider();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -53,6 +54,12 @@
             // 
             // imsWaitScreen
             // 
+            this.imsWaitScreen.AllowLooping = true;
+            this.imsWaitScreen.AutoSlide = DevExpress.XtraEditors.Controls.AutoSlide.Forward;
+            this.imsWaitScreen.AutoSlideInterval = 2000;
+            this.imsWaitScreen.CurrentImageIndex = 0;
+            this.imsWaitScreen.Images.Add(((System.Drawing.Image)(resources.GetObject("imsWaitScreen.Images"))));
+            this.imsWaitScreen.Images.Add(((System.Drawing.Image)(resources.GetObject("imsWaitScreen.Images1"))));
             this.imsWaitScreen.Location = new System.Drawing.Point(12, 12);
             this.imsWaitScreen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.imsWaitScreen.Name = "imsWaitScreen";

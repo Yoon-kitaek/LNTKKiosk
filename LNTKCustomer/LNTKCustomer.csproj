@@ -91,12 +91,6 @@
     <Compile Include="Form\PlaceSelection.Designer.cs">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\RecommendedMenuImage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\RecommendedMenuImage.Designer.cs">
-      <DependentUpon>RecommendedMenuImage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\장애인전용.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\행사소개.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
