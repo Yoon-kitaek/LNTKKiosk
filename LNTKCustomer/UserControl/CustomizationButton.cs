@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DevExpressKiller;
 
-namespace LNTKCustomer.Form
+namespace LNTKCustomer.UserControl
 {
-    public partial class PlaceSelection : DevExpress.XtraEditors.XtraForm
+    public partial class CustomizationButton : DevExpress.XtraEditors.XtraUserControl
     {
-        public PlaceSelection()
+        public CustomizationButton()
         {
-
             InitializeComponent();
         }
-
     }
 }

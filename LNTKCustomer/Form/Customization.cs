@@ -8,17 +8,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DevExpressKiller;
 
 namespace LNTKCustomer.Form
 {
-    public partial class PlaceSelection : DevExpress.XtraEditors.XtraForm
+    public partial class Customization : DevExpress.XtraEditors.XtraForm
     {
-        public PlaceSelection()
+        public Customization()
         {
-
             InitializeComponent();
         }
 
+        private void Customization_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
