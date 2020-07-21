@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace LNTKCustomer
 {
     static class Program
-    {//ㅇ
+    {
 
 
         /// <summary>
