@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.Utils.Extensions;
 
 namespace LNTKCustomer.Form
 {
@@ -21,6 +22,13 @@ namespace LNTKCustomer.Form
         private void Customization_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void sbtBeverageCustomization_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"{bvsBeverage.Location.ToString()}");
+            bvsBeverage.Location.WithVertOffset(500);
+            bvsBeverage.Location.WithY( 700);
         }
     }
 }

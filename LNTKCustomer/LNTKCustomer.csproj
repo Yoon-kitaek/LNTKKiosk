@@ -83,6 +83,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\BeverageSelection.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +105,12 @@
     </Compile>
     <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectBeverage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectBeverage.Designer.cs">
+      <DependentUpon>SelectBeverage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\Customization.resx">
       <DependentUpon>Customization.cs</DependentUpon>
@@ -125,17 +136,15 @@
     <EmbeddedResource Include="UserControl\FrenchFriesSelection.resx">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\SelectBeverage.resx">
+      <DependentUpon>SelectBeverage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -159,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftArrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

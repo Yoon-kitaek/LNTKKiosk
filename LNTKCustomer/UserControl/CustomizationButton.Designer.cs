@@ -38,7 +38,7 @@
             // 
             // sbtBurgerCustomization
             // 
-            this.sbtBurgerCustomization.Location = new System.Drawing.Point(785, 26);
+            this.sbtBurgerCustomization.Location = new System.Drawing.Point(573, 24);
             this.sbtBurgerCustomization.Name = "sbtBurgerCustomization";
             this.sbtBurgerCustomization.Size = new System.Drawing.Size(142, 68);
             this.sbtBurgerCustomization.TabIndex = 14;
@@ -46,20 +46,20 @@
             // 
             // lbcBurgerCustomization
             // 
-            this.lbcBurgerCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcBurgerCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
             this.lbcBurgerCustomization.Appearance.Options.UseFont = true;
             this.lbcBurgerCustomization.Appearance.Options.UseTextOptions = true;
             this.lbcBurgerCustomization.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbcBurgerCustomization.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcBurgerCustomization.Location = new System.Drawing.Point(272, 39);
+            this.lbcBurgerCustomization.Location = new System.Drawing.Point(211, 41);
             this.lbcBurgerCustomization.Name = "lbcBurgerCustomization";
-            this.lbcBurgerCustomization.Size = new System.Drawing.Size(470, 41);
+            this.lbcBurgerCustomization.Size = new System.Drawing.Size(326, 30);
             this.lbcBurgerCustomization.TabIndex = 13;
             this.lbcBurgerCustomization.Text = "추가/변경하실 재료를 선택해주세요";
             // 
             // pceBurgerPicture
             // 
-            this.pceBurgerPicture.Location = new System.Drawing.Point(123, 7);
+            this.pceBurgerPicture.Location = new System.Drawing.Point(79, 3);
             this.pceBurgerPicture.Name = "pceBurgerPicture";
             this.pceBurgerPicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pceBurgerPicture.Size = new System.Drawing.Size(126, 110);
@@ -68,11 +68,11 @@
             // pceOne
             // 
             this.pceOne.EditValue = global::LNTKCustomer.Properties.Resources.one;
-            this.pceOne.Location = new System.Drawing.Point(15, 16);
+            this.pceOne.Location = new System.Drawing.Point(3, 24);
             this.pceOne.Name = "pceOne";
             this.pceOne.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pceOne.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceOne.Size = new System.Drawing.Size(90, 90);
+            this.pceOne.Size = new System.Drawing.Size(70, 70);
             this.pceOne.TabIndex = 11;
             // 
             // CustomizationButton
@@ -84,7 +84,7 @@
             this.Controls.Add(this.pceBurgerPicture);
             this.Controls.Add(this.pceOne);
             this.Name = "CustomizationButton";
-            this.Size = new System.Drawing.Size(976, 135);
+            this.Size = new System.Drawing.Size(744, 116);
             ((System.ComponentModel.ISupportInitialize)(this.pceBurgerPicture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceOne.Properties)).EndInit();
             this.ResumeLayout(false);
