@@ -63,7 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerMenu.cs" />
+    <Compile Include="CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomerMenu.designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
