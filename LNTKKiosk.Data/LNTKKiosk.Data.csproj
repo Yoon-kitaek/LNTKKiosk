@@ -61,6 +61,7 @@
       <DependentUpon>LNTK.tt</DependentUpon>
     </Compile>
     <Compile Include="DataRepository.cs" />
+    <Compile Include="Data\CodeCategory.cs" />
     <Compile Include="Data\CodeData.cs" />
     <Compile Include="Data\EntityData.cs" />
     <Compile Include="Data\EventData.cs" />

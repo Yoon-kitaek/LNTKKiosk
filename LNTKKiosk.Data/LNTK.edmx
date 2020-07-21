@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LNTKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LNTKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Code">
           <Key>
             <PropertyRef Name="CodeId" />
@@ -61,7 +61,7 @@
           </Key>
           <Property Name="OrderId" Type="int" Nullable="false" />
           <Property Name="ProductId" Type="int" Nullable="false" />
-          <Property Name="Dummy" Type="nchar" MaxLength="10" />
+          <Property Name="Quantity" Type="int" />
         </EntityType>
         <EntityType Name="OrderStock">
           <Key>
@@ -307,29 +307,89 @@
             <End Role="Recipe" EntitySet="Recipe" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LNTKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LNTKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Codes" EntityType="LNTKModel.Code" />
+          <EntitySet Name="CodeCategories" EntityType="LNTKModel.CodeCategory" />
+          <EntitySet Name="Events" EntityType="LNTKModel.Event" />
+          <EntitySet Name="EventProducts" EntityType="LNTKModel.EventProduct" />
+          <EntitySet Name="Groceries" EntityType="LNTKModel.Grocery" />
+          <EntitySet Name="Orders" EntityType="LNTKModel.Order" />
+          <EntitySet Name="OrderDetails" EntityType="LNTKModel.OrderDetail" />
+          <EntitySet Name="OrderStocks" EntityType="LNTKModel.OrderStock" />
+          <EntitySet Name="Products" EntityType="LNTKModel.Product" />
+          <EntitySet Name="Recipes" EntityType="LNTKModel.Recipe" />
+          <EntitySet Name="Stocks" EntityType="LNTKModel.Stock" />
+          <AssociationSet Name="FK_Grocery_Code" Association="LNTKModel.FK_Grocery_Code">
+            <End Role="Code" EntitySet="Codes" />
+            <End Role="Grocery" EntitySet="Groceries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Grocery_Code1" Association="LNTKModel.FK_Grocery_Code1">
+            <End Role="Code" EntitySet="Codes" />
+            <End Role="Grocery" EntitySet="Groceries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_코드_코드카테고리" Association="LNTKModel.FK_코드_코드카테고리">
+            <End Role="CodeCategory" EntitySet="CodeCategories" />
+            <End Role="Code" EntitySet="Codes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_이벤트_포함_상품_이벤트" Association="LNTKModel.FK_이벤트_포함_상품_이벤트">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="EventProduct" EntitySet="EventProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_이벤트_포함_상품_상품" Association="LNTKModel.FK_이벤트_포함_상품_상품">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="EventProduct" EntitySet="EventProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_재고_식자재1" Association="LNTKModel.FK_재고_식자재1">
+            <End Role="Grocery" EntitySet="Groceries" />
+            <End Role="Stock" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_투입_식자재" Association="LNTKModel.FK_투입_식자재">
+            <End Role="Grocery" EntitySet="Groceries" />
+            <End Role="Recipe" EntitySet="Recipes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_사용된재고_주문" Association="LNTKModel.FK_사용된재고_주문">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderStock" EntitySet="OrderStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_장바구니_주문" Association="LNTKModel.FK_장바구니_주문">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_장바구니_상품" Association="LNTKModel.FK_장바구니_상품">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_사용된재고_재고" Association="LNTKModel.FK_사용된재고_재고">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="OrderStock" EntitySet="OrderStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_투입_상품" Association="LNTKModel.FK_투입_상품">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Recipe" EntitySet="Recipes" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Code">
           <Key>
             <PropertyRef Name="CodeId" />
           </Key>
           <Property Name="CodeId" Type="Int32" Nullable="false" />
           <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
-          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Groceries" Relationship="Self.FK_Grocery_Code" FromRole="Code" ToRole="Grocery" />
-          <NavigationProperty Name="Groceries1" Relationship="Self.FK_Grocery_Code1" FromRole="Code" ToRole="Grocery" />
-          <NavigationProperty Name="CodeCategory" Relationship="Self.FK_코드_코드카테고리" FromRole="Code" ToRole="CodeCategory" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Groceries" Relationship="LNTKModel.FK_Grocery_Code" FromRole="Code" ToRole="Grocery" />
+          <NavigationProperty Name="Groceries1" Relationship="LNTKModel.FK_Grocery_Code1" FromRole="Code" ToRole="Grocery" />
+          <NavigationProperty Name="CodeCategory" Relationship="LNTKModel.FK_코드_코드카테고리" FromRole="Code" ToRole="CodeCategory" />
         </EntityType>
         <EntityType Name="CodeCategory">
           <Key>
             <PropertyRef Name="CodeCategoryId" />
           </Key>
           <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
-          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Codes" Relationship="Self.FK_코드_코드카테고리" FromRole="CodeCategory" ToRole="Code" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Codes" Relationship="LNTKModel.FK_코드_코드카테고리" FromRole="CodeCategory" ToRole="Code" />
         </EntityType>
         <EntityType Name="Event">
           <Key>
@@ -339,7 +399,7 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="StartTime" Type="Int32" />
           <Property Name="EndTime" Type="Int32" />
-          <NavigationProperty Name="EventProducts" Relationship="Self.FK_이벤트_포함_상품_이벤트" FromRole="Event" ToRole="EventProduct" />
+          <NavigationProperty Name="EventProducts" Relationship="LNTKModel.FK_이벤트_포함_상품_이벤트" FromRole="Event" ToRole="EventProduct" />
         </EntityType>
         <EntityType Name="EventProduct">
           <Key>
@@ -349,8 +409,8 @@
           <Property Name="EventId" Type="Int32" Nullable="false" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
           <Property Name="DiscountRate" Type="Int32" />
-          <NavigationProperty Name="Event" Relationship="Self.FK_이벤트_포함_상품_이벤트" FromRole="EventProduct" ToRole="Event" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_이벤트_포함_상품_상품" FromRole="EventProduct" ToRole="Product" />
+          <NavigationProperty Name="Event" Relationship="LNTKModel.FK_이벤트_포함_상품_이벤트" FromRole="EventProduct" ToRole="Event" />
+          <NavigationProperty Name="Product" Relationship="LNTKModel.FK_이벤트_포함_상품_상품" FromRole="EventProduct" ToRole="Product" />
         </EntityType>
         <EntityType Name="Grocery">
           <Key>
@@ -359,10 +419,10 @@
           <Property Name="GroceryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CodeId" Type="Int32" Nullable="false" />
           <Property Name="Unit" Type="Int32" />
-          <NavigationProperty Name="Code" Relationship="Self.FK_Grocery_Code" FromRole="Grocery" ToRole="Code" />
-          <NavigationProperty Name="Code1" Relationship="Self.FK_Grocery_Code1" FromRole="Grocery" ToRole="Code" />
-          <NavigationProperty Name="Stocks" Relationship="Self.FK_재고_식자재1" FromRole="Grocery" ToRole="Stock" />
-          <NavigationProperty Name="Recipes" Relationship="Self.FK_투입_식자재" FromRole="Grocery" ToRole="Recipe" />
+          <NavigationProperty Name="Code" Relationship="LNTKModel.FK_Grocery_Code" FromRole="Grocery" ToRole="Code" />
+          <NavigationProperty Name="Code1" Relationship="LNTKModel.FK_Grocery_Code1" FromRole="Grocery" ToRole="Code" />
+          <NavigationProperty Name="Stocks" Relationship="LNTKModel.FK_재고_식자재1" FromRole="Grocery" ToRole="Stock" />
+          <NavigationProperty Name="Recipes" Relationship="LNTKModel.FK_투입_식자재" FromRole="Grocery" ToRole="Recipe" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -371,8 +431,8 @@
           <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="OrderStocks" Relationship="Self.FK_사용된재고_주문" FromRole="Order" ToRole="OrderStock" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK_장바구니_주문" FromRole="Order" ToRole="OrderDetail" />
+          <NavigationProperty Name="OrderStocks" Relationship="LNTKModel.FK_사용된재고_주문" FromRole="Order" ToRole="OrderStock" />
+          <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_장바구니_주문" FromRole="Order" ToRole="OrderDetail" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -381,9 +441,9 @@
           </Key>
           <Property Name="OrderId" Type="Int32" Nullable="false" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
-          <Property Name="Dummy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_장바구니_주문" FromRole="OrderDetail" ToRole="Order" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_장바구니_상품" FromRole="OrderDetail" ToRole="Product" />
+          <Property Name="Quantity" Type="Int32" />
+          <NavigationProperty Name="Order" Relationship="LNTKModel.FK_장바구니_주문" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="LNTKModel.FK_장바구니_상품" FromRole="OrderDetail" ToRole="Product" />
         </EntityType>
         <EntityType Name="OrderStock">
           <Key>
@@ -393,21 +453,21 @@
           <Property Name="OrderId" Type="Int32" Nullable="false" />
           <Property Name="StockId" Type="Int32" Nullable="false" />
           <Property Name="Dummy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_사용된재고_주문" FromRole="OrderStock" ToRole="Order" />
-          <NavigationProperty Name="Stock" Relationship="Self.FK_사용된재고_재고" FromRole="OrderStock" ToRole="Stock" />
+          <NavigationProperty Name="Order" Relationship="LNTKModel.FK_사용된재고_주문" FromRole="OrderStock" ToRole="Order" />
+          <NavigationProperty Name="Stock" Relationship="LNTKModel.FK_사용된재고_재고" FromRole="OrderStock" ToRole="Stock" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
             <PropertyRef Name="ProductId" />
           </Key>
           <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="EventProducts" Relationship="Self.FK_이벤트_포함_상품_상품" FromRole="Product" ToRole="EventProduct" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK_장바구니_상품" FromRole="Product" ToRole="OrderDetail" />
-          <NavigationProperty Name="Recipes" Relationship="Self.FK_투입_상품" FromRole="Product" ToRole="Recipe" />
+          <NavigationProperty Name="EventProducts" Relationship="LNTKModel.FK_이벤트_포함_상품_상품" FromRole="Product" ToRole="EventProduct" />
+          <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_장바구니_상품" FromRole="Product" ToRole="OrderDetail" />
+          <NavigationProperty Name="Recipes" Relationship="LNTKModel.FK_투입_상품" FromRole="Product" ToRole="Recipe" />
         </EntityType>
         <EntityType Name="Recipe">
           <Key>
@@ -417,8 +477,8 @@
           <Property Name="ProductId" Type="Int32" Nullable="false" />
           <Property Name="GroceryId" Type="Int32" Nullable="false" />
           <Property Name="Amount" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Grocery" Relationship="Self.FK_투입_식자재" FromRole="Recipe" ToRole="Grocery" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_투입_상품" FromRole="Recipe" ToRole="Product" />
+          <NavigationProperty Name="Grocery" Relationship="LNTKModel.FK_투입_식자재" FromRole="Recipe" ToRole="Grocery" />
+          <NavigationProperty Name="Product" Relationship="LNTKModel.FK_투입_상품" FromRole="Recipe" ToRole="Product" />
         </EntityType>
         <EntityType Name="Stock">
           <Key>
@@ -430,12 +490,12 @@
           <Property Name="ExpirationDate" Type="Int32" />
           <Property Name="Price" Type="Int32" />
           <Property Name="ExhaustedDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Grocery" Relationship="Self.FK_재고_식자재1" FromRole="Stock" ToRole="Grocery" />
-          <NavigationProperty Name="OrderStocks" Relationship="Self.FK_사용된재고_재고" FromRole="Stock" ToRole="OrderStock" />
+          <NavigationProperty Name="Grocery" Relationship="LNTKModel.FK_재고_식자재1" FromRole="Stock" ToRole="Grocery" />
+          <NavigationProperty Name="OrderStocks" Relationship="LNTKModel.FK_사용된재고_재고" FromRole="Stock" ToRole="OrderStock" />
         </EntityType>
         <Association Name="FK_Grocery_Code">
-          <End Role="Code" Type="Self.Code" Multiplicity="1" />
-          <End Role="Grocery" Type="Self.Grocery" Multiplicity="*" />
+          <End Type="LNTKModel.Code" Role="Code" Multiplicity="1" />
+          <End Type="LNTKModel.Grocery" Role="Grocery" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Code">
               <PropertyRef Name="CodeId" />
@@ -446,8 +506,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Grocery_Code1">
-          <End Role="Code" Type="Self.Code" Multiplicity="0..1" />
-          <End Role="Grocery" Type="Self.Grocery" Multiplicity="*" />
+          <End Type="LNTKModel.Code" Role="Code" Multiplicity="0..1" />
+          <End Type="LNTKModel.Grocery" Role="Grocery" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Code">
               <PropertyRef Name="CodeId" />
@@ -458,8 +518,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_코드_코드카테고리">
-          <End Role="CodeCategory" Type="Self.CodeCategory" Multiplicity="1" />
-          <End Role="Code" Type="Self.Code" Multiplicity="*" />
+          <End Type="LNTKModel.CodeCategory" Role="CodeCategory" Multiplicity="1" />
+          <End Type="LNTKModel.Code" Role="Code" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CodeCategory">
               <PropertyRef Name="CodeCategoryId" />
@@ -470,8 +530,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_이벤트_포함_상품_이벤트">
-          <End Role="Event" Type="Self.Event" Multiplicity="1" />
-          <End Role="EventProduct" Type="Self.EventProduct" Multiplicity="*" />
+          <End Type="LNTKModel.Event" Role="Event" Multiplicity="1" />
+          <End Type="LNTKModel.EventProduct" Role="EventProduct" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Event">
               <PropertyRef Name="EventId" />
@@ -482,8 +542,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_이벤트_포함_상품_상품">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="EventProduct" Type="Self.EventProduct" Multiplicity="*" />
+          <End Type="LNTKModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="LNTKModel.EventProduct" Role="EventProduct" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ProductId" />
@@ -494,8 +554,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_재고_식자재1">
-          <End Role="Grocery" Type="Self.Grocery" Multiplicity="1" />
-          <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+          <End Type="LNTKModel.Grocery" Role="Grocery" Multiplicity="1" />
+          <End Type="LNTKModel.Stock" Role="Stock" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grocery">
               <PropertyRef Name="GroceryId" />
@@ -506,8 +566,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_투입_식자재">
-          <End Role="Grocery" Type="Self.Grocery" Multiplicity="1" />
-          <End Role="Recipe" Type="Self.Recipe" Multiplicity="*" />
+          <End Type="LNTKModel.Grocery" Role="Grocery" Multiplicity="1" />
+          <End Type="LNTKModel.Recipe" Role="Recipe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grocery">
               <PropertyRef Name="GroceryId" />
@@ -518,8 +578,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_사용된재고_주문">
-          <End Role="Order" Type="Self.Order" Multiplicity="1" />
-          <End Role="OrderStock" Type="Self.OrderStock" Multiplicity="*" />
+          <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="LNTKModel.OrderStock" Role="OrderStock" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Order">
               <PropertyRef Name="OrderId" />
@@ -530,8 +590,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_장바구니_주문">
-          <End Role="Order" Type="Self.Order" Multiplicity="1" />
-          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Order">
               <PropertyRef Name="OrderId" />
@@ -542,8 +602,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_장바구니_상품">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <End Type="LNTKModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ProductId" />
@@ -554,8 +614,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_사용된재고_재고">
-          <End Role="Stock" Type="Self.Stock" Multiplicity="1" />
-          <End Role="OrderStock" Type="Self.OrderStock" Multiplicity="*" />
+          <End Type="LNTKModel.Stock" Role="Stock" Multiplicity="1" />
+          <End Type="LNTKModel.OrderStock" Role="OrderStock" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Stock">
               <PropertyRef Name="StockId" />
@@ -566,8 +626,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_투입_상품">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="Recipe" Type="Self.Recipe" Multiplicity="*" />
+          <End Type="LNTKModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="LNTKModel.Recipe" Role="Recipe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ProductId" />
@@ -577,67 +637,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="LNTKEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Codes" EntityType="Self.Code" />
-          <EntitySet Name="CodeCategories" EntityType="Self.CodeCategory" />
-          <EntitySet Name="Events" EntityType="Self.Event" />
-          <EntitySet Name="EventProducts" EntityType="Self.EventProduct" />
-          <EntitySet Name="Groceries" EntityType="Self.Grocery" />
-          <EntitySet Name="Orders" EntityType="Self.Order" />
-          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
-          <EntitySet Name="OrderStocks" EntityType="Self.OrderStock" />
-          <EntitySet Name="Products" EntityType="Self.Product" />
-          <EntitySet Name="Recipes" EntityType="Self.Recipe" />
-          <EntitySet Name="Stocks" EntityType="Self.Stock" />
-          <AssociationSet Name="FK_Grocery_Code" Association="Self.FK_Grocery_Code">
-            <End Role="Code" EntitySet="Codes" />
-            <End Role="Grocery" EntitySet="Groceries" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Grocery_Code1" Association="Self.FK_Grocery_Code1">
-            <End Role="Code" EntitySet="Codes" />
-            <End Role="Grocery" EntitySet="Groceries" />
-          </AssociationSet>
-          <AssociationSet Name="FK_코드_코드카테고리" Association="Self.FK_코드_코드카테고리">
-            <End Role="CodeCategory" EntitySet="CodeCategories" />
-            <End Role="Code" EntitySet="Codes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_이벤트_포함_상품_이벤트" Association="Self.FK_이벤트_포함_상품_이벤트">
-            <End Role="Event" EntitySet="Events" />
-            <End Role="EventProduct" EntitySet="EventProducts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_이벤트_포함_상품_상품" Association="Self.FK_이벤트_포함_상품_상품">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="EventProduct" EntitySet="EventProducts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_재고_식자재1" Association="Self.FK_재고_식자재1">
-            <End Role="Grocery" EntitySet="Groceries" />
-            <End Role="Stock" EntitySet="Stocks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_투입_식자재" Association="Self.FK_투입_식자재">
-            <End Role="Grocery" EntitySet="Groceries" />
-            <End Role="Recipe" EntitySet="Recipes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_사용된재고_주문" Association="Self.FK_사용된재고_주문">
-            <End Role="Order" EntitySet="Orders" />
-            <End Role="OrderStock" EntitySet="OrderStocks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_장바구니_주문" Association="Self.FK_장바구니_주문">
-            <End Role="Order" EntitySet="Orders" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_장바구니_상품" Association="Self.FK_장바구니_상품">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_사용된재고_재고" Association="Self.FK_사용된재고_재고">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="OrderStock" EntitySet="OrderStocks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_투입_상품" Association="Self.FK_투입_상품">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="Recipe" EntitySet="Recipes" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -647,104 +646,104 @@
           <EntitySetMapping Name="Codes">
             <EntityTypeMapping TypeName="LNTKModel.Code">
               <MappingFragment StoreEntitySet="Code">
-                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
-                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
                 <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CodeCategories">
             <EntityTypeMapping TypeName="LNTKModel.CodeCategory">
               <MappingFragment StoreEntitySet="CodeCategory">
-                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
                 <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Events">
             <EntityTypeMapping TypeName="LNTKModel.Event">
               <MappingFragment StoreEntitySet="Event">
-                <ScalarProperty Name="EventId" ColumnName="EventId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
                 <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EventProducts">
             <EntityTypeMapping TypeName="LNTKModel.EventProduct">
               <MappingFragment StoreEntitySet="EventProduct">
-                <ScalarProperty Name="EventId" ColumnName="EventId" />
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Groceries">
             <EntityTypeMapping TypeName="LNTKModel.Grocery">
               <MappingFragment StoreEntitySet="Grocery">
-                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
-                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
                 <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="LNTKModel.Order">
               <MappingFragment StoreEntitySet="Order">
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderDetails">
             <EntityTypeMapping TypeName="LNTKModel.OrderDetail">
               <MappingFragment StoreEntitySet="OrderDetail">
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="Dummy" ColumnName="Dummy" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderStocks">
             <EntityTypeMapping TypeName="LNTKModel.OrderStock">
               <MappingFragment StoreEntitySet="OrderStock">
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
                 <ScalarProperty Name="Dummy" ColumnName="Dummy" />
+                <ScalarProperty Name="StockId" ColumnName="StockId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="LNTKModel.Product">
               <MappingFragment StoreEntitySet="Product">
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Picture" ColumnName="Picture" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Recipes">
             <EntityTypeMapping TypeName="LNTKModel.Recipe">
               <MappingFragment StoreEntitySet="Recipe">
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Stocks">
             <EntityTypeMapping TypeName="LNTKModel.Stock">
               <MappingFragment StoreEntitySet="Stock">
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
-                <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
-                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="ExhaustedDate" ColumnName="ExhaustedDate" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
+                <ScalarProperty Name="StockId" ColumnName="StockId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

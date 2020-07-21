@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LNTKKiosk.Data
 {
-    public class CodeData : EntityData<Code>
+    public class CodeCategoryData : EntityData<CodeCategory>
     {
-        public Code Get(int codeId)
+        public CodeCategory Get(int codecategoryId)
         {
             LNTKEntities context = CreateContext();
 
-            return context.Codes.FirstOrDefault(a => a.CodeId == codeId);
+            return context.CodeCategories.FirstOrDefault(a => a.CodeCategoryId == codecategoryId);
         }
 
     }

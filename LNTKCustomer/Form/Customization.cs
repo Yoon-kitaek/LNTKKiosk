@@ -27,8 +27,8 @@ namespace LNTKCustomer.Form
         private void sbtBeverageCustomization_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"{bvsBeverage.Location.ToString()}");
-            bvsBeverage.Location.WithVertOffset(500);
-            bvsBeverage.Location.WithY( 700);
+            var p = bvsBeverage.Location.WithVertOffset(500);
+            bvsBeverage.Location = bvsBeverage.Location.WithVertOffset(500);
         }
     }
 }
