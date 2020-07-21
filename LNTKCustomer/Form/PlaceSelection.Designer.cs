@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.pceAtStore = new DevExpress.XtraEditors.PictureEdit();
-            this.pceTakeOut = new DevExpress.XtraEditors.PictureEdit();
             this.sbtEnglish = new DevExpress.XtraEditors.SimpleButton();
             this.sbtKorean = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -48,16 +46,16 @@
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.sliPlaceSelection = new DevExpress.XtraLayout.SimpleLabelItem();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.sliLanguage = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.pceAtStore = new DevExpress.XtraEditors.PictureEdit();
+            this.pceTakeOut = new DevExpress.XtraEditors.PictureEdit();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pceAtStore.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -73,12 +71,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceAtStore.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -95,28 +95,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(1182, 703);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // pceAtStore
-            // 
-            this.pceAtStore.EditValue = global::LNTKCustomer.Properties.Resources.ForkAndKnife;
-            this.pceAtStore.Location = new System.Drawing.Point(628, 145);
-            this.pceAtStore.Name = "pceAtStore";
-            this.pceAtStore.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceAtStore.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceAtStore.Size = new System.Drawing.Size(455, 273);
-            this.pceAtStore.StyleController = this.layoutControl1;
-            this.pceAtStore.TabIndex = 12;
-            // 
-            // pceTakeOut
-            // 
-            this.pceTakeOut.EditValue = global::LNTKCustomer.Properties.Resources.Cart;
-            this.pceTakeOut.Location = new System.Drawing.Point(97, 145);
-            this.pceTakeOut.Name = "pceTakeOut";
-            this.pceTakeOut.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceTakeOut.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceTakeOut.Size = new System.Drawing.Size(455, 273);
-            this.pceTakeOut.StyleController = this.layoutControl1;
-            this.pceTakeOut.TabIndex = 11;
             // 
             // sbtEnglish
             // 
@@ -302,24 +280,6 @@
             this.emptySpaceItem10.Size = new System.Drawing.Size(327, 74);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.pceTakeOut;
-            this.layoutControlItem5.Location = new System.Drawing.Point(85, 133);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(459, 277);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.pceAtStore;
-            this.layoutControlItem1.Location = new System.Drawing.Point(616, 133);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(459, 277);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
@@ -357,6 +317,46 @@
             this.sliLanguage.Size = new System.Drawing.Size(928, 22);
             this.sliLanguage.TextSize = new System.Drawing.Size(192, 18);
             // 
+            // pceAtStore
+            // 
+            this.pceAtStore.EditValue = global::LNTKCustomer.Properties.Resources.ForkAndKnife;
+            this.pceAtStore.Location = new System.Drawing.Point(628, 145);
+            this.pceAtStore.Name = "pceAtStore";
+            this.pceAtStore.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceAtStore.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceAtStore.Size = new System.Drawing.Size(455, 273);
+            this.pceAtStore.StyleController = this.layoutControl1;
+            this.pceAtStore.TabIndex = 12;
+            // 
+            // pceTakeOut
+            // 
+            this.pceTakeOut.EditValue = global::LNTKCustomer.Properties.Resources.Cart;
+            this.pceTakeOut.Location = new System.Drawing.Point(97, 145);
+            this.pceTakeOut.Name = "pceTakeOut";
+            this.pceTakeOut.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceTakeOut.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceTakeOut.Size = new System.Drawing.Size(455, 273);
+            this.pceTakeOut.StyleController = this.layoutControl1;
+            this.pceTakeOut.TabIndex = 11;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.pceTakeOut;
+            this.layoutControlItem5.Location = new System.Drawing.Point(85, 133);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(459, 277);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.pceAtStore;
+            this.layoutControlItem1.Location = new System.Drawing.Point(616, 133);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(459, 277);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
             // PlaceSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -369,8 +369,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pceAtStore.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -386,12 +384,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceAtStore.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }

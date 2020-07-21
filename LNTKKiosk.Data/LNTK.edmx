@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LNTKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Code">
+          <Key>
+            <PropertyRef Name="CodeId" />
+          </Key>
+          <Property Name="CodeId" Type="int" Nullable="false" />
+          <Property Name="CodeCategoryId" Type="int" Nullable="false" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CodeCategory">
+          <Key>
+            <PropertyRef Name="CodeCategoryId" />
+          </Key>
+          <Property Name="CodeCategoryId" Type="int" Nullable="false" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartTime" Type="int" />
+          <Property Name="EndTime" Type="int" />
+        </EntityType>
+        <EntityType Name="EventProduct">
+          <Key>
+            <PropertyRef Name="EventId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="DiscountRate" Type="int" />
+        </EntityType>
+        <EntityType Name="Grocery">
+          <Key>
+            <PropertyRef Name="GroceryId" />
+          </Key>
+          <Property Name="GroceryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodeId" Type="int" Nullable="false" />
+          <Property Name="Unit" Type="int" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" Nullable="false" />
+          <Property Name="IsCompleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="Dummy" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="OrderStock">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="StockId" />
+          </Key>
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="StockId" Type="int" Nullable="false" />
+          <Property Name="Dummy" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Picture" Type="varbinary(max)" />
+          <Property Name="Price" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Recipe">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="GroceryId" />
+          </Key>
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="GroceryId" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="StockId" />
+          </Key>
+          <Property Name="StockId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroceryId" Type="int" Nullable="false" />
+          <Property Name="ReceivedDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="ExpirationDate" Type="int" />
+          <Property Name="Price" Type="int" />
+          <Property Name="ExhaustedDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_Grocery_Code">
+          <End Role="Code" Type="Self.Code" Multiplicity="1" />
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Code">
+              <PropertyRef Name="CodeId" />
+            </Principal>
+            <Dependent Role="Grocery">
+              <PropertyRef Name="CodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Grocery_Code1">
+          <End Role="Code" Type="Self.Code" Multiplicity="0..1" />
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Code">
+              <PropertyRef Name="CodeId" />
+            </Principal>
+            <Dependent Role="Grocery">
+              <PropertyRef Name="Unit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_사용된재고_재고">
+          <End Role="Stock" Type="Self.Stock" Multiplicity="1" />
+          <End Role="OrderStock" Type="Self.OrderStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="StockId" />
+            </Principal>
+            <Dependent Role="OrderStock">
+              <PropertyRef Name="StockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_사용된재고_주문">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderStock" Type="Self.OrderStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderStock">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_이벤트 포함 상품_상품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="EventProduct" Type="Self.EventProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="EventProduct">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_이벤트 포함 상품_이벤트">
+          <End Role="Event" Type="Self.Event" Multiplicity="1" />
+          <End Role="EventProduct" Type="Self.EventProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="EventId" />
+            </Principal>
+            <Dependent Role="EventProduct">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_장바구니_상품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_장바구니_주문">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_재고_식자재1">
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="1" />
+          <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grocery">
+              <PropertyRef Name="GroceryId" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="GroceryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_코드_코드카테고리">
+          <End Role="CodeCategory" Type="Self.CodeCategory" Multiplicity="1" />
+          <End Role="Code" Type="Self.Code" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CodeCategory">
+              <PropertyRef Name="CodeCategoryId" />
+            </Principal>
+            <Dependent Role="Code">
+              <PropertyRef Name="CodeCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_투입_상품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Recipe" Type="Self.Recipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Recipe">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_투입_식자재">
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="1" />
+          <End Role="Recipe" Type="Self.Recipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grocery">
+              <PropertyRef Name="GroceryId" />
+            </Principal>
+            <Dependent Role="Recipe">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LNTKModelStoreContainer">
+          <EntitySet Name="Code" EntityType="Self.Code" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CodeCategory" EntityType="Self.CodeCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventProduct" EntityType="Self.EventProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grocery" EntityType="Self.Grocery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderStock" EntityType="Self.OrderStock" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Recipe" EntityType="Self.Recipe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Grocery_Code" Association="Self.FK_Grocery_Code">
+            <End Role="Code" EntitySet="Code" />
+            <End Role="Grocery" EntitySet="Grocery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Grocery_Code1" Association="Self.FK_Grocery_Code1">
+            <End Role="Code" EntitySet="Code" />
+            <End Role="Grocery" EntitySet="Grocery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_사용된재고_재고" Association="Self.FK_사용된재고_재고">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="OrderStock" EntitySet="OrderStock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_사용된재고_주문" Association="Self.FK_사용된재고_주문">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderStock" EntitySet="OrderStock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_이벤트 포함 상품_상품" Association="Self.FK_이벤트 포함 상품_상품">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="EventProduct" EntitySet="EventProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_이벤트 포함 상품_이벤트" Association="Self.FK_이벤트 포함 상품_이벤트">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="EventProduct" EntitySet="EventProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_장바구니_상품" Association="Self.FK_장바구니_상품">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_장바구니_주문" Association="Self.FK_장바구니_주문">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_재고_식자재1" Association="Self.FK_재고_식자재1">
+            <End Role="Grocery" EntitySet="Grocery" />
+            <End Role="Stock" EntitySet="Stock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_코드_코드카테고리" Association="Self.FK_코드_코드카테고리">
+            <End Role="CodeCategory" EntitySet="CodeCategory" />
+            <End Role="Code" EntitySet="Code" />
+          </AssociationSet>
+          <AssociationSet Name="FK_투입_상품" Association="Self.FK_투입_상품">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Recipe" EntitySet="Recipe" />
+          </AssociationSet>
+          <AssociationSet Name="FK_투입_식자재" Association="Self.FK_투입_식자재">
+            <End Role="Grocery" EntitySet="Grocery" />
+            <End Role="Recipe" EntitySet="Recipe" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LNTKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Code">
+          <Key>
+            <PropertyRef Name="CodeId" />
+          </Key>
+          <Property Name="CodeId" Type="Int32" Nullable="false" />
+          <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Groceries" Relationship="Self.FK_Grocery_Code" FromRole="Code" ToRole="Grocery" />
+          <NavigationProperty Name="Groceries1" Relationship="Self.FK_Grocery_Code1" FromRole="Code" ToRole="Grocery" />
+          <NavigationProperty Name="CodeCategory" Relationship="Self.FK_코드_코드카테고리" FromRole="Code" ToRole="CodeCategory" />
+        </EntityType>
+        <EntityType Name="CodeCategory">
+          <Key>
+            <PropertyRef Name="CodeCategoryId" />
+          </Key>
+          <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Codes" Relationship="Self.FK_코드_코드카테고리" FromRole="CodeCategory" ToRole="Code" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StartTime" Type="Int32" />
+          <Property Name="EndTime" Type="Int32" />
+          <NavigationProperty Name="EventProducts" Relationship="Self.FK_이벤트_포함_상품_이벤트" FromRole="Event" ToRole="EventProduct" />
+        </EntityType>
+        <EntityType Name="EventProduct">
+          <Key>
+            <PropertyRef Name="EventId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="DiscountRate" Type="Int32" />
+          <NavigationProperty Name="Event" Relationship="Self.FK_이벤트_포함_상품_이벤트" FromRole="EventProduct" ToRole="Event" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_이벤트_포함_상품_상품" FromRole="EventProduct" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Grocery">
+          <Key>
+            <PropertyRef Name="GroceryId" />
+          </Key>
+          <Property Name="GroceryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeId" Type="Int32" Nullable="false" />
+          <Property Name="Unit" Type="Int32" />
+          <NavigationProperty Name="Code" Relationship="Self.FK_Grocery_Code" FromRole="Grocery" ToRole="Code" />
+          <NavigationProperty Name="Code1" Relationship="Self.FK_Grocery_Code1" FromRole="Grocery" ToRole="Code" />
+          <NavigationProperty Name="Stocks" Relationship="Self.FK_재고_식자재1" FromRole="Grocery" ToRole="Stock" />
+          <NavigationProperty Name="Recipes" Relationship="Self.FK_투입_식자재" FromRole="Grocery" ToRole="Recipe" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="OrderStocks" Relationship="Self.FK_사용된재고_주문" FromRole="Order" ToRole="OrderStock" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK_장바구니_주문" FromRole="Order" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="Dummy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_장바구니_주문" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_장바구니_상품" FromRole="OrderDetail" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="OrderStock">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="StockId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="StockId" Type="Int32" Nullable="false" />
+          <Property Name="Dummy" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_사용된재고_주문" FromRole="OrderStock" ToRole="Order" />
+          <NavigationProperty Name="Stock" Relationship="Self.FK_사용된재고_재고" FromRole="OrderStock" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EventProducts" Relationship="Self.FK_이벤트_포함_상품_상품" FromRole="Product" ToRole="EventProduct" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK_장바구니_상품" FromRole="Product" ToRole="OrderDetail" />
+          <NavigationProperty Name="Recipes" Relationship="Self.FK_투입_상품" FromRole="Product" ToRole="Recipe" />
+        </EntityType>
+        <EntityType Name="Recipe">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="GroceryId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="GroceryId" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Grocery" Relationship="Self.FK_투입_식자재" FromRole="Recipe" ToRole="Grocery" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_투입_상품" FromRole="Recipe" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="StockId" />
+          </Key>
+          <Property Name="StockId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroceryId" Type="Int32" Nullable="false" />
+          <Property Name="ReceivedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ExpirationDate" Type="Int32" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="ExhaustedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Grocery" Relationship="Self.FK_재고_식자재1" FromRole="Stock" ToRole="Grocery" />
+          <NavigationProperty Name="OrderStocks" Relationship="Self.FK_사용된재고_재고" FromRole="Stock" ToRole="OrderStock" />
+        </EntityType>
+        <Association Name="FK_Grocery_Code">
+          <End Role="Code" Type="Self.Code" Multiplicity="1" />
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Code">
+              <PropertyRef Name="CodeId" />
+            </Principal>
+            <Dependent Role="Grocery">
+              <PropertyRef Name="CodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Grocery_Code1">
+          <End Role="Code" Type="Self.Code" Multiplicity="0..1" />
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Code">
+              <PropertyRef Name="CodeId" />
+            </Principal>
+            <Dependent Role="Grocery">
+              <PropertyRef Name="Unit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_코드_코드카테고리">
+          <End Role="CodeCategory" Type="Self.CodeCategory" Multiplicity="1" />
+          <End Role="Code" Type="Self.Code" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CodeCategory">
+              <PropertyRef Name="CodeCategoryId" />
+            </Principal>
+            <Dependent Role="Code">
+              <PropertyRef Name="CodeCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_이벤트_포함_상품_이벤트">
+          <End Role="Event" Type="Self.Event" Multiplicity="1" />
+          <End Role="EventProduct" Type="Self.EventProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="EventId" />
+            </Principal>
+            <Dependent Role="EventProduct">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_이벤트_포함_상품_상품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="EventProduct" Type="Self.EventProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="EventProduct">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_재고_식자재1">
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="1" />
+          <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grocery">
+              <PropertyRef Name="GroceryId" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="GroceryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_투입_식자재">
+          <End Role="Grocery" Type="Self.Grocery" Multiplicity="1" />
+          <End Role="Recipe" Type="Self.Recipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grocery">
+              <PropertyRef Name="GroceryId" />
+            </Principal>
+            <Dependent Role="Recipe">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_사용된재고_주문">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderStock" Type="Self.OrderStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderStock">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_장바구니_주문">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_장바구니_상품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_사용된재고_재고">
+          <End Role="Stock" Type="Self.Stock" Multiplicity="1" />
+          <End Role="OrderStock" Type="Self.OrderStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="StockId" />
+            </Principal>
+            <Dependent Role="OrderStock">
+              <PropertyRef Name="StockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_투입_상품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Recipe" Type="Self.Recipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Recipe">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LNTKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Codes" EntityType="Self.Code" />
+          <EntitySet Name="CodeCategories" EntityType="Self.CodeCategory" />
+          <EntitySet Name="Events" EntityType="Self.Event" />
+          <EntitySet Name="EventProducts" EntityType="Self.EventProduct" />
+          <EntitySet Name="Groceries" EntityType="Self.Grocery" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+          <EntitySet Name="OrderStocks" EntityType="Self.OrderStock" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Recipes" EntityType="Self.Recipe" />
+          <EntitySet Name="Stocks" EntityType="Self.Stock" />
+          <AssociationSet Name="FK_Grocery_Code" Association="Self.FK_Grocery_Code">
+            <End Role="Code" EntitySet="Codes" />
+            <End Role="Grocery" EntitySet="Groceries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Grocery_Code1" Association="Self.FK_Grocery_Code1">
+            <End Role="Code" EntitySet="Codes" />
+            <End Role="Grocery" EntitySet="Groceries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_코드_코드카테고리" Association="Self.FK_코드_코드카테고리">
+            <End Role="CodeCategory" EntitySet="CodeCategories" />
+            <End Role="Code" EntitySet="Codes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_이벤트_포함_상품_이벤트" Association="Self.FK_이벤트_포함_상품_이벤트">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="EventProduct" EntitySet="EventProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_이벤트_포함_상품_상품" Association="Self.FK_이벤트_포함_상품_상품">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="EventProduct" EntitySet="EventProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_재고_식자재1" Association="Self.FK_재고_식자재1">
+            <End Role="Grocery" EntitySet="Groceries" />
+            <End Role="Stock" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_투입_식자재" Association="Self.FK_투입_식자재">
+            <End Role="Grocery" EntitySet="Groceries" />
+            <End Role="Recipe" EntitySet="Recipes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_사용된재고_주문" Association="Self.FK_사용된재고_주문">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderStock" EntitySet="OrderStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_장바구니_주문" Association="Self.FK_장바구니_주문">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_장바구니_상품" Association="Self.FK_장바구니_상품">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_사용된재고_재고" Association="Self.FK_사용된재고_재고">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="OrderStock" EntitySet="OrderStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_투입_상품" Association="Self.FK_투입_상품">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Recipe" EntitySet="Recipes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LNTKModelStoreContainer" CdmEntityContainer="LNTKEntities">
+          <EntitySetMapping Name="Codes">
+            <EntityTypeMapping TypeName="LNTKModel.Code">
+              <MappingFragment StoreEntitySet="Code">
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CodeCategories">
+            <EntityTypeMapping TypeName="LNTKModel.CodeCategory">
+              <MappingFragment StoreEntitySet="CodeCategory">
+                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="LNTKModel.Event">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventProducts">
+            <EntityTypeMapping TypeName="LNTKModel.EventProduct">
+              <MappingFragment StoreEntitySet="EventProduct">
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groceries">
+            <EntityTypeMapping TypeName="LNTKModel.Grocery">
+              <MappingFragment StoreEntitySet="Grocery">
+                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="LNTKModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="LNTKModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Dummy" ColumnName="Dummy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderStocks">
+            <EntityTypeMapping TypeName="LNTKModel.OrderStock">
+              <MappingFragment StoreEntitySet="OrderStock">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="StockId" ColumnName="StockId" />
+                <ScalarProperty Name="Dummy" ColumnName="Dummy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="LNTKModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recipes">
+            <EntityTypeMapping TypeName="LNTKModel.Recipe">
+              <MappingFragment StoreEntitySet="Recipe">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stocks">
+            <EntityTypeMapping TypeName="LNTKModel.Stock">
+              <MappingFragment StoreEntitySet="Stock">
+                <ScalarProperty Name="StockId" ColumnName="StockId" />
+                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
+                <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ExhaustedDate" ColumnName="ExhaustedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
