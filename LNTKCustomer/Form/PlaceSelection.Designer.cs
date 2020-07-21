@@ -327,6 +327,7 @@
             this.pceAtStore.Size = new System.Drawing.Size(455, 273);
             this.pceAtStore.StyleController = this.layoutControl1;
             this.pceAtStore.TabIndex = 12;
+            this.pceAtStore.EditValueChanged += new System.EventHandler(this.pceAtStore_EditValueChanged);
             // 
             // pceTakeOut
             // 
@@ -338,6 +339,7 @@
             this.pceTakeOut.Size = new System.Drawing.Size(455, 273);
             this.pceTakeOut.StyleController = this.layoutControl1;
             this.pceTakeOut.TabIndex = 11;
+            this.pceTakeOut.EditValueChanged += new System.EventHandler(this.pceTakeOut_EditValueChanged);
             // 
             // layoutControlItem5
             // 

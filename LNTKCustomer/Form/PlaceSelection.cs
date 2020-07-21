@@ -20,5 +20,16 @@ namespace LNTKCustomer.Form
             InitializeComponent();
         }
 
+        private void pceTakeOut_EditValueChanged(object sender, EventArgs e)
+        {
+            CustomerMenu form = new CustomerMenu();
+            form.Show();
+        }
+
+        private void pceAtStore_EditValueChanged(object sender, EventArgs e)
+        {
+            CustomerMenu form = new CustomerMenu();
+            form.Show();
+        }
     }
 }
