@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.btnRecommended = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -44,13 +45,14 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.btnRecommendedMenu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-           // this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -61,7 +63,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(637, 336, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(800, 450);
+            this.layoutControl1.Size = new System.Drawing.Size(790, 448);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -77,18 +79,27 @@
             this.accordionControl1.Appearance.AccordionControl.Options.UseFont = true;
             this.accordionControl1.Appearance.AccordionControl.Options.UseForeColor = true;
             this.accordionControl1.Appearance.Item.Hovered.BackColor = System.Drawing.Color.LightGray;
+            this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Tahoma", 12F);
             this.accordionControl1.Appearance.Item.Hovered.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Item.Hovered.Options.UseFont = true;
             this.accordionControl1.Appearance.Item.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.accordionControl1.Appearance.Item.Normal.Options.UseFont = true;
-            this.accordionControl1.Appearance.Item.Pressed.BackColor = System.Drawing.Color.Blue;
-            this.accordionControl1.Appearance.Item.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.accordionControl1.Appearance.Item.Pressed.BackColor = System.Drawing.Color.Lime;
+            this.accordionControl1.Appearance.Item.Pressed.Font = new System.Drawing.Font("Tahoma", 12F);
             this.accordionControl1.Appearance.Item.Pressed.Options.UseBackColor = true;
             this.accordionControl1.Appearance.Item.Pressed.Options.UseFont = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Hovered.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.accordionControl1.Appearance.ItemWithContainer.Hovered.Options.UseFont = true;
             this.accordionControl1.Appearance.ItemWithContainer.Normal.BackColor = System.Drawing.Color.White;
             this.accordionControl1.Appearance.ItemWithContainer.Normal.BackColor2 = System.Drawing.Color.White;
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.Font = new System.Drawing.Font("Tahoma", 12F);
             this.accordionControl1.Appearance.ItemWithContainer.Normal.Options.UseBackColor = true;
-            this.accordionControl1.Appearance.ItemWithContainer.Pressed.BackColor = System.Drawing.Color.Blue;
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Pressed.BackColor = System.Drawing.Color.Lime;
+            this.accordionControl1.Appearance.ItemWithContainer.Pressed.Font = new System.Drawing.Font("Tahoma", 12F);
             this.accordionControl1.Appearance.ItemWithContainer.Pressed.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Pressed.Options.UseFont = true;
+            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnRecommended,
             this.accordionControlSeparator1,
@@ -100,10 +111,11 @@
             this.accordionControlSeparator4,
             this.btnDiscountLunch,
             this.accordionControlSeparator5});
+            this.accordionControl1.ExpandElementMode = DevExpress.XtraBars.Navigation.ExpandElementMode.Single;
             this.accordionControl1.Location = new System.Drawing.Point(12, 12);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
-            this.accordionControl1.Size = new System.Drawing.Size(173, 426);
+            this.accordionControl1.Size = new System.Drawing.Size(171, 424);
             this.accordionControl1.StyleController = this.layoutControl1;
             this.accordionControl1.TabIndex = 3;
             this.accordionControl1.Text = "accordionControl1";
@@ -112,6 +124,8 @@
             // 
             // btnRecommended
             // 
+            this.btnRecommended.Appearance.Disabled.ForeColor = System.Drawing.Color.Black;
+            this.btnRecommended.Appearance.Disabled.Options.UseForeColor = true;
             this.btnRecommended.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
@@ -120,6 +134,7 @@
             this.btnRecommended.Name = "btnRecommended";
             this.btnRecommended.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnRecommended.Text = "추천 메뉴";
+            this.btnRecommended.Click += new System.EventHandler(this.btnRecommended_Click);
             // 
             // accordionControlSeparator1
             // 
@@ -195,7 +210,7 @@
             this.layoutControlItem1,
             this.emptySpaceItem1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(800, 450);
+            this.Root.Size = new System.Drawing.Size(790, 448);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -203,16 +218,16 @@
             this.layoutControlItem1.Control = this.accordionControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(177, 430);
+            this.layoutControlItem1.Size = new System.Drawing.Size(175, 428);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(177, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(175, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(603, 430);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(595, 428);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // btnRecommendedMenu
@@ -237,18 +252,18 @@
             this.btnRecommendedMenu.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnRecommendedMenu.Text = "추천 메뉴";
             // 
-            // ribbonPage2
+            // xtraTabbedMdiManager1
             // 
-   // this.ribbonPage2.Name = "ribbonPage2";
-       //    this.ribbonPage2.Text = "ribbonPage2";
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // CustomerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(790, 448);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::LNTKCustomer.Properties.Resources._3D햄버거;
+            this.IsMdiContainer = true;
             this.Name = "CustomerMenu";
             this.Text = "CustomerMenu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -257,6 +272,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,6 +295,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator3;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator4;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator5;
-  
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

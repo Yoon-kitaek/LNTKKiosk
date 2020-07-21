@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CustomerMenu : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
     {
         public CustomerMenu()
         {
@@ -36,6 +36,14 @@ namespace LNTKCustomer.Form
         private void btnBurgerSet_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRecommended_Click(object sender, EventArgs e)
+        {
+         //   RecommendedMenuImage form = new RecommendedMenuImage();
+            //form.MdiParent = this;
+         //   form.WindowState = FormWindowState.Maximized;
+          //  form.Show();
         }
     }
 }
