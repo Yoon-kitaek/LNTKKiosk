@@ -133,4 +133,25 @@
   <data name="two" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\two.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_3D햄버거" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3D햄버거.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="감자튀김" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\감자튀김.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="감자튀김앤소스" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\감자튀김앤소스.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="무채색햄버거" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\무채색햄버거.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="버거" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\버거.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="버거세트" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\버거세트.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="장애인전용" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\장애인전용.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

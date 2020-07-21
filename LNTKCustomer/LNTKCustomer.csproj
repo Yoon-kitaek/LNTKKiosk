@@ -42,7 +42,11 @@
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGantt.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -65,8 +69,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerMenu.cs" />
-    <Compile Include="CustomerMenu.designer.cs">
+    <Compile Include="Form\CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CustomerMenu.designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="DevKiller\ProcessKiller.cs" />
@@ -81,12 +87,6 @@
     </Compile>
     <Compile Include="Form\PlaceSelection.Designer.cs">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\CustomerMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\CustomerMenu.Designer.cs">
-      <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
@@ -114,7 +114,7 @@
     <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomerMenu.resx">
+    <EmbeddedResource Include="Form\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Customization.resx">
@@ -122,9 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PlaceSelection.resx">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\CustomerMenu.resx">
-      <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -178,6 +175,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\무채색햄버거.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3D햄버거.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\감자튀김.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\감자튀김앤소스.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\버거세트.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\버거.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\장애인전용.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
