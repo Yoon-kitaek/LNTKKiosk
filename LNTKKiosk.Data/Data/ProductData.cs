@@ -8,5 +8,11 @@ namespace LNTKKiosk.Data
 {
     public class ProductData : EntityData<Product>
     {
+        public List<Product> SearchByCategory(string category)
+        {
+            var context = CreateContext();
+
+            return context.Products.Where(x => x.Name.Contains(category)).ToList();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LNTKKiosk.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace LNTKManager
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void uscButtonContainer_MenuSelected(object sender, ButtonContainer.MenuSelectedEventArgs e)
+        {
+            List<Product> list = DataRepository.Product.SearchByCategory(e.Label);
+
+            Text = e.Label;
         }
     }
 }
