@@ -91,6 +91,12 @@
     <Compile Include="Form\PlaceSelection.Designer.cs">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\RecommendedMenuImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RecommendedMenuImage.Designer.cs">
+      <DependentUpon>RecommendedMenuImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
     </Compile>

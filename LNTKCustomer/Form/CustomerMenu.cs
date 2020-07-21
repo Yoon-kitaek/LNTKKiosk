@@ -40,10 +40,10 @@ namespace LNTKCustomer.Form
 
         private void btnRecommended_Click(object sender, EventArgs e)
         {
-         //   RecommendedMenuImage form = new RecommendedMenuImage();
+            //RecommendedMenuImage form = new RecommendedMenuImage();
             //form.MdiParent = this;
-         //   form.WindowState = FormWindowState.Maximized;
-          //  form.Show();
+            //form.WindowState = FormWindowState.Maximized;
+            //form.Show();
         }
     }
 }
