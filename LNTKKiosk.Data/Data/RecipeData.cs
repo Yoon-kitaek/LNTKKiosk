@@ -8,5 +8,6 @@ namespace LNTKKiosk.Data
 {
     public class RecipeData : EntityData<Recipe>
     {
+        //asasa
     }
 }
