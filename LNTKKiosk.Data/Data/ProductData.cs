@@ -54,9 +54,19 @@ namespace LNTKKiosk.Data
         {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
             
-            list.OrderByDescending(x=>x.DiscountRate);
+            if(list is null)
+                {
+                product.EventPrice = product.Price;
             
-           // product.EventPrice = product.Price * list[0].DiscountRate; 
+            }
+            else
+                {  
+                list.OrderByDescending(x=>x.DiscountRate);
+            
+            product.EventPrice = product.Price * (1-list[0].DiscountRate); 
+            
+            }
+          
         }
     }
 }
