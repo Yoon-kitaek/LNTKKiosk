@@ -34,7 +34,7 @@ namespace LNTKCustomer.UserControl
             set
             {
                 lbcName.Text = value;
-                lbcPrice.Text = DataRepository.Product.GetByName(lbcName.Text).Price.ToString(); //TODO : 할인 이벤트 고려
+                lbcPrice.Text = DataRepository.Product.GetByName(lbcName.Text).EventPrice.ToString(); 
                 SetPicture();
             }
         }

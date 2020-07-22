@@ -49,6 +49,15 @@ namespace LNTKKiosk.Data
 
             return context.Products.FirstOrDefault(a => a.Name == name);
         }
+
+        public void SetEventPrice(Product product)
+        {
+            List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
+            
+            list.OrderByDescending(x=>x.DiscountRate);
+            
+            product.EventPrice = product.Price * list[0].DiscountRate; 
+        }
     }
 }
 //
