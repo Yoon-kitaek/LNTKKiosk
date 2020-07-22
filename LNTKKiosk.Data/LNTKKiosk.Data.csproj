@@ -69,7 +69,9 @@
     <Compile Include="Data\ProductData.cs" />
     <Compile Include="Data\RecipeData.cs" />
     <Compile Include="Data\StockData.cs" />
+    <Compile Include="Entities\Grocery.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Stock.cs" />
     <Compile Include="Event.cs">
       <DependentUpon>LNTK.tt</DependentUpon>
     </Compile>
