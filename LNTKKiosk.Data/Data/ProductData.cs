@@ -56,7 +56,7 @@ namespace LNTKKiosk.Data
             
             list.OrderByDescending(x=>x.DiscountRate);
             
-            product.EventPrice = product.Price * list[0].DiscountRate; 
+           // product.EventPrice = product.Price * list[0].DiscountRate; 
         }
     }
 }

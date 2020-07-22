@@ -33,8 +33,8 @@ namespace LNTKCustomer.UserControl
             }
             set
             {
-                lbcName.Text = value;
-                lbcPrice.Text = DataRepository.Product.GetByName(lbcName.Text).EventPrice.ToString(); 
+               lbcName.Text = value;
+               lbcPrice.Text = DataRepository.Product.GetByName(lbcName.Text).EventPrice.ToString(); 
                 SetPicture();
             }
         }
