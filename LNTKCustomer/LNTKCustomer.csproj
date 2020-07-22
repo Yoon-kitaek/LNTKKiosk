@@ -40,6 +40,7 @@
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -63,12 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevKiller\ProcessKiller.cs" />
-    <Compile Include="Formdssd1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formdssd1.Designer.cs">
-      <DependentUpon>Formdssd1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\BeverageCoffeeMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,7 +79,9 @@
     <Compile Include="Form\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\CustomerMenu.Designer.cs" />
+    <Compile Include="Form\CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Customization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,13 +149,9 @@
     <Compile Include="UserControl\SelectBeverage.Designer.cs">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form\CustomerMenu.resx" />
+    <EmbeddedResource Include="Form\CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Customization.resx">
       <DependentUpon>Customization.cs</DependentUpon>
     </EmbeddedResource>
