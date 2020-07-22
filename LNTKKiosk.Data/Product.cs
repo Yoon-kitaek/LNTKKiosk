@@ -27,7 +27,9 @@ namespace LNTKKiosk.Data
         public string Description { get; set; }
         public byte[] Picture { get; set; }
         public int Price { get; set; }
+        public int CodeCategoryId { get; set; }
     
+        public virtual CodeCategory CodeCategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EventProduct> EventProducts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

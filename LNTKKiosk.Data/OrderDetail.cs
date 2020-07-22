@@ -14,9 +14,10 @@ namespace LNTKKiosk.Data
     
     public partial class OrderDetail
     {
+        public int OrderDetailId { get; set; }
         public int OrderId { get; set; }
         public int ProductId { get; set; }
-        public Nullable<int> Quantity { get; set; }
+        public bool IsCompleted { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

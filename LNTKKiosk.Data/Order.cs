@@ -17,8 +17,8 @@ namespace LNTKKiosk.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
-            this.OrderStocks = new HashSet<OrderStock>();
             this.OrderDetails = new HashSet<OrderDetail>();
+            this.OrderStocks = new HashSet<OrderStock>();
         }
     
         public int OrderId { get; set; }
@@ -26,8 +26,8 @@ namespace LNTKKiosk.Data
         public bool IsCompleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderStock> OrderStocks { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderStock> OrderStocks { get; set; }
     }
 }

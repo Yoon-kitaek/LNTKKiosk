@@ -22,8 +22,8 @@ namespace LNTKKiosk.Data
     
         public int EventId { get; set; }
         public string Name { get; set; }
-        public Nullable<int> StartTime { get; set; }
-        public Nullable<int> EndTime { get; set; }
+        public int StartTime { get; set; }
+        public int EndTime { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EventProduct> EventProducts { get; set; }

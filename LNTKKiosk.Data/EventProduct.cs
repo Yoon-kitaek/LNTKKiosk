@@ -16,7 +16,7 @@ namespace LNTKKiosk.Data
     {
         public int EventId { get; set; }
         public int ProductId { get; set; }
-        public Nullable<int> DiscountRate { get; set; }
+        public int DiscountRate { get; set; }
     
         public virtual Event Event { get; set; }
         public virtual Product Product { get; set; }

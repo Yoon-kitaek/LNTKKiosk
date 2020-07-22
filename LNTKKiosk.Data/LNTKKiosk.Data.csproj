@@ -54,9 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Code.cs">
-      <DependentUpon>LNTK.tt</DependentUpon>
-    </Compile>
     <Compile Include="CodeCategory.cs">
       <DependentUpon>LNTK.tt</DependentUpon>
     </Compile>
@@ -73,6 +70,7 @@
     <Compile Include="Data\ProductData.cs" />
     <Compile Include="Data\RecipeData.cs" />
     <Compile Include="Data\StockData.cs" />
+    <Compile Include="Entities\Product.cs" />
     <Compile Include="Event.cs">
       <DependentUpon>LNTK.tt</DependentUpon>
     </Compile>
@@ -145,9 +143,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

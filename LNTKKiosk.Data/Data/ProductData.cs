@@ -54,12 +54,13 @@ namespace LNTKKiosk.Data
         {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
             Event @event = new Event();
+            int t = DateTime.Now.Hour*100 + DateTime.Now.Minute;
             if(list.Count>0)
             {
                 foreach(EventProduct eventProduct in list)
                 {
                     @event = DataRepository.Event.Get(eventProduct.EventId);
-                    if(DateTime.Now < @event.StartTime || DateTime.Now > @event.EndTime )
+                    if(t < @event.StartTime || t > @event.EndTime )
                     {
                         list.Remove(eventProduct);
                     }

@@ -25,7 +25,6 @@ namespace LNTKKiosk.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Code> Codes { get; set; }
         public virtual DbSet<CodeCategory> CodeCategories { get; set; }
         public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<EventProduct> EventProducts { get; set; }

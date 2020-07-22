@@ -17,13 +17,16 @@ namespace LNTKKiosk.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CodeCategory()
         {
-            this.Codes = new HashSet<Code>();
+            this.Groceries = new HashSet<Grocery>();
+            this.Products = new HashSet<Product>();
         }
     
         public int CodeCategoryId { get; set; }
         public string Item { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Code> Codes { get; set; }
+        public virtual ICollection<Grocery> Groceries { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

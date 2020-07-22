@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LNTKKiosk
+namespace LNTKKiosk.Data
 {
     partial class Product
     {
