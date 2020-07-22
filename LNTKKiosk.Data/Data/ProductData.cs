@@ -36,6 +36,15 @@ namespace LNTKKiosk.Data
             return query.FirstOrDefault();
 
         }
+
+        public List<Product> FilterbyCatergory(int codeCategoryId)
+        {
+            List<Product> list = DataRepository.Product.GetAll();
+
+            return list.Where(x => x.CodeCategoryId == codeCategoryId).ToList();
+
+        }
+
         public List<Product> SearchByCategory(string category)
         {
             var context = CreateContext();
@@ -53,24 +62,26 @@ namespace LNTKKiosk.Data
         public int GetDiscountRate(Product product)
         {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
+            List<EventProduct> listfiltered = new List<EventProduct>();
             Event @event = new Event();
             int t = DateTime.Now.Hour * 100 + DateTime.Now.Minute;
-            if (list.Count > 0)
+            if (list.Count() > 0)
             {
                 foreach (EventProduct eventProduct in list)
                 {
                     @event = DataRepository.Event.Get(eventProduct.EventId);
-                    if (t < @event.StartTime || t > @event.EndTime)
+                    if (t > @event.StartTime && t < @event.EndTime)
                     {
-                        list.Remove(eventProduct);
+                        listfiltered.Add(eventProduct);
                     }
+                   
                 }
 
-                if (list.Count > 0)
+                if (listfiltered.Count() > 0)
                 {
-                    list.OrderByDescending(x => x.DiscountRate);
+                    listfiltered.OrderByDescending(x => x.DiscountRate);
 
-                    return list[0].DiscountRate;
+                    return listfiltered[0].DiscountRate;
                 }
             }
 
@@ -79,31 +90,7 @@ namespace LNTKKiosk.Data
 
         public void SetEventPrice(Product product)
         {
-            List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
-            Event @event = new Event();
-            int t = DateTime.Now.Hour*100 + DateTime.Now.Minute;
-            if(list.Count>0)
-            {
-                foreach(EventProduct eventProduct in list)
-                {
-                    @event = DataRepository.Event.Get(eventProduct.EventId);
-                    if(t < @event.StartTime || t > @event.EndTime )
-                    {
-                        list.Remove(eventProduct);
-                    }
-                }
-                
-                if(list.Count>0)
-                {                
-                    list.OrderByDescending(x=>x.DiscountRate);
-                
-                    product.EventPrice = product.Price * (1-list[0].DiscountRate); 
-
-                    return;
-                }
-            }           
-            product.EventPrice = product.Price;
-            
+            product.EventPrice = product.Price * (1 - DataRepository.Product.GetDiscountRate(product));
             return;
         }
     }
