@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CustomerMenu : DevExpress.XtraBars.ToolbarForm.ToolbarForm
+    public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
     {
         public CustomerMenu()
         {
@@ -33,7 +33,7 @@ namespace LNTKCustomer.Form
 
         private void btnRecommended_Click(object sender, EventArgs e)
         {
-           
+
 
             RecommendedMenu form = new RecommendedMenu();
             form.MdiParent = this;
@@ -64,7 +64,7 @@ namespace LNTKCustomer.Form
         private void btnBeverageCoffee_Click(object sender, EventArgs e)
         {
 
-          
+
 
 
             BeverageCoffeeMenu form = new BeverageCoffeeMenu();
@@ -76,7 +76,7 @@ namespace LNTKCustomer.Form
         private void btnKingMorning_Click(object sender, EventArgs e)
         {
 
-          
+
 
             KingMorningMenu form = new KingMorningMenu();
             form.MdiParent = this;
@@ -93,6 +93,18 @@ namespace LNTKCustomer.Form
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // CustomerMenu
+            // 
+            this.ClientSize = new System.Drawing.Size(892, 449);
+            this.Name = "CustomerMenu";
+            this.ResumeLayout(false);
+
         }
     }
 }

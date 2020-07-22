@@ -63,17 +63,57 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevKiller\ProcessKiller.cs" />
+    <Compile Include="Formdssd1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formdssd1.Designer.cs">
+      <DependentUpon>Formdssd1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BeverageCoffeeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BeverageCoffeeMenu.Designer.cs">
+      <DependentUpon>BeverageCoffeeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BurgerSetMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BurgerSetMenu.Designer.cs">
+      <DependentUpon>BurgerSetMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CustomerMenu.Designer.cs" />
     <Compile Include="Form\Customization.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Customization.Designer.cs">
       <DependentUpon>Customization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\KingMorningMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\KingMorningMenu.Designer.cs">
+      <DependentUpon>KingMorningMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LunchDiscountMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LunchDiscountMenu.Designer.cs">
+      <DependentUpon>LunchDiscountMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\PlaceSelection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\PlaceSelection.Designer.cs">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RecommendedMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RecommendedMenu.Designer.cs">
+      <DependentUpon>RecommendedMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
@@ -112,6 +152,13 @@
     <Compile Include="UserControl\SelectBeverage.Designer.cs">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\CustomerMenu.resx" />
     <EmbeddedResource Include="Form\Customization.resx">
       <DependentUpon>Customization.cs</DependentUpon>
     </EmbeddedResource>
