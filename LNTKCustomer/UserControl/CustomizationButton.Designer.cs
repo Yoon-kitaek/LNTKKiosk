@@ -38,9 +38,13 @@
             // 
             // sbtBurgerCustomization
             // 
-            this.sbtBurgerCustomization.Location = new System.Drawing.Point(573, 24);
+            this.sbtBurgerCustomization.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
+            this.sbtBurgerCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.sbtBurgerCustomization.Appearance.Options.UseBackColor = true;
+            this.sbtBurgerCustomization.Appearance.Options.UseFont = true;
+            this.sbtBurgerCustomization.Location = new System.Drawing.Point(580, 24);
             this.sbtBurgerCustomization.Name = "sbtBurgerCustomization";
-            this.sbtBurgerCustomization.Size = new System.Drawing.Size(142, 68);
+            this.sbtBurgerCustomization.Size = new System.Drawing.Size(200, 60);
             this.sbtBurgerCustomization.TabIndex = 14;
             this.sbtBurgerCustomization.Text = "재료 추가/변경";
             // 
@@ -84,7 +88,7 @@
             this.Controls.Add(this.pceBurgerPicture);
             this.Controls.Add(this.pceOne);
             this.Name = "CustomizationButton";
-            this.Size = new System.Drawing.Size(744, 116);
+            this.Size = new System.Drawing.Size(928, 116);
             ((System.ComponentModel.ISupportInitialize)(this.pceBurgerPicture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceOne.Properties)).EndInit();
             this.ResumeLayout(false);

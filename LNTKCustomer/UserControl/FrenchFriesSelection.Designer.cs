@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lbcBurgerCustomization = new DevExpress.XtraEditors.LabelControl();
-            this.pceTwo = new DevExpress.XtraEditors.PictureEdit();
             this.sbtFriesCustomization = new DevExpress.XtraEditors.SimpleButton();
+            this.pceTwo = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pceTwo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +47,18 @@
             this.lbcBurgerCustomization.TabIndex = 14;
             this.lbcBurgerCustomization.Text = "원하시는 감자튀김/사이드메뉴를 선택해주세요";
             // 
+            // sbtFriesCustomization
+            // 
+            this.sbtFriesCustomization.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
+            this.sbtFriesCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.sbtFriesCustomization.Appearance.Options.UseBackColor = true;
+            this.sbtFriesCustomization.Appearance.Options.UseFont = true;
+            this.sbtFriesCustomization.Location = new System.Drawing.Point(554, 5);
+            this.sbtFriesCustomization.Name = "sbtFriesCustomization";
+            this.sbtFriesCustomization.Size = new System.Drawing.Size(200, 60);
+            this.sbtFriesCustomization.TabIndex = 15;
+            this.sbtFriesCustomization.Text = "감자튀김 추가/변경";
+            // 
             // pceTwo
             // 
             this.pceTwo.EditValue = global::LNTKCustomer.Properties.Resources.two;
@@ -57,14 +69,6 @@
             this.pceTwo.Size = new System.Drawing.Size(70, 70);
             this.pceTwo.TabIndex = 7;
             // 
-            // sbtFriesCustomization
-            // 
-            this.sbtFriesCustomization.Location = new System.Drawing.Point(544, 4);
-            this.sbtFriesCustomization.Name = "sbtFriesCustomization";
-            this.sbtFriesCustomization.Size = new System.Drawing.Size(142, 68);
-            this.sbtFriesCustomization.TabIndex = 15;
-            this.sbtFriesCustomization.Text = "감자튀김 추가/변경";
-            // 
             // FrenchFriesSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -73,7 +77,7 @@
             this.Controls.Add(this.lbcBurgerCustomization);
             this.Controls.Add(this.pceTwo);
             this.Name = "FrenchFriesSelection";
-            this.Size = new System.Drawing.Size(692, 76);
+            this.Size = new System.Drawing.Size(824, 76);
             ((System.ComponentModel.ISupportInitialize)(this.pceTwo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
