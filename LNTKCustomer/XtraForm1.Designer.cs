@@ -1,6 +1,6 @@
-﻿namespace LNTKCustomer.Form
+﻿namespace LNTKCustomer
 {
-    partial class BurgerSetMenu
+    partial class XtraForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // BurgerSetMenu
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "BurgerSetMenu";
-            this.Text = "BurgerSetMenu";
-            this.ResumeLayout(false);
-
+            this.Text = "XtraForm1";
         }
 
         #endregion
