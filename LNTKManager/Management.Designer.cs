@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.tctlManagement = new DevExpress.XtraTab.XtraTabControl();
             this.tpgeOrder = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -39,22 +36,15 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsProduct = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonContainer1 = new LNTKManager.ButtonContainer();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
-            this.grvProduct = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.bdsProduct = new System.Windows.Forms.BindingSource(this.components);
-            this.colProductId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPicture = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEventProducts = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOrderDetails = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRecipes = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).BeginInit();
             this.tctlManagement.SuspendLayout();
             this.tpgeOrder.SuspendLayout();
@@ -63,11 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,10 +114,73 @@
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.grvProduct);
+            this.xtraTabPage2.Controls.Add(this.dataGridView1);
+            this.xtraTabPage2.Controls.Add(this.buttonContainer1);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(798, 418);
             this.xtraTabPage2.Text = "상품관리";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.nameDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bdsProduct;
+            this.dataGridView1.Location = new System.Drawing.Point(56, 133);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(652, 229);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // ProductId
+            // 
+            this.ProductId.DataPropertyName = "ProductId";
+            this.ProductId.HeaderText = "ProductId";
+            this.ProductId.MinimumWidth = 6;
+            this.ProductId.Name = "ProductId";
+            this.ProductId.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bdsProduct
+            // 
+            this.bdsProduct.DataSource = typeof(LNTKKiosk.Data.Product);
+            // 
+            // buttonContainer1
+            // 
+            this.buttonContainer1.Location = new System.Drawing.Point(56, 57);
+            this.buttonContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonContainer1.Name = "buttonContainer1";
+            this.buttonContainer1.Size = new System.Drawing.Size(652, 69);
+            this.buttonContainer1.TabIndex = 0;
+            this.buttonContainer1.MenuSelected += new System.EventHandler<LNTKManager.ButtonContainer.MenuSelectedEventArgs>(this.buttonContainer1_MenuSelected);
             // 
             // xtraTabPage3
             // 
@@ -144,135 +193,6 @@
             this.xtraTabPage5.Name = "xtraTabPage5";
             this.xtraTabPage5.Size = new System.Drawing.Size(798, 418);
             this.xtraTabPage5.Text = "재료관리";
-            // 
-            // grvProduct
-            // 
-            this.grvProduct.DataSource = this.bdsProduct;
-            gridLevelNode1.LevelTemplate = this.gridView4;
-            gridLevelNode1.RelationName = "Level1";
-            gridLevelNode2.LevelTemplate = this.gridView5;
-            gridLevelNode2.RelationName = "Level2";
-            gridLevelNode3.LevelTemplate = this.gridView6;
-            gridLevelNode3.RelationName = "Level3";
-            this.grvProduct.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1,
-            gridLevelNode2,
-            gridLevelNode3});
-            this.grvProduct.Location = new System.Drawing.Point(27, 109);
-            this.grvProduct.MainView = this.gridView3;
-            this.grvProduct.Name = "grvProduct";
-            this.grvProduct.Size = new System.Drawing.Size(637, 306);
-            this.grvProduct.TabIndex = 4;
-            this.grvProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3,
-            this.gridView4,
-            this.gridView5,
-            this.gridView6});
-            // 
-            // gridView3
-            // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colProductId,
-            this.colName,
-            this.colDescription,
-            this.colPicture,
-            this.colPrice,
-            this.colEventProducts,
-            this.colOrderDetails,
-            this.colRecipes});
-            this.gridView3.GridControl = this.grvProduct;
-            this.gridView3.Name = "gridView3";
-            // 
-            // gridView4
-            // 
-            this.gridView4.GridControl = this.grvProduct;
-            this.gridView4.Name = "gridView4";
-            // 
-            // gridView5
-            // 
-            this.gridView5.GridControl = this.grvProduct;
-            this.gridView5.Name = "gridView5";
-            // 
-            // gridView6
-            // 
-            this.gridView6.GridControl = this.grvProduct;
-            this.gridView6.Name = "gridView6";
-            // 
-            // bdsProduct
-            // 
-            this.bdsProduct.DataSource = typeof(LNTKKiosk.Data.Product);
-            // 
-            // colProductId
-            // 
-            this.colProductId.FieldName = "ProductId";
-            this.colProductId.MinWidth = 25;
-            this.colProductId.Name = "colProductId";
-            this.colProductId.Visible = true;
-            this.colProductId.VisibleIndex = 0;
-            this.colProductId.Width = 94;
-            // 
-            // colName
-            // 
-            this.colName.FieldName = "Name";
-            this.colName.MinWidth = 25;
-            this.colName.Name = "colName";
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 1;
-            this.colName.Width = 94;
-            // 
-            // colDescription
-            // 
-            this.colDescription.FieldName = "Description";
-            this.colDescription.MinWidth = 25;
-            this.colDescription.Name = "colDescription";
-            this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 2;
-            this.colDescription.Width = 94;
-            // 
-            // colPicture
-            // 
-            this.colPicture.FieldName = "Picture";
-            this.colPicture.MinWidth = 25;
-            this.colPicture.Name = "colPicture";
-            this.colPicture.Visible = true;
-            this.colPicture.VisibleIndex = 3;
-            this.colPicture.Width = 94;
-            // 
-            // colPrice
-            // 
-            this.colPrice.FieldName = "Price";
-            this.colPrice.MinWidth = 25;
-            this.colPrice.Name = "colPrice";
-            this.colPrice.Visible = true;
-            this.colPrice.VisibleIndex = 4;
-            this.colPrice.Width = 94;
-            // 
-            // colEventProducts
-            // 
-            this.colEventProducts.FieldName = "EventProducts";
-            this.colEventProducts.MinWidth = 25;
-            this.colEventProducts.Name = "colEventProducts";
-            this.colEventProducts.Visible = true;
-            this.colEventProducts.VisibleIndex = 5;
-            this.colEventProducts.Width = 94;
-            // 
-            // colOrderDetails
-            // 
-            this.colOrderDetails.FieldName = "OrderDetails";
-            this.colOrderDetails.MinWidth = 25;
-            this.colOrderDetails.Name = "colOrderDetails";
-            this.colOrderDetails.Visible = true;
-            this.colOrderDetails.VisibleIndex = 6;
-            this.colOrderDetails.Width = 94;
-            // 
-            // colRecipes
-            // 
-            this.colRecipes.FieldName = "Recipes";
-            this.colRecipes.MinWidth = 25;
-            this.colRecipes.Name = "colRecipes";
-            this.colRecipes.Visible = true;
-            this.colRecipes.VisibleIndex = 7;
-            this.colRecipes.Width = 94;
             // 
             // Management
             // 
@@ -290,11 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grvProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProduct)).EndInit();
             this.ResumeLayout(false);
 
@@ -311,20 +227,13 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl grvProduct;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource bdsProduct;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductId;
-        private DevExpress.XtraGrid.Columns.GridColumn colName;
-        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn colPicture;
-        private DevExpress.XtraGrid.Columns.GridColumn colPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn colEventProducts;
-        private DevExpress.XtraGrid.Columns.GridColumn colOrderDetails;
-        private DevExpress.XtraGrid.Columns.GridColumn colRecipes;
+        private ButtonContainer buttonContainer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
     }
 }
 
