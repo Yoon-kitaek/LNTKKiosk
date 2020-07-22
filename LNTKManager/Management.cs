@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LNTKKiosk.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,10 @@ namespace LNTKManager
             InitializeComponent();
         }
 
-       
+        private void Management_Load(object sender, EventArgs e)
+        {
+            bdsCompletedOrder.DataSource = DataRepository.Order.GetwithCompleted();
+            bdsNonCompletedOrder.DataSource = DataRepository.Order.GetwithNonCompletedCustomer();
+        }
     }
 }

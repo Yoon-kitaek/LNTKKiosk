@@ -16,8 +16,8 @@ namespace LNTKManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Management());
-            Application.Run(new Form1());
+            Application.Run(new Management());
+            
         }
     }
 }

@@ -68,12 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevKiller\ProcessKiller.cs" />
-    <Compile Include="Form\BeverageCoffeeMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\BeverageCoffeeMenu.Designer.cs">
-      <DependentUpon>BeverageCoffeeMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\BurgerSetMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,9 +159,6 @@
     <Compile Include="UserControl\XtraUserControl1.Designer.cs">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\BeverageCoffeeMenu.resx">
-      <DependentUpon>BeverageCoffeeMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\BurgerSetMenu.resx">
       <DependentUpon>BurgerSetMenu.cs</DependentUpon>
     </EmbeddedResource>

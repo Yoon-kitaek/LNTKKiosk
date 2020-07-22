@@ -25,6 +25,28 @@ namespace LNTKKiosk.Data
             Delete(order);
         }
 
+        public object GetwithCompleted()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Orders
+                        where x.IsCompleted == true
+                        select x;
+
+            return query.ToList();
+        }
+
+        public object GetwithNonCompletedCustomer()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Orders
+                        where x.IsCompleted == false
+                        select x;
+
+            return query.ToList();
+        }
+
         public int GetMaxId()
         {
             LNTKEntities context = CreateContext();

@@ -150,6 +150,8 @@
       <DependentUpon>TabButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LNTKKiosk.Data.Order.datasource" />
+    <None Include="Properties\DataSources\LNTKKiosk.Data.OrderDetail.datasource" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

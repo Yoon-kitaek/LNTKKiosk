@@ -25,6 +25,8 @@ namespace LNTKKiosk.Data
             Delete(orderDetail);
         }
 
+       
+
         public List<OrderDetail> GetByOrder(int orderId)
         {
             List<OrderDetail> orderDetails = DataRepository.OrderDetail.GetAll();
