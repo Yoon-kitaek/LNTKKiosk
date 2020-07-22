@@ -95,16 +95,6 @@ namespace LNTKCustomer.Form
             form.Show();
         }
 
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // CustomerMenu
-            // 
-            this.ClientSize = new System.Drawing.Size(892, 449);
-            this.Name = "CustomerMenu";
-            this.ResumeLayout(false);
-
-        }
+       
     }
 }
