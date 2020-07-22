@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.lbcPrice = new DevExpress.XtraEditors.LabelControl();
+            this.lbcName = new DevExpress.XtraEditors.LabelControl();
             this.pceThumbnail = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lbcName = new DevExpress.XtraEditors.LabelControl();
-            this.lbcPrice = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceThumbnail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -63,6 +63,62 @@
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
             this.dataLayoutControl1.Size = new System.Drawing.Size(632, 386);
             this.dataLayoutControl1.TabIndex = 4;
+            // 
+            // lbcPrice
+            // 
+            this.lbcPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.lbcPrice.Appearance.Options.UseFont = true;
+            this.lbcPrice.Appearance.Options.UseTextOptions = true;
+            this.lbcPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbcPrice.Location = new System.Drawing.Point(12, 344);
+            this.lbcPrice.Name = "lbcPrice";
+            this.lbcPrice.Size = new System.Drawing.Size(608, 30);
+            this.lbcPrice.StyleController = this.dataLayoutControl1;
+            this.lbcPrice.TabIndex = 6;
+            this.lbcPrice.Text = "label";
+            // 
+            // lbcName
+            // 
+            this.lbcName.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.lbcName.Appearance.Options.UseFont = true;
+            this.lbcName.Appearance.Options.UseTextOptions = true;
+            this.lbcName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcName.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcName.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcName.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcName.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcName.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcName.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcName.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcName.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcName.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcName.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcName.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbcName.Location = new System.Drawing.Point(12, 310);
+            this.lbcName.Name = "lbcName";
+            this.lbcName.Size = new System.Drawing.Size(608, 30);
+            this.lbcName.StyleController = this.dataLayoutControl1;
+            this.lbcName.TabIndex = 5;
+            this.lbcName.Text = "label";
             // 
             // pceThumbnail
             // 
@@ -94,6 +150,24 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.lbcName;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 298);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(612, 34);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.lbcPrice;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 332);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(612, 34);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -124,80 +198,6 @@
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.lbcName;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 298);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(612, 34);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // lbcName
-            // 
-            this.lbcName.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.lbcName.Appearance.Options.UseFont = true;
-            this.lbcName.Appearance.Options.UseTextOptions = true;
-            this.lbcName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcName.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcName.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcName.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcName.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcName.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcName.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcName.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcName.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcName.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcName.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcName.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcName.Location = new System.Drawing.Point(12, 310);
-            this.lbcName.Name = "lbcName";
-            this.lbcName.Size = new System.Drawing.Size(608, 30);
-            this.lbcName.StyleController = this.dataLayoutControl1;
-            this.lbcName.TabIndex = 5;
-            this.lbcName.Text = "label";
-            // 
-            // lbcPrice
-            // 
-            this.lbcPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.lbcPrice.Appearance.Options.UseFont = true;
-            this.lbcPrice.Appearance.Options.UseTextOptions = true;
-            this.lbcPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcPrice.Location = new System.Drawing.Point(12, 344);
-            this.lbcPrice.Name = "lbcPrice";
-            this.lbcPrice.Size = new System.Drawing.Size(608, 30);
-            this.lbcPrice.StyleController = this.dataLayoutControl1;
-            this.lbcPrice.TabIndex = 6;
-            this.lbcPrice.Text = "label";
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.lbcPrice;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 332);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(612, 34);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
             // Thumbnail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -212,12 +212,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pceThumbnail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }

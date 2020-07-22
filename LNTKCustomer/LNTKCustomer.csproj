@@ -45,6 +45,8 @@
     <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -157,6 +159,12 @@
     <Compile Include="UserControl\Thumbnail.Designer.cs">
       <DependentUpon>Thumbnail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\XtraUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\XtraUserControl1.Designer.cs">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\BeverageCoffeeMenu.resx">
       <DependentUpon>BeverageCoffeeMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Thumbnail.resx">
       <DependentUpon>Thumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />

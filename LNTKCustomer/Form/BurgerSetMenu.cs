@@ -16,5 +16,10 @@ namespace LNTKCustomer.Form
         {
             InitializeComponent();
         }
+
+        private void BurgerSetMenu_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
