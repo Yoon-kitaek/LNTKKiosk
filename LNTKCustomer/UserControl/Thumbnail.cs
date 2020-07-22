@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
 using System.IO;
+using LNTKCustomer.Form;
 
 namespace LNTKCustomer.UserControl
 {
@@ -33,10 +34,26 @@ namespace LNTKCustomer.UserControl
             }
             set
             {
-               lbcName.Text = value;
-               lbcPrice.Text = DataRepository.Product.GetByName(lbcName.Text).EventPrice.ToString(); 
-                SetPicture();
             }
+        }
+
+        public void SetValues(string name)
+        {
+            Product product = DataRepository.Product.GetByName(name);
+            lbcName.Text = name;
+            int discountRate = DataRepository.Product.GetDiscountRate(product);
+            if (discountRate > 0)
+            {
+                lbcDiscountSticker.Visible = true;
+                lbcDiscountSticker.Text = $"{discountRate}%";
+
+            }
+            else
+                lbcDiscountSticker.Visible = false;
+
+            DataRepository.Product.SetEventPrice(product);
+            lbcPrice.Text = product.EventPrice.ToString();
+            //   SetPicture();
         }
 
         public void SetPicture()
