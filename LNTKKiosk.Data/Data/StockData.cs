@@ -36,5 +36,24 @@ namespace LNTKKiosk.Data
             return query.FirstOrDefault();
 
         }
+
+        public List<Stock> GetByGroceryId(int groceryId)
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Stocks
+                        where x.GroceryId == groceryId
+                        select new { Stock = x, GroceryName = x.Grocery.Item };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.Stock.GroceryName = item.GroceryName;
+            }
+
+            return items.ConvertAll(x => x.Stock);
+
+        }
     }
 }
