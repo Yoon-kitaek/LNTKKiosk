@@ -8,7 +8,7 @@ namespace LNTKKiosk.Data
 {
     public class DataRepository
     {
-        public static CodeData Code { get; } = new CodeData();
+       
         public static EventData Event { get; } = new EventData();
         public static EventProductData EventProduct { get; } = new EventProductData();
         public static GroceryData Grocery { get; } = new GroceryData();

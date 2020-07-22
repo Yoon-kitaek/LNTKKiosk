@@ -16,7 +16,7 @@ namespace LNTKCustomer.UserControl
         public XtraUserControl1()
         {
             InitializeComponent();
-            labelControl1.Text = Discount
+            
         }
     }
 }
