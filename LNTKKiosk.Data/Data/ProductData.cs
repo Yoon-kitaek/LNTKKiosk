@@ -54,7 +54,7 @@ namespace LNTKKiosk.Data
         {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
             Event @event = new Event();
-            if(list != null)
+            if(list.Count>0)
             {
                 foreach(EventProduct eventProduct in list)
                 {
@@ -80,4 +80,3 @@ namespace LNTKKiosk.Data
         }
     }
 }
-//
