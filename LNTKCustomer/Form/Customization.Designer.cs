@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.selectBeverage1 = new LNTKCustomer.UserControl.SelectBeverage();
-            this.frenchFriesSelection1 = new LNTKCustomer.UserControl.FrenchFriesSelection();
-            this.bvsBeverage = new LNTKCustomer.UserControl.BeverageSelection();
-            this.customizationButton1 = new LNTKCustomer.UserControl.CustomizationButton();
             this.sbtNext = new DevExpress.XtraEditors.SimpleButton();
             this.pceMenuPicture = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -46,6 +42,10 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.selectBeverage1 = new LNTKCustomer.UserControl.SelectBeverage();
+            this.frenchFriesSelection1 = new LNTKCustomer.UserControl.FrenchFriesSelection();
+            this.bvsBeverage = new LNTKCustomer.UserControl.BeverageSelection();
+            this.customizationButton1 = new LNTKCustomer.UserControl.CustomizationButton();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -87,35 +87,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(1123, 535);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // selectBeverage1
-            // 
-            this.selectBeverage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.selectBeverage1.Location = new System.Drawing.Point(5, 324);
-            this.selectBeverage1.Name = "selectBeverage1";
-            this.selectBeverage1.Size = new System.Drawing.Size(1113, 122);
-            this.selectBeverage1.TabIndex = 19;
-            // 
-            // frenchFriesSelection1
-            // 
-            this.frenchFriesSelection1.Location = new System.Drawing.Point(5, 181);
-            this.frenchFriesSelection1.Name = "frenchFriesSelection1";
-            this.frenchFriesSelection1.Size = new System.Drawing.Size(1113, 61);
-            this.frenchFriesSelection1.TabIndex = 18;
-            // 
-            // bvsBeverage
-            // 
-            this.bvsBeverage.Location = new System.Drawing.Point(5, 262);
-            this.bvsBeverage.Name = "bvsBeverage";
-            this.bvsBeverage.Size = new System.Drawing.Size(1113, 52);
-            this.bvsBeverage.TabIndex = 17;
-            // 
-            // customizationButton1
-            // 
-            this.customizationButton1.Location = new System.Drawing.Point(5, 75);
-            this.customizationButton1.Name = "customizationButton1";
-            this.customizationButton1.Size = new System.Drawing.Size(1113, 86);
-            this.customizationButton1.TabIndex = 16;
             // 
             // sbtNext
             // 
@@ -241,6 +212,35 @@
             this.emptySpaceItem5.Name = "emptySpaceItem5";
             this.emptySpaceItem5.Size = new System.Drawing.Size(1123, 10);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // selectBeverage1
+            // 
+            this.selectBeverage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectBeverage1.Location = new System.Drawing.Point(5, 324);
+            this.selectBeverage1.Name = "selectBeverage1";
+            this.selectBeverage1.Size = new System.Drawing.Size(1113, 122);
+            this.selectBeverage1.TabIndex = 19;
+            // 
+            // frenchFriesSelection1
+            // 
+            this.frenchFriesSelection1.Location = new System.Drawing.Point(5, 181);
+            this.frenchFriesSelection1.Name = "frenchFriesSelection1";
+            this.frenchFriesSelection1.Size = new System.Drawing.Size(1113, 61);
+            this.frenchFriesSelection1.TabIndex = 18;
+            // 
+            // bvsBeverage
+            // 
+            this.bvsBeverage.Location = new System.Drawing.Point(5, 262);
+            this.bvsBeverage.Name = "bvsBeverage";
+            this.bvsBeverage.Size = new System.Drawing.Size(1113, 52);
+            this.bvsBeverage.TabIndex = 17;
+            // 
+            // customizationButton1
+            // 
+            this.customizationButton1.Location = new System.Drawing.Point(5, 75);
+            this.customizationButton1.Name = "customizationButton1";
+            this.customizationButton1.Size = new System.Drawing.Size(1113, 86);
+            this.customizationButton1.TabIndex = 16;
             // 
             // layoutControlItem2
             // 
