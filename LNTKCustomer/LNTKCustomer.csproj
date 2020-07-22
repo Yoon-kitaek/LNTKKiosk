@@ -92,12 +92,6 @@
     <Compile Include="Form\Customization.Designer.cs">
       <DependentUpon>Customization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\DeatilSelection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\DeatilSelection.Designer.cs">
-      <DependentUpon>DeatilSelection.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\KingMorningMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Customization.resx">
       <DependentUpon>Customization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\DeatilSelection.resx">
-      <DependentUpon>DeatilSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PlaceSelection.resx">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
