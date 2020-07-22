@@ -53,20 +53,30 @@ namespace LNTKKiosk.Data
         public void SetEventPrice(Product product)
         {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
-            
-            if(list is null)
+            Event @event = new Event();
+            if(list != null)
+            {
+                foreach(EventProduct eventProduct in list)
                 {
-                product.EventPrice = product.Price;
+                    @event = DataRepository.Event.Get(eventProduct.EventId);
+                    if(DateTime.Now < @event.StartTime || DateTime.Now > @event.EndTime )
+                    {
+                        list.Remove(eventProduct);
+                    }
+                }
+                
+                if(list.Count>0)
+                {                
+                    list.OrderByDescending(x=>x.DiscountRate);
+                
+                    product.EventPrice = product.Price * (1-list[0].DiscountRate); 
+
+                    return;
+                }
+            }           
+            product.EventPrice = product.Price;
             
-            }
-            else
-                {  
-                list.OrderByDescending(x=>x.DiscountRate);
-            
-            product.EventPrice = product.Price * (1-list[0].DiscountRate); 
-            
-            }
-          
+            return;
         }
     }
 }
