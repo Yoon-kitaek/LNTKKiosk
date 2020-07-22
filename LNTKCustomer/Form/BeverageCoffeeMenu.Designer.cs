@@ -28,33 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
             this.SuspendLayout();
             // 
-            // label1
+            // uscThumbnail1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(275, 167);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "리뉴얼 중입니다(음료 메뉴란입니다)";
+            this.uscThumbnail1.Label = "label";
+            this.uscThumbnail1.Location = new System.Drawing.Point(12, 2);
+            this.uscThumbnail1.Name = "uscThumbnail1";
+            this.uscThumbnail1.Size = new System.Drawing.Size(472, 329);
+            this.uscThumbnail1.TabIndex = 0;
+            // 
+            // uscThumbnail2
+            // 
+            this.uscThumbnail2.Label = "label";
+            this.uscThumbnail2.Location = new System.Drawing.Point(507, 2);
+            this.uscThumbnail2.Name = "uscThumbnail2";
+            this.uscThumbnail2.Size = new System.Drawing.Size(472, 329);
+            this.uscThumbnail2.TabIndex = 1;
+            // 
+            // uscThumbnail3
+            // 
+            this.uscThumbnail3.Label = "label";
+            this.uscThumbnail3.Location = new System.Drawing.Point(12, 337);
+            this.uscThumbnail3.Name = "uscThumbnail3";
+            this.uscThumbnail3.Size = new System.Drawing.Size(472, 329);
+            this.uscThumbnail3.TabIndex = 2;
+            // 
+            // uscThumbnail4
+            // 
+            this.uscThumbnail4.Label = "label";
+            this.uscThumbnail4.Location = new System.Drawing.Point(507, 337);
+            this.uscThumbnail4.Name = "uscThumbnail4";
+            this.uscThumbnail4.Size = new System.Drawing.Size(472, 329);
+            this.uscThumbnail4.TabIndex = 3;
             // 
             // BeverageCoffeeMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1016, 692);
+            this.Controls.Add(this.uscThumbnail4);
+            this.Controls.Add(this.uscThumbnail3);
+            this.Controls.Add(this.uscThumbnail2);
+            this.Controls.Add(this.uscThumbnail1);
             this.Name = "BeverageCoffeeMenu";
             this.Text = "BeverageCoffeeMenu";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private UserControl.Thumbnail uscThumbnail1;
+        private UserControl.Thumbnail uscThumbnail2;
+        private UserControl.Thumbnail uscThumbnail3;
+        private UserControl.Thumbnail uscThumbnail4;
     }
 }
