@@ -202,28 +202,28 @@
             // 
             // lbcDiscountSticker
             // 
-            this.lbcDiscountSticker.Appearance.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.lbcDiscountSticker.Appearance.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.lbcDiscountSticker.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbcDiscountSticker.Appearance.Options.UseFont = true;
             this.lbcDiscountSticker.Appearance.Options.UseForeColor = true;
             this.lbcDiscountSticker.Appearance.Options.UseTextOptions = true;
             this.lbcDiscountSticker.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbcDiscountSticker.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcDiscountSticker.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.lbcDiscountSticker.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.lbcDiscountSticker.AppearanceDisabled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbcDiscountSticker.AppearanceDisabled.Options.UseFont = true;
             this.lbcDiscountSticker.AppearanceDisabled.Options.UseForeColor = true;
             this.lbcDiscountSticker.AppearanceDisabled.Options.UseTextOptions = true;
             this.lbcDiscountSticker.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbcDiscountSticker.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcDiscountSticker.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.lbcDiscountSticker.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.lbcDiscountSticker.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbcDiscountSticker.AppearanceHovered.Options.UseFont = true;
             this.lbcDiscountSticker.AppearanceHovered.Options.UseForeColor = true;
             this.lbcDiscountSticker.AppearanceHovered.Options.UseTextOptions = true;
             this.lbcDiscountSticker.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbcDiscountSticker.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcDiscountSticker.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.lbcDiscountSticker.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.lbcDiscountSticker.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbcDiscountSticker.AppearancePressed.Options.UseFont = true;
             this.lbcDiscountSticker.AppearancePressed.Options.UseForeColor = true;

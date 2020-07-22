@@ -37,14 +37,19 @@ namespace LNTKCustomer.UserControl
                 Product product = DataRepository.Product.GetByName(value);
                 
                 lbcName.Text = value;
-
-                if (DataRepository.Product.GetDiscountRate(product) > 0)
+                //    int discountRate = DataRepository.Product.GetDiscountRate(product);
+                int discountRate = 10;
+                if (discountRate > 0)
+                { 
                     lbcDiscountSticker.Visible = true;
+                    lbcDiscountSticker.Text = $"{discountRate}%";
+
+                }
                 else
                     lbcDiscountSticker.Visible = false;
                 
-                lbcPrice.Text = DataRepository.Product.GetByName(lbcName.Text).EventPrice.ToString();
-                SetPicture();
+             //   lbcPrice.Text = DataRepository.Product.GetByName(lbcName.Text).EventPrice.ToString();
+             //   SetPicture();
 
             }
         }

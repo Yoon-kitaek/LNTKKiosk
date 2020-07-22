@@ -35,6 +35,7 @@
             this.btnBurger = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnBeverage = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMorningSale = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.thumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,9 +135,18 @@
             this.btnMorningSale.Text = "킹모닝";
             this.btnMorningSale.Click += new System.EventHandler(this.btnMorningSale_Click);
             // 
+            // thumbnail1
+            // 
+            this.thumbnail1.Label = "label";
+            this.thumbnail1.Location = new System.Drawing.Point(361, 70);
+            this.thumbnail1.Name = "thumbnail1";
+            this.thumbnail1.Size = new System.Drawing.Size(460, 345);
+            this.thumbnail1.TabIndex = 2;
+            // 
             // CustomerMenu
             // 
             this.ClientSize = new System.Drawing.Size(892, 449);
+            this.Controls.Add(this.thumbnail1);
             this.Controls.Add(this.accordionControl2);
             this.IsMdiContainer = true;
             this.Name = "CustomerMenu";
@@ -174,5 +184,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnMorningSale;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator10;
+        private UserControl.Thumbnail thumbnail1;
     }
 }
