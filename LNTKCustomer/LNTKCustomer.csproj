@@ -247,9 +247,6 @@
     <None Include="Resources\one.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RightArrow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\LeftArrow.png" />
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +257,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DiscountSticker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiscountSticker.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

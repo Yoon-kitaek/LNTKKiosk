@@ -77,7 +77,7 @@
             // 
             // pceRight
             // 
-            this.pceRight.EditValue = global::LNTKCustomer.Properties.Resources.LeftArrow;
+            this.pceRight.EditValue = global::LNTKCustomer.Properties.Resources.RightArrow;
             this.pceRight.Location = new System.Drawing.Point(865, 244);
             this.pceRight.Margin = new System.Windows.Forms.Padding(5);
             this.pceRight.Name = "pceRight";
