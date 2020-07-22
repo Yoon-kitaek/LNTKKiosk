@@ -130,7 +130,6 @@
             // 
             this.ClientSize = new System.Drawing.Size(892, 449);
             this.Controls.Add(this.accordionControl2);
-            this.IconOptions.Image = global::LNTKCustomer.Properties.Resources._3D햄버거;
             this.IsMdiContainer = true;
             this.Name = "CustomerMenu";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl2)).EndInit();
