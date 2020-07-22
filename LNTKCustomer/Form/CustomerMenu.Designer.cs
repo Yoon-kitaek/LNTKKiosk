@@ -57,6 +57,14 @@
             // 
             // accordionControlElement5
             // 
+            this.accordionControlElement5.Appearance.Disabled.ForeColor = System.Drawing.Color.Red;
+            this.accordionControlElement5.Appearance.Disabled.Options.UseForeColor = true;
+            this.accordionControlElement5.Appearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.accordionControlElement5.Appearance.Hovered.Options.UseForeColor = true;
+            this.accordionControlElement5.Appearance.Normal.ForeColor = System.Drawing.Color.Red;
+            this.accordionControlElement5.Appearance.Normal.Options.UseForeColor = true;
+            this.accordionControlElement5.Appearance.Pressed.ForeColor = System.Drawing.Color.Red;
+            this.accordionControlElement5.Appearance.Pressed.Options.UseForeColor = true;
             this.accordionControlElement5.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_Hamburger_131964;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
