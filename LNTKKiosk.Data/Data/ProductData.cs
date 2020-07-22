@@ -50,6 +50,33 @@ namespace LNTKKiosk.Data
             return context.Products.FirstOrDefault(a => a.Name == name);
         }
 
+        public int GetDiscountRate(Product product)
+        {
+            List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
+            Event @event = new Event();
+            int t = DateTime.Now.Hour * 100 + DateTime.Now.Minute;
+            if (list.Count > 0)
+            {
+                foreach (EventProduct eventProduct in list)
+                {
+                    @event = DataRepository.Event.Get(eventProduct.EventId);
+                    if (t < @event.StartTime || t > @event.EndTime)
+                    {
+                        list.Remove(eventProduct);
+                    }
+                }
+
+                if (list.Count > 0)
+                {
+                    list.OrderByDescending(x => x.DiscountRate);
+
+                    return list[0].DiscountRate;
+                }
+            }
+
+            return 0;
+        }
+
         public void SetEventPrice(Product product)
         {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
