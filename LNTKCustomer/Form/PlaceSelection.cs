@@ -31,5 +31,10 @@ namespace LNTKCustomer.Form
             CustomerMenu form = new CustomerMenu();
             form.Show();
         }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

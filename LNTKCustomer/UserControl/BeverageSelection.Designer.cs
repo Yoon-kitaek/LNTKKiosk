@@ -77,7 +77,7 @@
             this.Controls.Add(this.lbcBurgerCustomization);
             this.Controls.Add(this.pceThree);
             this.Name = "BeverageSelection";
-            this.Size = new System.Drawing.Size(812, 77);
+            this.Size = new System.Drawing.Size(1006, 77);
             ((System.ComponentModel.ISupportInitialize)(this.pceThree.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

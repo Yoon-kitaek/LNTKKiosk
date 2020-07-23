@@ -35,7 +35,7 @@
             this.btnBurger = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnBeverage = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMorningSale = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.thumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.accordionControl2.Location = new System.Drawing.Point(0, 0);
             this.accordionControl2.Name = "accordionControl2";
             this.accordionControl2.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
-            this.accordionControl2.Size = new System.Drawing.Size(260, 449);
+            this.accordionControl2.Size = new System.Drawing.Size(260, 571);
             this.accordionControl2.TabIndex = 0;
             this.accordionControl2.Text = "accordionControl2";
             // 
@@ -152,18 +152,15 @@
             this.btnMorningSale.Text = "킹모닝";
             this.btnMorningSale.Click += new System.EventHandler(this.btnMorningSale_Click);
             // 
-            // thumbnail1
+            // ribbonPage2
             // 
-            this.thumbnail1.Label = "label";
-            this.thumbnail1.Location = new System.Drawing.Point(361, 70);
-            this.thumbnail1.Name = "thumbnail1";
-            this.thumbnail1.Size = new System.Drawing.Size(460, 345);
-            this.thumbnail1.TabIndex = 2;
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
             // 
             // CustomerMenu
             // 
-            this.ClientSize = new System.Drawing.Size(892, 449);
-            this.Controls.Add(this.thumbnail1);
+            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
+            this.ClientSize = new System.Drawing.Size(1047, 571);
             this.Controls.Add(this.accordionControl2);
             this.IsMdiContainer = true;
             this.Name = "CustomerMenu";
@@ -201,6 +198,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnMorningSale;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator10;
-        private UserControl.Thumbnail thumbnail1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
     }
 }

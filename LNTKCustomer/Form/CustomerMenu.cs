@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
+    public partial class CustomerMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public CustomerMenu()
         {
@@ -21,7 +21,7 @@ namespace LNTKCustomer.Form
 
         private void btnRecommendedButton_Click(object sender, EventArgs e)
         {
-            RecommendedMenu form = new RecommendedMenu();
+            ProductThumbnail form = new ProductThumbnail();
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -30,7 +30,7 @@ namespace LNTKCustomer.Form
         private void btnBurger_Click(object sender, EventArgs e)
         {
 
-            BurgerSetMenu form = new BurgerSetMenu();
+            ProductThumbnail form = new ProductThumbnail();
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -38,7 +38,7 @@ namespace LNTKCustomer.Form
 
         private void btnBeverage_Click(object sender, EventArgs e)
         {
-            BeverageCoffeeMenu form = new BeverageCoffeeMenu();
+            ProductThumbnail form = new ProductThumbnail();
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -50,6 +50,11 @@ namespace LNTKCustomer.Form
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+        }
+
+        private void toolboxControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

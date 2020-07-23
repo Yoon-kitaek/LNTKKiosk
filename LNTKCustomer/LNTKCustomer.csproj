@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -68,18 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevKiller\ProcessKiller.cs" />
-    <Compile Include="Form\BeverageCoffeeMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\BeverageCoffeeMenu.Designer.cs">
-      <DependentUpon>BeverageCoffeeMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\BurgerSetMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\BurgerSetMenu.Designer.cs">
-      <DependentUpon>BurgerSetMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\CardPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,12 +172,6 @@
     <Compile Include="UserControl\XtraUserControl1.Designer.cs">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\BeverageCoffeeMenu.resx">
-      <DependentUpon>BeverageCoffeeMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\BurgerSetMenu.resx">
-      <DependentUpon>BurgerSetMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\CardPayment.resx">
       <DependentUpon>CardPayment.cs</DependentUpon>
     </EmbeddedResource>

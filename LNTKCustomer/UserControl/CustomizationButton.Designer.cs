@@ -42,7 +42,7 @@
             this.sbtBurgerCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.sbtBurgerCustomization.Appearance.Options.UseBackColor = true;
             this.sbtBurgerCustomization.Appearance.Options.UseFont = true;
-            this.sbtBurgerCustomization.Location = new System.Drawing.Point(580, 24);
+            this.sbtBurgerCustomization.Location = new System.Drawing.Point(926, 127);
             this.sbtBurgerCustomization.Name = "sbtBurgerCustomization";
             this.sbtBurgerCustomization.Size = new System.Drawing.Size(200, 60);
             this.sbtBurgerCustomization.TabIndex = 14;
@@ -55,7 +55,7 @@
             this.lbcBurgerCustomization.Appearance.Options.UseTextOptions = true;
             this.lbcBurgerCustomization.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbcBurgerCustomization.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcBurgerCustomization.Location = new System.Drawing.Point(211, 41);
+            this.lbcBurgerCustomization.Location = new System.Drawing.Point(557, 142);
             this.lbcBurgerCustomization.Name = "lbcBurgerCustomization";
             this.lbcBurgerCustomization.Size = new System.Drawing.Size(326, 30);
             this.lbcBurgerCustomization.TabIndex = 13;
@@ -63,10 +63,10 @@
             // 
             // pceBurgerPicture
             // 
-            this.pceBurgerPicture.Location = new System.Drawing.Point(79, 3);
+            this.pceBurgerPicture.Location = new System.Drawing.Point(81, 14);
             this.pceBurgerPicture.Name = "pceBurgerPicture";
             this.pceBurgerPicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceBurgerPicture.Size = new System.Drawing.Size(126, 110);
+            this.pceBurgerPicture.Size = new System.Drawing.Size(453, 292);
             this.pceBurgerPicture.TabIndex = 12;
             // 
             // pceOne
@@ -88,7 +88,7 @@
             this.Controls.Add(this.pceBurgerPicture);
             this.Controls.Add(this.pceOne);
             this.Name = "CustomizationButton";
-            this.Size = new System.Drawing.Size(928, 116);
+            this.Size = new System.Drawing.Size(1161, 324);
             ((System.ComponentModel.ISupportInitialize)(this.pceBurgerPicture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceOne.Properties)).EndInit();
             this.ResumeLayout(false);

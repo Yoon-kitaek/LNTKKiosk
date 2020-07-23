@@ -22,14 +22,13 @@ namespace LNTKCustomer.Form
 
         private void Customization_Load(object sender, EventArgs e)
         {
+            if (DesignMode)
+                return;
 
         }
 
         private void sbtBeverageCustomization_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{bvsBeverage.Location.ToString()}");
-            var p = bvsBeverage.Location.WithVertOffset(500);
-            bvsBeverage.Location = bvsBeverage.Location.WithVertOffset(500);
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
