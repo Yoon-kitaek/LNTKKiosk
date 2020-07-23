@@ -15,6 +15,9 @@ namespace LNTKCustomer.Form
     {
         public Payment()
         {
+
+         
+
             InitializeComponent();
         }
 
@@ -22,6 +25,12 @@ namespace LNTKCustomer.Form
         {
             CardPayment form = new CardPayment();
             form.ShowDialog();
+        }
+
+        private void Payment_Load(object sender, EventArgs e)
+        {
+            if (DesignMode)
+                return;
         }
     }
 }

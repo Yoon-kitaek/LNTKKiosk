@@ -229,6 +229,7 @@
     <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.Product.datasource" />
+    <None Include="Properties\DataSources\LNTKKiosk.Data.ProductPackage.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

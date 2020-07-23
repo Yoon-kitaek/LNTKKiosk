@@ -271,6 +271,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Payment";
             this.Text = "Payment";
+            this.Load += new System.EventHandler(this.Payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
