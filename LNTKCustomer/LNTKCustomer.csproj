@@ -117,18 +117,6 @@
     <Compile Include="Form\ProductThumbnail.Designer.cs">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\RecommendedMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\RecommendedMenu.Designer.cs">
-      <DependentUpon>RecommendedMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\ShoppingCart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\ShoppingCart.Designer.cs">
-      <DependentUpon>ShoppingCart.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,12 +154,6 @@
     <Compile Include="UserControl\SelectBeverage.Designer.cs">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.Designer.cs">
-      <DependentUpon>ShoppedProductImages.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\Thumbnail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,12 +184,6 @@
     <EmbeddedResource Include="Form\ProductThumbnail.resx">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\RecommendedMenu.resx">
-      <DependentUpon>RecommendedMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\ShoppingCart.resx">
-      <DependentUpon>ShoppingCart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -229,9 +205,6 @@
     <EmbeddedResource Include="UserControl\SelectBeverage.resx">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\ShoppedProductImages.resx">
-      <DependentUpon>ShoppedProductImages.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Thumbnail.resx">
       <DependentUpon>Thumbnail.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,9 +225,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cart.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ForkAndKnife.png" />
@@ -297,6 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

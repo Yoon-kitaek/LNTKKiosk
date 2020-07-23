@@ -17,29 +17,39 @@ namespace LNTKCustomer.Form
         private const int thumbnailCount = 6;
         private List<UserControl.Thumbnail> thumbnails = new List<UserControl.Thumbnail>();
         private int j = 0;
-        private int categoryid = 10;
+        private int categoryId;
+        public void SetCategoryId(int categoryId)
+        {
+            this.categoryId = categoryId;
+            BindThumbnail();   
+        
+        }
 
+        //categoryid=11 음료
+        //categoryid=12 사이드
         public ProductThumbnail()
         {
             InitializeComponent();
         }
 
+
+
         private void ProductThumbnail_Load(object sender, EventArgs e)
         {
-           
+            categoryId = 10;
             thumbnails.Add(uscThumbnail1);
             thumbnails.Add(uscThumbnail2);
             thumbnails.Add(uscThumbnail3);
             thumbnails.Add(uscThumbnail4);
             thumbnails.Add(uscThumbnail5);
             thumbnails.Add(uscThumbnail6);
-            BindingThumbnail();
+            BindThumbnail();
 
         }
 
-        private void BindingThumbnail()
+        private void BindThumbnail()
         {
-            List<Product> products = DataRepository.Product.FilterbyCatergory(categoryid);
+            List<Product> products = DataRepository.Product.FilterbyCatergory(categoryId);
             for (int i = 0; i < thumbnailCount; i++)
             {
                 if (i + j * thumbnailCount >= products.Count)
@@ -58,19 +68,19 @@ namespace LNTKCustomer.Form
         private void pceLeft_Click(object sender, EventArgs e)
         {
             if (j == 0)
-                j = (DataRepository.Product.FilterbyCatergory(categoryid).Count-1) / thumbnailCount;
+                j = (DataRepository.Product.FilterbyCatergory(categoryId).Count-1) / thumbnailCount;
             else
                 j--;
-            BindingThumbnail();
+            BindThumbnail();
         }
 
         private void pceRight_Click(object sender, EventArgs e)
         {
-            if (j == (DataRepository.Product.FilterbyCatergory(categoryid).Count - 1) / thumbnailCount)
+            if (j == (DataRepository.Product.FilterbyCatergory(categoryId).Count - 1) / thumbnailCount)
                 j = 0;
             else
                 j++;
-            BindingThumbnail();
+            BindThumbnail();
         }
     }
 }
