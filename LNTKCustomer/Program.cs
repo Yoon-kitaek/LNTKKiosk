@@ -29,18 +29,20 @@ namespace LNTKCustomer
 
 
             List<ProductPackage> shoppingList = new List<ProductPackage>();
-            ProductPackage test = new ProductPackage();
-            test.PackageName = "몬스터X 라지 세트";
+            ProductPackage test1 = new ProductPackage();
+            ProductPackage test2 = new ProductPackage();
+            test1.PackageName = "몬스터X 라지 세트";
             List<int> ttt = new List<int>();
             ttt.Add(26);
             ttt.Add(20);
             ttt.Add(21);
-            test.productIds = ttt;
-            shoppingList.Add(test);
-            test.PackageName = "닭갈비버거";
-            ttt.Clear();
-            ttt.Add(27);
-            shoppingList.Add(test);
+            test1.productIds = ttt;
+            shoppingList.Add(test1);
+            test2.PackageName = "닭갈비버거";
+            List<int> ttt2 = new List<int>();
+            ttt2.Add(27);
+            test2.productIds = ttt2;
+            shoppingList.Add(test2);
 
 
 
