@@ -40,6 +40,8 @@
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.selectBeverage1 = new LNTKCustomer.UserControl.SelectBeverage();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnCard = new DevExpress.XtraEditors.SimpleButton();
             this.btnCash = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -55,12 +57,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.selectBeverage1);
             this.layoutControl1.Controls.Add(this.labelControl2);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.btnCard);
@@ -87,7 +91,7 @@
             this.labelControl2.AppearancePressed.Options.UseTextOptions = true;
             this.labelControl2.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(662, 360);
+            this.labelControl2.Location = new System.Drawing.Point(662, 357);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(471, 81);
             this.labelControl2.StyleController = this.layoutControl1;
@@ -107,7 +111,7 @@
             this.labelControl1.AppearancePressed.Options.UseTextOptions = true;
             this.labelControl1.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(102, 360);
+            this.labelControl1.Location = new System.Drawing.Point(102, 357);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(473, 81);
             this.labelControl1.StyleController = this.layoutControl1;
@@ -128,7 +132,8 @@
             this.emptySpaceItem3,
             this.emptySpaceItem6,
             this.layoutControlItem3,
-            this.layoutControlItem4});
+            this.layoutControlItem4,
+            this.layoutControlItem5});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1226, 811);
             this.Root.TextVisible = false;
@@ -136,41 +141,41 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(90, 433);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(90, 430);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(477, 358);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(477, 313);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 82);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 79);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(90, 709);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(90, 664);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(650, 433);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(650, 430);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(475, 358);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(475, 313);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(567, 82);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(567, 79);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(83, 709);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(83, 664);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(1125, 82);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(1125, 79);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(81, 709);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(81, 664);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
@@ -178,13 +183,13 @@
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(1206, 82);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(1206, 79);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.labelControl1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(90, 348);
+            this.layoutControlItem3.Location = new System.Drawing.Point(90, 345);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(477, 85);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -193,17 +198,33 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.labelControl2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(650, 348);
+            this.layoutControlItem4.Location = new System.Drawing.Point(650, 345);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(475, 85);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // selectBeverage1
+            // 
+            this.selectBeverage1.Location = new System.Drawing.Point(12, 755);
+            this.selectBeverage1.Name = "selectBeverage1";
+            this.selectBeverage1.Size = new System.Drawing.Size(1202, 44);
+            this.selectBeverage1.TabIndex = 8;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.selectBeverage1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 743);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(1206, 48);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
             // btnCard
             // 
             this.btnCard.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.payment;
             this.btnCard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCard.Location = new System.Drawing.Point(662, 94);
+            this.btnCard.Location = new System.Drawing.Point(662, 91);
             this.btnCard.Name = "btnCard";
             this.btnCard.Size = new System.Drawing.Size(471, 262);
             this.btnCard.StyleController = this.layoutControl1;
@@ -214,7 +235,7 @@
             // 
             this.btnCash.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.cash;
             this.btnCash.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCash.Location = new System.Drawing.Point(102, 94);
+            this.btnCash.Location = new System.Drawing.Point(102, 91);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(473, 262);
             this.btnCash.StyleController = this.layoutControl1;
@@ -223,7 +244,7 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btnCash;
-            this.layoutControlItem1.Location = new System.Drawing.Point(90, 82);
+            this.layoutControlItem1.Location = new System.Drawing.Point(90, 79);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(477, 266);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -232,7 +253,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnCard;
-            this.layoutControlItem2.Location = new System.Drawing.Point(650, 82);
+            this.layoutControlItem2.Location = new System.Drawing.Point(650, 79);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(475, 266);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -257,6 +278,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
@@ -281,5 +303,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private UserControl.SelectBeverage selectBeverage1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }

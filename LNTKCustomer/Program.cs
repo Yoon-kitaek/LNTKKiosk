@@ -24,7 +24,7 @@ namespace LNTKCustomer
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerMenu());
+            Application.Run(new ShoppingCart());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
