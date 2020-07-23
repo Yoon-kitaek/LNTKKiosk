@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CustomerMenu : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
     {
         public CustomerMenu()
         {

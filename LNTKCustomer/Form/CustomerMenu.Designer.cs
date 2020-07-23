@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.accordionControl2 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator10 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
@@ -36,7 +37,14 @@
             this.btnBeverage = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMorningSale = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // accordionControl2
@@ -157,14 +165,39 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit1.EditValue = global::LNTKCustomer.Properties.Resources.Cart;
+            this.pictureEdit1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.pictureEdit1.Location = new System.Drawing.Point(2, 2);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.ZoomPercent = 20D;
+            this.pictureEdit1.Size = new System.Drawing.Size(124, 62);
+            this.pictureEdit1.TabIndex = 5;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.pictureEdit1);
+            this.panelControl1.Location = new System.Drawing.Point(907, 12);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(128, 66);
+            this.panelControl1.TabIndex = 7;
+            // 
             // CustomerMenu
             // 
-            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.ClientSize = new System.Drawing.Size(1047, 571);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.accordionControl2);
             this.IsMdiContainer = true;
             this.Name = "CustomerMenu";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,5 +232,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator10;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }
