@@ -73,8 +73,7 @@ namespace LNTKKiosk.Data
                     if (t > @event.StartTime && t < @event.EndTime)
                     {
                         listfiltered.Add(eventProduct);
-                    }
-                   
+                    } 
                 }
 
                 if (listfiltered.Count() > 0)
@@ -90,7 +89,7 @@ namespace LNTKKiosk.Data
 
         public void SetEventPrice(Product product)
         {
-            product.EventPrice = product.Price * (1 - DataRepository.Product.GetDiscountRate(product));
+            product.EventPrice = product.Price * (100 - DataRepository.Product.GetDiscountRate(product))/100;
             return;
         }
     }

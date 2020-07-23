@@ -11,7 +11,7 @@ namespace LNTKCustomer
 {
     static class Program
     {
-        ////ㄹ
+        ////
         ///////////////////////////ㄹㄹ
         /// <summary>
         /// The main entry point for the application.
@@ -24,7 +24,7 @@ namespace LNTKCustomer
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Payment());
+            Application.Run(new RecommendedMenu());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)

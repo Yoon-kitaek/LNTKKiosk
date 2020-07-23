@@ -207,6 +207,9 @@
     <EmbeddedResource Include="Form\ProductThumbnail.resx">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\RecommendedMenu.resx">
+      <DependentUpon>RecommendedMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -265,9 +268,6 @@
     <None Include="Resources\one.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RightArrow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\LeftArrow.png" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +290,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\카드결제리더기.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiscountSticker.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

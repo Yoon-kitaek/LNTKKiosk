@@ -41,7 +41,7 @@ namespace LNTKCustomer.UserControl
         {
             Product product = DataRepository.Product.GetByName(name);
             lbcName.Text = name;
-            int discountRate = DataRepository.Product.GetDiscountRate(product);
+            int discountRate = DataRepository.Product.GetDiscountRate(product);      
             if (discountRate > 0)
             {
                 lbcDiscountSticker.Visible = true;
