@@ -83,9 +83,9 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DiscountSticker {
+        internal static System.Drawing.Bitmap cash {
             get {
-                object obj = ResourceManager.GetObject("DiscountSticker", resourceCulture);
+                object obj = ResourceManager.GetObject("cash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +133,16 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NFC카드결제단말기 {
+            get {
+                object obj = ResourceManager.GetObject("NFC카드결제단말기", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap one {
             get {
                 object obj = ResourceManager.GetObject("one", resourceCulture);
@@ -146,6 +156,16 @@ namespace LNTKCustomer.Properties {
         internal static System.Drawing.Bitmap RightArrow {
             get {
                 object obj = ResourceManager.GetObject("RightArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap payment {
+            get {
+                object obj = ResourceManager.GetObject("payment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +246,26 @@ namespace LNTKCustomer.Properties {
         internal static System.Drawing.Bitmap 장애인전용 {
             get {
                 object obj = ResourceManager.GetObject("장애인전용", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap 카드결제리더기 {
+            get {
+                object obj = ResourceManager.GetObject("카드결제리더기", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap 카드리더기 {
+            get {
+                object obj = ResourceManager.GetObject("카드리더기", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

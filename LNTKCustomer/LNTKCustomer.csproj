@@ -80,6 +80,12 @@
     <Compile Include="Form\BurgerSetMenu.Designer.cs">
       <DependentUpon>BurgerSetMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\CardPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CardPayment.Designer.cs">
+      <DependentUpon>CardPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     </Compile>
     <Compile Include="Form\LunchDiscountMenu.Designer.cs">
       <DependentUpon>LunchDiscountMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\PlaceSelection.cs">
       <SubType>Form</SubType>
@@ -177,11 +189,17 @@
     <EmbeddedResource Include="Form\BurgerSetMenu.resx">
       <DependentUpon>BurgerSetMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\CardPayment.resx">
+      <DependentUpon>CardPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Customization.resx">
       <DependentUpon>Customization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PlaceSelection.resx">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
@@ -259,7 +277,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DiscountSticker.png" />
+    <None Include="Resources\payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NFC카드결제단말기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\카드리더기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\카드결제리더기.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DiscountSticker.svg" />
