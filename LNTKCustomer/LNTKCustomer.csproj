@@ -87,6 +87,18 @@
     <Compile Include="Form\Customization.Designer.cs">
       <DependentUpon>Customization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\KingMorningMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\KingMorningMenu.Designer.cs">
+      <DependentUpon>KingMorningMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LunchDiscountMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LunchDiscountMenu.Designer.cs">
+      <DependentUpon>LunchDiscountMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Payment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,8 +117,12 @@
     <Compile Include="Form\ProductThumbnail.Designer.cs">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ShoppingCart.cs" />
-    <Compile Include="Form\ShoppingCart.Designer.cs" />
+    <Compile Include="Form\ShoppingCart.cs">
+<SubType>Form</SubType>
+</Compile>
+    <Compile Include="Form\ShoppingCart.Designer.cs">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,9 +160,9 @@
     <Compile Include="UserControl\SelectBeverage.Designer.cs">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.cs">
+    <Compile Include="UserControl\ShoppedProductImages.cs" >
       <SubType>UserControl</SubType>
-    </Compile>
+    </Compile>	
     <Compile Include="UserControl\ShoppedProductImages.Designer.cs">
       <DependentUpon>ShoppedProductImages.cs</DependentUpon>
     </Compile>
@@ -180,7 +196,9 @@
     <EmbeddedResource Include="Form\ProductThumbnail.resx">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ShoppingCart.resx" />
+    <EmbeddedResource Include="Form\ShoppingCart.resx">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
