@@ -30,28 +30,33 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pceRight = new DevExpress.XtraEditors.PictureEdit();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
             this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
             this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pceRight = new DevExpress.XtraEditors.PictureEdit();
-            this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
+            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
+            this.lbcPackageName = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lbcPackageName);
             this.layoutControl1.Controls.Add(this.tableLayoutPanel1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -74,41 +79,15 @@
             this.tableLayoutPanel1.Controls.Add(this.uscThumbnail1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.uscThumbnail2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.uscThumbnail3, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.uscThumbnail4, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 57);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(777, 345);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(777, 300);
             this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // uscThumbnail1
-            // 
-            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail1.Label = "label";
-            this.uscThumbnail1.Location = new System.Drawing.Point(49, 3);
-            this.uscThumbnail1.Name = "uscThumbnail1";
-            this.uscThumbnail1.Size = new System.Drawing.Size(164, 339);
-            this.uscThumbnail1.TabIndex = 0;
-            // 
-            // uscThumbnail2
-            // 
-            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail2.Label = "label";
-            this.uscThumbnail2.Location = new System.Drawing.Point(219, 3);
-            this.uscThumbnail2.Name = "uscThumbnail2";
-            this.uscThumbnail2.Size = new System.Drawing.Size(164, 339);
-            this.uscThumbnail2.TabIndex = 1;
-            // 
-            // uscThumbnail3
-            // 
-            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail3.Label = "label";
-            this.uscThumbnail3.Location = new System.Drawing.Point(389, 3);
-            this.uscThumbnail3.Name = "uscThumbnail3";
-            this.uscThumbnail3.Size = new System.Drawing.Size(164, 339);
-            this.uscThumbnail3.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
@@ -123,8 +102,22 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(45, 339);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(45, 294);
             this.tableLayoutPanel2.TabIndex = 9;
+            // 
+            // pceRight
+            // 
+            this.pceRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceRight.EditValue = global::LNTKCustomer.Properties.Resources.RightArrow;
+            this.pceRight.Location = new System.Drawing.Point(5, 122);
+            this.pceRight.Margin = new System.Windows.Forms.Padding(5);
+            this.pceRight.Name = "pceRight";
+            this.pceRight.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceRight.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceRight.Size = new System.Drawing.Size(35, 48);
+            this.pceRight.StyleController = this.layoutControl1;
+            this.pceRight.TabIndex = 7;
+            this.pceRight.Click += new System.EventHandler(this.pceRight_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -139,8 +132,22 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(40, 339);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(40, 294);
             this.tableLayoutPanel3.TabIndex = 10;
+            // 
+            // pceLeft
+            // 
+            this.pceLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceLeft.EditValue = global::LNTKCustomer.Properties.Resources.LeftArrow;
+            this.pceLeft.Location = new System.Drawing.Point(4, 121);
+            this.pceLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.pceLeft.Name = "pceLeft";
+            this.pceLeft.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceLeft.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceLeft.Size = new System.Drawing.Size(32, 50);
+            this.pceLeft.StyleController = this.layoutControl1;
+            this.pceLeft.TabIndex = 6;
+            this.pceLeft.Click += new System.EventHandler(this.pceLeft_Click);
             // 
             // Root
             // 
@@ -149,7 +156,8 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(801, 369);
             this.Root.TextVisible = false;
@@ -157,37 +165,81 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.tableLayoutPanel1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 45);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(781, 349);
+            this.layoutControlItem1.Size = new System.Drawing.Size(781, 304);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // pceRight
+            // uscThumbnail1
             // 
-            this.pceRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceRight.EditValue = global::LNTKCustomer.Properties.Resources.RightArrow;
-            this.pceRight.Location = new System.Drawing.Point(5, 140);
-            this.pceRight.Margin = new System.Windows.Forms.Padding(5);
-            this.pceRight.Name = "pceRight";
-            this.pceRight.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceRight.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceRight.Size = new System.Drawing.Size(35, 57);
-            this.pceRight.StyleController = this.layoutControl1;
-            this.pceRight.TabIndex = 7;
+            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail1.Label = "label";
+            this.uscThumbnail1.Location = new System.Drawing.Point(49, 3);
+            this.uscThumbnail1.Name = "uscThumbnail1";
+            this.uscThumbnail1.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail1.TabIndex = 0;
             // 
-            // pceLeft
+            // uscThumbnail2
             // 
-            this.pceLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceLeft.EditValue = global::LNTKCustomer.Properties.Resources.LeftArrow;
-            this.pceLeft.Location = new System.Drawing.Point(4, 139);
-            this.pceLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.pceLeft.Name = "pceLeft";
-            this.pceLeft.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceLeft.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceLeft.Size = new System.Drawing.Size(32, 59);
-            this.pceLeft.StyleController = this.layoutControl1;
-            this.pceLeft.TabIndex = 6;
+            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail2.Label = "label";
+            this.uscThumbnail2.Location = new System.Drawing.Point(219, 3);
+            this.uscThumbnail2.Name = "uscThumbnail2";
+            this.uscThumbnail2.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail2.TabIndex = 1;
+            // 
+            // uscThumbnail3
+            // 
+            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail3.Label = "label";
+            this.uscThumbnail3.Location = new System.Drawing.Point(389, 3);
+            this.uscThumbnail3.Name = "uscThumbnail3";
+            this.uscThumbnail3.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail3.TabIndex = 2;
+            // 
+            // uscThumbnail4
+            // 
+            this.uscThumbnail4.Label = "label";
+            this.uscThumbnail4.Location = new System.Drawing.Point(559, 3);
+            this.uscThumbnail4.Name = "uscThumbnail4";
+            this.uscThumbnail4.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail4.TabIndex = 11;
+            // 
+            // lbcPackageName
+            // 
+            this.lbcPackageName.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.Appearance.Options.UseFont = true;
+            this.lbcPackageName.Appearance.Options.UseTextOptions = true;
+            this.lbcPackageName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.AppearanceDisabled.Options.UseFont = true;
+            this.lbcPackageName.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.AppearanceHovered.Options.UseFont = true;
+            this.lbcPackageName.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.AppearancePressed.Options.UseFont = true;
+            this.lbcPackageName.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbcPackageName.Location = new System.Drawing.Point(12, 12);
+            this.lbcPackageName.Name = "lbcPackageName";
+            this.lbcPackageName.Size = new System.Drawing.Size(777, 41);
+            this.lbcPackageName.StyleController = this.layoutControl1;
+            this.lbcPackageName.TabIndex = 7;
+            this.lbcPackageName.Text = "패키지 이름";
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.lbcPackageName;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(781, 45);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // ShoppedProductImages
             // 
@@ -200,11 +252,12 @@
             this.layoutControl1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +275,8 @@
         private DevExpress.XtraEditors.PictureEdit pceLeft;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private Thumbnail uscThumbnail4;
+        private DevExpress.XtraEditors.LabelControl lbcPackageName;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

@@ -15,7 +15,7 @@ namespace LNTKCustomer.UserControl
 {
     public partial class ShoppedProductImages : DevExpress.XtraEditors.XtraUserControl
     {
-        private const int thumbnailCount = 3;
+        private const int thumbnailCount = 4;
         private List<UserControl.Thumbnail> thumbnails = new List<UserControl.Thumbnail>();
         private int j = 0;
         List<ProductPackage> shoppinglist = new List<ProductPackage>();
@@ -26,6 +26,7 @@ namespace LNTKCustomer.UserControl
             thumbnails.Add(uscThumbnail1);
             thumbnails.Add(uscThumbnail2);
             thumbnails.Add(uscThumbnail3);
+            thumbnails.Add(uscThumbnail4);
         }
 
         public void SetShoppingList (List<ProductPackage> list)
@@ -35,6 +36,7 @@ namespace LNTKCustomer.UserControl
         }
         private void BindingThumbnail()
         {
+            lbcPackageName.Text = shoppinglist[j].PackageName;
             for (int i = 0; i < thumbnailCount; i++)
             {
                 if (shoppinglist[j].productIds.Count <= i )
@@ -72,7 +74,6 @@ namespace LNTKCustomer.UserControl
         {
             ArrowClickedEventArgs args = new ArrowClickedEventArgs(isRight);
             OnArrowClicked(args);
-            MessageBox.Show($"{j} && {shoppinglist.Count}");
             if (isRight == true)
             {
                 if (j == shoppinglist.Count-1)
