@@ -38,8 +38,7 @@ namespace LNTKCustomer.Form
 
         private void btnMorningSale_Click(object sender, EventArgs e)
         {
-            KingMorningMenu form = new KingMorningMenu();
-            form.Show();
+           
          
         }
 
