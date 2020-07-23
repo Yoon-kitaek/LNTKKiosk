@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Thumbnail));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.lbcPrice = new DevExpress.XtraEditors.LabelControl();
-            this.lbcName = new DevExpress.XtraEditors.LabelControl();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pceThumbnail = new DevExpress.XtraEditors.PictureEdit();
+            this.lbcName = new DevExpress.XtraEditors.LabelControl();
+            this.lbcPrice = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.lbcDiscountSticker = new DevExpress.XtraEditors.LabelControl();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceThumbnail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -62,32 +62,31 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(675, 448);
             this.dataLayoutControl1.TabIndex = 4;
             // 
-            // lbcPrice
+            // tableLayoutPanel1
             // 
-            this.lbcPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.lbcPrice.Appearance.Options.UseFont = true;
-            this.lbcPrice.Appearance.Options.UseTextOptions = true;
-            this.lbcPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcPrice.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lbcPrice.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lbcPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcPrice.Location = new System.Drawing.Point(3, 384);
-            this.lbcPrice.Name = "lbcPrice";
-            this.lbcPrice.Size = new System.Drawing.Size(645, 30);
-            this.lbcPrice.TabIndex = 6;
-            this.lbcPrice.Text = "label";
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.pceThumbnail, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbcName, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbcPrice, 0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(651, 424);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // pceThumbnail
+            // 
+            this.pceThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceThumbnail.Location = new System.Drawing.Point(3, 3);
+            this.pceThumbnail.Name = "pceThumbnail";
+            this.pceThumbnail.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceThumbnail.Size = new System.Drawing.Size(645, 333);
+            this.pceThumbnail.TabIndex = 4;
             // 
             // lbcName
             // 
@@ -117,14 +116,32 @@
             this.lbcName.TabIndex = 5;
             this.lbcName.Text = "label";
             // 
-            // pceThumbnail
+            // lbcPrice
             // 
-            this.pceThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceThumbnail.Location = new System.Drawing.Point(3, 3);
-            this.pceThumbnail.Name = "pceThumbnail";
-            this.pceThumbnail.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceThumbnail.Size = new System.Drawing.Size(645, 333);
-            this.pceThumbnail.TabIndex = 4;
+            this.lbcPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.lbcPrice.Appearance.Options.UseFont = true;
+            this.lbcPrice.Appearance.Options.UseTextOptions = true;
+            this.lbcPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcPrice.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lbcPrice.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lbcPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbcPrice.Location = new System.Drawing.Point(3, 384);
+            this.lbcPrice.Name = "lbcPrice";
+            this.lbcPrice.Size = new System.Drawing.Size(645, 30);
+            this.lbcPrice.TabIndex = 6;
+            this.lbcPrice.Text = "label";
             // 
             // layoutControlGroup1
             // 
@@ -135,6 +152,15 @@
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(675, 448);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.tableLayoutPanel1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(655, 428);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
             // 
             // Root
             // 
@@ -168,8 +194,10 @@
             // 
             // lbcDiscountSticker
             // 
+            this.lbcDiscountSticker.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.lbcDiscountSticker.Appearance.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.lbcDiscountSticker.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbcDiscountSticker.Appearance.Options.UseBackColor = true;
             this.lbcDiscountSticker.Appearance.Options.UseFont = true;
             this.lbcDiscountSticker.Appearance.Options.UseForeColor = true;
             this.lbcDiscountSticker.Appearance.Options.UseTextOptions = true;
@@ -205,33 +233,6 @@
             this.lbcDiscountSticker.TabIndex = 7;
             this.lbcDiscountSticker.Text = "할인률";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.pceThumbnail, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbcName, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbcPrice, 0, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(651, 424);
-            this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.tableLayoutPanel1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(655, 428);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
             // Thumbnail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -244,15 +245,15 @@
             this.Click += new System.EventHandler(this.Thumbnail_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceThumbnail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }

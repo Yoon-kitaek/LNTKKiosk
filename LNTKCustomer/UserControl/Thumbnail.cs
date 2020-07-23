@@ -23,7 +23,7 @@ namespace LNTKCustomer.UserControl
 
         private void Thumbnail_Load(object sender, EventArgs e)
         {
-            lbcName.Width = pceThumbnail.Width;
+            lbcDiscountSticker.Parent = pceThumbnail;
         }
 
         public string Label

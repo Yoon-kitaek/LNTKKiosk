@@ -30,16 +30,10 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.frenchFriesSelection1 = new LNTKCustomer.UserControl.FrenchFriesSelection();
-            this.bvsBeverage = new LNTKCustomer.UserControl.BeverageSelection();
-            this.customizationButton1 = new LNTKCustomer.UserControl.CustomizationButton();
             this.sbtNext = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -47,14 +41,17 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.frenchFriesSelection1 = new LNTKCustomer.UserControl.FrenchFriesSelection();
+            this.bvsBeverage = new LNTKCustomer.UserControl.BeverageSelection();
+            this.customizationButton1 = new LNTKCustomer.UserControl.CustomizationButton();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
@@ -62,6 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -100,27 +100,6 @@
             this.simpleButton1.TabIndex = 20;
             this.simpleButton1.Text = "결제하기";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // frenchFriesSelection1
-            // 
-            this.frenchFriesSelection1.Location = new System.Drawing.Point(5, 395);
-            this.frenchFriesSelection1.Name = "frenchFriesSelection1";
-            this.frenchFriesSelection1.Size = new System.Drawing.Size(1113, 94);
-            this.frenchFriesSelection1.TabIndex = 18;
-            // 
-            // bvsBeverage
-            // 
-            this.bvsBeverage.Location = new System.Drawing.Point(5, 527);
-            this.bvsBeverage.Name = "bvsBeverage";
-            this.bvsBeverage.Size = new System.Drawing.Size(1113, 170);
-            this.bvsBeverage.TabIndex = 17;
-            // 
-            // customizationButton1
-            // 
-            this.customizationButton1.Location = new System.Drawing.Point(5, 55);
-            this.customizationButton1.Name = "customizationButton1";
-            this.customizationButton1.Size = new System.Drawing.Size(1113, 319);
-            this.customizationButton1.TabIndex = 16;
             // 
             // sbtNext
             // 
@@ -175,33 +154,6 @@
             this.emptySpaceItem5.Name = "emptySpaceItem5";
             this.emptySpaceItem5.Size = new System.Drawing.Size(1123, 11);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.customizationButton1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 50);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1123, 329);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.bvsBeverage;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 522);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1123, 180);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.frenchFriesSelection1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 390);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(1123, 104);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
             // 
             // emptySpaceItem6
             // 
@@ -261,6 +213,54 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(1123, 50);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // frenchFriesSelection1
+            // 
+            this.frenchFriesSelection1.Location = new System.Drawing.Point(5, 395);
+            this.frenchFriesSelection1.Name = "frenchFriesSelection1";
+            this.frenchFriesSelection1.Size = new System.Drawing.Size(1113, 94);
+            this.frenchFriesSelection1.TabIndex = 18;
+            // 
+            // bvsBeverage
+            // 
+            this.bvsBeverage.Location = new System.Drawing.Point(5, 527);
+            this.bvsBeverage.Name = "bvsBeverage";
+            this.bvsBeverage.Size = new System.Drawing.Size(1113, 170);
+            this.bvsBeverage.TabIndex = 17;
+            // 
+            // customizationButton1
+            // 
+            this.customizationButton1.Location = new System.Drawing.Point(5, 55);
+            this.customizationButton1.Name = "customizationButton1";
+            this.customizationButton1.Size = new System.Drawing.Size(1113, 319);
+            this.customizationButton1.TabIndex = 16;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.customizationButton1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(1123, 329);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.bvsBeverage;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 522);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(1123, 180);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.frenchFriesSelection1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 390);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(1123, 104);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
             // Customization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -277,9 +277,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
@@ -287,6 +284,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
