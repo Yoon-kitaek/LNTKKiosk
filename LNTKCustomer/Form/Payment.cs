@@ -20,7 +20,8 @@ namespace LNTKCustomer.Form
 
         private void btnCard_Click(object sender, EventArgs e)
         {
-            //결제창윈폼
+            CardPayment form = new CardPayment();
+            form.ShowDialog();
         }
     }
 }
