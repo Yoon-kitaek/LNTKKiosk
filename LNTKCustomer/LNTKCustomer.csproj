@@ -117,7 +117,9 @@
     <Compile Include="Form\ProductThumbnail.Designer.cs">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ShoppingCart.cs" />
+    <Compile Include="Form\ShoppingCart.cs">
+<SubType>Form</SubType>
+</Compile>
     <Compile Include="Form\ShoppingCart.Designer.cs">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </Compile>
@@ -158,7 +160,9 @@
     <Compile Include="UserControl\SelectBeverage.Designer.cs">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.cs" />
+    <Compile Include="UserControl\ShoppedProductImages.cs" >
+      <SubType>UserControl</SubType>
+    </Compile>	
     <Compile Include="UserControl\ShoppedProductImages.Designer.cs">
       <DependentUpon>ShoppedProductImages.cs</DependentUpon>
     </Compile>
