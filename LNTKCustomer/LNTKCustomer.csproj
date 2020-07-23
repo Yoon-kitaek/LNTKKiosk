@@ -189,6 +189,9 @@
     <EmbeddedResource Include="Form\ProductThumbnail.resx">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\RecommendedMenu.resx">
+      <DependentUpon>RecommendedMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

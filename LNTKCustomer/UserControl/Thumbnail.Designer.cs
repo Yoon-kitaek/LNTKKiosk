@@ -34,31 +34,27 @@
             this.lbcName = new DevExpress.XtraEditors.LabelControl();
             this.pceThumbnail = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.lbcDiscountSticker = new DevExpress.XtraEditors.LabelControl();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceThumbnail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
-            this.dataLayoutControl1.Controls.Add(this.lbcPrice);
-            this.dataLayoutControl1.Controls.Add(this.lbcName);
-            this.dataLayoutControl1.Controls.Add(this.pceThumbnail);
+            this.dataLayoutControl1.Controls.Add(this.tableLayoutPanel1);
             this.dataLayoutControl1.Location = new System.Drawing.Point(12, 12);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(944, 243, 812, 500);
@@ -87,10 +83,9 @@
             this.lbcPrice.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lbcPrice.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lbcPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcPrice.Location = new System.Drawing.Point(12, 406);
+            this.lbcPrice.Location = new System.Drawing.Point(3, 384);
             this.lbcPrice.Name = "lbcPrice";
-            this.lbcPrice.Size = new System.Drawing.Size(651, 30);
-            this.lbcPrice.StyleController = this.dataLayoutControl1;
+            this.lbcPrice.Size = new System.Drawing.Size(645, 30);
             this.lbcPrice.TabIndex = 6;
             this.lbcPrice.Text = "label";
             // 
@@ -115,20 +110,20 @@
             this.lbcName.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lbcName.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lbcName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcName.Location = new System.Drawing.Point(12, 372);
+            this.lbcName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbcName.Location = new System.Drawing.Point(3, 342);
             this.lbcName.Name = "lbcName";
-            this.lbcName.Size = new System.Drawing.Size(651, 30);
-            this.lbcName.StyleController = this.dataLayoutControl1;
+            this.lbcName.Size = new System.Drawing.Size(645, 36);
             this.lbcName.TabIndex = 5;
             this.lbcName.Text = "label";
             // 
             // pceThumbnail
             // 
-            this.pceThumbnail.Location = new System.Drawing.Point(12, 12);
+            this.pceThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceThumbnail.Location = new System.Drawing.Point(3, 3);
             this.pceThumbnail.Name = "pceThumbnail";
             this.pceThumbnail.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceThumbnail.Size = new System.Drawing.Size(651, 356);
-            this.pceThumbnail.StyleController = this.dataLayoutControl1;
+            this.pceThumbnail.Size = new System.Drawing.Size(645, 333);
             this.pceThumbnail.TabIndex = 4;
             // 
             // layoutControlGroup1
@@ -136,39 +131,10 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4});
+            this.layoutControlItem5});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(675, 448);
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.pceThumbnail;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(655, 360);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.lbcName;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 360);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(655, 34);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.lbcPrice;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 394);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(655, 34);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
             // 
             // Root
             // 
@@ -231,13 +197,40 @@
             this.lbcDiscountSticker.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbcDiscountSticker.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lbcDiscountSticker.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcDiscountSticker.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("labelControl1.ImageOptions.Image")));
+            this.lbcDiscountSticker.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("lbcDiscountSticker.ImageOptions.Image")));
             this.lbcDiscountSticker.Location = new System.Drawing.Point(24, 24);
             this.lbcDiscountSticker.MaximumSize = new System.Drawing.Size(200, 200);
             this.lbcDiscountSticker.Name = "lbcDiscountSticker";
             this.lbcDiscountSticker.Size = new System.Drawing.Size(200, 191);
             this.lbcDiscountSticker.TabIndex = 7;
             this.lbcDiscountSticker.Text = "할인률";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.pceThumbnail, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbcName, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbcPrice, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(651, 424);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.tableLayoutPanel1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(655, 428);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
             // 
             // Thumbnail
             // 
@@ -253,13 +246,13 @@
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pceThumbnail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,14 +262,13 @@
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private DevExpress.XtraEditors.PictureEdit pceThumbnail;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.LabelControl lbcName;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.LabelControl lbcPrice;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.LabelControl lbcDiscountSticker;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }
