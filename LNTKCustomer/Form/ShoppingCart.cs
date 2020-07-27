@@ -15,25 +15,19 @@ namespace LNTKCustomer.Form
 {
     public partial class ShoppingCart : DevExpress.XtraEditors.XtraForm
     {
-        List<ProductPackage> shoppingList = new List<ProductPackage>();
-        List<Product> shoppedProduct = new List<Product>();
+        List<ShoppedItem> shoppingList = new List<ShoppedItem>();
 
-        public ShoppingCart(List <ProductPackage> shoppingList)
+        public ShoppingCart(List <ShoppedItem> shoppingList)
         {
             InitializeComponent();
             this.shoppingList = shoppingList;
-            foreach (ProductPackage productPackage in shoppingList)
-            {
-                for (int i = 0; i < productPackage.Quantity; i++)
-                    shoppedProduct.Add(DataRepository.Product.Get(productPackage.productIds[i]));
-            }
             productBindingSource.DataSource = this.shoppingList;
 
         }
 
         private void ShoppingCart_Load(object sender, EventArgs e)
         {
-       //     shoppedProductImages1.SetShoppingList(shoppingList);
+            uscShoppedItemThumbnail.SetShoppingList(shoppingList);
         }
 
  

@@ -29,72 +29,72 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.accordionControl2 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.adcMenuCategory = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.adcLogo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator10 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.btnRecommendedButton = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnBurger = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnBeverage = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMorningSale = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.pceShoppingCart = new DevExpress.XtraEditors.PictureEdit();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            this.pcnShoppingCart = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.adcMenuCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceShoppingCart.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcnShoppingCart)).BeginInit();
+            this.pcnShoppingCart.SuspendLayout();
             this.SuspendLayout();
             // 
-            // accordionControl2
+            // adcMenuCategory
             // 
-            this.accordionControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accordionControl2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement5,
+            this.adcMenuCategory.Dock = System.Windows.Forms.DockStyle.Left;
+            this.adcMenuCategory.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.adcLogo,
             this.accordionControlSeparator10,
             this.btnRecommendedButton,
             this.btnBurger,
             this.btnBeverage,
             this.btnMorningSale});
-            this.accordionControl2.Location = new System.Drawing.Point(0, 0);
-            this.accordionControl2.Name = "accordionControl2";
-            this.accordionControl2.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
-            this.accordionControl2.Size = new System.Drawing.Size(260, 571);
-            this.accordionControl2.TabIndex = 0;
-            this.accordionControl2.Text = "accordionControl2";
+            this.adcMenuCategory.Location = new System.Drawing.Point(0, 0);
+            this.adcMenuCategory.Name = "adcMenuCategory";
+            this.adcMenuCategory.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
+            this.adcMenuCategory.Size = new System.Drawing.Size(260, 571);
+            this.adcMenuCategory.TabIndex = 0;
+            this.adcMenuCategory.Text = "accordionControl2";
             // 
-            // accordionControlElement5
+            // adcLogo
             // 
-            this.accordionControlElement5.Appearance.Disabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.accordionControlElement5.Appearance.Disabled.ForeColor = System.Drawing.Color.Red;
-            this.accordionControlElement5.Appearance.Disabled.Options.UseFont = true;
-            this.accordionControlElement5.Appearance.Disabled.Options.UseForeColor = true;
-            this.accordionControlElement5.Appearance.Disabled.Options.UseTextOptions = true;
-            this.accordionControlElement5.Appearance.Disabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.accordionControlElement5.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.accordionControlElement5.Appearance.Hovered.ForeColor = System.Drawing.Color.Red;
-            this.accordionControlElement5.Appearance.Hovered.Options.UseFont = true;
-            this.accordionControlElement5.Appearance.Hovered.Options.UseForeColor = true;
-            this.accordionControlElement5.Appearance.Hovered.Options.UseTextOptions = true;
-            this.accordionControlElement5.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.accordionControlElement5.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.accordionControlElement5.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.accordionControlElement5.Appearance.Normal.ForeColor = System.Drawing.Color.Red;
-            this.accordionControlElement5.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement5.Appearance.Normal.Options.UseForeColor = true;
-            this.accordionControlElement5.Appearance.Normal.Options.UseTextOptions = true;
-            this.accordionControlElement5.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.accordionControlElement5.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.accordionControlElement5.Appearance.Pressed.ForeColor = System.Drawing.Color.Red;
-            this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
-            this.accordionControlElement5.Appearance.Pressed.Options.UseForeColor = true;
-            this.accordionControlElement5.Appearance.Pressed.Options.UseTextOptions = true;
-            this.accordionControlElement5.Appearance.Pressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.accordionControlElement5.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_Hamburger_131964;
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement5.Text = " LotteNalds TouchKing";
+            this.adcLogo.Appearance.Disabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.adcLogo.Appearance.Disabled.ForeColor = System.Drawing.Color.Red;
+            this.adcLogo.Appearance.Disabled.Options.UseFont = true;
+            this.adcLogo.Appearance.Disabled.Options.UseForeColor = true;
+            this.adcLogo.Appearance.Disabled.Options.UseTextOptions = true;
+            this.adcLogo.Appearance.Disabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.adcLogo.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.adcLogo.Appearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.adcLogo.Appearance.Hovered.Options.UseFont = true;
+            this.adcLogo.Appearance.Hovered.Options.UseForeColor = true;
+            this.adcLogo.Appearance.Hovered.Options.UseTextOptions = true;
+            this.adcLogo.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.adcLogo.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.adcLogo.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.adcLogo.Appearance.Normal.ForeColor = System.Drawing.Color.Red;
+            this.adcLogo.Appearance.Normal.Options.UseFont = true;
+            this.adcLogo.Appearance.Normal.Options.UseForeColor = true;
+            this.adcLogo.Appearance.Normal.Options.UseTextOptions = true;
+            this.adcLogo.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.adcLogo.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.adcLogo.Appearance.Pressed.ForeColor = System.Drawing.Color.Red;
+            this.adcLogo.Appearance.Pressed.Options.UseFont = true;
+            this.adcLogo.Appearance.Pressed.Options.UseForeColor = true;
+            this.adcLogo.Appearance.Pressed.Options.UseTextOptions = true;
+            this.adcLogo.Appearance.Pressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.adcLogo.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_Hamburger_131964;
+            this.adcLogo.Name = "adcLogo";
+            this.adcLogo.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.adcLogo.Text = " LotteNalds TouchKing";
             // 
             // accordionControlSeparator10
             // 
@@ -165,41 +165,44 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // pictureEdit1
+            // pceShoppingCart
             // 
-            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit1.EditValue = global::LNTKCustomer.Properties.Resources.Cart;
-            this.pictureEdit1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.pictureEdit1.Location = new System.Drawing.Point(2, 2);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.ZoomPercent = 15D;
-            this.pictureEdit1.Size = new System.Drawing.Size(64, 48);
-            this.pictureEdit1.TabIndex = 5;
+            this.pceShoppingCart.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pceShoppingCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceShoppingCart.EditValue = global::LNTKCustomer.Properties.Resources.Cart;
+            this.pceShoppingCart.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.pceShoppingCart.Location = new System.Drawing.Point(2, 2);
+            this.pceShoppingCart.Name = "pceShoppingCart";
+            this.pceShoppingCart.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pceShoppingCart.Properties.Appearance.Options.UseBackColor = true;
+            this.pceShoppingCart.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceShoppingCart.Properties.ZoomPercent = 15D;
+            this.pceShoppingCart.Size = new System.Drawing.Size(64, 48);
+            this.pceShoppingCart.TabIndex = 5;
+            this.pceShoppingCart.Click += new System.EventHandler(this.pceShoppingCart_Click);
             // 
-            // panelControl1
+            // pcnShoppingCart
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.Controls.Add(this.pictureEdit1);
-            this.panelControl1.Location = new System.Drawing.Point(977, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(68, 52);
-            this.panelControl1.TabIndex = 7;
+            this.pcnShoppingCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcnShoppingCart.Controls.Add(this.pceShoppingCart);
+            this.pcnShoppingCart.Location = new System.Drawing.Point(977, 0);
+            this.pcnShoppingCart.Name = "pcnShoppingCart";
+            this.pcnShoppingCart.Size = new System.Drawing.Size(68, 52);
+            this.pcnShoppingCart.TabIndex = 7;
             // 
             // CustomerMenu
             // 
             this.ClientSize = new System.Drawing.Size(1047, 571);
-            this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.accordionControl2);
+            this.Controls.Add(this.pcnShoppingCart);
+            this.Controls.Add(this.adcMenuCategory);
             this.IsMdiContainer = true;
             this.Name = "CustomerMenu";
             this.Load += new System.EventHandler(this.CustomerMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adcMenuCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceShoppingCart.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcnShoppingCart)).EndInit();
+            this.pcnShoppingCart.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,16 +229,16 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
-        private DevExpress.XtraBars.Navigation.AccordionControl accordionControl2;
+        private DevExpress.XtraBars.Navigation.AccordionControl adcMenuCategory;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnRecommendedButton;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnBurger;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnBeverage;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnMorningSale;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement adcLogo;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator10;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit pceShoppingCart;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl pcnShoppingCart;
     }
 }

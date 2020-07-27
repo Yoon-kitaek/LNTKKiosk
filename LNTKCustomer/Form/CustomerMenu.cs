@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraWaitForm;
 using LNTKCustomer.UserControl;
+using LNTKKiosk.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +16,26 @@ namespace LNTKCustomer.Form
     public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
     {
         ProductThumbnail form = new ProductThumbnail();
+        List<ShoppedItem> shoppingList = new List<ShoppedItem>();
 
         public CustomerMenu()
         {
             InitializeComponent();
+            SetTestData();
+        }
+
+        private void SetTestData()
+        {
+            List<ShoppedItem> shoppingList = new List<ShoppedItem>();
+            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
+            ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1, 0);
+            ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1, 0);
+            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1, 3000);
+
+            shoppingList.Add(test1);
+            shoppingList.Add(test2);
+            shoppingList.Add(test3);
+            shoppingList.Add(test4);
         }
 
         private void btnRecommendedButton_Click(object sender, EventArgs e)
@@ -42,10 +59,6 @@ namespace LNTKCustomer.Form
          
         }
 
-        private void toolboxControl1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CustomerMenu_Load(object sender, EventArgs e)
         {
@@ -53,5 +66,18 @@ namespace LNTKCustomer.Form
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
+
+        private void pceShoppingCart_Click(object sender, EventArgs e)
+        {
+            ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
+            shoppingCart.MdiParent = this;
+            shoppingCart.WindowState = FormWindowState.Maximized;
+            shoppingCart.Show();
+            pceShoppingCart.Visible = false;
+            pcnShoppingCart.Visible = false;
+            adcMenuCategory.Enabled = false;
+            adcLogo.Enabled = true;
+        }
+
     }
 }

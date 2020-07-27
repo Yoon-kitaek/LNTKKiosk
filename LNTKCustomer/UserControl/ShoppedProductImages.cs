@@ -18,7 +18,8 @@ namespace LNTKCustomer.UserControl
         private const int thumbnailCount = 4;
         private List<UserControl.Thumbnail> thumbnails = new List<UserControl.Thumbnail>();
         private int j = 0;
-        List<ProductPackage> shoppinglist = new List<ProductPackage>();
+        List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
+        List<ShoppedPackage> shoppedPackageList = new List<ShoppedPackage>(); 
 
         public ShoppedProductImages()
         {
@@ -29,24 +30,32 @@ namespace LNTKCustomer.UserControl
             thumbnails.Add(uscThumbnail4);
         }
 
-        public void SetShoppingList (List<ProductPackage> list)
+        public void SetShoppingList (List<ShoppedItem> list)
         {
-            shoppinglist = list;
+            shoppedItemList = list;
+            foreach (string name in shoppedItemList.Select(x => x.packageName).Distinct())
+            {
+                ShoppedPackage shoppedPackage = new ShoppedPackage();
+                shoppedPackage.packageName = name;
+                shoppedPackage.productIds = shoppedItemList.Where(x => x.packageName.Equals(name)).Select(y => y.productId).Distinct().ToList();
+                shoppedPackageList.Add(shoppedPackage);
+
+            }
             BindingThumbnail();
         }
         private void BindingThumbnail()
         {
-            lbcPackageName.Text = shoppinglist[j].PackageName;
+            lbcPackageName.Text = shoppedPackageList[j].packageName;
             for (int i = 0; i < thumbnailCount; i++)
             {
-                if (shoppinglist[j].productIds.Count <= i )
+                if (shoppedPackageList[j].productIds.Count <= i)
                 {
                     thumbnails[i].Visible = false;
                 }
                 else
                 {
                     thumbnails[i].Visible = true;
-                    thumbnails[i].SetValues(DataRepository.Product.Get(shoppinglist[j].productIds[i]).Name);
+                    thumbnails[i].SetValues(DataRepository.Product.Get(shoppedPackageList[j].productIds[i]).Name);
                 }
 
             }
@@ -76,7 +85,7 @@ namespace LNTKCustomer.UserControl
             OnArrowClicked(args);
             if (isRight == true)
             {
-                if (j == shoppinglist.Count-1)
+                if (j == shoppedPackageList.Count-1)
                     j = 0;
                 else
                     j++;
@@ -85,7 +94,7 @@ namespace LNTKCustomer.UserControl
             else
             {
                 if (j == 0)
-                    j = shoppinglist.Count - 1;
+                    j = shoppedPackageList.Count - 1;
                 else
                     j--;
 
