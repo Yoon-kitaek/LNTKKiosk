@@ -58,7 +58,7 @@
       <DependentUpon>LNTK.tt</DependentUpon>
     </Compile>
     <Compile Include="DataRepository.cs" />
-    <Compile Include="Data\CodeCategory.cs" />
+    <Compile Include="Data\CodeCategoryData.cs" />
     <Compile Include="Data\EntityData.cs" />
     <Compile Include="Data\EventData.cs" />
     <Compile Include="Data\EventProductData.cs" />
@@ -73,6 +73,7 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShoppedItem.cs" />
     <Compile Include="Entities\ShoppedPackage.cs" />
+    <Compile Include="Entities\Recipe.cs" />
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Event.cs">
       <DependentUpon>LNTK.tt</DependentUpon>
