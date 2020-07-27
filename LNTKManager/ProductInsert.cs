@@ -19,6 +19,7 @@ namespace LNTKManager
         public ProductInsert()
         {
             InitializeComponent();
+            
         }
 
         private Product _product = new Product(); 
@@ -46,6 +47,13 @@ namespace LNTKManager
             _product.Price = int.Parse(txePrice.Text);
             _product.CodeCategoryId = (int)cbbCategoryId.SelectedValue;
         }
+
+        private void EditPicture()
+        {
+            _product.Picture=
+        }
+
+        //
 
         private byte[] ConvertImageToBinary(Image image)
         {
@@ -93,8 +101,15 @@ namespace LNTKManager
             }
 
             WriteToEntity();
-           
-            try
+
+
+            if (txeName.Text == DataRepository.Product.GetByName(_product)) ;
+            {
+                EditPicture();
+
+            }
+
+                try
             {
                 DataRepository.Product.Insert(_product);
             }

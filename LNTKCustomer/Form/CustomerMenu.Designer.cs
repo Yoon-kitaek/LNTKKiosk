@@ -179,6 +179,7 @@
             this.pceShoppingCart.Properties.ZoomPercent = 15D;
             this.pceShoppingCart.Size = new System.Drawing.Size(64, 48);
             this.pceShoppingCart.TabIndex = 5;
+
             this.pceShoppingCart.Click += new System.EventHandler(this.pceShoppingCart_Click);
             // 
             // pcnShoppingCart

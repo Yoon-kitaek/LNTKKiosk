@@ -21,6 +21,7 @@ namespace LNTKCustomer
         private void imsWaitScreen_Click(object sender, EventArgs e)
         {
             PlaceSelection placeSelection = new PlaceSelection();
+            placeSelection.WindowState= FormWindowState.Maximized;
             placeSelection.Show();
 
         }

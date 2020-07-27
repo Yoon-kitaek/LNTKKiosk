@@ -98,6 +98,7 @@
     <Compile Include="ButtonContainer.Designer.cs">
       <DependentUpon>ButtonContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="DevKiller\ProcessKiller.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +188,7 @@
     <EmbeddedResource Include="TabButton.resx">
       <DependentUpon>TabButton.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.CodeCategory.datasource" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.Grocery.datasource" />

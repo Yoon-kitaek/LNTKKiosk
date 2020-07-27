@@ -43,6 +43,7 @@ namespace LNTKCustomer.UserControl
             }
             BindingThumbnail();
         }
+
         private void BindingThumbnail()
         {
             lbcPackageName.Text = shoppedPackageList[j].packageName;
@@ -60,6 +61,7 @@ namespace LNTKCustomer.UserControl
 
             }
         }
+
         private void pceLeft_Click(object sender, EventArgs e)
         {
             OnArrowClicked(false);
