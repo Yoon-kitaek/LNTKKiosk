@@ -25,15 +25,15 @@ namespace LNTKCustomer
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            ////
 
 
             List<ShoppedItem> shoppingList = new List<ShoppedItem>();
-            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트",26,1, 8200);
+            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
             ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1, 0);
             ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1, 0);
-            ShoppedItem test4 = new ShoppedItem("닭갈비버거",27,1,3000);
-           
+            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1, 3000);
+
             shoppingList.Add(test1);
             shoppingList.Add(test2);
             shoppingList.Add(test3);
@@ -41,12 +41,15 @@ namespace LNTKCustomer
 
 
 
-            Application.Run(new ShoppingCart(shoppingList));
+
+             Application.Run(new ShoppingCart(shoppingList));
+            //Application.Run(new EndPage());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
         {
             Console.WriteLine($"[{e.Count}] at {DateTime.Now}");
+            //
         }
     }
 }

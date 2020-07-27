@@ -153,9 +153,9 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RightArrow {
+        internal static System.Drawing.Bitmap payment {
             get {
-                object obj = ResourceManager.GetObject("RightArrow", resourceCulture);
+                object obj = ResourceManager.GetObject("payment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap payment {
+        internal static System.Drawing.Bitmap RightArrow {
             get {
-                object obj = ResourceManager.GetObject("payment", resourceCulture);
+                object obj = ResourceManager.GetObject("RightArrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +236,16 @@ namespace LNTKCustomer.Properties {
         internal static System.Drawing.Bitmap 버거세트 {
             get {
                 object obj = ResourceManager.GetObject("버거세트", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap 삼성페이 {
+            get {
+                object obj = ResourceManager.GetObject("삼성페이", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

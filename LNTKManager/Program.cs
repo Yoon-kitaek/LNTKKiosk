@@ -17,7 +17,7 @@ namespace LNTKManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Management());
-            Application.Run(new StockInsert());
+            Application.Run(new RecipeManagement());
         }
     }
 }

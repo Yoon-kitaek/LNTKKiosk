@@ -18,9 +18,11 @@ namespace LNTKCustomer.Form
             InitializeComponent();
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
+   
+        private void imageSlider1_Click(object sender, EventArgs e)
         {
-
+            //CustomerMenu form = new CustomerMenu();
+            //form.Show();
         }
     }
 }

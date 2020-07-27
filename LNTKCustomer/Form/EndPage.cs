@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace LNTKCustomer.UserControl
+namespace LNTKCustomer.Form
 {
-    public partial class XtraUserControl1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class EndPage : DevExpress.XtraEditors.XtraForm
     {
-        public XtraUserControl1()
+        public EndPage()
         {
             InitializeComponent();
-            
         }
     }
 }
