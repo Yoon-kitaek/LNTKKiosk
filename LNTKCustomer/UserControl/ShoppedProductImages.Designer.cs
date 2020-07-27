@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lbcPackageName = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pceRight = new DevExpress.XtraEditors.PictureEdit();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
-            this.lbcPackageName = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -67,6 +67,32 @@
             this.layoutControl1.TabIndex = 10;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // lbcPackageName
+            // 
+            this.lbcPackageName.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.Appearance.Options.UseFont = true;
+            this.lbcPackageName.Appearance.Options.UseTextOptions = true;
+            this.lbcPackageName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.AppearanceDisabled.Options.UseFont = true;
+            this.lbcPackageName.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.AppearanceHovered.Options.UseFont = true;
+            this.lbcPackageName.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcPackageName.AppearancePressed.Options.UseFont = true;
+            this.lbcPackageName.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbcPackageName.Location = new System.Drawing.Point(12, 12);
+            this.lbcPackageName.Name = "lbcPackageName";
+            this.lbcPackageName.Size = new System.Drawing.Size(777, 41);
+            this.lbcPackageName.StyleController = this.layoutControl1;
+            this.lbcPackageName.TabIndex = 7;
+            this.lbcPackageName.Text = "패키지 이름";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 6;
@@ -88,6 +114,41 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(777, 300);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // uscThumbnail1
+            // 
+            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail1.Label = "label";
+            this.uscThumbnail1.Location = new System.Drawing.Point(49, 3);
+            this.uscThumbnail1.Name = "uscThumbnail1";
+            this.uscThumbnail1.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail1.TabIndex = 0;
+            // 
+            // uscThumbnail2
+            // 
+            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail2.Label = "label";
+            this.uscThumbnail2.Location = new System.Drawing.Point(219, 3);
+            this.uscThumbnail2.Name = "uscThumbnail2";
+            this.uscThumbnail2.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail2.TabIndex = 1;
+            // 
+            // uscThumbnail3
+            // 
+            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail3.Label = "label";
+            this.uscThumbnail3.Location = new System.Drawing.Point(389, 3);
+            this.uscThumbnail3.Name = "uscThumbnail3";
+            this.uscThumbnail3.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail3.TabIndex = 2;
+            // 
+            // uscThumbnail4
+            // 
+            this.uscThumbnail4.Label = "label";
+            this.uscThumbnail4.Location = new System.Drawing.Point(559, 3);
+            this.uscThumbnail4.Name = "uscThumbnail4";
+            this.uscThumbnail4.Size = new System.Drawing.Size(164, 294);
+            this.uscThumbnail4.TabIndex = 11;
             // 
             // tableLayoutPanel2
             // 
@@ -170,67 +231,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(781, 304);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // uscThumbnail1
-            // 
-            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail1.Label = "label";
-            this.uscThumbnail1.Location = new System.Drawing.Point(49, 3);
-            this.uscThumbnail1.Name = "uscThumbnail1";
-            this.uscThumbnail1.Size = new System.Drawing.Size(164, 294);
-            this.uscThumbnail1.TabIndex = 0;
-            // 
-            // uscThumbnail2
-            // 
-            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail2.Label = "label";
-            this.uscThumbnail2.Location = new System.Drawing.Point(219, 3);
-            this.uscThumbnail2.Name = "uscThumbnail2";
-            this.uscThumbnail2.Size = new System.Drawing.Size(164, 294);
-            this.uscThumbnail2.TabIndex = 1;
-            // 
-            // uscThumbnail3
-            // 
-            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail3.Label = "label";
-            this.uscThumbnail3.Location = new System.Drawing.Point(389, 3);
-            this.uscThumbnail3.Name = "uscThumbnail3";
-            this.uscThumbnail3.Size = new System.Drawing.Size(164, 294);
-            this.uscThumbnail3.TabIndex = 2;
-            // 
-            // uscThumbnail4
-            // 
-            this.uscThumbnail4.Label = "label";
-            this.uscThumbnail4.Location = new System.Drawing.Point(559, 3);
-            this.uscThumbnail4.Name = "uscThumbnail4";
-            this.uscThumbnail4.Size = new System.Drawing.Size(164, 294);
-            this.uscThumbnail4.TabIndex = 11;
-            // 
-            // lbcPackageName
-            // 
-            this.lbcPackageName.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcPackageName.Appearance.Options.UseFont = true;
-            this.lbcPackageName.Appearance.Options.UseTextOptions = true;
-            this.lbcPackageName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcPackageName.AppearanceDisabled.Options.UseFont = true;
-            this.lbcPackageName.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcPackageName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcPackageName.AppearanceHovered.Options.UseFont = true;
-            this.lbcPackageName.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcPackageName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcPackageName.AppearancePressed.Options.UseFont = true;
-            this.lbcPackageName.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcPackageName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcPackageName.Location = new System.Drawing.Point(12, 12);
-            this.lbcPackageName.Name = "lbcPackageName";
-            this.lbcPackageName.Size = new System.Drawing.Size(777, 41);
-            this.lbcPackageName.StyleController = this.layoutControl1;
-            this.lbcPackageName.TabIndex = 7;
-            this.lbcPackageName.Text = "패키지 이름";
             // 
             // layoutControlItem2
             // 

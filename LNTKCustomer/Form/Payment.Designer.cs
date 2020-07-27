@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.selectBeverage1 = new LNTKCustomer.UserControl.SelectBeverage();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnCard = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCash = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.selectBeverage1 = new LNTKCustomer.UserControl.SelectBeverage();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnCard = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCash = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -78,6 +78,13 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // selectBeverage1
+            // 
+            this.selectBeverage1.Location = new System.Drawing.Point(12, 755);
+            this.selectBeverage1.Name = "selectBeverage1";
+            this.selectBeverage1.Size = new System.Drawing.Size(1202, 44);
+            this.selectBeverage1.TabIndex = 8;
+            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 40F, System.Drawing.FontStyle.Bold);
@@ -91,9 +98,9 @@
             this.labelControl2.AppearancePressed.Options.UseTextOptions = true;
             this.labelControl2.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(662, 357);
+            this.labelControl2.Location = new System.Drawing.Point(649, 357);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(471, 81);
+            this.labelControl2.Size = new System.Drawing.Size(484, 81);
             this.labelControl2.StyleController = this.layoutControl1;
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "카드 결제";
@@ -117,6 +124,31 @@
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "현금 결제";
+            // 
+            // btnCard
+            // 
+            this.btnCard.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.payment;
+            this.btnCard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnCard.Location = new System.Drawing.Point(649, 91);
+            this.btnCard.Name = "btnCard";
+            this.btnCard.Size = new System.Drawing.Size(484, 262);
+            this.btnCard.StyleController = this.layoutControl1;
+            this.btnCard.TabIndex = 5;
+            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
+            // 
+            // btnCash
+            // 
+            this.btnCash.AppearanceHovered.BackColor = System.Drawing.Color.Transparent;
+            this.btnCash.AppearanceHovered.Options.UseBackColor = true;
+            this.btnCash.AppearancePressed.BackColor = System.Drawing.Color.Transparent;
+            this.btnCash.AppearancePressed.Options.UseBackColor = true;
+            this.btnCash.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.cash;
+            this.btnCash.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnCash.Location = new System.Drawing.Point(102, 91);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.Size = new System.Drawing.Size(473, 262);
+            this.btnCash.StyleController = this.layoutControl1;
+            this.btnCash.TabIndex = 4;
             // 
             // Root
             // 
@@ -157,17 +189,35 @@
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(650, 430);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(637, 430);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(475, 313);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(488, 313);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.btnCash;
+            this.layoutControlItem1.Location = new System.Drawing.Point(90, 79);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(477, 266);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.btnCard;
+            this.layoutControlItem2.Location = new System.Drawing.Point(637, 79);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(488, 266);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(567, 79);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(83, 664);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(70, 664);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
@@ -198,18 +248,11 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.labelControl2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(650, 345);
+            this.layoutControlItem4.Location = new System.Drawing.Point(637, 345);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(475, 85);
+            this.layoutControlItem4.Size = new System.Drawing.Size(488, 85);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // selectBeverage1
-            // 
-            this.selectBeverage1.Location = new System.Drawing.Point(12, 755);
-            this.selectBeverage1.Name = "selectBeverage1";
-            this.selectBeverage1.Size = new System.Drawing.Size(1202, 44);
-            this.selectBeverage1.TabIndex = 8;
             // 
             // layoutControlItem5
             // 
@@ -220,45 +263,6 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // btnCard
-            // 
-            this.btnCard.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.payment;
-            this.btnCard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCard.Location = new System.Drawing.Point(662, 91);
-            this.btnCard.Name = "btnCard";
-            this.btnCard.Size = new System.Drawing.Size(471, 262);
-            this.btnCard.StyleController = this.layoutControl1;
-            this.btnCard.TabIndex = 5;
-            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
-            // 
-            // btnCash
-            // 
-            this.btnCash.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.cash;
-            this.btnCash.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCash.Location = new System.Drawing.Point(102, 91);
-            this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(473, 262);
-            this.btnCash.StyleController = this.layoutControl1;
-            this.btnCash.TabIndex = 4;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.btnCash;
-            this.layoutControlItem1.Location = new System.Drawing.Point(90, 79);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(477, 266);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.btnCard;
-            this.layoutControlItem2.Location = new System.Drawing.Point(650, 79);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(475, 266);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -267,20 +271,21 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Payment";
             this.Text = "Payment";
+            this.Load += new System.EventHandler(this.Payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -37,12 +37,17 @@ namespace LNTKCustomer
             ttt.Add(20);
             ttt.Add(21);
             test1.productIds = ttt;
+            test1.Quantity = 2;
+            test1.GetTotalPrice();
             shoppingList.Add(test1);
             test2.PackageName = "닭갈비버거";
             List<int> ttt2 = new List<int>();
             ttt2.Add(27);
             test2.productIds = ttt2;
+            test2.Quantity = 1;
+            test2.GetTotalPrice();
             shoppingList.Add(test2);
+            
 
 
 

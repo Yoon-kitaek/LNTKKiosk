@@ -87,18 +87,6 @@
     <Compile Include="Form\Customization.Designer.cs">
       <DependentUpon>Customization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\KingMorningMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\KingMorningMenu.Designer.cs">
-      <DependentUpon>KingMorningMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\LunchDiscountMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\LunchDiscountMenu.Designer.cs">
-      <DependentUpon>LunchDiscountMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\Payment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,8 +106,8 @@
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\ShoppingCart.cs">
-<SubType>Form</SubType>
-</Compile>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\ShoppingCart.Designer.cs">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </Compile>
@@ -154,15 +142,21 @@
     <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\QuantityChanged.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\QuantityChanged.Designer.cs">
+      <DependentUpon>QuantityChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\SelectBeverage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl\SelectBeverage.Designer.cs">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.cs" >
+    <Compile Include="UserControl\ShoppedProductImages.cs">
       <SubType>UserControl</SubType>
-    </Compile>	
+    </Compile>
     <Compile Include="UserControl\ShoppedProductImages.Designer.cs">
       <DependentUpon>ShoppedProductImages.cs</DependentUpon>
     </Compile>
@@ -217,6 +211,9 @@
     <EmbeddedResource Include="UserControl\FrenchFriesSelection.resx">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\QuantityChanged.resx">
+      <DependentUpon>QuantityChanged.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SelectBeverage.resx">
       <DependentUpon>SelectBeverage.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +228,8 @@
     </EmbeddedResource>
     <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LNTKKiosk.Data.Product.datasource" />
+    <None Include="Properties\DataSources\LNTKKiosk.Data.ProductPackage.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
