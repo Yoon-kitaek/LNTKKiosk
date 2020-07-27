@@ -150,6 +150,12 @@
     <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\PackageSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\PackageSelection.Designer.cs">
+      <DependentUpon>PackageSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\QuantityChanged.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\FrenchFriesSelection.resx">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\PackageSelection.resx">
+      <DependentUpon>PackageSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\QuantityChanged.resx">
       <DependentUpon>QuantityChanged.cs</DependentUpon>

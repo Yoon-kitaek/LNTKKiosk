@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -66,6 +66,40 @@
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 40F);
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
+            this.labelControl3.Location = new System.Drawing.Point(428, 247);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(346, 81);
+            this.labelControl3.StyleController = this.layoutControl1;
+            this.labelControl3.TabIndex = 6;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 40F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(143, 247);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(281, 81);
+            this.labelControl2.StyleController = this.layoutControl1;
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "주문번호 :";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 40F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(143, 162);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(631, 81);
+            this.labelControl1.StyleController = this.layoutControl1;
+            this.labelControl1.TabIndex = 4;
+            this.labelControl1.Text = "주문이 완료되었습니다.";
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -82,21 +116,10 @@
             this.Root.Size = new System.Drawing.Size(928, 568);
             this.Root.TextVisible = false;
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 40F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(275, 162);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(631, 81);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "주문이 완료되었습니다.";
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.labelControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(263, 150);
+            this.layoutControlItem1.Location = new System.Drawing.Point(131, 150);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(635, 85);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -110,42 +133,19 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(908, 228);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 40F);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(275, 247);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(281, 81);
-            this.labelControl2.StyleController = this.layoutControl1;
-            this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "주문번호 :";
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.labelControl2;
-            this.layoutControlItem2.Location = new System.Drawing.Point(263, 235);
+            this.layoutControlItem2.Location = new System.Drawing.Point(131, 235);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(285, 85);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 40F);
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(560, 247);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(346, 81);
-            this.labelControl3.StyleController = this.layoutControl1;
-            this.labelControl3.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.labelControl3;
-            this.layoutControlItem3.Location = new System.Drawing.Point(548, 235);
+            this.layoutControlItem3.Location = new System.Drawing.Point(416, 235);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(350, 85);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -164,15 +164,15 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 150);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(263, 170);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(131, 170);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(898, 150);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(766, 150);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 170);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(142, 170);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // EndPage
