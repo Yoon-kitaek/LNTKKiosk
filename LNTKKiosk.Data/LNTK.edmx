@@ -294,7 +294,6 @@
           <EntitySet Name="EventProducts" EntityType="LNTKModel.EventProduct" />
           <EntitySet Name="Groceries" EntityType="LNTKModel.Grocery" />
           <EntitySet Name="Orders" EntityType="LNTKModel.Order" />
-          <EntitySet Name="OrderDetails" EntityType="LNTKModel.OrderDetail" />
           <EntitySet Name="OrderStocks" EntityType="LNTKModel.OrderStock" />
           <EntitySet Name="Products" EntityType="LNTKModel.Product" />
           <EntitySet Name="Recipes" EntityType="LNTKModel.Recipe" />
@@ -323,17 +322,9 @@
             <End Role="Grocery" EntitySet="Groceries" />
             <End Role="Stock" EntitySet="Stocks" />
           </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_Order" Association="LNTKModel.FK_OrderDetail_Order">
-            <End Role="Order" EntitySet="Orders" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
           <AssociationSet Name="FK_OrderStock_Order" Association="LNTKModel.FK_OrderStock_Order">
             <End Role="Order" EntitySet="Orders" />
             <End Role="OrderStock" EntitySet="OrderStocks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_Product" Association="LNTKModel.FK_OrderDetail_Product">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
           <AssociationSet Name="FK_OrderStock_Stock" Association="LNTKModel.FK_OrderStock_Stock">
             <End Role="Stock" EntitySet="Stocks" />
@@ -342,6 +333,15 @@
           <AssociationSet Name="FK_Recipe_Product" Association="LNTKModel.FK_Recipe_Product">
             <End Role="Product" EntitySet="Products" />
             <End Role="Recipe" EntitySet="Recipes" />
+          </AssociationSet>
+          <EntitySet Name="OrderDetails" EntityType="LNTKModel.OrderDetail" />
+          <AssociationSet Name="FK_OrderDetail_Order" Association="LNTKModel.FK_OrderDetail_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Product" Association="LNTKModel.FK_OrderDetail_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="CodeCategory">
@@ -393,19 +393,8 @@
           <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
           <NavigationProperty Name="OrderStocks" Relationship="LNTKModel.FK_OrderStock_Order" FromRole="Order" ToRole="OrderStock" />
-        </EntityType>
-        <EntityType Name="OrderDetail">
-          <Key>
-            <PropertyRef Name="OrderDetailId" />
-          </Key>
-          <Property Name="OrderDetailId" Type="Int32" Nullable="false" />
-          <Property Name="OrderId" Type="Int32" Nullable="false" />
-          <Property Name="ProductId" Type="Int32" Nullable="false" />
-          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="LNTKModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
-          <NavigationProperty Name="Product" Relationship="LNTKModel.FK_OrderDetail_Product" FromRole="OrderDetail" ToRole="Product" />
+          <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
         </EntityType>
         <EntityType Name="OrderStock">
           <Key>
@@ -430,8 +419,8 @@
           <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CodeCategory" Relationship="LNTKModel.FK_Product_CodeCategory" FromRole="Product" ToRole="CodeCategory" />
           <NavigationProperty Name="EventProducts" Relationship="LNTKModel.FK_EventProduct_Product" FromRole="Product" ToRole="EventProduct" />
-          <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_OrderDetail_Product" FromRole="Product" ToRole="OrderDetail" />
           <NavigationProperty Name="Recipes" Relationship="LNTKModel.FK_Recipe_Product" FromRole="Product" ToRole="Recipe" />
+          <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_OrderDetail_Product" FromRole="Product" ToRole="OrderDetail" />
         </EntityType>
         <EntityType Name="Recipe">
           <Key>
@@ -529,18 +518,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_OrderDetail_Order">
-          <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
-          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Order">
-              <PropertyRef Name="OrderId" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="OrderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_OrderStock_Order">
           <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
           <End Type="LNTKModel.OrderStock" Role="OrderStock" Multiplicity="*" />
@@ -550,18 +527,6 @@
             </Principal>
             <Dependent Role="OrderStock">
               <PropertyRef Name="OrderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderDetail_Product">
-          <End Type="LNTKModel.Product" Role="Product" Multiplicity="1" />
-          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductId" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="ProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -585,6 +550,41 @@
               <PropertyRef Name="ProductId" />
             </Principal>
             <Dependent Role="Recipe">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetailId" />
+          </Key>
+          <Property Name="OrderDetailId" Type="Int32" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="LNTKModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="LNTKModel.FK_OrderDetail_Product" FromRole="OrderDetail" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_OrderDetail_Order">
+          <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Product">
+          <End Type="LNTKModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
               <PropertyRef Name="ProductId" />
             </Dependent>
           </ReferentialConstraint>
@@ -641,16 +641,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="OrderDetails">
-            <EntityTypeMapping TypeName="LNTKModel.OrderDetail">
-              <MappingFragment StoreEntitySet="OrderDetail">
-                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="OrderStocks">
             <EntityTypeMapping TypeName="LNTKModel.OrderStock">
               <MappingFragment StoreEntitySet="OrderStock">
@@ -690,6 +680,16 @@
                 <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
                 <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
                 <ScalarProperty Name="StockId" ColumnName="StockId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="LNTKModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

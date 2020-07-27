@@ -35,5 +35,27 @@ namespace LNTKKiosk.Data
 
             return query.FirstOrDefault();
         }
+
+        public object GetwithCompleted()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Orders
+                        where x.IsCompleted == true
+                        select x;
+
+            return query.ToList();
+        }
+
+        public object GetwithNonCompleted()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Orders
+                        where x.IsCompleted == false
+                        select x;
+
+            return query.ToList();
+        }
     }
 }
