@@ -142,12 +142,6 @@
     <Compile Include="ProductInsert.Designer.cs">
       <DependentUpon>ProductInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductManagement.Designer.cs">
-      <DependentUpon>ProductManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProductManagement\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductInsert.resx">
       <DependentUpon>ProductInsert.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductManagement.resx">
-      <DependentUpon>ProductManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductManagement\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
