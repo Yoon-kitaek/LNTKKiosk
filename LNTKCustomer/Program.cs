@@ -59,6 +59,7 @@ namespace LNTKCustomer
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
         {
             Console.WriteLine($"[{e.Count}] at {DateTime.Now}");
+            //
         }
     }
 }
