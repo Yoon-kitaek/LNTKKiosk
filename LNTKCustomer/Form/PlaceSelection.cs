@@ -20,21 +20,27 @@ namespace LNTKCustomer.Form
             InitializeComponent();
         }
 
-        private void pceTakeOut_EditValueChanged(object sender, EventArgs e)
-        {
-            CustomerMenu form = new CustomerMenu();
-            form.Show();
-        }
-
-        private void pceAtStore_EditValueChanged(object sender, EventArgs e)
-        {
-            CustomerMenu form = new CustomerMenu();
-            form.Show();
-        }
+   
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pceTakeOut_Click(object sender, EventArgs e)
+        {
+            CustomerMenu form = new CustomerMenu();
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+            Close();
+        }
+
+        private void pceAtStore_Click(object sender, EventArgs e)
+        {
+            CustomerMenu form = new CustomerMenu();
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+            Close();
         }
     }
 }

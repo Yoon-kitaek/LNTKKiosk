@@ -25,8 +25,8 @@ namespace LNTKCustomer
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ////
-
+            
+            //////
 
             List<ShoppedItem> shoppingList = new List<ShoppedItem>();
             ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
@@ -42,8 +42,10 @@ namespace LNTKCustomer
 
 
 
-             Application.Run(new ShoppingCart(shoppingList));
+            //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
+            //Application.Run(new CustomerMenu());
+            Application.Run(new WaitScreen());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
