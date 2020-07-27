@@ -55,6 +55,7 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProduct)).BeginInit();
@@ -69,6 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            this.xtraTabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView4
@@ -80,7 +83,7 @@
             // grvProduct
             // 
             this.grvProduct.DataSource = this.bdsProduct;
-            this.grvProduct.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grvProduct.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.LevelTemplate = this.gridView4;
             gridLevelNode1.RelationName = "Level1";
             gridLevelNode2.LevelTemplate = this.gridView5;
@@ -93,7 +96,7 @@
             gridLevelNode3});
             this.grvProduct.Location = new System.Drawing.Point(4, 32);
             this.grvProduct.MainView = this.gridView3;
-            this.grvProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grvProduct.Margin = new System.Windows.Forms.Padding(4);
             this.grvProduct.Name = "grvProduct";
             this.grvProduct.Size = new System.Drawing.Size(796, 382);
             this.grvProduct.TabIndex = 4;
@@ -215,7 +218,7 @@
             this.tctlManagement.Appearance.Options.UseFont = true;
             this.tctlManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tctlManagement.Location = new System.Drawing.Point(0, 0);
-            this.tctlManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tctlManagement.Margin = new System.Windows.Forms.Padding(4);
             this.tctlManagement.Name = "tctlManagement";
             this.tctlManagement.SelectedTabPage = this.tpgeOrder;
             this.tctlManagement.Size = new System.Drawing.Size(800, 450);
@@ -231,17 +234,17 @@
             // 
             this.tpgeOrder.Controls.Add(this.gridControl2);
             this.tpgeOrder.Controls.Add(this.gridControl1);
-            this.tpgeOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpgeOrder.Margin = new System.Windows.Forms.Padding(4);
             this.tpgeOrder.Name = "tpgeOrder";
             this.tpgeOrder.Size = new System.Drawing.Size(798, 418);
             this.tpgeOrder.Text = "주문관리";
             // 
             // gridControl2
             // 
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Location = new System.Drawing.Point(14, 284);
             this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.Size = new System.Drawing.Size(500, 225);
             this.gridControl2.TabIndex = 1;
@@ -256,10 +259,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Location = new System.Drawing.Point(14, 18);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(500, 225);
             this.gridControl1.TabIndex = 0;
@@ -275,24 +278,32 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.grvProduct);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(798, 418);
             this.xtraTabPage2.Text = "상품관리";
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(798, 418);
             this.xtraTabPage3.Text = "매출조회";
             // 
             // xtraTabPage5
             // 
-            this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xtraTabPage5.Controls.Add(this.pivotGridControl1);
+            this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage5.Name = "xtraTabPage5";
             this.xtraTabPage5.Size = new System.Drawing.Size(798, 418);
             this.xtraTabPage5.Text = "재료관리";
+            // 
+            // pivotGridControl1
+            // 
+            this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
+            this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.Size = new System.Drawing.Size(565, 418);
+            this.pivotGridControl1.TabIndex = 0;
             // 
             // Management
             // 
@@ -316,6 +327,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
+            this.xtraTabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,6 +358,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEventProducts;
         private DevExpress.XtraGrid.Columns.GridColumn colOrderDetails;
         private DevExpress.XtraGrid.Columns.GridColumn colRecipes;
+        private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl1;
     }
 }
 

@@ -8,5 +8,7 @@ namespace LNTKKiosk.Data
 {
     public partial class Grocery
     {
+        public string CategoryName { get; set; }
+
     }
 }

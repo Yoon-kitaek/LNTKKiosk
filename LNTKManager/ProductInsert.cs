@@ -21,6 +21,23 @@ namespace LNTKManager
             InitializeComponent();
         }
 
+        public ProductInsert(Product product)
+        {
+            InitializeComponent();
+
+            txeID.Text = product.ProductId.ToString();
+            txeName.Text = product.Name;
+
+            txbDescription.Text = product.Description;
+            txePrice.Text = product.Price.ToString();
+            cbbCategoryId.SelectedItem = product.CodeCategoryId;
+            
+           // pcbImage.Image = byteArrayToImage(product.Picture);
+
+            if (pcbImage.Image != null)
+                _product.Picture = ConvertImageToBinary(pcbImage.Image);
+        }
+
         private Product _product = new Product(); 
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -45,6 +62,15 @@ namespace LNTKManager
             _product.Picture = ConvertImageToBinary(pcbImage.Image);
             _product.Price = int.Parse(txePrice.Text);
             _product.CodeCategoryId = (int)cbbCategoryId.SelectedValue;
+        }
+
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
         }
 
         private byte[] ConvertImageToBinary(Image image)
@@ -126,6 +152,23 @@ namespace LNTKManager
         private void ProductInsert_Load(object sender, EventArgs e)
         {
             bdsCategory.DataSource = DataRepository.CodeCategory.GetMenuCategory();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _product.ProductId = int.Parse(txeID.Text);
+            WriteToEntity();
+
+            try
+            {
+                DataRepository.Product.Update(_product);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show("수정되었습니다.");
+            Close();
         }
     }
 }
