@@ -91,17 +91,13 @@ namespace LNTKCustomer.Form
 
         private void uscThumbnail_Click(int i)
         {
-            if (thumbnails[i].Label.Contains("버거") == true)
+           // if (thumbnails[i].Label.Contains("버거") == true)
                 
-            else
+          //  else
             {
                 Product product = DataRepository.Product.GetByName(thumbnails[i].Label);
                 shoppingList.Add(new ShoppedItem(product.Name,product.ProductId,1,product.EventPrice));
             }
-
-
-
-
 
         }
 

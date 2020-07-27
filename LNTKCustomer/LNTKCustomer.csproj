@@ -304,6 +304,15 @@
   <ItemGroup>
     <None Include="Resources\삼성페이.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BurgerLargeSet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BurgerSingle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BurgerMiddleSet.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

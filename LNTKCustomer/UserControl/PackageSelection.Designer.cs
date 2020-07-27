@@ -32,21 +32,21 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pceMiddleSet = new DevExpress.XtraEditors.PictureEdit();
-            this.pceSingle = new DevExpress.XtraEditors.PictureEdit();
-            this.pceLargetSet = new DevExpress.XtraEditors.PictureEdit();
             this.lbcSingle = new DevExpress.XtraEditors.LabelControl();
             this.lbcLargeSet = new DevExpress.XtraEditors.LabelControl();
             this.lbcMiddleSet = new DevExpress.XtraEditors.LabelControl();
+            this.pceLargetSet = new DevExpress.XtraEditors.PictureEdit();
+            this.pceSingle = new DevExpress.XtraEditors.PictureEdit();
+            this.pceMiddleSet = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceMiddleSet.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceLargetSet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceMiddleSet.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -99,42 +99,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // pceMiddleSet
-            // 
-            this.tablePanel1.SetColumn(this.pceMiddleSet, 1);
-            this.pceMiddleSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceMiddleSet.Location = new System.Drawing.Point(366, 3);
-            this.pceMiddleSet.Name = "pceMiddleSet";
-            this.pceMiddleSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceMiddleSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceMiddleSet, 0);
-            this.pceMiddleSet.Size = new System.Drawing.Size(357, 268);
-            this.pceMiddleSet.TabIndex = 0;
-            // 
-            // pceSingle
-            // 
-            this.tablePanel1.SetColumn(this.pceSingle, 0);
-            this.pceSingle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceSingle.Location = new System.Drawing.Point(3, 3);
-            this.pceSingle.Name = "pceSingle";
-            this.pceSingle.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceSingle.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceSingle, 0);
-            this.pceSingle.Size = new System.Drawing.Size(357, 268);
-            this.pceSingle.TabIndex = 1;
-            // 
-            // pceLargetSet
-            // 
-            this.tablePanel1.SetColumn(this.pceLargetSet, 2);
-            this.pceLargetSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceLargetSet.Location = new System.Drawing.Point(730, 3);
-            this.pceLargetSet.Name = "pceLargetSet";
-            this.pceLargetSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceLargetSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceLargetSet, 0);
-            this.pceLargetSet.Size = new System.Drawing.Size(357, 268);
-            this.pceLargetSet.TabIndex = 2;
-            // 
             // lbcSingle
             // 
             this.lbcSingle.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
@@ -149,7 +113,7 @@
             this.tablePanel1.SetRow(this.lbcSingle, 1);
             this.lbcSingle.Size = new System.Drawing.Size(357, 63);
             this.lbcSingle.TabIndex = 4;
-            this.lbcSingle.Text = "labelControl2";
+            this.lbcSingle.Text = "단품";
             // 
             // lbcLargeSet
             // 
@@ -165,7 +129,7 @@
             this.tablePanel1.SetRow(this.lbcLargeSet, 1);
             this.lbcLargeSet.Size = new System.Drawing.Size(357, 63);
             this.lbcLargeSet.TabIndex = 5;
-            this.lbcLargeSet.Text = "labelControl2";
+            this.lbcLargeSet.Text = "세트(L)";
             // 
             // lbcMiddleSet
             // 
@@ -181,7 +145,46 @@
             this.tablePanel1.SetRow(this.lbcMiddleSet, 1);
             this.lbcMiddleSet.Size = new System.Drawing.Size(357, 63);
             this.lbcMiddleSet.TabIndex = 6;
-            this.lbcMiddleSet.Text = "labelControl2";
+            this.lbcMiddleSet.Text = "세트(M)";
+            // 
+            // pceLargetSet
+            // 
+            this.tablePanel1.SetColumn(this.pceLargetSet, 2);
+            this.pceLargetSet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceLargetSet.EditValue = global::LNTKCustomer.Properties.Resources.BurgerLargeSet;
+            this.pceLargetSet.Location = new System.Drawing.Point(730, 3);
+            this.pceLargetSet.Name = "pceLargetSet";
+            this.pceLargetSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceLargetSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceLargetSet, 0);
+            this.pceLargetSet.Size = new System.Drawing.Size(357, 268);
+            this.pceLargetSet.TabIndex = 2;
+            // 
+            // pceSingle
+            // 
+            this.tablePanel1.SetColumn(this.pceSingle, 0);
+            this.pceSingle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceSingle.EditValue = global::LNTKCustomer.Properties.Resources.BurgerSingle;
+            this.pceSingle.Location = new System.Drawing.Point(3, 3);
+            this.pceSingle.Name = "pceSingle";
+            this.pceSingle.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceSingle.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceSingle, 0);
+            this.pceSingle.Size = new System.Drawing.Size(357, 268);
+            this.pceSingle.TabIndex = 1;
+            // 
+            // pceMiddleSet
+            // 
+            this.tablePanel1.SetColumn(this.pceMiddleSet, 1);
+            this.pceMiddleSet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceMiddleSet.EditValue = global::LNTKCustomer.Properties.Resources.BurgerMiddleSet;
+            this.pceMiddleSet.Location = new System.Drawing.Point(366, 3);
+            this.pceMiddleSet.Name = "pceMiddleSet";
+            this.pceMiddleSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceMiddleSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceMiddleSet, 0);
+            this.pceMiddleSet.Size = new System.Drawing.Size(357, 268);
+            this.pceMiddleSet.TabIndex = 0;
             // 
             // PackageSelection
             // 
@@ -196,9 +199,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceMiddleSet.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceLargetSet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceMiddleSet.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
