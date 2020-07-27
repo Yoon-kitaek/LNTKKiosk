@@ -35,5 +35,22 @@ namespace LNTKKiosk.Data
 
             return query.FirstOrDefault();
         }
+
+        public List<Grocery> GetAllWithProperties()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Groceries
+                        select new { Grocery = x, CategoryName = x.CodeCategory.Item };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.Grocery.CategoryName = item.CategoryName;
+            }
+
+            return items.ConvertAll(x => x.Grocery);
+        }
     }
 }
