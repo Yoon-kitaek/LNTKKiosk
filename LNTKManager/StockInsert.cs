@@ -84,6 +84,17 @@ namespace LNTKManager
             _stock = new Stock();
             WriteToEntity();
 
+            try
+            {
+                DataRepository.Stock.Insert(_stock);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show("등록되었습니다.");
+            Close();
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

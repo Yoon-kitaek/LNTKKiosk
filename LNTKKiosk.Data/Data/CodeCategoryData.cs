@@ -15,5 +15,16 @@ namespace LNTKKiosk.Data
             return context.CodeCategories.FirstOrDefault(a => a.CodeCategoryId == codecategoryId);
         }
 
+        public List<CodeCategory> GetMenuCategory()
+        {
+            List<CodeCategory> codeCategories = new List<CodeCategory>();
+
+            codeCategories.Add(DataRepository.CodeCategory.Get(10));
+            codeCategories.Add(DataRepository.CodeCategory.Get(11));
+            codeCategories.Add(DataRepository.CodeCategory.Get(12));
+
+            return codeCategories;
+        }
+
     }
 }
