@@ -31,6 +31,8 @@ namespace LNTKCustomer.Form
         {
             if (DesignMode)
                 return;
+
+            
         }
     }
 }

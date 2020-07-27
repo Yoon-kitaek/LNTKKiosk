@@ -25,8 +25,8 @@ namespace LNTKCustomer
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ////
-
+            
+            //////
 
             List<ShoppedItem> shoppingList = new List<ShoppedItem>();
             ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
