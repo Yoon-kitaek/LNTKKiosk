@@ -16,7 +16,7 @@ namespace LNTKCustomer.Form
     public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
     {
         ProductThumbnail form = new ProductThumbnail();
-        List<ProductPackage> shoppingList = new List<ProductPackage>();
+        List<ShoppedItem> shoppingList = new List<ShoppedItem>();
 
         public CustomerMenu()
         {
@@ -26,20 +26,16 @@ namespace LNTKCustomer.Form
 
         private void SetTestData()
         {
-            ProductPackage test1 = new ProductPackage();
-            ProductPackage test2 = new ProductPackage();
-            test1.PackageName = "몬스터X 라지 세트";
-            List<int> ttt = new List<int>();
-            ttt.Add(26);
-            ttt.Add(20);
-            ttt.Add(21);
-            test1.productIds = ttt;
+            List<ShoppedItem> shoppingList = new List<ShoppedItem>();
+            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
+            ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1, 0);
+            ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1, 0);
+            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1, 3000);
+
             shoppingList.Add(test1);
-            test2.PackageName = "닭갈비버거";
-            List<int> ttt2 = new List<int>();
-            ttt2.Add(27);
-            test2.productIds = ttt2;
             shoppingList.Add(test2);
+            shoppingList.Add(test3);
+            shoppingList.Add(test4);
         }
 
         private void btnRecommendedButton_Click(object sender, EventArgs e)

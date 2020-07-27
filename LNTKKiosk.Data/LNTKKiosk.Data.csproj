@@ -71,7 +71,8 @@
     <Compile Include="Data\StockData.cs" />
     <Compile Include="Entities\Grocery.cs" />
     <Compile Include="Entities\Product.cs" />
-    <Compile Include="Entities\ProductPackage.cs" />
+    <Compile Include="Entities\ShoppedItem.cs" />
+    <Compile Include="Entities\ShoppedPackage.cs" />
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Event.cs">
       <DependentUpon>LNTK.tt</DependentUpon>
