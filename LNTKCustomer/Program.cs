@@ -25,7 +25,7 @@ namespace LNTKCustomer
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            ////
 
 
             List<ShoppedItem> shoppingList = new List<ShoppedItem>();
