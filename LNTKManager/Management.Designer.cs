@@ -62,6 +62,7 @@
             this.fieldOrderTime = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldProductName = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldProductPrice = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.OrderMonth = new DevExpress.XtraPivotGrid.PivotGridField();
             this.tpgeShin = new DevExpress.XtraTab.XtraTabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).BeginInit();
@@ -334,7 +335,8 @@
             this.fieldCategoryName,
             this.fieldOrderTime,
             this.fieldProductName,
-            this.fieldProductPrice});
+            this.fieldProductPrice,
+            this.OrderMonth});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.Size = new System.Drawing.Size(798, 418);
@@ -348,20 +350,26 @@
             // 
             this.fieldCategoryName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.fieldCategoryName.AreaIndex = 0;
+            this.fieldCategoryName.Caption = "카테고리";
             this.fieldCategoryName.FieldName = "CategoryName";
             this.fieldCategoryName.Name = "fieldCategoryName";
+            this.fieldCategoryName.Width = 123;
             // 
             // fieldOrderTime
             // 
             this.fieldOrderTime.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.fieldOrderTime.AreaIndex = 0;
+            this.fieldOrderTime.Caption = "Year";
             this.fieldOrderTime.FieldName = "OrderTime";
+            this.fieldOrderTime.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
             this.fieldOrderTime.Name = "fieldOrderTime";
+            this.fieldOrderTime.UnboundFieldName = "fieldOrderTime";
             // 
             // fieldProductName
             // 
             this.fieldProductName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.fieldProductName.AreaIndex = 1;
+            this.fieldProductName.Caption = "상품";
             this.fieldProductName.FieldName = "ProductName";
             this.fieldProductName.Name = "fieldProductName";
             // 
@@ -371,6 +379,16 @@
             this.fieldProductPrice.AreaIndex = 0;
             this.fieldProductPrice.FieldName = "ProductPrice";
             this.fieldProductPrice.Name = "fieldProductPrice";
+            // 
+            // OrderMonth
+            // 
+            this.OrderMonth.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.OrderMonth.AreaIndex = 1;
+            this.OrderMonth.Caption = "Month";
+            this.OrderMonth.FieldName = "OrderTime";
+            this.OrderMonth.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth;
+            this.OrderMonth.Name = "OrderMonth";
+            this.OrderMonth.UnboundFieldName = "OrderMonth";
             // 
             // tpgeShin
             // 
@@ -447,6 +465,7 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldOrderTime;
         private DevExpress.XtraPivotGrid.PivotGridField fieldProductName;
         private DevExpress.XtraPivotGrid.PivotGridField fieldProductPrice;
+        private DevExpress.XtraPivotGrid.PivotGridField OrderMonth;
     }
 }
 
