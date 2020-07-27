@@ -125,12 +125,6 @@
     <Compile Include="Form\WaitScreen.Designer.cs">
       <DependentUpon>WaitScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\XtraForm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\XtraForm2.Designer.cs">
-      <DependentUpon>XtraForm2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -204,9 +198,6 @@
     <EmbeddedResource Include="Form\ShoppingCart.resx">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\XtraForm2.resx">
-      <DependentUpon>XtraForm2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -239,6 +230,7 @@
     </EmbeddedResource>
     <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LNTKCustomer.Form.ShoppingCart.datasource" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.Product.datasource" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.ProductPackage.datasource" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.ShoppedItem.datasource" />

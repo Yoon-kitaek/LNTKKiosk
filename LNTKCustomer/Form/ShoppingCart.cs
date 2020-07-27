@@ -27,7 +27,7 @@ namespace LNTKCustomer.Form
 
         private void ShoppingCart_Load(object sender, EventArgs e)
         {
-            uscShoppedItemThumbnail.SetShoppingList(shoppingList);
+          //  uscShoppedItemThumbnail.SetShoppingList(shoppingList);
         }
 
  
