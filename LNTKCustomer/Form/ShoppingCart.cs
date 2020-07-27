@@ -36,17 +36,19 @@ namespace LNTKCustomer.Form
        //     shoppedProductImages1.SetShoppingList(shoppingList);
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            Payment form = new Payment();
-           
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
-        }
+ 
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Payment form = new Payment();
+
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
         }
     }
 }

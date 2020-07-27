@@ -47,12 +47,13 @@ namespace LNTKCustomer
             test2.Quantity = 1;
             test2.GetTotalPrice();
             shoppingList.Add(test2);
-            
 
 
 
 
-            Application.Run(new ShoppingCart(shoppingList));
+
+            //  Application.Run(new ShoppingCart(shoppingList));
+            Application.Run(new EndPage());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)

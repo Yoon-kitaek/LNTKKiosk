@@ -11,18 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CardPayment : DevExpress.XtraEditors.XtraForm
+    public partial class XtraForm2 : DevExpress.XtraEditors.XtraForm
     {
-        public CardPayment()
+        public XtraForm2()
         {
             InitializeComponent();
-        }
-
-   
-        private void imageSlider1_Click(object sender, EventArgs e)
-        {
-            //CustomerMenu form = new CustomerMenu();
-            //form.Show();
         }
     }
 }
