@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
 using DevExpress.XtraWaitForm;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace LNTKCustomer.Form
 {
@@ -31,7 +32,9 @@ namespace LNTKCustomer.Form
 
         private void ShoppingCart_Load(object sender, EventArgs e)
         {
-          //  uscShoppedItemThumbnail.SetShoppingList(shoppingList);
+            uscShoppedItemThumbnail.SetShoppingList(shoppingList);
+            GridView gridView1 = grcShoppedItemList.MainView as GridView;
+            gridView1.ExpandAllGroups();
         }
 
  
@@ -47,6 +50,11 @@ namespace LNTKCustomer.Form
 
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+        }
+
+        private void grcShoppedItemList_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
