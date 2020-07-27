@@ -31,8 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colpackageName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colproductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colquantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.uscShoppedItemThumbnail = new LNTKCustomer.UserControl.ShoppedProductImages();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -43,12 +47,15 @@
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEventPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tileViewColumn1 = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.coltotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -71,7 +78,7 @@
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.pivotGridControl1);
+            this.layoutControl2.Controls.Add(this.gridControl1);
             this.layoutControl2.Controls.Add(this.uscShoppedItemThumbnail);
             this.layoutControl2.Location = new System.Drawing.Point(12, 12);
             this.layoutControl2.Name = "layoutControl2";
@@ -81,23 +88,71 @@
             this.layoutControl2.TabIndex = 4;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // pivotGridControl1
+            // gridControl1
             // 
-            this.pivotGridControl1.DataSource = this.productBindingSource;
-            this.pivotGridControl1.Location = new System.Drawing.Point(12, 236);
-            this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(894, 459);
-            this.pivotGridControl1.TabIndex = 6;
+            this.gridControl1.DataSource = this.productBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(12, 355);
+            this.gridControl1.MainView = this.gridView2;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(894, 340);
+            this.gridControl1.TabIndex = 6;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(LNTKKiosk.Data.ShoppedItem);
             // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colpackageName,
+            this.colproductName,
+            this.colquantity,
+            this.coltotalPrice});
+            this.gridView2.GridControl = this.gridControl1;
+            this.gridView2.GroupCount = 1;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colpackageName, DevExpress.Data.ColumnSortOrder.Descending)});
+            // 
+            // colpackageName
+            // 
+            this.colpackageName.Caption = " ";
+            this.colpackageName.FieldName = "packageName";
+            this.colpackageName.MinWidth = 25;
+            this.colpackageName.Name = "colpackageName";
+            this.colpackageName.Visible = true;
+            this.colpackageName.VisibleIndex = 0;
+            this.colpackageName.Width = 94;
+            // 
+            // colproductName
+            // 
+            this.colproductName.Caption = "상품명";
+            this.colproductName.FieldName = "productName";
+            this.colproductName.MinWidth = 25;
+            this.colproductName.Name = "colproductName";
+            this.colproductName.OptionsColumn.ReadOnly = true;
+            this.colproductName.Visible = true;
+            this.colproductName.VisibleIndex = 0;
+            this.colproductName.Width = 94;
+            // 
+            // colquantity
+            // 
+            this.colquantity.Caption = "수량";
+            this.colquantity.FieldName = "quantity";
+            this.colquantity.MinWidth = 25;
+            this.colquantity.Name = "colquantity";
+            this.colquantity.Visible = true;
+            this.colquantity.VisibleIndex = 1;
+            this.colquantity.Width = 94;
+            // 
             // uscShoppedItemThumbnail
             // 
             this.uscShoppedItemThumbnail.Location = new System.Drawing.Point(12, 12);
             this.uscShoppedItemThumbnail.Name = "uscShoppedItemThumbnail";
-            this.uscShoppedItemThumbnail.Size = new System.Drawing.Size(894, 220);
+            this.uscShoppedItemThumbnail.Size = new System.Drawing.Size(894, 339);
             this.uscShoppedItemThumbnail.TabIndex = 5;
             // 
             // layoutControlGroup1
@@ -116,16 +171,16 @@
             this.layoutControlItem3.Control = this.uscShoppedItemThumbnail;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(898, 224);
+            this.layoutControlItem3.Size = new System.Drawing.Size(898, 343);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.pivotGridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 224);
+            this.layoutControlItem2.Control = this.gridControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 343);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(898, 463);
+            this.layoutControlItem2.Size = new System.Drawing.Size(898, 344);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -182,6 +237,20 @@
             this.gridColumn1.VisibleIndex = 2;
             this.gridColumn1.Width = 94;
             // 
+            // tileViewColumn1
+            // 
+            this.tileViewColumn1.Name = "tileViewColumn1";
+            // 
+            // coltotalPrice
+            // 
+            this.coltotalPrice.Caption = "가격";
+            this.coltotalPrice.FieldName = "totalPrice";
+            this.coltotalPrice.MinWidth = 25;
+            this.coltotalPrice.Name = "coltotalPrice";
+            this.coltotalPrice.Visible = true;
+            this.coltotalPrice.VisibleIndex = 2;
+            this.coltotalPrice.Width = 94;
+            // 
             // ShoppingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -195,8 +264,9 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -221,7 +291,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colEventPrice;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl1;
+        private DevExpress.XtraGrid.Columns.TileViewColumn tileViewColumn1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colpackageName;
+        private DevExpress.XtraGrid.Columns.GridColumn colproductName;
+        private DevExpress.XtraGrid.Columns.GridColumn colquantity;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn coltotalPrice;
     }
 }
