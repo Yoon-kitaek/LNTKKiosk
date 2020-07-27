@@ -19,7 +19,23 @@ namespace LNTKManager
         public ProductInsert()
         {
             InitializeComponent();
+        }
+
+        public ProductInsert(Product product)
+        {
+            InitializeComponent();
+
+            txeID.Text = product.ProductId.ToString();
+            txeName.Text = product.Name;
+
+            txbDescription.Text = product.Description;
+            txePrice.Text = product.Price.ToString();
+            cbbCategoryId.SelectedItem = product.CodeCategoryId;
             
+           // pcbImage.Image = byteArrayToImage(product.Picture);
+
+            if (pcbImage.Image != null)
+                _product.Picture = ConvertImageToBinary(pcbImage.Image);
         }
 
         private Product _product = new Product(); 
@@ -48,12 +64,14 @@ namespace LNTKManager
             _product.CodeCategoryId = (int)cbbCategoryId.SelectedValue;
         }
 
-        private void EditPicture()
+        public Image byteArrayToImage(byte[] bytesArr)
         {
-            _product.Picture=
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
         }
-
-        //
 
         private byte[] ConvertImageToBinary(Image image)
         {
@@ -101,15 +119,8 @@ namespace LNTKManager
             }
 
             WriteToEntity();
-
-
-            if (txeName.Text == DataRepository.Product.GetByName(_product)) ;
-            {
-                EditPicture();
-
-            }
-
-                try
+           
+            try
             {
                 DataRepository.Product.Insert(_product);
             }
@@ -141,6 +152,23 @@ namespace LNTKManager
         private void ProductInsert_Load(object sender, EventArgs e)
         {
             bdsCategory.DataSource = DataRepository.CodeCategory.GetMenuCategory();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _product.ProductId = int.Parse(txeID.Text);
+            WriteToEntity();
+
+            try
+            {
+                DataRepository.Product.Update(_product);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show("수정되었습니다.");
+            Close();
         }
     }
 }
