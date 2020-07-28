@@ -104,6 +104,7 @@
             this.uscThumbnail1.Name = "uscThumbnail1";
             this.uscThumbnail1.Size = new System.Drawing.Size(247, 269);
             this.uscThumbnail1.TabIndex = 0;
+            this.uscThumbnail1.Click += new System.EventHandler(this.uscThumbnail1_Click);
             // 
             // uscThumbnail2
             // 
@@ -113,6 +114,7 @@
             this.uscThumbnail2.Name = "uscThumbnail2";
             this.uscThumbnail2.Size = new System.Drawing.Size(247, 269);
             this.uscThumbnail2.TabIndex = 1;
+            this.uscThumbnail2.Click += new System.EventHandler(this.uscThumbnail2_Click);
             // 
             // uscThumbnail3
             // 
@@ -122,6 +124,7 @@
             this.uscThumbnail3.Name = "uscThumbnail3";
             this.uscThumbnail3.Size = new System.Drawing.Size(249, 269);
             this.uscThumbnail3.TabIndex = 2;
+            this.uscThumbnail3.Click += new System.EventHandler(this.uscThumbnail3_Click);
             // 
             // uscThumbnail4
             // 
@@ -131,6 +134,7 @@
             this.uscThumbnail4.Name = "uscThumbnail4";
             this.uscThumbnail4.Size = new System.Drawing.Size(247, 270);
             this.uscThumbnail4.TabIndex = 3;
+            this.uscThumbnail4.Click += new System.EventHandler(this.uscThumbnail4_Click);
             // 
             // uscThumbnail5
             // 
@@ -140,6 +144,7 @@
             this.uscThumbnail5.Name = "uscThumbnail5";
             this.uscThumbnail5.Size = new System.Drawing.Size(247, 270);
             this.uscThumbnail5.TabIndex = 4;
+            this.uscThumbnail5.Click += new System.EventHandler(this.uscThumbnail5_Click);
             // 
             // uscThumbnail6
             // 
@@ -149,6 +154,7 @@
             this.uscThumbnail6.Name = "uscThumbnail6";
             this.uscThumbnail6.Size = new System.Drawing.Size(249, 270);
             this.uscThumbnail6.TabIndex = 5;
+            this.uscThumbnail6.Click += new System.EventHandler(this.uscThumbnail6_Click);
             // 
             // Root
             // 

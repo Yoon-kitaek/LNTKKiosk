@@ -33,5 +33,26 @@ namespace LNTKKiosk.Data
 
             return orderDetails;
         }
+
+        public List<OrderDetail> GetAllWithProperties()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.OrderDetails
+                        select new { OrderDetail = x, ProductPrice = x.Product.Price, OrderDate = x.Order.Date, ProductName = x.Product.Name, CategoryName = x.Product.CodeCategory.Item };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.OrderDetail.ProductPrice = item.ProductPrice;
+                item.OrderDetail.OrderTime = item.OrderDate;
+                item.OrderDetail.ProductName = item.ProductName;
+                item.OrderDetail.CategoryName = item.CategoryName;
+            }
+
+            return items.ConvertAll(x => x.OrderDetail);
+
+        }
     }
 }

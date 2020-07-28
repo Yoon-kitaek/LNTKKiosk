@@ -89,7 +89,7 @@
             // uscTabButton3
             // 
             this.uscTabButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscTabButton3.Label = "음료";
+            this.uscTabButton3.Label = "etc..";
             this.uscTabButton3.Location = new System.Drawing.Point(420, 3);
             this.uscTabButton3.Name = "uscTabButton3";
             this.uscTabButton3.Size = new System.Drawing.Size(136, 253);

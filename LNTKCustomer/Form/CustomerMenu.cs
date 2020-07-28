@@ -16,7 +16,7 @@ namespace LNTKCustomer.Form
     public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
     {
         ProductThumbnail form = new ProductThumbnail();
-        List<ShoppedItem> shoppingList = new List<ShoppedItem>();
+        public List<ShoppedItem> shoppingList { get; set; }
 
         public CustomerMenu()
         {
@@ -62,6 +62,7 @@ namespace LNTKCustomer.Form
 
         private void CustomerMenu_Load(object sender, EventArgs e)
         {
+            form.GetShoppedItemList(shoppingList);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();

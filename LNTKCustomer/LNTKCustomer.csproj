@@ -125,12 +125,6 @@
     <Compile Include="Form\WaitScreen.Designer.cs">
       <DependentUpon>WaitScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\XtraForm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\XtraForm2.Designer.cs">
-      <DependentUpon>XtraForm2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -155,6 +149,12 @@
     </Compile>
     <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PackageSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\PackageSelection.Designer.cs">
+      <DependentUpon>PackageSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\QuantityChanged.cs">
       <SubType>UserControl</SubType>
@@ -204,9 +204,6 @@
     <EmbeddedResource Include="Form\ShoppingCart.resx">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\XtraForm2.resx">
-      <DependentUpon>XtraForm2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -224,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\FrenchFriesSelection.resx">
       <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\PackageSelection.resx">
+      <DependentUpon>PackageSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\QuantityChanged.resx">
       <DependentUpon>QuantityChanged.cs</DependentUpon>
@@ -305,22 +305,13 @@
     <None Include="Resources\삼성페이.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\set2.jpg" />
+    <None Include="Resources\BurgerLargeSet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\set33.jpg" />
+    <None Include="Resources\BurgerSingle.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\single.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\single2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2222.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\333.png" />
+    <None Include="Resources\BurgerMiddleSet.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
