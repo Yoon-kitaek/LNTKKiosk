@@ -24,8 +24,10 @@ namespace LNTKCustomer.UserControl
 
         public void SetPrice()
         {
-            int price = DataRepository.Product.GetByName(Name).EventPrice;
-            lbcSingle.Text = price.ToString();
+            Product product = DataRepository.Product.GetByName(Name);
+            DataRepository.Product.SetEventPrice(product); //TODO : EventPrice 한번에
+            int price = product.EventPrice;
+            lbcSinglePrice.Text = price.ToString();
             lbcMiddleSetPrice.Text = (price + MiddleSizePrice).ToString();
             lbcLargeSetPrice.Text = (price + LargeSizePrice).ToString();
 

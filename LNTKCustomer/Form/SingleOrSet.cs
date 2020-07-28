@@ -21,6 +21,7 @@ namespace LNTKCustomer.Form
             this.Text = packageName;
             this.shoppingList = shoppingList;
             uscPackageSelection.Name = packageName;
+            uscPackageSelection.SetPrice();
         }
 
 
