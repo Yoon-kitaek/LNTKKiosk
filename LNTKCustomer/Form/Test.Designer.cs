@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.thumbnailContainer1 = new LNTKCustomer.UserControl.ThumbnailContainer();
+            this.packageSelection1 = new LNTKCustomer.UserControl.PackageSelection();
             this.SuspendLayout();
             // 
-            // thumbnailContainer1
+            // packageSelection1
             // 
-            this.thumbnailContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thumbnailContainer1.Location = new System.Drawing.Point(0, 0);
-            this.thumbnailContainer1.Name = "thumbnailContainer1";
-            this.thumbnailContainer1.Size = new System.Drawing.Size(512, 386);
-            this.thumbnailContainer1.TabIndex = 0;
+            this.packageSelection1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.packageSelection1.Location = new System.Drawing.Point(0, 0);
+            this.packageSelection1.Name = "packageSelection1";
+            this.packageSelection1.Size = new System.Drawing.Size(512, 386);
+            this.packageSelection1.TabIndex = 0;
             // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 386);
-            this.Controls.Add(this.thumbnailContainer1);
+            this.Controls.Add(this.packageSelection1);
             this.Name = "Test";
             this.Text = "Test";
             this.ResumeLayout(false);
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private UserControl.ThumbnailContainer thumbnailContainer1;
+        private UserControl.PackageSelection packageSelection1;
     }
 }

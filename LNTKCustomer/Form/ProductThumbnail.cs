@@ -94,8 +94,6 @@ namespace LNTKCustomer.Form
         private void uscThumbnail_ThumbnailClicked(object sender, Thumbnail.ThumbnailClickedEventArgs e)
         {
             Thumbnail thumbnail = sender as Thumbnail;
-
-            MessageBox.Show($"{thumbnail.Label}");
             if (thumbnail.Label.Contains("버거") == true)
             {
                 SingleOrSet form = new SingleOrSet(thumbnail.Label, shoppingList);

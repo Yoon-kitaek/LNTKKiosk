@@ -30,6 +30,9 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.lbcSinglePrice = new DevExpress.XtraEditors.LabelControl();
+            this.lbcMiddleSetPrice = new DevExpress.XtraEditors.LabelControl();
+            this.lbcLargeSetPrice = new DevExpress.XtraEditors.LabelControl();
             this.lbcMiddleSet = new DevExpress.XtraEditors.LabelControl();
             this.lbcLargeSet = new DevExpress.XtraEditors.LabelControl();
             this.lbcSingle = new DevExpress.XtraEditors.LabelControl();
@@ -38,9 +41,6 @@
             this.pceMiddleSet = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lbcLargeSetPrice = new DevExpress.XtraEditors.LabelControl();
-            this.lbcMiddleSetPrice = new DevExpress.XtraEditors.LabelControl();
-            this.lbcSinglePrice = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
@@ -86,6 +86,90 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 15F)});
             this.tablePanel1.Size = new System.Drawing.Size(1090, 343);
             this.tablePanel1.TabIndex = 4;
+            // 
+            // lbcSinglePrice
+            // 
+            this.lbcSinglePrice.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcSinglePrice.Appearance.Options.UseFont = true;
+            this.lbcSinglePrice.Appearance.Options.UseTextOptions = true;
+            this.lbcSinglePrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcSinglePrice.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcSinglePrice.AppearanceDisabled.Options.UseFont = true;
+            this.lbcSinglePrice.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcSinglePrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcSinglePrice.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcSinglePrice.AppearanceHovered.Options.UseFont = true;
+            this.lbcSinglePrice.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcSinglePrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcSinglePrice.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcSinglePrice.AppearancePressed.Options.UseFont = true;
+            this.lbcSinglePrice.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcSinglePrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcSinglePrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.tablePanel1.SetColumn(this.lbcSinglePrice, 0);
+            this.lbcSinglePrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbcSinglePrice.Location = new System.Drawing.Point(3, 294);
+            this.lbcSinglePrice.Name = "lbcSinglePrice";
+            this.tablePanel1.SetRow(this.lbcSinglePrice, 2);
+            this.lbcSinglePrice.Size = new System.Drawing.Size(357, 46);
+            this.lbcSinglePrice.TabIndex = 9;
+            this.lbcSinglePrice.Text = "labelControl3";
+            // 
+            // lbcMiddleSetPrice
+            // 
+            this.lbcMiddleSetPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcMiddleSetPrice.Appearance.Options.UseFont = true;
+            this.lbcMiddleSetPrice.Appearance.Options.UseTextOptions = true;
+            this.lbcMiddleSetPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcMiddleSetPrice.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcMiddleSetPrice.AppearanceDisabled.Options.UseFont = true;
+            this.lbcMiddleSetPrice.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcMiddleSetPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcMiddleSetPrice.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcMiddleSetPrice.AppearanceHovered.Options.UseFont = true;
+            this.lbcMiddleSetPrice.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcMiddleSetPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcMiddleSetPrice.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcMiddleSetPrice.AppearancePressed.Options.UseFont = true;
+            this.lbcMiddleSetPrice.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcMiddleSetPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcMiddleSetPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.tablePanel1.SetColumn(this.lbcMiddleSetPrice, 1);
+            this.lbcMiddleSetPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbcMiddleSetPrice.Location = new System.Drawing.Point(366, 294);
+            this.lbcMiddleSetPrice.Name = "lbcMiddleSetPrice";
+            this.tablePanel1.SetRow(this.lbcMiddleSetPrice, 2);
+            this.lbcMiddleSetPrice.Size = new System.Drawing.Size(357, 46);
+            this.lbcMiddleSetPrice.TabIndex = 8;
+            this.lbcMiddleSetPrice.Text = "labelControl2";
+            // 
+            // lbcLargeSetPrice
+            // 
+            this.lbcLargeSetPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcLargeSetPrice.Appearance.Options.UseFont = true;
+            this.lbcLargeSetPrice.Appearance.Options.UseTextOptions = true;
+            this.lbcLargeSetPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcLargeSetPrice.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcLargeSetPrice.AppearanceDisabled.Options.UseFont = true;
+            this.lbcLargeSetPrice.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcLargeSetPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcLargeSetPrice.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcLargeSetPrice.AppearanceHovered.Options.UseFont = true;
+            this.lbcLargeSetPrice.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcLargeSetPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcLargeSetPrice.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcLargeSetPrice.AppearancePressed.Options.UseFont = true;
+            this.lbcLargeSetPrice.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcLargeSetPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lbcLargeSetPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.tablePanel1.SetColumn(this.lbcLargeSetPrice, 2);
+            this.lbcLargeSetPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbcLargeSetPrice.Location = new System.Drawing.Point(730, 294);
+            this.lbcLargeSetPrice.Name = "lbcLargeSetPrice";
+            this.tablePanel1.SetRow(this.lbcLargeSetPrice, 2);
+            this.lbcLargeSetPrice.Size = new System.Drawing.Size(357, 46);
+            this.lbcLargeSetPrice.TabIndex = 7;
+            this.lbcLargeSetPrice.Text = "labelControl1";
             // 
             // lbcMiddleSet
             // 
@@ -147,6 +231,7 @@
             this.tablePanel1.SetRow(this.pceLargetSet, 0);
             this.pceLargetSet.Size = new System.Drawing.Size(357, 234);
             this.pceLargetSet.TabIndex = 2;
+            this.pceLargetSet.Click += new System.EventHandler(this.pceLargetSet_Click);
             // 
             // pceSingle
             // 
@@ -160,6 +245,7 @@
             this.tablePanel1.SetRow(this.pceSingle, 0);
             this.pceSingle.Size = new System.Drawing.Size(357, 234);
             this.pceSingle.TabIndex = 1;
+            this.pceSingle.Click += new System.EventHandler(this.pceSingle_Click);
             // 
             // pceMiddleSet
             // 
@@ -173,6 +259,7 @@
             this.tablePanel1.SetRow(this.pceMiddleSet, 0);
             this.pceMiddleSet.Size = new System.Drawing.Size(357, 234);
             this.pceMiddleSet.TabIndex = 0;
+            this.pceMiddleSet.Click += new System.EventHandler(this.pceMiddleSet_Click);
             // 
             // Root
             // 
@@ -192,90 +279,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(1094, 347);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // lbcLargeSetPrice
-            // 
-            this.lbcLargeSetPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcLargeSetPrice.Appearance.Options.UseFont = true;
-            this.lbcLargeSetPrice.Appearance.Options.UseTextOptions = true;
-            this.lbcLargeSetPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcLargeSetPrice.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcLargeSetPrice.AppearanceDisabled.Options.UseFont = true;
-            this.lbcLargeSetPrice.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcLargeSetPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcLargeSetPrice.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcLargeSetPrice.AppearanceHovered.Options.UseFont = true;
-            this.lbcLargeSetPrice.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcLargeSetPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcLargeSetPrice.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcLargeSetPrice.AppearancePressed.Options.UseFont = true;
-            this.lbcLargeSetPrice.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcLargeSetPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcLargeSetPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.tablePanel1.SetColumn(this.lbcLargeSetPrice, 2);
-            this.lbcLargeSetPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcLargeSetPrice.Location = new System.Drawing.Point(730, 294);
-            this.lbcLargeSetPrice.Name = "lbcLargeSetPrice";
-            this.tablePanel1.SetRow(this.lbcLargeSetPrice, 2);
-            this.lbcLargeSetPrice.Size = new System.Drawing.Size(357, 46);
-            this.lbcLargeSetPrice.TabIndex = 7;
-            this.lbcLargeSetPrice.Text = "labelControl1";
-            // 
-            // lbcMiddleSetPrice
-            // 
-            this.lbcMiddleSetPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcMiddleSetPrice.Appearance.Options.UseFont = true;
-            this.lbcMiddleSetPrice.Appearance.Options.UseTextOptions = true;
-            this.lbcMiddleSetPrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcMiddleSetPrice.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcMiddleSetPrice.AppearanceDisabled.Options.UseFont = true;
-            this.lbcMiddleSetPrice.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcMiddleSetPrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcMiddleSetPrice.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcMiddleSetPrice.AppearanceHovered.Options.UseFont = true;
-            this.lbcMiddleSetPrice.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcMiddleSetPrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcMiddleSetPrice.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcMiddleSetPrice.AppearancePressed.Options.UseFont = true;
-            this.lbcMiddleSetPrice.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcMiddleSetPrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcMiddleSetPrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.tablePanel1.SetColumn(this.lbcMiddleSetPrice, 1);
-            this.lbcMiddleSetPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcMiddleSetPrice.Location = new System.Drawing.Point(366, 294);
-            this.lbcMiddleSetPrice.Name = "lbcMiddleSetPrice";
-            this.tablePanel1.SetRow(this.lbcMiddleSetPrice, 2);
-            this.lbcMiddleSetPrice.Size = new System.Drawing.Size(357, 46);
-            this.lbcMiddleSetPrice.TabIndex = 8;
-            this.lbcMiddleSetPrice.Text = "labelControl2";
-            // 
-            // lbcSinglePrice
-            // 
-            this.lbcSinglePrice.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcSinglePrice.Appearance.Options.UseFont = true;
-            this.lbcSinglePrice.Appearance.Options.UseTextOptions = true;
-            this.lbcSinglePrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcSinglePrice.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcSinglePrice.AppearanceDisabled.Options.UseFont = true;
-            this.lbcSinglePrice.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcSinglePrice.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcSinglePrice.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcSinglePrice.AppearanceHovered.Options.UseFont = true;
-            this.lbcSinglePrice.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcSinglePrice.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcSinglePrice.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcSinglePrice.AppearancePressed.Options.UseFont = true;
-            this.lbcSinglePrice.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcSinglePrice.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lbcSinglePrice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.tablePanel1.SetColumn(this.lbcSinglePrice, 0);
-            this.lbcSinglePrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcSinglePrice.Location = new System.Drawing.Point(3, 294);
-            this.lbcSinglePrice.Name = "lbcSinglePrice";
-            this.tablePanel1.SetRow(this.lbcSinglePrice, 2);
-            this.lbcSinglePrice.Size = new System.Drawing.Size(357, 46);
-            this.lbcSinglePrice.TabIndex = 9;
-            this.lbcSinglePrice.Text = "labelControl3";
             // 
             // PackageSelection
             // 

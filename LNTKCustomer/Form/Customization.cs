@@ -15,15 +15,27 @@ namespace LNTKCustomer.Form
 {
     public partial class Customization : DevExpress.XtraEditors.XtraForm
     {
-        public Customization()
+        string name;
+        public Customization(string packageName)
         {
             InitializeComponent();
+            name = packageName;         
         }
 
         private void Customization_Load(object sender, EventArgs e)
         {
             if (DesignMode)
                 return;
+          
+            if (name.Contains("세트") == false)
+            {
+                sbtNext.Visible = false;
+                uscBeverageSelection.Visible = false;
+                uscSideSelection.Visible = false;
+                
+                MessageBox.Show($"{uscBeverageSelection.Visible},{uscSideSelection.Visible},{sbtNext.Visible}");
+
+            }
 
         }
 
@@ -37,5 +49,7 @@ namespace LNTKCustomer.Form
             Payment form = new Payment();
             form.Show();
         }
+
+       
     }
 }
