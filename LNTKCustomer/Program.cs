@@ -39,8 +39,8 @@ namespace LNTKCustomer
 
             //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
-            //Application.Run(new CustomerMenu());
-            Application.Run(new XtraForm2());
+            Application.Run(new CustomerMenu());
+          
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
@@ -48,5 +48,5 @@ namespace LNTKCustomer
             Console.WriteLine($"[{e.Count}] at {DateTime.Now}");
             //
         }
-    }
+    } //
 }
