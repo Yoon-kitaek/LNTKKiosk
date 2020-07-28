@@ -82,9 +82,5 @@ namespace LNTKCustomer.UserControl
         }
         #endregion
 
-        private void uscThumbnail1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test");
-        }
     }
 }
