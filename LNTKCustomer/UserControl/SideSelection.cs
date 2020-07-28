@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace LNTKCustomer.UserControl
 {
-    public partial class FrenchFriesSelection : DevExpress.XtraEditors.XtraUserControl
+    public partial class SideSelection : DevExpress.XtraEditors.XtraUserControl
     {
-        public FrenchFriesSelection()
+        public SideSelection()
         {
             InitializeComponent();
         }

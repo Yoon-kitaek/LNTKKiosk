@@ -156,11 +156,11 @@
     <Compile Include="UserControl\CustomizationButton.Designer.cs">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\FrenchFriesSelection.cs">
+    <Compile Include="UserControl\SideSelection.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
-      <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    <Compile Include="UserControl\SideSelection.Designer.cs">
+      <DependentUpon>SideSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\PackageSelection.cs">
       <SubType>UserControl</SubType>
@@ -243,8 +243,8 @@
     <EmbeddedResource Include="UserControl\CustomizationButton.resx">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\FrenchFriesSelection.resx">
-      <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\SideSelection.resx">
+      <DependentUpon>SideSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\PackageSelection.resx">
       <DependentUpon>PackageSelection.cs</DependentUpon>

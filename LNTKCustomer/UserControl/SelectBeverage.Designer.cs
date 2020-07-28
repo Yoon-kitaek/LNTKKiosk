@@ -30,16 +30,16 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pceRight = new DevExpress.XtraEditors.PictureEdit();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -84,42 +84,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(995, 239);
             this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // uscThumbnail1
-            // 
-            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail1.Label = "label";
-            this.uscThumbnail1.Location = new System.Drawing.Point(62, 3);
-            this.uscThumbnail1.Name = "uscThumbnail1";
-            this.uscThumbnail1.Size = new System.Drawing.Size(212, 233);
-            this.uscThumbnail1.TabIndex = 0;
-            // 
-            // uscThumbnail2
-            // 
-            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail2.Label = "label";
-            this.uscThumbnail2.Location = new System.Drawing.Point(280, 3);
-            this.uscThumbnail2.Name = "uscThumbnail2";
-            this.uscThumbnail2.Size = new System.Drawing.Size(212, 233);
-            this.uscThumbnail2.TabIndex = 1;
-            // 
-            // uscThumbnail3
-            // 
-            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail3.Label = "label";
-            this.uscThumbnail3.Location = new System.Drawing.Point(498, 3);
-            this.uscThumbnail3.Name = "uscThumbnail3";
-            this.uscThumbnail3.Size = new System.Drawing.Size(212, 233);
-            this.uscThumbnail3.TabIndex = 2;
-            // 
-            // uscThumbnail4
-            // 
-            this.uscThumbnail4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail4.Label = "label";
-            this.uscThumbnail4.Location = new System.Drawing.Point(716, 3);
-            this.uscThumbnail4.Name = "uscThumbnail4";
-            this.uscThumbnail4.Size = new System.Drawing.Size(212, 233);
-            this.uscThumbnail4.TabIndex = 8;
             // 
             // tableLayoutPanel2
             // 
@@ -201,6 +165,42 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(999, 243);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // uscThumbnail1
+            // 
+            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail1.Label = "label";
+            this.uscThumbnail1.Location = new System.Drawing.Point(62, 3);
+            this.uscThumbnail1.Name = "uscThumbnail1";
+            this.uscThumbnail1.Size = new System.Drawing.Size(212, 233);
+            this.uscThumbnail1.TabIndex = 0;
+            // 
+            // uscThumbnail2
+            // 
+            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail2.Label = "label";
+            this.uscThumbnail2.Location = new System.Drawing.Point(280, 3);
+            this.uscThumbnail2.Name = "uscThumbnail2";
+            this.uscThumbnail2.Size = new System.Drawing.Size(212, 233);
+            this.uscThumbnail2.TabIndex = 1;
+            // 
+            // uscThumbnail3
+            // 
+            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail3.Label = "label";
+            this.uscThumbnail3.Location = new System.Drawing.Point(498, 3);
+            this.uscThumbnail3.Name = "uscThumbnail3";
+            this.uscThumbnail3.Size = new System.Drawing.Size(212, 233);
+            this.uscThumbnail3.TabIndex = 2;
+            // 
+            // uscThumbnail4
+            // 
+            this.uscThumbnail4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail4.Label = "label";
+            this.uscThumbnail4.Location = new System.Drawing.Point(716, 3);
+            this.uscThumbnail4.Name = "uscThumbnail4";
+            this.uscThumbnail4.Size = new System.Drawing.Size(212, 233);
+            this.uscThumbnail4.TabIndex = 8;
             // 
             // SelectBeverage
             // 
