@@ -12,6 +12,11 @@ namespace LNTKCustomer
 {
     static class Program
     {
+        ////
+        ///////////////////////////ㄹㄹ
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -39,8 +44,8 @@ namespace LNTKCustomer
 
             //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
+            //Application.Run(new CustomerMenu());
             Application.Run(new CustomerMenu());
-          
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
@@ -48,5 +53,5 @@ namespace LNTKCustomer
             Console.WriteLine($"[{e.Count}] at {DateTime.Now}");
             //
         }
-    } //
+    }
 }

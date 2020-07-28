@@ -35,20 +35,20 @@
             this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
             this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pceRight = new DevExpress.XtraEditors.PictureEdit();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pceRight = new DevExpress.XtraEditors.PictureEdit();
-            this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -137,6 +137,20 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(58, 233);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
+            // pceRight
+            // 
+            this.pceRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceRight.EditValue = global::LNTKCustomer.Properties.Resources.RightArrow;
+            this.pceRight.Location = new System.Drawing.Point(5, 98);
+            this.pceRight.Margin = new System.Windows.Forms.Padding(5);
+            this.pceRight.Name = "pceRight";
+            this.pceRight.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceRight.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceRight.Size = new System.Drawing.Size(48, 36);
+            this.pceRight.StyleController = this.layoutControl1;
+            this.pceRight.TabIndex = 7;
+            this.pceRight.Click += new System.EventHandler(this.pceRight_Click);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -152,6 +166,20 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(53, 233);
             this.tableLayoutPanel3.TabIndex = 10;
+            // 
+            // pceLeft
+            // 
+            this.pceLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceLeft.EditValue = global::LNTKCustomer.Properties.Resources.LeftArrow;
+            this.pceLeft.Location = new System.Drawing.Point(4, 97);
+            this.pceLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.pceLeft.Name = "pceLeft";
+            this.pceLeft.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceLeft.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceLeft.Size = new System.Drawing.Size(45, 38);
+            this.pceLeft.StyleController = this.layoutControl1;
+            this.pceLeft.TabIndex = 6;
+            this.pceLeft.Click += new System.EventHandler(this.pceLeft_Click);
             // 
             // Root
             // 
@@ -174,34 +202,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // pceRight
-            // 
-            this.pceRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceRight.EditValue = global::LNTKCustomer.Properties.Resources.RightArrow;
-            this.pceRight.Location = new System.Drawing.Point(5, 98);
-            this.pceRight.Margin = new System.Windows.Forms.Padding(5);
-            this.pceRight.Name = "pceRight";
-            this.pceRight.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceRight.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceRight.Size = new System.Drawing.Size(48, 36);
-            this.pceRight.StyleController = this.layoutControl1;
-            this.pceRight.TabIndex = 7;
-            this.pceRight.Click += new System.EventHandler(this.pceRight_Click);
-            // 
-            // pceLeft
-            // 
-            this.pceLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceLeft.EditValue = global::LNTKCustomer.Properties.Resources.LeftArrow;
-            this.pceLeft.Location = new System.Drawing.Point(4, 97);
-            this.pceLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.pceLeft.Name = "pceLeft";
-            this.pceLeft.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceLeft.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceLeft.Size = new System.Drawing.Size(45, 38);
-            this.pceLeft.StyleController = this.layoutControl1;
-            this.pceLeft.TabIndex = 6;
-            this.pceLeft.Click += new System.EventHandler(this.pceLeft_Click);
-            // 
             // SelectBeverage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -214,11 +214,11 @@
             this.layoutControl1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

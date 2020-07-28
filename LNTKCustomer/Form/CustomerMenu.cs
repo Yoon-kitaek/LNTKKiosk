@@ -26,7 +26,7 @@ namespace LNTKCustomer.Form
 
         private void SetTestData()
         {
-            List<ShoppedItem> shoppingList = new List<ShoppedItem>();
+            shoppingList = new List<ShoppedItem>();
             ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
             ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1, 0);
             ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1, 0);
@@ -61,11 +61,13 @@ namespace LNTKCustomer.Form
 
 
         private void CustomerMenu_Load(object sender, EventArgs e)
-        {
+        {           
+            SetTestData();//실험용
             form.GetShoppedItemList(shoppingList);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+
         }
 
         private void pceShoppingCart_Click(object sender, EventArgs e)

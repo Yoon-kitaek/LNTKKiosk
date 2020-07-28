@@ -85,8 +85,10 @@
             this.pceThumbnail.Location = new System.Drawing.Point(3, 3);
             this.pceThumbnail.Name = "pceThumbnail";
             this.pceThumbnail.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceThumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pceThumbnail.Size = new System.Drawing.Size(645, 333);
             this.pceThumbnail.TabIndex = 4;
+            this.pceThumbnail.Click += new System.EventHandler(this.Thumbnail_Click);
             // 
             // lbcName
             // 
@@ -226,10 +228,10 @@
             this.lbcDiscountSticker.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lbcDiscountSticker.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbcDiscountSticker.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("lbcDiscountSticker.ImageOptions.Image")));
-            this.lbcDiscountSticker.Location = new System.Drawing.Point(24, 24);
+            this.lbcDiscountSticker.Location = new System.Drawing.Point(2, 0);
             this.lbcDiscountSticker.MaximumSize = new System.Drawing.Size(200, 200);
             this.lbcDiscountSticker.Name = "lbcDiscountSticker";
-            this.lbcDiscountSticker.Size = new System.Drawing.Size(200, 191);
+            this.lbcDiscountSticker.Size = new System.Drawing.Size(130, 177);
             this.lbcDiscountSticker.TabIndex = 7;
             this.lbcDiscountSticker.Text = "할인률";
             // 
@@ -242,7 +244,6 @@
             this.Name = "Thumbnail";
             this.Size = new System.Drawing.Size(699, 472);
             this.Load += new System.EventHandler(this.Thumbnail_Load);
-            this.Click += new System.EventHandler(this.Thumbnail_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

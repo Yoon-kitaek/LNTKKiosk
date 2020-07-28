@@ -32,11 +32,9 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.cbbCategoryId = new System.Windows.Forms.ComboBox();
-            this.bdsCategory = new System.Windows.Forms.BindingSource(this.components);
             this.txeName = new DevExpress.XtraEditors.TextEdit();
             this.txbDescription = new System.Windows.Forms.TextBox();
             this.txePrice = new DevExpress.XtraEditors.TextEdit();
-            this.pcbImage = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -45,7 +43,6 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -56,18 +53,18 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.bdsCategory = new System.Windows.Forms.BindingSource(this.components);
+            this.pcbImage = new System.Windows.Forms.PictureBox();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -77,6 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -122,10 +122,6 @@
             this.cbbCategoryId.TabIndex = 14;
             this.cbbCategoryId.ValueMember = "CodeCategoryId";
             // 
-            // bdsCategory
-            // 
-            this.bdsCategory.DataSource = typeof(LNTKKiosk.Data.CodeCategory);
-            // 
             // txeName
             // 
             this.txeName.Location = new System.Drawing.Point(67, 40);
@@ -153,16 +149,6 @@
             this.txePrice.StyleController = this.layoutControl1;
             this.txePrice.TabIndex = 10;
             this.txePrice.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.txePrice_EditValueChanging);
-            // 
-            // pcbImage
-            // 
-            this.pcbImage.Location = new System.Drawing.Point(359, 12);
-            this.pcbImage.MinimumSize = new System.Drawing.Size(260, 260);
-            this.pcbImage.Name = "pcbImage";
-            this.pcbImage.Size = new System.Drawing.Size(284, 336);
-            this.pcbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbImage.TabIndex = 8;
-            this.pcbImage.TabStop = false;
             // 
             // btnSave
             // 
@@ -257,16 +243,6 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.pcbImage;
-            this.layoutControlItem5.Location = new System.Drawing.Point(347, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(288, 340);
-            this.layoutControlItem5.Text = "미리보기";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txbDescription;
@@ -356,6 +332,30 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // bdsCategory
+            // 
+            this.bdsCategory.DataSource = typeof(LNTKKiosk.Data.CodeCategory);
+            // 
+            // pcbImage
+            // 
+            this.pcbImage.Location = new System.Drawing.Point(359, 12);
+            this.pcbImage.MinimumSize = new System.Drawing.Size(260, 260);
+            this.pcbImage.Name = "pcbImage";
+            this.pcbImage.Size = new System.Drawing.Size(284, 336);
+            this.pcbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImage.TabIndex = 8;
+            this.pcbImage.TabStop = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.pcbImage;
+            this.layoutControlItem5.Location = new System.Drawing.Point(347, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(288, 340);
+            this.layoutControlItem5.Text = "미리보기";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
             // ProductInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -367,16 +367,13 @@
             this.Load += new System.EventHandler(this.ProductInsert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -386,6 +383,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
