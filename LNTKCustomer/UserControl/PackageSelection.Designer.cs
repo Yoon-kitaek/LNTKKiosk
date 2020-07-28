@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lbcSingle = new DevExpress.XtraEditors.LabelControl();
-            this.lbcLargeSet = new DevExpress.XtraEditors.LabelControl();
             this.lbcMiddleSet = new DevExpress.XtraEditors.LabelControl();
+            this.lbcLargeSet = new DevExpress.XtraEditors.LabelControl();
+            this.lbcSingle = new DevExpress.XtraEditors.LabelControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pceLargetSet = new DevExpress.XtraEditors.PictureEdit();
             this.pceSingle = new DevExpress.XtraEditors.PictureEdit();
             this.pceMiddleSet = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceLargetSet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).BeginInit();
@@ -59,16 +59,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(1114, 367);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1114, 367);
-            this.Root.TextVisible = false;
             // 
             // tablePanel1
             // 
@@ -90,30 +80,21 @@
             this.tablePanel1.Size = new System.Drawing.Size(1090, 343);
             this.tablePanel1.TabIndex = 4;
             // 
-            // layoutControlItem1
+            // lbcMiddleSet
             // 
-            this.layoutControlItem1.Control = this.tablePanel1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1094, 347);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // lbcSingle
-            // 
-            this.lbcSingle.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcSingle.Appearance.Options.UseFont = true;
-            this.lbcSingle.Appearance.Options.UseTextOptions = true;
-            this.lbcSingle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcSingle.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.tablePanel1.SetColumn(this.lbcSingle, 0);
-            this.lbcSingle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcSingle.Location = new System.Drawing.Point(3, 277);
-            this.lbcSingle.Name = "lbcSingle";
-            this.tablePanel1.SetRow(this.lbcSingle, 1);
-            this.lbcSingle.Size = new System.Drawing.Size(357, 63);
-            this.lbcSingle.TabIndex = 4;
-            this.lbcSingle.Text = "단품";
+            this.lbcMiddleSet.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcMiddleSet.Appearance.Options.UseFont = true;
+            this.lbcMiddleSet.Appearance.Options.UseTextOptions = true;
+            this.lbcMiddleSet.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcMiddleSet.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.tablePanel1.SetColumn(this.lbcMiddleSet, 1);
+            this.lbcMiddleSet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbcMiddleSet.Location = new System.Drawing.Point(366, 277);
+            this.lbcMiddleSet.Name = "lbcMiddleSet";
+            this.tablePanel1.SetRow(this.lbcMiddleSet, 1);
+            this.lbcMiddleSet.Size = new System.Drawing.Size(357, 63);
+            this.lbcMiddleSet.TabIndex = 6;
+            this.lbcMiddleSet.Text = "세트(M)";
             // 
             // lbcLargeSet
             // 
@@ -131,21 +112,40 @@
             this.lbcLargeSet.TabIndex = 5;
             this.lbcLargeSet.Text = "세트(L)";
             // 
-            // lbcMiddleSet
+            // lbcSingle
             // 
-            this.lbcMiddleSet.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbcMiddleSet.Appearance.Options.UseFont = true;
-            this.lbcMiddleSet.Appearance.Options.UseTextOptions = true;
-            this.lbcMiddleSet.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcMiddleSet.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.tablePanel1.SetColumn(this.lbcMiddleSet, 1);
-            this.lbcMiddleSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcMiddleSet.Location = new System.Drawing.Point(366, 277);
-            this.lbcMiddleSet.Name = "lbcMiddleSet";
-            this.tablePanel1.SetRow(this.lbcMiddleSet, 1);
-            this.lbcMiddleSet.Size = new System.Drawing.Size(357, 63);
-            this.lbcMiddleSet.TabIndex = 6;
-            this.lbcMiddleSet.Text = "세트(M)";
+            this.lbcSingle.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.lbcSingle.Appearance.Options.UseFont = true;
+            this.lbcSingle.Appearance.Options.UseTextOptions = true;
+            this.lbcSingle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcSingle.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.tablePanel1.SetColumn(this.lbcSingle, 0);
+            this.lbcSingle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbcSingle.Location = new System.Drawing.Point(3, 277);
+            this.lbcSingle.Name = "lbcSingle";
+            this.tablePanel1.SetRow(this.lbcSingle, 1);
+            this.lbcSingle.Size = new System.Drawing.Size(357, 63);
+            this.lbcSingle.TabIndex = 4;
+            this.lbcSingle.Text = "단품";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1114, 367);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.tablePanel1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1094, 347);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // pceLargetSet
             // 
@@ -195,9 +195,9 @@
             this.Size = new System.Drawing.Size(1114, 367);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceLargetSet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).EndInit();

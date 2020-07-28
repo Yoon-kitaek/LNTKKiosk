@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
+using LNTKCustomer.UserControl;
 
 namespace LNTKCustomer.Form
 {
@@ -89,48 +90,70 @@ namespace LNTKCustomer.Form
             BindThumbnail();
         }
 
-        private void uscThumbnail_Click(int i)
+
+        private void uscThumbnail_ThumbnailClicked(object sender, Thumbnail.ThumbnailClickedEventArgs e)
         {
-           // if (thumbnails[i].Label.Contains("버거") == true)
-                
-          //  else
+            Thumbnail thumbnail = sender as Thumbnail;
+
+            MessageBox.Show($"{thumbnail.Label}");
+            if (thumbnail.Label.Contains("버거") == true)
             {
-                Product product = DataRepository.Product.GetByName(thumbnails[i].Label);
-                shoppingList.Add(new ShoppedItem(product.Name,product.ProductId,1,product.EventPrice));
+                SingleOrSet form = new SingleOrSet();
+                form.Show();
+            }
+            else
+            {
+                Product product = DataRepository.Product.GetByName(thumbnail.Label);
+                shoppingList.Add(new ShoppedItem(product.Name, product.ProductId, 1, product.EventPrice));
             }
 
+
+            OnThumbnailClicked(e.Name);
+
         }
 
 
+       
+        #region ThumbnailClicked event things for C# 3.0
+        public event EventHandler<ThumbnailClickedEventArgs> ThumbnailClicked;
 
-        private void uscThumbnail1_Click(object sender, EventArgs e)
+        protected virtual void OnThumbnailClicked(ThumbnailClickedEventArgs e)
         {
-            uscThumbnail_Click(0);
+            if (ThumbnailClicked != null)
+                ThumbnailClicked(this, e);
         }
 
-        private void uscThumbnail2_Click(object sender, EventArgs e)
+        private ThumbnailClickedEventArgs OnThumbnailClicked(string name)
         {
-            uscThumbnail_Click(1);
+            ThumbnailClickedEventArgs args = new ThumbnailClickedEventArgs(name);
+            OnThumbnailClicked(args);
+
+            return args;
         }
 
-        private void uscThumbnail3_Click(object sender, EventArgs e)
+        private ThumbnailClickedEventArgs OnThumbnailClickedForOut()
         {
-            uscThumbnail_Click(2);
+            ThumbnailClickedEventArgs args = new ThumbnailClickedEventArgs();
+            OnThumbnailClicked(args);
+
+            return args;
         }
 
-        private void uscThumbnail4_Click(object sender, EventArgs e)
+        public class ThumbnailClickedEventArgs : EventArgs
         {
-            uscThumbnail_Click(3);
-        }
+            public string Name { get; set; }
 
-        private void uscThumbnail5_Click(object sender, EventArgs e)
-        {
-            uscThumbnail_Click(4);
-        }
+            public ThumbnailClickedEventArgs()
+            {
+            }
 
-        private void uscThumbnail6_Click(object sender, EventArgs e)
-        {
-            uscThumbnail_Click(5);
+            public ThumbnailClickedEventArgs(string name)
+            {
+                Name = name;
+            }
         }
+        #endregion
+
+
     }
 }
