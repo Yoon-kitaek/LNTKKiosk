@@ -187,4 +187,16 @@
   <data name="삼성페이" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\삼성페이.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="set33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\set33.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="single2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\single2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_333" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\333.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
