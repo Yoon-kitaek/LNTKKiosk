@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace LNTKKiosk.Data
 {
     public class StockData : EntityData<Stock>
@@ -50,6 +51,38 @@ namespace LNTKKiosk.Data
             foreach (var item in items)
             {
                 item.Stock.GroceryName = item.GroceryName;
+            }
+
+            return items.ConvertAll(x => x.Stock);
+
+        }
+
+        public List<Stock> GetAllWithProperties()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Stocks
+                        select new
+                        {
+                            Stock = x,
+                            GroceryName = x.Grocery.Item
+
+                        };
+
+
+           
+            //var query = from x in context.Stocks
+            //            select new { Stock = x, GroceryName = x.Grocery.Item, ReceivedDate
+            //                RemainingTime = (x.ReceivedDate.AddDays((double)x.ExpirationDate)-DateTime.Now)};
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.Stock.GroceryName = item.GroceryName;
+                //if(item.RemainingTime.Days > 0)
+                item.Stock.RemainingTime = (item.Stock.ReceivedDate.AddDays(30) - DateTime.Now).Days;
+               
             }
 
             return items.ConvertAll(x => x.Stock);
