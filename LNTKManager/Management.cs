@@ -1,5 +1,9 @@
-﻿using LNTKKiosk.Data;
+﻿using DevExpress.Data;
+using DevExpress.XtraTreeList.Columns;
+using DevExpress.XtraTreeList.Nodes;
+using LNTKKiosk.Data;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +20,7 @@ namespace LNTKManager
         public Management()
         {
             InitializeComponent();
-            
+
         }
 
         private void buttonContainer1_MenuSelected(object sender, ButtonContainer.MenuSelectedEventArgs e)
@@ -65,6 +69,7 @@ namespace LNTKManager
 
         }
 
+       
         private void Management_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lotteNaldsTouchKingDataSet3.OrderDetail' table. You can move, or remove it, as needed.
@@ -116,5 +121,7 @@ namespace LNTKManager
         {
 
         }
+
+       
     }
 }

@@ -34,7 +34,15 @@
             DevExpress.XtraPivotGrid.PivotGridFormatRule pivotGridFormatRule1 = new DevExpress.XtraPivotGrid.PivotGridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings formatRuleTotalTypeSettings1 = new DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.fieldProductPrice = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.colRemainingTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tctlManagement = new DevExpress.XtraTab.XtraTabControl();
             this.tpgeOrder = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -89,9 +97,8 @@
             this.colStockId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrice1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colReceivedDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRemainingTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pivotGridControl2 = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).BeginInit();
             this.tctlManagement.SuspendLayout();
             this.tpgeOrder.SuspendLayout();
@@ -120,7 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // fieldProductPrice
@@ -131,6 +138,25 @@
             this.fieldProductPrice.FieldName = "ProductPrice";
             this.fieldProductPrice.Name = "fieldProductPrice";
             this.fieldProductPrice.ValueFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            // 
+            // colRemainingTime
+            // 
+            this.colRemainingTime.FieldName = "RemainingTime";
+            this.colRemainingTime.MinWidth = 25;
+            this.colRemainingTime.Name = "colRemainingTime";
+            this.colRemainingTime.OptionsColumn.AllowEdit = false;
+            this.colRemainingTime.Visible = true;
+            this.colRemainingTime.VisibleIndex = 4;
+            this.colRemainingTime.Width = 94;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "신선도";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 5;
+            this.gridColumn1.Width = 94;
             // 
             // tctlManagement
             // 
@@ -607,7 +633,6 @@
             // 
             // tpgeShin
             // 
-            this.tpgeShin.Controls.Add(this.pivotGridControl2);
             this.tpgeShin.Controls.Add(this.gridControl4);
             this.tpgeShin.Name = "tpgeShin";
             this.tpgeShin.Size = new System.Drawing.Size(1106, 459);
@@ -616,11 +641,12 @@
             // gridControl4
             // 
             this.gridControl4.DataSource = this.bdsStock;
-            this.gridControl4.Location = new System.Drawing.Point(29, 29);
+            this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl4.Location = new System.Drawing.Point(0, 0);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.MenuManager = this.barManager1;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(418, 216);
+            this.gridControl4.Size = new System.Drawing.Size(1106, 459);
             this.gridControl4.TabIndex = 0;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -636,10 +662,43 @@
             this.colStockId,
             this.colPrice1,
             this.colReceivedDate,
-            this.colRemainingTime});
+            this.colRemainingTime,
+            this.gridColumn1});
+            gridFormatRule1.Column = this.colRemainingTime;
+            gridFormatRule1.ColumnApplyTo = this.gridColumn1;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
+            formatConditionRuleValue2.Value1 = "20";
+            gridFormatRule1.Rule = formatConditionRuleValue2;
+            gridFormatRule2.Column = this.colRemainingTime;
+            gridFormatRule2.ColumnApplyTo = this.gridColumn1;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Between;
+            formatConditionRuleValue3.Value1 = "10";
+            formatConditionRuleValue3.Value2 = "21";
+            gridFormatRule2.Rule = formatConditionRuleValue3;
+            gridFormatRule3.Column = this.colRemainingTime;
+            gridFormatRule3.ColumnApplyTo = this.gridColumn1;
+            gridFormatRule3.Name = "Format2";
+            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
+            formatConditionRuleValue4.Value1 = "10";
+            gridFormatRule3.Rule = formatConditionRuleValue4;
+            this.gridView4.FormatRules.Add(gridFormatRule1);
+            this.gridView4.FormatRules.Add(gridFormatRule2);
+            this.gridView4.FormatRules.Add(gridFormatRule3);
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.GroupCount = 1;
+            this.gridView4.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "RemainingTime", null, "(Count={0})")});
             this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsView.ShowFooter = true;
+            this.gridView4.OptionsView.ShowGroupedColumns = true;
             this.gridView4.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colGroceryName, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
@@ -648,6 +707,7 @@
             this.colGroceryName.FieldName = "GroceryName";
             this.colGroceryName.MinWidth = 25;
             this.colGroceryName.Name = "colGroceryName";
+            this.colGroceryName.OptionsColumn.AllowEdit = false;
             this.colGroceryName.Visible = true;
             this.colGroceryName.VisibleIndex = 0;
             this.colGroceryName.Width = 94;
@@ -657,8 +717,9 @@
             this.colStockId.FieldName = "StockId";
             this.colStockId.MinWidth = 25;
             this.colStockId.Name = "colStockId";
+            this.colStockId.OptionsColumn.AllowEdit = false;
             this.colStockId.Visible = true;
-            this.colStockId.VisibleIndex = 0;
+            this.colStockId.VisibleIndex = 1;
             this.colStockId.Width = 94;
             // 
             // colPrice1
@@ -666,8 +727,9 @@
             this.colPrice1.FieldName = "Price";
             this.colPrice1.MinWidth = 25;
             this.colPrice1.Name = "colPrice1";
+            this.colPrice1.OptionsColumn.AllowEdit = false;
             this.colPrice1.Visible = true;
-            this.colPrice1.VisibleIndex = 1;
+            this.colPrice1.VisibleIndex = 2;
             this.colPrice1.Width = 94;
             // 
             // colReceivedDate
@@ -675,32 +737,15 @@
             this.colReceivedDate.FieldName = "ReceivedDate";
             this.colReceivedDate.MinWidth = 25;
             this.colReceivedDate.Name = "colReceivedDate";
+            this.colReceivedDate.OptionsColumn.AllowEdit = false;
             this.colReceivedDate.Visible = true;
-            this.colReceivedDate.VisibleIndex = 2;
+            this.colReceivedDate.VisibleIndex = 3;
             this.colReceivedDate.Width = 94;
-            // 
-            // colRemainingTime
-            // 
-            this.colRemainingTime.FieldName = "RemainingTime";
-            this.colRemainingTime.MinWidth = 25;
-            this.colRemainingTime.Name = "colRemainingTime";
-            this.colRemainingTime.Visible = true;
-            this.colRemainingTime.VisibleIndex = 3;
-            this.colRemainingTime.Width = 94;
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pivotGridControl2
-            // 
-            this.pivotGridControl2.Location = new System.Drawing.Point(491, 45);
-            this.pivotGridControl2.MenuManager = this.barManager1;
-            this.pivotGridControl2.Name = "pivotGridControl2";
-            this.pivotGridControl2.OLAPConnectionString = "";
-            this.pivotGridControl2.Size = new System.Drawing.Size(470, 294);
-            this.pivotGridControl2.TabIndex = 1;
             // 
             // Management
             // 
@@ -743,7 +788,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -808,7 +853,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPrice1;
         private DevExpress.XtraGrid.Columns.GridColumn colReceivedDate;
         private DevExpress.XtraGrid.Columns.GridColumn colRemainingTime;
-        private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl2;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }
 
