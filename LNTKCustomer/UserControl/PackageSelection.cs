@@ -13,9 +13,11 @@ namespace LNTKCustomer.UserControl
 {
     public partial class PackageSelection : DevExpress.XtraEditors.XtraUserControl
     {
+        public string Name { get; set; }
         public PackageSelection()
         {
             InitializeComponent();
         }
+
     }
 }

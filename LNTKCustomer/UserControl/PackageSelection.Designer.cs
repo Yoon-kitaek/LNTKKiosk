@@ -33,20 +33,21 @@
             this.lbcMiddleSet = new DevExpress.XtraEditors.LabelControl();
             this.lbcLargeSet = new DevExpress.XtraEditors.LabelControl();
             this.lbcSingle = new DevExpress.XtraEditors.LabelControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pceLargetSet = new DevExpress.XtraEditors.PictureEdit();
             this.pceSingle = new DevExpress.XtraEditors.PictureEdit();
             this.pceMiddleSet = new DevExpress.XtraEditors.PictureEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceLargetSet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceMiddleSet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -66,18 +67,21 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F)});
+            this.tablePanel1.Controls.Add(this.labelControl1);
             this.tablePanel1.Controls.Add(this.lbcMiddleSet);
             this.tablePanel1.Controls.Add(this.lbcLargeSet);
             this.tablePanel1.Controls.Add(this.lbcSingle);
             this.tablePanel1.Controls.Add(this.pceLargetSet);
             this.tablePanel1.Controls.Add(this.pceSingle);
             this.tablePanel1.Controls.Add(this.pceMiddleSet);
+            this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel1.Location = new System.Drawing.Point(12, 12);
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 80F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1090, 343);
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 70F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 15F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 15F)});
+            this.tablePanel1.Size = new System.Drawing.Size(1090, 41);
             this.tablePanel1.TabIndex = 4;
             // 
             // lbcMiddleSet
@@ -89,10 +93,10 @@
             this.lbcMiddleSet.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.tablePanel1.SetColumn(this.lbcMiddleSet, 1);
             this.lbcMiddleSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcMiddleSet.Location = new System.Drawing.Point(366, 277);
+            this.lbcMiddleSet.Location = new System.Drawing.Point(366, 32);
             this.lbcMiddleSet.Name = "lbcMiddleSet";
             this.tablePanel1.SetRow(this.lbcMiddleSet, 1);
-            this.lbcMiddleSet.Size = new System.Drawing.Size(357, 63);
+            this.lbcMiddleSet.Size = new System.Drawing.Size(357, 0);
             this.lbcMiddleSet.TabIndex = 6;
             this.lbcMiddleSet.Text = "세트(M)";
             // 
@@ -105,10 +109,10 @@
             this.lbcLargeSet.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.tablePanel1.SetColumn(this.lbcLargeSet, 2);
             this.lbcLargeSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcLargeSet.Location = new System.Drawing.Point(730, 277);
+            this.lbcLargeSet.Location = new System.Drawing.Point(730, 32);
             this.lbcLargeSet.Name = "lbcLargeSet";
             this.tablePanel1.SetRow(this.lbcLargeSet, 1);
-            this.lbcLargeSet.Size = new System.Drawing.Size(357, 63);
+            this.lbcLargeSet.Size = new System.Drawing.Size(357, 0);
             this.lbcLargeSet.TabIndex = 5;
             this.lbcLargeSet.Text = "세트(L)";
             // 
@@ -121,12 +125,51 @@
             this.lbcSingle.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.tablePanel1.SetColumn(this.lbcSingle, 0);
             this.lbcSingle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcSingle.Location = new System.Drawing.Point(3, 277);
+            this.lbcSingle.Location = new System.Drawing.Point(3, 32);
             this.lbcSingle.Name = "lbcSingle";
             this.tablePanel1.SetRow(this.lbcSingle, 1);
-            this.lbcSingle.Size = new System.Drawing.Size(357, 63);
+            this.lbcSingle.Size = new System.Drawing.Size(357, 0);
             this.lbcSingle.TabIndex = 4;
             this.lbcSingle.Text = "단품";
+            // 
+            // pceLargetSet
+            // 
+            this.tablePanel1.SetColumn(this.pceLargetSet, 2);
+            this.pceLargetSet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceLargetSet.EditValue = global::LNTKCustomer.Properties.Resources.BurgerLargeSet;
+            this.pceLargetSet.Location = new System.Drawing.Point(730, 3);
+            this.pceLargetSet.Name = "pceLargetSet";
+            this.pceLargetSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceLargetSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceLargetSet, 0);
+            this.pceLargetSet.Size = new System.Drawing.Size(357, 23);
+            this.pceLargetSet.TabIndex = 2;
+            // 
+            // pceSingle
+            // 
+            this.tablePanel1.SetColumn(this.pceSingle, 0);
+            this.pceSingle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceSingle.EditValue = global::LNTKCustomer.Properties.Resources.BurgerSingle;
+            this.pceSingle.Location = new System.Drawing.Point(3, 3);
+            this.pceSingle.Name = "pceSingle";
+            this.pceSingle.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceSingle.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceSingle, 0);
+            this.pceSingle.Size = new System.Drawing.Size(357, 23);
+            this.pceSingle.TabIndex = 1;
+            // 
+            // pceMiddleSet
+            // 
+            this.tablePanel1.SetColumn(this.pceMiddleSet, 1);
+            this.pceMiddleSet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceMiddleSet.EditValue = global::LNTKCustomer.Properties.Resources.BurgerMiddleSet;
+            this.pceMiddleSet.Location = new System.Drawing.Point(366, 3);
+            this.pceMiddleSet.Name = "pceMiddleSet";
+            this.pceMiddleSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceMiddleSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceMiddleSet, 0);
+            this.pceMiddleSet.Size = new System.Drawing.Size(357, 23);
+            this.pceMiddleSet.TabIndex = 0;
             // 
             // Root
             // 
@@ -147,44 +190,21 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // pceLargetSet
+            // labelControl1
             // 
-            this.tablePanel1.SetColumn(this.pceLargetSet, 2);
-            this.pceLargetSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceLargetSet.EditValue = global::LNTKCustomer.Properties.Resources.BurgerLargeSet;
-            this.pceLargetSet.Location = new System.Drawing.Point(730, 3);
-            this.pceLargetSet.Name = "pceLargetSet";
-            this.pceLargetSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceLargetSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceLargetSet, 0);
-            this.pceLargetSet.Size = new System.Drawing.Size(357, 268);
-            this.pceLargetSet.TabIndex = 2;
-            // 
-            // pceSingle
-            // 
-            this.tablePanel1.SetColumn(this.pceSingle, 0);
-            this.pceSingle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceSingle.EditValue = global::LNTKCustomer.Properties.Resources.BurgerSingle;
-            this.pceSingle.Location = new System.Drawing.Point(3, 3);
-            this.pceSingle.Name = "pceSingle";
-            this.pceSingle.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceSingle.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceSingle, 0);
-            this.pceSingle.Size = new System.Drawing.Size(357, 268);
-            this.pceSingle.TabIndex = 1;
-            // 
-            // pceMiddleSet
-            // 
-            this.tablePanel1.SetColumn(this.pceMiddleSet, 1);
-            this.pceMiddleSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceMiddleSet.EditValue = global::LNTKCustomer.Properties.Resources.BurgerMiddleSet;
-            this.pceMiddleSet.Location = new System.Drawing.Point(366, 3);
-            this.pceMiddleSet.Name = "pceMiddleSet";
-            this.pceMiddleSet.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceMiddleSet.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceMiddleSet, 0);
-            this.pceMiddleSet.Size = new System.Drawing.Size(357, 268);
-            this.pceMiddleSet.TabIndex = 0;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.tablePanel1.SetColumn(this.labelControl1, 0);
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl1.Location = new System.Drawing.Point(3, 32);
+            this.labelControl1.Name = "labelControl1";
+            this.tablePanel1.SetRow(this.labelControl1, 1);
+            this.labelControl1.Size = new System.Drawing.Size(357, 0);
+            this.labelControl1.TabIndex = 7;
+            this.labelControl1.Text = "단품";
             // 
             // PackageSelection
             // 
@@ -197,11 +217,11 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceLargetSet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceSingle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceMiddleSet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,5 +238,6 @@
         private DevExpress.XtraEditors.PictureEdit pceSingle;
         private DevExpress.XtraEditors.PictureEdit pceMiddleSet;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

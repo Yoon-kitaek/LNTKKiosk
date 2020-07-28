@@ -98,7 +98,7 @@ namespace LNTKCustomer.Form
             MessageBox.Show($"{thumbnail.Label}");
             if (thumbnail.Label.Contains("버거") == true)
             {
-                SingleOrSet form = new SingleOrSet();
+                SingleOrSet form = new SingleOrSet(thumbnail.Label, shoppingList);
                 form.Show();
             }
             else

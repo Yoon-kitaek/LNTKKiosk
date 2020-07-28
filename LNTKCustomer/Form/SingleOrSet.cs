@@ -8,15 +8,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using LNTKKiosk.Data;
 
 namespace LNTKCustomer.Form
 {
     public partial class SingleOrSet : DevExpress.XtraEditors.XtraForm
     {
-        public SingleOrSet()
+        private List<ShoppedItem> shoppingList = new List<ShoppedItem>();
+        public SingleOrSet(string packageName, List<ShoppedItem> shoppingList)
         {
             InitializeComponent();
-         //TODO   this.Text = uscPackageSelection.
+            this.Text = packageName;
+            this.shoppingList = shoppingList;
+            uscPackageSelection.Name = packageName;
         }
+
+
     }
 }
