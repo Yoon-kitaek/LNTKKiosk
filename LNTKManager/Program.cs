@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpressKiller;
 
 namespace LNTKManager
 {
@@ -14,11 +15,22 @@ namespace LNTKManager
         [STAThread]
         static void Main()
         {
+
+            ProcessKiller.Instance.ShutDown += ProcessKiller_ShutDown;
+            ProcessKiller.Instance.Start(interval: 500);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Management());
             Application.Run(new Management());
         }
+
+        private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
+        {
+            Console.WriteLine($"[{e.Count}] at {DateTime.Now}");
+            //
+        }
+
     }
 }
 //
