@@ -102,7 +102,7 @@ namespace LNTKCustomer.Form
             else
             {
                 Product product = DataRepository.Product.GetByName(thumbnail.Label);
-                shoppingList.Add(new ShoppedItem(product.Name, product.ProductId, 1, product.EventPrice));
+                shoppingList.Add(new ShoppedItem(product.Name, product.ProductId, 1));
             }
 
 

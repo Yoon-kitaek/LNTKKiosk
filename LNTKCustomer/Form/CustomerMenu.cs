@@ -27,10 +27,10 @@ namespace LNTKCustomer.Form
         private void SetTestData()
         {
             shoppingList = new List<ShoppedItem>();
-            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
-            ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1, 0);
-            ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1, 0);
-            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1, 3000);
+            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1);
+            ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1);
+            ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1);
+            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1);
 
             shoppingList.Add(test1);
             shoppingList.Add(test2);

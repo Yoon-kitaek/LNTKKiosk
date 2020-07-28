@@ -8,13 +8,15 @@ namespace LNTKKiosk.Data
 {
     public class ShoppedItem
     {
-        public ShoppedItem(string packageName, int productId, int qunatity, int price)
+        public ShoppedItem(string packageName, int productId, int qunatity)
         {
+            Product product = DataRepository.Product.Get(productId);
             this.packageName = packageName;
             this.productId = productId;
-            productName = DataRepository.Product.Get(productId).Name;
+            productName = product.Name;
             this.quantity = qunatity;
-            this.price = price;
+            DataRepository.Product.SetEventPrice(product);
+            this.price = product.EventPrice;
             totalPrice = this.quantity * this.price;
         }
         public string packageName { get; set; }       

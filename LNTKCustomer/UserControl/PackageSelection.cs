@@ -78,24 +78,24 @@ namespace LNTKCustomer.UserControl
         private void pceSingle_Click(object sender, EventArgs e)
         {
             OnMenuClicked(lbcSingle.Text);
-            OpenCustomizationMenu(Name);
+            OpenCustomizationMenu(Name,"");
         }
 
         private void pceMiddleSet_Click(object sender, EventArgs e)
         {
             OnMenuClicked(lbcMiddleSet.Text);
-            OpenCustomizationMenu(Name + lbcMiddleSet.Text);
+            OpenCustomizationMenu(Name ,lbcMiddleSet.Text);
         }
 
         private void pceLargetSet_Click(object sender, EventArgs e)
         {
             OnMenuClicked(lbcLargeSet.Text);
-            OpenCustomizationMenu(Name + lbcLargeSet.Text);
+            OpenCustomizationMenu(Name , lbcLargeSet.Text);
         }
 
-        private void OpenCustomizationMenu(string packageName)
+        private void OpenCustomizationMenu(string productName, string package)
         {
-            Customization customization = new Customization(packageName);
+            Customization customization = new Customization(productName, package);
             customization.Show();
         
         }
