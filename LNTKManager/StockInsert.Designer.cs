@@ -36,6 +36,7 @@
             this.txeExpirationDate = new DevExpress.XtraEditors.TextEdit();
             this.txeReceivedDate = new DevExpress.XtraEditors.TextEdit();
             this.cbbGroceryId = new System.Windows.Forms.ComboBox();
+            this.bdsGrocery = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -45,12 +46,12 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.bdsGrocery = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeExpirationDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeReceivedDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -60,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -141,6 +141,10 @@
             this.cbbGroceryId.Size = new System.Drawing.Size(291, 23);
             this.cbbGroceryId.TabIndex = 4;
             this.cbbGroceryId.ValueMember = "GroceryId";
+            // 
+            // bdsGrocery
+            // 
+            this.bdsGrocery.DataSource = typeof(LNTKKiosk.Data.Grocery);
             // 
             // Root
             // 
@@ -235,10 +239,6 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(62, 34);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // bdsGrocery
-            // 
-            this.bdsGrocery.DataSource = typeof(LNTKKiosk.Data.Grocery);
-            // 
             // StockInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -253,6 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeExpirationDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeReceivedDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -262,7 +263,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).EndInit();
             this.ResumeLayout(false);
 
         }

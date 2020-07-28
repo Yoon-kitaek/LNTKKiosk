@@ -132,5 +132,7 @@ namespace LNTKCustomer.Form
         {
             uscThumbnail_Click(5);
         }
+
+       
     }
 }

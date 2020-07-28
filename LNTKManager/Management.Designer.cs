@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Management));
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraPivotGrid.PivotGridFormatRule pivotGridFormatRule2 = new DevExpress.XtraPivotGrid.PivotGridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings formatRuleTotalTypeSettings2 = new DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraPivotGrid.PivotGridFormatRule pivotGridFormatRule1 = new DevExpress.XtraPivotGrid.PivotGridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings formatRuleTotalTypeSettings1 = new DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings();
             this.fieldProductPrice = new DevExpress.XtraPivotGrid.PivotGridField();
             this.tctlManagement = new DevExpress.XtraTab.XtraTabControl();
             this.tpgeOrder = new DevExpress.XtraTab.XtraTabPage();
@@ -101,7 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -123,10 +123,10 @@
             this.tctlManagement.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tctlManagement.Appearance.Options.UseFont = true;
             this.tctlManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tctlManagement.Location = new System.Drawing.Point(0, 41);
+            this.tctlManagement.Location = new System.Drawing.Point(0, 57);
             this.tctlManagement.Name = "tctlManagement";
             this.tctlManagement.SelectedTabPage = this.tpgeOrder;
-            this.tctlManagement.Size = new System.Drawing.Size(1108, 491);
+            this.tctlManagement.Size = new System.Drawing.Size(1108, 471);
             this.tctlManagement.TabIndex = 0;
             this.tctlManagement.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tpgeOrder,
@@ -142,7 +142,7 @@
             this.tpgeOrder.Controls.Add(this.gridControl2);
             this.tpgeOrder.Controls.Add(this.gridControl1);
             this.tpgeOrder.Name = "tpgeOrder";
-            this.tpgeOrder.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeOrder.Size = new System.Drawing.Size(1102, 435);
             this.tpgeOrder.Text = "주문관리";
             // 
             // gridControl2
@@ -261,7 +261,7 @@
             this.tpgeProduct.Controls.Add(this.btnAdd);
             this.tpgeProduct.Controls.Add(this.buttonContainer1);
             this.tpgeProduct.Name = "tpgeProduct";
-            this.tpgeProduct.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeProduct.Size = new System.Drawing.Size(1102, 435);
             this.tpgeProduct.Text = "상품관리";
             // 
             // gridControl3
@@ -319,7 +319,7 @@
             this.colDescription.Name = "colDescription";
             this.colDescription.OptionsColumn.AllowEdit = false;
             this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 1;
+            this.colDescription.VisibleIndex = 2;
             this.colDescription.Width = 94;
             // 
             // colPrice
@@ -329,7 +329,7 @@
             this.colPrice.Name = "colPrice";
             this.colPrice.OptionsColumn.AllowEdit = false;
             this.colPrice.Visible = true;
-            this.colPrice.VisibleIndex = 2;
+            this.colPrice.VisibleIndex = 3;
             this.colPrice.Width = 113;
             // 
             // barManager1
@@ -382,31 +382,31 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1108, 41);
+            this.barDockControlTop.Size = new System.Drawing.Size(1108, 57);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 532);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 528);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1108, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1108, 24);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 57);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 491);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 471);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1108, 41);
+            this.barDockControlRight.Location = new System.Drawing.Point(1108, 57);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 491);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 471);
             // 
             // btnDelete
             // 
@@ -451,7 +451,7 @@
             // 
             this.tpgeRevenue.Controls.Add(this.layoutControl1);
             this.tpgeRevenue.Name = "tpgeRevenue";
-            this.tpgeRevenue.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeRevenue.Size = new System.Drawing.Size(1102, 435);
             this.tpgeRevenue.Text = "매출조회";
             // 
             // layoutControl1
@@ -462,22 +462,22 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1106, 459);
+            this.layoutControl1.Size = new System.Drawing.Size(1102, 435);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // chartControl1
             // 
             this.chartControl1.DataSource = this.pivotGridControl1;
-            xyDiagram2.AxisX.Title.Text = "카테고리 상품";
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.Label.TextPattern = "{V}";
-            xyDiagram2.AxisY.Title.Text = "Revenue";
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram2;
+            xyDiagram1.AxisX.Title.Text = "카테고리 상품";
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Label.TextPattern = "{V}";
+            xyDiagram1.AxisY.Title.Text = "Revenue";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.MaxHorizontalPercentage = 30D;
             this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(12, 231);
+            this.chartControl1.Location = new System.Drawing.Point(12, 219);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesDataMember = "Series";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
@@ -485,7 +485,7 @@
             this.chartControl1.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             this.chartControl1.SeriesTemplate.SeriesDataMember = "Series";
             this.chartControl1.SeriesTemplate.ValueDataMembersSerializable = "Values";
-            this.chartControl1.Size = new System.Drawing.Size(1082, 216);
+            this.chartControl1.Size = new System.Drawing.Size(1078, 204);
             this.chartControl1.TabIndex = 4;
             // 
             // pivotGridControl1
@@ -497,20 +497,20 @@
             this.fieldProductName,
             this.fieldProductPrice,
             this.OrderMonth});
-            pivotGridFormatRule2.Measure = this.fieldProductPrice;
-            pivotGridFormatRule2.Name = "Format0";
-            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Between;
-            formatConditionRuleValue2.Value1 = 10000;
-            formatConditionRuleValue2.Value2 = 20000;
-            pivotGridFormatRule2.Rule = formatConditionRuleValue2;
-            formatRuleTotalTypeSettings2.ApplyToCustomTotalCell = false;
-            formatRuleTotalTypeSettings2.ApplyToGrandTotalCell = false;
-            formatRuleTotalTypeSettings2.ApplyToTotalCell = false;
-            pivotGridFormatRule2.Settings = formatRuleTotalTypeSettings2;
-            pivotGridFormatRule2.StopIfTrue = true;
-            this.pivotGridControl1.FormatRules.Add(pivotGridFormatRule2);
+            pivotGridFormatRule1.Measure = this.fieldProductPrice;
+            pivotGridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Between;
+            formatConditionRuleValue1.Value1 = 10000;
+            formatConditionRuleValue1.Value2 = 20000;
+            pivotGridFormatRule1.Rule = formatConditionRuleValue1;
+            formatRuleTotalTypeSettings1.ApplyToCustomTotalCell = false;
+            formatRuleTotalTypeSettings1.ApplyToGrandTotalCell = false;
+            formatRuleTotalTypeSettings1.ApplyToTotalCell = false;
+            pivotGridFormatRule1.Settings = formatRuleTotalTypeSettings1;
+            pivotGridFormatRule1.StopIfTrue = true;
+            this.pivotGridControl1.FormatRules.Add(pivotGridFormatRule1);
             this.pivotGridControl1.Location = new System.Drawing.Point(12, 12);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsChartDataSource.ProvideColumnCustomTotals = true;
@@ -520,7 +520,7 @@
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowGrandTotals = true;
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowTotals = true;
             this.pivotGridControl1.OptionsMenu.EnableFormatRulesMenu = true;
-            this.pivotGridControl1.Size = new System.Drawing.Size(1082, 215);
+            this.pivotGridControl1.Size = new System.Drawing.Size(1078, 203);
             this.pivotGridControl1.TabIndex = 0;
             // 
             // bdsOrderDetail
@@ -572,7 +572,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1106, 459);
+            this.Root.Size = new System.Drawing.Size(1102, 435);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -580,23 +580,23 @@
             this.layoutControlItem1.Control = this.pivotGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1086, 219);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1082, 207);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.chartControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 219);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 207);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1086, 220);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1082, 208);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // tpgeShin
             // 
             this.tpgeShin.Name = "tpgeShin";
-            this.tpgeShin.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeShin.Size = new System.Drawing.Size(1102, 455);
             this.tpgeShin.Text = "재료관리";
             // 
             // timer1
@@ -634,7 +634,7 @@
             this.tpgeRevenue.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderDetail)).EndInit();
