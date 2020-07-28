@@ -92,5 +92,12 @@ namespace LNTKKiosk.Data
             product.EventPrice = product.Price * (100 - DataRepository.Product.GetDiscountRate(product))/100;
             return;
         }
+
+        public List<Product> SearchByCategoryId(int categoryId)
+        {
+            var context = CreateContext();
+
+            return context.Products.Where(x => x.CodeCategoryId == categoryId).ToList();
+        }
     }
 }

@@ -70,6 +70,7 @@
     <Compile Include="Data\RecipeData.cs" />
     <Compile Include="Data\StockData.cs" />
     <Compile Include="Entities\Grocery.cs" />
+    <Compile Include="Entities\OrderDetail.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShoppedItem.cs" />
     <Compile Include="Entities\ShoppedPackage.cs" />
