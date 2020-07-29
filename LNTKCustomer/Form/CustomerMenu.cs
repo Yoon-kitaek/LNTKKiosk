@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
+    public partial class CustomerMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         ProductThumbnail form = new ProductThumbnail();
         public List<ShoppedItem> shoppingList { get; set; }
@@ -67,20 +67,29 @@ namespace LNTKCustomer.Form
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+         //   tileBarItem6.ItemSize.Equals()
+         //   tileBar1.WideTileWidth = 160;
 
         }
 
         private void pceShoppingCart_Click(object sender, EventArgs e)
         {
-            ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
-            shoppingCart.MdiParent = this;
-            shoppingCart.WindowState = FormWindowState.Maximized;
-            shoppingCart.Show();
-            pceShoppingCart.Visible = false;
-            pcnShoppingCart.Visible = false;
-            adcMenuCategory.Enabled = false;
-            adcLogo.Enabled = true;
+            //ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
+            //shoppingCart.MdiParent = this;
+            //shoppingCart.WindowState = FormWindowState.Maximized;
+            //shoppingCart.Show();
+            //pceShoppingCart.Visible = false;
+            //pcnShoppingCart.Visible = false;
+
+
+
+            //adcMenuCategory.Enabled = false;
+            //adcLogo.Enabled = true;
         }
 
+        private void tileBar2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

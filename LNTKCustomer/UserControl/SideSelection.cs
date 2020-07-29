@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.IO;
+using LNTKKiosk.Data;
 
 namespace LNTKCustomer.UserControl
 {
@@ -16,6 +18,20 @@ namespace LNTKCustomer.UserControl
         public SideSelection()
         {
             InitializeComponent();
+        }
+
+        public void SetPicture(int productId)
+        {
+            pceSidePicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
+        }
+
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
         }
     }
 }
