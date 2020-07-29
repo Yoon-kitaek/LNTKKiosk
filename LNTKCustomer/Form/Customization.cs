@@ -71,13 +71,6 @@ namespace LNTKCustomer.Form
         }
 
 
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Payment form = new Payment();
-            form.Show();
-        }
-
         private void btnPutInCart_Click(object sender, EventArgs e)
         {
             AddtoCart();
@@ -85,7 +78,8 @@ namespace LNTKCustomer.Form
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            
+            Payment form = new Payment();
+            form.Show();
         }
     }
 }

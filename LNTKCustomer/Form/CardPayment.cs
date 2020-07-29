@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Threading;
+
 
 namespace LNTKCustomer.Form
 {
@@ -16,13 +18,13 @@ namespace LNTKCustomer.Form
         public CardPayment()
         {
             InitializeComponent();
+
+            EndPage form = new EndPage();
+            form.Show();
+
+
         }
 
-   
-        private void imageSlider1_Click(object sender, EventArgs e)
-        {
-            //CustomerMenu form = new CustomerMenu();
-            //form.Show();
-        }
+
     }
 }

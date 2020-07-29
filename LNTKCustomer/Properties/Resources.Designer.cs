@@ -63,26 +63,6 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2222 {
-            get {
-                object obj = ResourceManager.GetObject("_2222", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _333 {
-            get {
-                object obj = ResourceManager.GetObject("_333", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _3D햄버거 {
             get {
                 object obj = ResourceManager.GetObject("_3D햄버거", resourceCulture);
@@ -163,6 +143,26 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Basket_2205960 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Basket_2205960", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_cart_9_3338943 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_cart_9_3338943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Hamburger_131964 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Hamburger_131964", resourceCulture);
@@ -223,26 +223,6 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap set33 {
-            get {
-                object obj = ResourceManager.GetObject("set33", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap single2 {
-            get {
-                object obj = ResourceManager.GetObject("single2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap three {
             get {
                 object obj = ResourceManager.GetObject("three", resourceCulture);
@@ -283,6 +263,16 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap 두툼패티감자튀김버거 {
+            get {
+                object obj = ResourceManager.GetObject("두툼패티감자튀김버거", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap 무채색햄버거 {
             get {
                 object obj = ResourceManager.GetObject("무채색햄버거", resourceCulture);
@@ -306,6 +296,16 @@ namespace LNTKCustomer.Properties {
         internal static System.Drawing.Bitmap 버거세트 {
             get {
                 object obj = ResourceManager.GetObject("버거세트", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap 베이컨버거 {
+            get {
+                object obj = ResourceManager.GetObject("베이컨버거", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
