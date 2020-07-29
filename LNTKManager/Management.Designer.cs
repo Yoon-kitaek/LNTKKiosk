@@ -98,6 +98,7 @@
             this.colReceivedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrice1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.fieldEventprice = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).BeginInit();
             this.tctlManagement.SuspendLayout();
             this.tpgeOrder.SuspendLayout();
@@ -162,10 +163,10 @@
             this.tctlManagement.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tctlManagement.Appearance.Options.UseFont = true;
             this.tctlManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tctlManagement.Location = new System.Drawing.Point(0, 41);
+            this.tctlManagement.Location = new System.Drawing.Point(0, 57);
             this.tctlManagement.Name = "tctlManagement";
             this.tctlManagement.SelectedTabPage = this.tpgeOrder;
-            this.tctlManagement.Size = new System.Drawing.Size(1108, 491);
+            this.tctlManagement.Size = new System.Drawing.Size(1108, 471);
             this.tctlManagement.TabIndex = 0;
             this.tctlManagement.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tpgeOrder,
@@ -181,7 +182,7 @@
             this.tpgeOrder.Controls.Add(this.gridControl2);
             this.tpgeOrder.Controls.Add(this.gridControl1);
             this.tpgeOrder.Name = "tpgeOrder";
-            this.tpgeOrder.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeOrder.Size = new System.Drawing.Size(1102, 435);
             this.tpgeOrder.Text = "주문관리";
             // 
             // gridControl2
@@ -300,7 +301,7 @@
             this.tpgeProduct.Controls.Add(this.btnAdd);
             this.tpgeProduct.Controls.Add(this.buttonContainer1);
             this.tpgeProduct.Name = "tpgeProduct";
-            this.tpgeProduct.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeProduct.Size = new System.Drawing.Size(1102, 435);
             this.tpgeProduct.Text = "상품관리";
             // 
             // gridControl3
@@ -421,31 +422,31 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1108, 41);
+            this.barDockControlTop.Size = new System.Drawing.Size(1108, 57);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 532);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 528);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1108, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1108, 24);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 57);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 491);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 471);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1108, 41);
+            this.barDockControlRight.Location = new System.Drawing.Point(1108, 57);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 491);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 471);
             // 
             // btnDelete
             // 
@@ -490,7 +491,7 @@
             // 
             this.tpgeRevenue.Controls.Add(this.layoutControl1);
             this.tpgeRevenue.Name = "tpgeRevenue";
-            this.tpgeRevenue.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeRevenue.Size = new System.Drawing.Size(1102, 435);
             this.tpgeRevenue.Text = "매출조회";
             // 
             // layoutControl1
@@ -501,7 +502,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1106, 459);
+            this.layoutControl1.Size = new System.Drawing.Size(1102, 435);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -511,12 +512,12 @@
             xyDiagram1.AxisX.Title.Text = "카테고리 상품";
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.Label.TextPattern = "{V}";
-            xyDiagram1.AxisY.Title.Text = "Revenue";
+            xyDiagram1.AxisY.Title.Text = "Revenue Eventprice";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.MaxHorizontalPercentage = 30D;
             this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(12, 231);
+            this.chartControl1.Location = new System.Drawing.Point(12, 219);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesDataMember = "Series";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
@@ -524,7 +525,7 @@
             this.chartControl1.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             this.chartControl1.SeriesTemplate.SeriesDataMember = "Series";
             this.chartControl1.SeriesTemplate.ValueDataMembersSerializable = "Values";
-            this.chartControl1.Size = new System.Drawing.Size(1082, 216);
+            this.chartControl1.Size = new System.Drawing.Size(1078, 204);
             this.chartControl1.TabIndex = 4;
             // 
             // pivotGridControl1
@@ -535,7 +536,8 @@
             this.fieldOrderTime,
             this.fieldProductName,
             this.fieldProductPrice,
-            this.OrderMonth});
+            this.OrderMonth,
+            this.fieldEventprice});
             pivotGridFormatRule1.Measure = this.fieldProductPrice;
             pivotGridFormatRule1.Name = "Format0";
             formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -559,7 +561,7 @@
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowGrandTotals = true;
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowTotals = true;
             this.pivotGridControl1.OptionsMenu.EnableFormatRulesMenu = true;
-            this.pivotGridControl1.Size = new System.Drawing.Size(1082, 215);
+            this.pivotGridControl1.Size = new System.Drawing.Size(1078, 203);
             this.pivotGridControl1.TabIndex = 0;
             // 
             // bdsOrderDetail
@@ -611,7 +613,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1106, 459);
+            this.Root.Size = new System.Drawing.Size(1102, 435);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -619,16 +621,16 @@
             this.layoutControlItem1.Control = this.pivotGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1086, 219);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1082, 207);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.chartControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 219);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 207);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1086, 220);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1082, 208);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -636,13 +638,13 @@
             // 
             this.tpgeShin.Controls.Add(this.gridControl4);
             this.tpgeShin.Name = "tpgeShin";
-            this.tpgeShin.Size = new System.Drawing.Size(1106, 459);
+            this.tpgeShin.Size = new System.Drawing.Size(1102, 435);
             this.tpgeShin.Text = "재료관리";
             // 
             // gridControl4
             // 
             this.gridControl4.DataSource = this.bdsStock;
-            this.gridControl4.Location = new System.Drawing.Point(85, 64);
+            this.gridControl4.Location = new System.Drawing.Point(28, 17);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.MenuManager = this.barManager1;
             this.gridControl4.Name = "gridControl4";
@@ -744,6 +746,13 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // fieldEventprice
+            // 
+            this.fieldEventprice.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldEventprice.AreaIndex = 1;
+            this.fieldEventprice.FieldName = "Eventprice";
+            this.fieldEventprice.Name = "fieldEventprice";
             // 
             // Management
             // 
@@ -851,6 +860,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPrice1;
         private DevExpress.XtraGrid.Columns.GridColumn colRemainingTime;
         private DevExpress.XtraGrid.Columns.GridColumn 신선도;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldEventprice;
     }
 }
 

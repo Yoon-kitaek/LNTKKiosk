@@ -61,10 +61,23 @@ namespace LNTKKiosk.Data
 
         public int GetDiscountRate(Product product)
         {
+            int t = DateTime.Now.Hour * 100 + DateTime.Now.Minute;
+            return CalculateDiscountRate(product, t);
+          
+        }
+        
+        public int GetDiscountRate(Product product , DateTime orderTime)
+        {
+            int t = orderTime.Hour * 100 + orderTime.Minute;
+            return CalculateDiscountRate(product, t);
+        }
+
+        private int CalculateDiscountRate(Product product, int t)
+        {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
             List<EventProduct> listfiltered = new List<EventProduct>();
             Event @event = new Event();
-            int t = DateTime.Now.Hour * 100 + DateTime.Now.Minute;
+
             if (list.Count() > 0)
             {
                 foreach (EventProduct eventProduct in list)
@@ -73,7 +86,7 @@ namespace LNTKKiosk.Data
                     if (t > @event.StartTime && t < @event.EndTime)
                     {
                         listfiltered.Add(eventProduct);
-                    } 
+                    }
                 }
 
                 if (listfiltered.Count() > 0)
@@ -93,11 +106,16 @@ namespace LNTKKiosk.Data
             return;
         }
 
+
         public List<Product> SearchByCategoryId(int categoryId)
         {
             var context = CreateContext();
 
             return context.Products.Where(x => x.CodeCategoryId == categoryId).ToList();
         }
+
+     
     }
+
+
 }
