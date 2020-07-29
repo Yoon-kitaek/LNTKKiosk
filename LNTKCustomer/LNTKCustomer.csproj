@@ -180,18 +180,6 @@
     <Compile Include="UserControl\QuantityChanged.Designer.cs">
       <DependentUpon>QuantityChanged.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\SelectBeverage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\SelectBeverage.Designer.cs">
-      <DependentUpon>SelectBeverage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.Designer.cs">
-      <DependentUpon>ShoppedProductImages.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\Thumbnail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,12 +248,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\QuantityChanged.resx">
       <DependentUpon>QuantityChanged.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\SelectBeverage.resx">
-      <DependentUpon>SelectBeverage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\ShoppedProductImages.resx">
-      <DependentUpon>ShoppedProductImages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Thumbnail.resx">
       <DependentUpon>Thumbnail.cs</DependentUpon>

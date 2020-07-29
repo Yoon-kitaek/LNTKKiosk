@@ -19,7 +19,7 @@ namespace LNTKCustomer.UserControl
         private List<Thumbnail> thumbnails = new List<Thumbnail>();
         private const int thumbnailCount = 4;
         private int j = 0;
-        private int categoryid = 11;
+        public int categoryId { get; set; }
         private bool isShoppingCart = false;
 
         public ThumbnailContainer()
