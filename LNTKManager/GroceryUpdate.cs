@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity.Core.Mapping;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,19 +11,27 @@ using System.Windows.Forms;
 
 namespace LNTKManager
 {
-    public partial class GroceryInsert : Form
+    public partial class GroceryUpdate : Form
     {
-        public GroceryInsert()
+        public GroceryUpdate()
         {
             InitializeComponent();
         }
 
-        private Grocery _grocery;
+        private Grocery _grocery = new Grocery();
 
-        private void WriteToEntity()
+        public GroceryUpdate(Grocery grocery) : this()
         {
-            _grocery.CodeCategoryId = (int?)cbbCategoryId.SelectedValue;
+            txeGroceryId.Text = grocery.GroceryId.ToString();
+            cbbCategoryId.SelectedItem = grocery.CodeCategoryId;
+            txeUnit.Text = grocery.Unit.ToString();
+            txeName.Text = grocery.Item;
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _grocery.GroceryId = int.Parse(txeGroceryId.Text);
+            _grocery.CodeCategoryId = (int?)cbbCategoryId.SelectedValue;
             try
             {
                 _grocery.Unit = int.Parse(txeUnit.Text);
@@ -34,44 +41,27 @@ namespace LNTKManager
                 Helpers.InputConstraint.OnlyIntConstraint(txeUnit);
             }
             _grocery.Item = txeName.Text;
-        }
-
-        private void GroceryInsert_Load(object sender, EventArgs e)
-        {
-            bdsCategory.DataSource = DataRepository.CodeCategory.GetAll();
-        }
-
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
-            if(txeUnit.Text == "")
-            {
-                MessageBox.Show("1개의 g을 입력해주세요");
-                return;
-            }
-
-            if(txeName.Text == "")
-            {
-                MessageBox.Show("식재료명을 입력해주세요");
-                return;
-            }
-            _grocery = new Grocery();
-            WriteToEntity();
 
             try
             {
-                DataRepository.Grocery.Insert(_grocery);
+                DataRepository.Grocery.Update(_grocery);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("등록되었습니다.");
+            MessageBox.Show("수정되었습니다.");
             Close();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void GroceryUpdate_Load(object sender, EventArgs e)
+        {
+            bdsCategory.DataSource = DataRepository.CodeCategory.GetAll();
         }
 
         private void txeUnit_KeyPress(object sender, KeyPressEventArgs e)

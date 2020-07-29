@@ -35,7 +35,6 @@
             this.txeName = new DevExpress.XtraEditors.TextEdit();
             this.txeUnit = new DevExpress.XtraEditors.TextEdit();
             this.cbbCategoryId = new System.Windows.Forms.ComboBox();
-            this.bdsCategory = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -44,11 +43,11 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.bdsCategory = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUnit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -57,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -111,6 +111,7 @@
             this.txeUnit.Size = new System.Drawing.Size(308, 24);
             this.txeUnit.StyleController = this.layoutControl1;
             this.txeUnit.TabIndex = 5;
+            this.txeUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txeUnit_KeyPress);
             // 
             // cbbCategoryId
             // 
@@ -123,10 +124,6 @@
             this.cbbCategoryId.Size = new System.Drawing.Size(308, 23);
             this.cbbCategoryId.TabIndex = 4;
             this.cbbCategoryId.ValueMember = "CodeCategoryId";
-            // 
-            // bdsCategory
-            // 
-            this.bdsCategory.DataSource = typeof(LNTKKiosk.Data.CodeCategory);
             // 
             // Root
             // 
@@ -211,6 +208,10 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(79, 34);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // bdsCategory
+            // 
+            this.bdsCategory.DataSource = typeof(LNTKKiosk.Data.CodeCategory);
+            // 
             // GroceryInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -218,13 +219,13 @@
             this.ClientSize = new System.Drawing.Size(387, 174);
             this.Controls.Add(this.layoutControl1);
             this.Name = "GroceryInsert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "식재료등록";
             this.Load += new System.EventHandler(this.GroceryInsert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUnit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -233,6 +234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).EndInit();
             this.ResumeLayout(false);
 
         }
