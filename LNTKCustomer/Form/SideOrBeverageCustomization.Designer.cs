@@ -40,7 +40,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(768, 830);
+            this.layoutControl1.Size = new System.Drawing.Size(768, 391);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -49,14 +49,14 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(768, 830);
+            this.Root.Size = new System.Drawing.Size(768, 391);
             this.Root.TextVisible = false;
             // 
             // SideOrBeverageCustomization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 830);
+            this.ClientSize = new System.Drawing.Size(768, 391);
             this.Controls.Add(this.layoutControl1);
             this.Name = "SideOrBeverageCustomization";
             this.Text = "SideOrBeverageCustomization";

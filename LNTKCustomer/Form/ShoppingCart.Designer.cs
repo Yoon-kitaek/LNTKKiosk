@@ -30,7 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.uscThumbnailContainer = new LNTKCustomer.UserControl.ThumbnailContainer();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.sbtHome = new DevExpress.XtraEditors.SimpleButton();
+            this.sbtPay = new DevExpress.XtraEditors.SimpleButton();
             this.grcShoppedItemList = new DevExpress.XtraGrid.GridControl();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -38,24 +41,23 @@
             this.colproductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colquantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.uscShoppedItemThumbnail = new LNTKCustomer.UserControl.ShoppedProductImages();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEventPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tileViewColumn1 = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.sbtPay = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sbtHome = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lbcPackageName = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -64,51 +66,98 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lbcPackageName);
+            this.layoutControl1.Controls.Add(this.uscThumbnailContainer);
             this.layoutControl1.Controls.Add(this.layoutControl2);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(826, 698, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(942, 731);
+            this.layoutControl1.Size = new System.Drawing.Size(734, 1066);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // uscThumbnailContainer
+            // 
+            this.uscThumbnailContainer.Location = new System.Drawing.Point(12, 67);
+            this.uscThumbnailContainer.Name = "uscThumbnailContainer";
+            this.uscThumbnailContainer.Size = new System.Drawing.Size(710, 589);
+            this.uscThumbnailContainer.TabIndex = 5;
+            this.uscThumbnailContainer.ArrowClicked += new System.EventHandler<LNTKCustomer.UserControl.ThumbnailContainer.ArrowClickedEventArgs>(this.uscThumbnailContainer_ArrowClicked);
             // 
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.sbtHome);
             this.layoutControl2.Controls.Add(this.sbtPay);
             this.layoutControl2.Controls.Add(this.grcShoppedItemList);
-            this.layoutControl2.Controls.Add(this.uscShoppedItemThumbnail);
-            this.layoutControl2.Location = new System.Drawing.Point(12, 12);
+            this.layoutControl2.Location = new System.Drawing.Point(12, 660);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 363, 812, 500);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(918, 707);
+            this.layoutControl2.Size = new System.Drawing.Size(710, 394);
             this.layoutControl2.TabIndex = 4;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // sbtHome
+            // 
+            this.sbtHome.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
+            this.sbtHome.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.sbtHome.Appearance.ForeColor = System.Drawing.Color.White;
+            this.sbtHome.Appearance.Options.UseBackColor = true;
+            this.sbtHome.Appearance.Options.UseFont = true;
+            this.sbtHome.Appearance.Options.UseForeColor = true;
+            this.sbtHome.Location = new System.Drawing.Point(68, 351);
+            this.sbtHome.MaximumSize = new System.Drawing.Size(0, 200);
+            this.sbtHome.Name = "sbtHome";
+            this.sbtHome.Size = new System.Drawing.Size(241, 31);
+            this.sbtHome.StyleController = this.layoutControl2;
+            this.sbtHome.TabIndex = 22;
+            this.sbtHome.Text = "다른 상품 보기";
+            this.sbtHome.Click += new System.EventHandler(this.sbtHome_Click);
+            // 
+            // sbtPay
+            // 
+            this.sbtPay.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.sbtPay.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.sbtPay.Appearance.Options.UseBackColor = true;
+            this.sbtPay.Appearance.Options.UseFont = true;
+            this.sbtPay.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.sbtPay.AppearanceDisabled.Options.UseFont = true;
+            this.sbtPay.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.sbtPay.AppearanceHovered.Options.UseFont = true;
+            this.sbtPay.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.sbtPay.AppearancePressed.Options.UseFont = true;
+            this.sbtPay.Location = new System.Drawing.Point(371, 351);
+            this.sbtPay.Name = "sbtPay";
+            this.sbtPay.Size = new System.Drawing.Size(252, 31);
+            this.sbtPay.StyleController = this.layoutControl2;
+            this.sbtPay.TabIndex = 21;
+            this.sbtPay.Text = "결제하기";
+            this.sbtPay.Click += new System.EventHandler(this.sbtPay_Click);
             // 
             // grcShoppedItemList
             // 
             this.grcShoppedItemList.DataSource = this.productBindingSource;
-            this.grcShoppedItemList.Location = new System.Drawing.Point(12, 331);
+            this.grcShoppedItemList.Location = new System.Drawing.Point(12, 12);
             this.grcShoppedItemList.MainView = this.gridView2;
             this.grcShoppedItemList.Name = "grcShoppedItemList";
-            this.grcShoppedItemList.Size = new System.Drawing.Size(894, 329);
+            this.grcShoppedItemList.Size = new System.Drawing.Size(686, 335);
             this.grcShoppedItemList.TabIndex = 6;
             this.grcShoppedItemList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -176,19 +225,11 @@
             this.coltotalPrice.VisibleIndex = 2;
             this.coltotalPrice.Width = 94;
             // 
-            // uscShoppedItemThumbnail
-            // 
-            this.uscShoppedItemThumbnail.Location = new System.Drawing.Point(12, 12);
-            this.uscShoppedItemThumbnail.Name = "uscShoppedItemThumbnail";
-            this.uscShoppedItemThumbnail.Size = new System.Drawing.Size(894, 315);
-            this.uscShoppedItemThumbnail.TabIndex = 5;
-            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3,
             this.layoutControlItem2,
             this.layoutControlItem4,
             this.layoutControlItem5,
@@ -196,45 +237,89 @@
             this.emptySpaceItem2,
             this.emptySpaceItem3});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(918, 707);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(710, 394);
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.uscShoppedItemThumbnail;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(898, 319);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.grcShoppedItemList;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 319);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(898, 333);
+            this.layoutControlItem2.Size = new System.Drawing.Size(690, 339);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.sbtPay;
+            this.layoutControlItem4.Location = new System.Drawing.Point(359, 339);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(256, 35);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.sbtHome;
+            this.layoutControlItem5.Location = new System.Drawing.Point(56, 339);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(245, 35);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(301, 339);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(58, 35);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(615, 339);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(75, 35);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 339);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(56, 35);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem3,
+            this.layoutControlItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(942, 731);
+            this.Root.Size = new System.Drawing.Size(734, 1066);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.layoutControl2;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 648);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(922, 711);
+            this.layoutControlItem1.Size = new System.Drawing.Size(714, 398);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.uscThumbnailContainer;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 55);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(714, 593);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // gridView1
             // 
@@ -274,90 +359,46 @@
             // 
             this.tileViewColumn1.Name = "tileViewColumn1";
             // 
-            // sbtPay
+            // lbcPackageName
             // 
-            this.sbtPay.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
-            this.sbtPay.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.sbtPay.Appearance.Options.UseBackColor = true;
-            this.sbtPay.Appearance.Options.UseFont = true;
-            this.sbtPay.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.sbtPay.AppearanceDisabled.Options.UseFont = true;
-            this.sbtPay.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.sbtPay.AppearanceHovered.Options.UseFont = true;
-            this.sbtPay.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.sbtPay.AppearancePressed.Options.UseFont = true;
-            this.sbtPay.Location = new System.Drawing.Point(479, 664);
-            this.sbtPay.Name = "sbtPay";
-            this.sbtPay.Size = new System.Drawing.Size(330, 31);
-            this.sbtPay.StyleController = this.layoutControl2;
-            this.sbtPay.TabIndex = 21;
-            this.sbtPay.Text = "결제하기";
-            this.sbtPay.Click += new System.EventHandler(this.sbtPay_Click);
+            this.lbcPackageName.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.Appearance.Options.UseFont = true;
+            this.lbcPackageName.Appearance.Options.UseTextOptions = true;
+            this.lbcPackageName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.AppearanceDisabled.Options.UseFont = true;
+            this.lbcPackageName.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.AppearanceHovered.Options.UseFont = true;
+            this.lbcPackageName.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.AppearancePressed.Options.UseFont = true;
+            this.lbcPackageName.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbcPackageName.Location = new System.Drawing.Point(12, 12);
+            this.lbcPackageName.Name = "lbcPackageName";
+            this.lbcPackageName.Size = new System.Drawing.Size(710, 51);
+            this.lbcPackageName.StyleController = this.layoutControl1;
+            this.lbcPackageName.TabIndex = 6;
+            this.lbcPackageName.Text = "세트 이름";
             // 
-            // layoutControlItem4
+            // layoutControlItem6
             // 
-            this.layoutControlItem4.Control = this.sbtPay;
-            this.layoutControlItem4.Location = new System.Drawing.Point(467, 652);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(334, 35);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // sbtHome
-            // 
-            this.sbtHome.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
-            this.sbtHome.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.sbtHome.Appearance.ForeColor = System.Drawing.Color.White;
-            this.sbtHome.Appearance.Options.UseBackColor = true;
-            this.sbtHome.Appearance.Options.UseFont = true;
-            this.sbtHome.Appearance.Options.UseForeColor = true;
-            this.sbtHome.Location = new System.Drawing.Point(85, 664);
-            this.sbtHome.MaximumSize = new System.Drawing.Size(0, 200);
-            this.sbtHome.Name = "sbtHome";
-            this.sbtHome.Size = new System.Drawing.Size(315, 31);
-            this.sbtHome.StyleController = this.layoutControl2;
-            this.sbtHome.TabIndex = 22;
-            this.sbtHome.Text = "다른 상품 보기";
-            this.sbtHome.Click += new System.EventHandler(this.sbtHome_Click);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.sbtHome;
-            this.layoutControlItem5.Location = new System.Drawing.Point(73, 652);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(319, 35);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(392, 652);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(75, 35);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(801, 652);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(97, 35);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 652);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(73, 35);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.Control = this.lbcPackageName;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(714, 55);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // ShoppingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 731);
+            this.ClientSize = new System.Drawing.Size(734, 1066);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ShoppingCart";
             this.Text = "ShoppingCart";
@@ -370,16 +411,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,8 +435,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private UserControl.ShoppedProductImages uscShoppedItemThumbnail;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colEventPrice;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -413,5 +453,9 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private UserControl.ThumbnailContainer uscThumbnailContainer;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraEditors.LabelControl lbcPackageName;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }
