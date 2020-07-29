@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
-namespace LNTKCustomer.Form
+namespace LNTKManager
 {
-    public partial class Test : DevExpress.XtraEditors.XtraForm
+    public partial class RecipeInsert : Form
     {
-        public Test()
+        public RecipeInsert()
         {
             InitializeComponent();
         }

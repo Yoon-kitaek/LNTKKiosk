@@ -48,7 +48,7 @@
             // sbtBurgerCustomization
             // 
             this.sbtBurgerCustomization.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.sbtBurgerCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.sbtBurgerCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.sbtBurgerCustomization.Appearance.Options.UseBackColor = true;
             this.sbtBurgerCustomization.Appearance.Options.UseFont = true;
             this.sbtBurgerCustomization.AppearanceDisabled.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
@@ -70,7 +70,7 @@
             this.tablePanel2.SetRow(this.sbtBurgerCustomization, 1);
             this.sbtBurgerCustomization.Size = new System.Drawing.Size(220, 81);
             this.sbtBurgerCustomization.TabIndex = 14;
-            this.sbtBurgerCustomization.Text = "재료 \r\n추가/변경";
+            this.sbtBurgerCustomization.Text = "재료\r\n 추가/변경";
             // 
             // lbcBurgerCustomization
             // 
