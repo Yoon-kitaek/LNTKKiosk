@@ -101,6 +101,7 @@
             this.pceBurgerPicture.Location = new System.Drawing.Point(177, 32);
             this.pceBurgerPicture.Name = "pceBurgerPicture";
             this.pceBurgerPicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceBurgerPicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.tablePanel1.SetRow(this.pceBurgerPicture, 1);
             this.pceBurgerPicture.Size = new System.Drawing.Size(284, 225);
             this.pceBurgerPicture.TabIndex = 12;

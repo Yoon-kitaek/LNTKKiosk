@@ -20,7 +20,10 @@ namespace LNTKCustomer.Form
         string package;
         public int beverageId { get; set; }
         public int SideId { get; set; }
-
+        const int FrenchFriesM = 12;
+        const int ColaM = 13;
+        const int FrenchFriesL = 20;
+        const int ColaL = 21;
 
 
 
@@ -31,31 +34,49 @@ namespace LNTKCustomer.Form
             InitializeComponent();
             productName = packageName;
             this.package = package;
+
         }
 
         private void Customization_Load(object sender, EventArgs e)
         {
             if (DesignMode)
                 return;
+            int productId = DataRepository.Product.GetByName(productName).ProductId;
+            uscBurgerCustomization.SetPicture(productId);
 
             if (package.Equals("") == true)
             {
-                layoutControl3.Visible = false;
+                layoutControl4.Visible = false;
             }
             else
-                layoutControl3.Visible = true;
+            {
+                layoutControl4.Visible = true;
+
+                if (package.Contains("M") == true)
+                {
+                    uscSideCustomization.SetPicture(FrenchFriesM);
+                    uscBeverageCustomization.SetPicture(ColaM);
+                }
+                else
+                {
+                    uscSideCustomization.SetPicture(FrenchFriesL);
+                    uscBeverageCustomization.SetPicture(ColaL);
+                }
+
+            }
+
 
         }
 
         public void SetShoppingList(List<ShoppedItem> shoppingList)
-        { 
-        
+        {
+
         }
 
         private void AddtoCart()
-        {                
+        {
             Product product = DataRepository.Product.GetByName(productName);
-            ShoppedItem shoppedItem = new ShoppedItem(Name + package, product.ProductId, 1);  
+            ShoppedItem shoppedItem = new ShoppedItem(Name + package, product.ProductId, 1);
             shoppingList.Add(shoppedItem);
 
             beverageId = 13;//for test
@@ -85,7 +106,7 @@ namespace LNTKCustomer.Form
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

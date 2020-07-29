@@ -22,7 +22,7 @@ namespace LNTKCustomer.UserControl
         
         public void SetPicture(int productId)
         {
-            pceBurgerPicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
+            pceBeveragePicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
         }
 
         public Image byteArrayToImage(byte[] bytesArr)

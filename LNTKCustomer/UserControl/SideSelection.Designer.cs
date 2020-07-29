@@ -33,13 +33,13 @@
             this.sbtFriesCustomization = new DevExpress.XtraEditors.SimpleButton();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.lbcBurgerCustomization = new DevExpress.XtraEditors.LabelControl();
-            this.pceBurgerPicture = new DevExpress.XtraEditors.PictureEdit();
+            this.pceSidePicture = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pceTwo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pceBurgerPicture.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSidePicture.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pceTwo
@@ -63,7 +63,7 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 25F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 40F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F)});
-            this.tablePanel1.Controls.Add(this.pceBurgerPicture);
+            this.tablePanel1.Controls.Add(this.pceSidePicture);
             this.tablePanel1.Controls.Add(this.tablePanel2);
             this.tablePanel1.Controls.Add(this.pceTwo);
             this.tablePanel1.Controls.Add(this.lbcBurgerCustomization);
@@ -143,16 +143,17 @@
             this.lbcBurgerCustomization.TabIndex = 14;
             this.lbcBurgerCustomization.Text = "원하시는 사이드메뉴를 선택해주세요";
             // 
-            // pceBurgerPicture
+            // pceSidePicture
             // 
-            this.tablePanel1.SetColumn(this.pceBurgerPicture, 2);
-            this.pceBurgerPicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceBurgerPicture.Location = new System.Drawing.Point(183, 18);
-            this.pceBurgerPicture.Name = "pceBurgerPicture";
-            this.pceBurgerPicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.tablePanel1.SetRow(this.pceBurgerPicture, 1);
-            this.pceBurgerPicture.Size = new System.Drawing.Size(294, 114);
-            this.pceBurgerPicture.TabIndex = 17;
+            this.tablePanel1.SetColumn(this.pceSidePicture, 2);
+            this.pceSidePicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceSidePicture.Location = new System.Drawing.Point(183, 18);
+            this.pceSidePicture.Name = "pceSidePicture";
+            this.pceSidePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceSidePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceSidePicture, 1);
+            this.pceSidePicture.Size = new System.Drawing.Size(294, 114);
+            this.pceSidePicture.TabIndex = 17;
             // 
             // SideSelection
             // 
@@ -167,7 +168,7 @@
             this.tablePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pceBurgerPicture.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSidePicture.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,6 +180,6 @@
         private DevExpress.Utils.Layout.TablePanel tablePanel2;
         private DevExpress.XtraEditors.SimpleButton sbtFriesCustomization;
         private DevExpress.XtraEditors.LabelControl lbcBurgerCustomization;
-        private DevExpress.XtraEditors.PictureEdit pceBurgerPicture;
+        private DevExpress.XtraEditors.PictureEdit pceSidePicture;
     }
 }

@@ -42,11 +42,11 @@
             this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.customizationButton1 = new LNTKCustomer.UserControl.CustomizationButton();
+            this.uscSideCustomization = new LNTKCustomer.UserControl.SideSelection();
+            this.uscBeverageCustomization = new LNTKCustomer.UserControl.BeverageSelection();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sideSelection1 = new LNTKCustomer.UserControl.SideSelection();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.beverageSelection1 = new LNTKCustomer.UserControl.BeverageSelection();
+            this.uscBurgerCustomization = new LNTKCustomer.UserControl.CustomizationButton();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
@@ -227,7 +227,7 @@
             // layoutControl3
             // 
             this.tablePanel2.SetColumn(this.layoutControl3, 0);
-            this.layoutControl3.Controls.Add(this.customizationButton1);
+            this.layoutControl3.Controls.Add(this.uscBurgerCustomization);
             this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl3.Location = new System.Drawing.Point(3, 3);
             this.layoutControl3.Name = "layoutControl3";
@@ -242,7 +242,7 @@
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3});
+            this.layoutControlItem5});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(1264, 251);
             this.layoutControlGroup2.TextVisible = false;
@@ -250,8 +250,8 @@
             // layoutControl4
             // 
             this.tablePanel2.SetColumn(this.layoutControl4, 0);
-            this.layoutControl4.Controls.Add(this.beverageSelection1);
-            this.layoutControl4.Controls.Add(this.sideSelection1);
+            this.layoutControl4.Controls.Add(this.uscSideCustomization);
+            this.layoutControl4.Controls.Add(this.uscBeverageCustomization);
             this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl4.Location = new System.Drawing.Point(3, 260);
             this.layoutControl4.Name = "layoutControl4";
@@ -266,8 +266,8 @@
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup3.GroupBordersVisible = false;
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem3,
+            this.layoutControlItem4});
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(1264, 251);
             this.layoutControlGroup3.TextVisible = false;
@@ -304,54 +304,51 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // customizationButton1
+            // uscSideCustomization
             // 
-            this.customizationButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customizationButton1.Location = new System.Drawing.Point(12, 12);
-            this.customizationButton1.Name = "customizationButton1";
-            this.customizationButton1.Size = new System.Drawing.Size(1240, 227);
-            this.customizationButton1.TabIndex = 4;
+            this.uscSideCustomization.Location = new System.Drawing.Point(12, 12);
+            this.uscSideCustomization.Name = "uscSideCustomization";
+            this.uscSideCustomization.Size = new System.Drawing.Size(1240, 111);
+            this.uscSideCustomization.TabIndex = 5;
+            // 
+            // uscBeverageCustomization
+            // 
+            this.uscBeverageCustomization.Location = new System.Drawing.Point(12, 127);
+            this.uscBeverageCustomization.Name = "uscBeverageCustomization";
+            this.uscBeverageCustomization.Size = new System.Drawing.Size(1240, 112);
+            this.uscBeverageCustomization.TabIndex = 4;
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.customizationButton1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Control = this.uscBeverageCustomization;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 115);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1244, 231);
+            this.layoutControlItem3.Size = new System.Drawing.Size(1244, 116);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // sideSelection1
-            // 
-            this.sideSelection1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideSelection1.Location = new System.Drawing.Point(12, 12);
-            this.sideSelection1.Name = "sideSelection1";
-            this.sideSelection1.Size = new System.Drawing.Size(1240, 111);
-            this.sideSelection1.TabIndex = 4;
-            // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.sideSelection1;
+            this.layoutControlItem4.Control = this.uscSideCustomization;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(1244, 115);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // beverageSelection1
+            // uscBurgerCustomization
             // 
-            this.beverageSelection1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.beverageSelection1.Location = new System.Drawing.Point(12, 127);
-            this.beverageSelection1.Name = "beverageSelection1";
-            this.beverageSelection1.Size = new System.Drawing.Size(1240, 112);
-            this.beverageSelection1.TabIndex = 5;
+            this.uscBurgerCustomization.Location = new System.Drawing.Point(12, 12);
+            this.uscBurgerCustomization.Name = "uscBurgerCustomization";
+            this.uscBurgerCustomization.Size = new System.Drawing.Size(1240, 227);
+            this.uscBurgerCustomization.TabIndex = 4;
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.beverageSelection1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 115);
+            this.layoutControlItem5.Control = this.uscBurgerCustomization;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(1244, 116);
+            this.layoutControlItem5.Size = new System.Drawing.Size(1244, 231);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -403,14 +400,14 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControl layoutControl4;
-        private UserControl.BeverageSelection beverageSelection1;
-        private UserControl.SideSelection sideSelection1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControl layoutControl3;
-        private UserControl.CustomizationButton customizationButton1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private UserControl.SideSelection uscSideCustomization;
+        private UserControl.BeverageSelection uscBeverageCustomization;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private UserControl.CustomizationButton uscBurgerCustomization;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }

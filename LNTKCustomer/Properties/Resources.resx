@@ -196,4 +196,16 @@
   <data name="BurgerSingle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BurgerSingle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BeverageIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BeverageIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BurgerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BurgerIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CartIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CartIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SideIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SideIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

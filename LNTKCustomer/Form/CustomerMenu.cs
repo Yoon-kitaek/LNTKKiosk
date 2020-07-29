@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CustomerMenu : DevExpress.XtraEditors.XtraForm
+    public partial class CustomerMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         ProductThumbnail form = new ProductThumbnail();
         public List<ShoppedItem> shoppingList { get; set; }
@@ -78,8 +78,8 @@ namespace LNTKCustomer.Form
             shoppingCart.Show();
             pceShoppingCart.Visible = false;
             pcnShoppingCart.Visible = false;
-            adcMenuCategory.Enabled = false;
-            adcLogo.Enabled = true;
+            //adcMenuCategory.Enabled = false;
+            //adcLogo.Enabled = true;
         }
 
     }
