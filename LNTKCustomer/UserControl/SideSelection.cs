@@ -8,21 +8,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using LNTKKiosk.Data;
 using System.IO;
+using LNTKKiosk.Data;
 
 namespace LNTKCustomer.UserControl
 {
-    public partial class CustomizationButton : DevExpress.XtraEditors.XtraUserControl
+    public partial class SideSelection : DevExpress.XtraEditors.XtraUserControl
     {
-        public CustomizationButton()
+        public SideSelection()
         {
             InitializeComponent();
         }
 
         public void SetPicture(int productId)
         {
-            pceBurgerPicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
+            pceSidePicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
