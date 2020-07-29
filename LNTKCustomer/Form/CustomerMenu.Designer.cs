@@ -106,7 +106,7 @@
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 1170);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 1102);
             this.barDockControl2.Manager = this.toolbarFormManager2;
             this.barDockControl2.Size = new System.Drawing.Size(747, 0);
             // 
@@ -116,7 +116,7 @@
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.toolbarFormManager2;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 1170);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 1102);
             // 
             // barDockControl4
             // 
@@ -124,7 +124,7 @@
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl4.Location = new System.Drawing.Point(747, 0);
             this.barDockControl4.Manager = this.toolbarFormManager2;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 1170);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 1102);
             // 
             // ribbonPage5
             // 
@@ -146,6 +146,7 @@
             this.tileBar2.Location = new System.Drawing.Point(0, 0);
             this.tileBar2.MaxId = 13;
             this.tileBar2.Name = "tileBar2";
+            this.tileBar2.Position = 232;
             this.tileBar2.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             this.tileBar2.Size = new System.Drawing.Size(747, 180);
             this.tileBar2.TabIndex = 23;
@@ -163,13 +164,13 @@
             this.ㅌ.AppearanceItem.Normal.BackColor = System.Drawing.Color.Red;
             this.ㅌ.AppearanceItem.Normal.Options.UseBackColor = true;
             this.ㅌ.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement1.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement1.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement1.Appearance.Normal.Options.UseFont = true;
-            tileItemElement1.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement1.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement1.Appearance.Pressed.Options.UseFont = true;
-            tileItemElement1.Appearance.Selected.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement1.Appearance.Selected.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement1.Appearance.Selected.Options.UseFont = true;
             tileItemElement1.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.BurgerIcon;
             tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
@@ -194,10 +195,14 @@
             this.tileBarItem2.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileBarItem2.AppearanceItem.Normal.Options.UseForeColor = true;
             this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement2.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement2.Appearance.Normal.Options.UseFont = true;
+            tileItemElement2.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
+            tileItemElement2.Appearance.Pressed.Options.UseFont = true;
+            tileItemElement2.Appearance.Selected.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
+            tileItemElement2.Appearance.Selected.Options.UseFont = true;
             tileItemElement2.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.BeverageIcon;
             tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
             tileItemElement2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
@@ -218,13 +223,13 @@
             this.tileBarItem3.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkOrange;
             this.tileBarItem3.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement3.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement3.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement3.Appearance.Normal.Options.UseFont = true;
-            tileItemElement3.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement3.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement3.Appearance.Pressed.Options.UseFont = true;
-            tileItemElement3.Appearance.Selected.Font = new System.Drawing.Font("Tahoma", 20F);
+            tileItemElement3.Appearance.Selected.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement3.Appearance.Selected.Options.UseFont = true;
             tileItemElement3.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.SideIcon;
             tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
@@ -268,10 +273,10 @@
             // tileBarItem1
             // 
             this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.Cart;
+            tileItemElement5.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_cart_9_3338943__1_;
             tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileItemElement5.ImageOptions.ImageBorder = DevExpress.XtraEditors.TileItemElementImageBorderMode.None;
-            tileItemElement5.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch;
+            tileItemElement5.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.NoScale;
             tileItemElement5.ImageOptions.ImageSize = new System.Drawing.Size(50, 50);
             tileItemElement5.Text = "";
             this.tileBarItem1.Elements.Add(tileItemElement5);
@@ -323,7 +328,7 @@
             // 
             // CustomerMenu
             // 
-            this.ClientSize = new System.Drawing.Size(747, 1170);
+            this.ClientSize = new System.Drawing.Size(747, 1102);
             this.Controls.Add(this.tileBar2);
             this.Controls.Add(this.barDockControl3);
             this.Controls.Add(this.barDockControl4);

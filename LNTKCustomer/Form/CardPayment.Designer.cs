@@ -176,7 +176,6 @@
             this.imageSlider1.StyleController = this.layoutControl1;
             this.imageSlider1.TabIndex = 7;
             this.imageSlider1.Text = "imageSlider1";
-            this.imageSlider1.Click += new System.EventHandler(this.imageSlider1_Click);
             // 
             // layoutControlItem2
             // 

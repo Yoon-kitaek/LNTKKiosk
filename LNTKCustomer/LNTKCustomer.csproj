@@ -353,10 +353,13 @@
     <None Include="Resources\BeverageIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BurgerEvent.jpg" />
+    <None Include="Resources\iconfinder_Basket_2205960.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BurgerEvent2.jpg" />
+    <None Include="Resources\iconfinder_cart-9_3338943.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_cart-9_3338943 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
