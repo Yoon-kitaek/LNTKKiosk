@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Management));
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraPivotGrid.PivotGridFormatRule pivotGridFormatRule1 = new DevExpress.XtraPivotGrid.PivotGridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings formatRuleTotalTypeSettings1 = new DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraPivotGrid.PivotGridFormatRule pivotGridFormatRule2 = new DevExpress.XtraPivotGrid.PivotGridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings formatRuleTotalTypeSettings2 = new DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue7 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.fieldProductPrice = new DevExpress.XtraPivotGrid.PivotGridField();
             this.colRemainingTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -117,7 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -509,12 +509,12 @@
             // chartControl1
             // 
             this.chartControl1.DataSource = this.pivotGridControl1;
-            xyDiagram1.AxisX.Title.Text = "카테고리 상품";
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Label.TextPattern = "{V}";
-            xyDiagram1.AxisY.Title.Text = "Revenue";
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram1;
+            xyDiagram2.AxisX.Title.Text = "카테고리 상품";
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.Label.TextPattern = "{V}";
+            xyDiagram2.AxisY.Title.Text = "Revenue";
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram2;
             this.chartControl1.Legend.MaxHorizontalPercentage = 30D;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(12, 231);
@@ -537,20 +537,20 @@
             this.fieldProductName,
             this.fieldProductPrice,
             this.OrderMonth});
-            pivotGridFormatRule1.Measure = this.fieldProductPrice;
-            pivotGridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Between;
-            formatConditionRuleValue1.Value1 = 10000;
-            formatConditionRuleValue1.Value2 = 20000;
-            pivotGridFormatRule1.Rule = formatConditionRuleValue1;
-            formatRuleTotalTypeSettings1.ApplyToCustomTotalCell = false;
-            formatRuleTotalTypeSettings1.ApplyToGrandTotalCell = false;
-            formatRuleTotalTypeSettings1.ApplyToTotalCell = false;
-            pivotGridFormatRule1.Settings = formatRuleTotalTypeSettings1;
-            pivotGridFormatRule1.StopIfTrue = true;
-            this.pivotGridControl1.FormatRules.Add(pivotGridFormatRule1);
+            pivotGridFormatRule2.Measure = this.fieldProductPrice;
+            pivotGridFormatRule2.Name = "Format0";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Between;
+            formatConditionRuleValue2.Value1 = 10000;
+            formatConditionRuleValue2.Value2 = 20000;
+            pivotGridFormatRule2.Rule = formatConditionRuleValue2;
+            formatRuleTotalTypeSettings2.ApplyToCustomTotalCell = false;
+            formatRuleTotalTypeSettings2.ApplyToGrandTotalCell = false;
+            formatRuleTotalTypeSettings2.ApplyToTotalCell = false;
+            pivotGridFormatRule2.Settings = formatRuleTotalTypeSettings2;
+            pivotGridFormatRule2.StopIfTrue = true;
+            this.pivotGridControl1.FormatRules.Add(pivotGridFormatRule2);
             this.pivotGridControl1.Location = new System.Drawing.Point(12, 12);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsChartDataSource.ProvideColumnCustomTotals = true;
@@ -578,6 +578,7 @@
             // 
             // fieldOrderTime
             // 
+            this.fieldOrderTime.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.fieldOrderTime.AreaIndex = 0;
             this.fieldOrderTime.Caption = "Year";
             this.fieldOrderTime.FieldName = "OrderTime";
@@ -595,6 +596,7 @@
             // 
             // OrderMonth
             // 
+            this.OrderMonth.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.OrderMonth.AreaIndex = 1;
             this.OrderMonth.Caption = "Month";
             this.OrderMonth.FieldName = "OrderTime";
@@ -641,12 +643,11 @@
             // gridControl4
             // 
             this.gridControl4.DataSource = this.bdsStock;
-            this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl4.Location = new System.Drawing.Point(0, 0);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.MenuManager = this.barManager1;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(1106, 459);
+            this.gridControl4.Size = new System.Drawing.Size(1106, 376);
             this.gridControl4.TabIndex = 0;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -664,34 +665,34 @@
             this.colReceivedDate,
             this.colRemainingTime,
             this.gridColumn1});
-            gridFormatRule1.Column = this.colRemainingTime;
-            gridFormatRule1.ColumnApplyTo = this.gridColumn1;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.Lime;
-            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
-            formatConditionRuleValue2.Value1 = "20";
-            gridFormatRule1.Rule = formatConditionRuleValue2;
-            gridFormatRule2.Column = this.colRemainingTime;
-            gridFormatRule2.ColumnApplyTo = this.gridColumn1;
-            gridFormatRule2.Name = "Format1";
-            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Between;
-            formatConditionRuleValue3.Value1 = "10";
-            formatConditionRuleValue3.Value2 = "21";
-            gridFormatRule2.Rule = formatConditionRuleValue3;
-            gridFormatRule3.Column = this.colRemainingTime;
-            gridFormatRule3.ColumnApplyTo = this.gridColumn1;
-            gridFormatRule3.Name = "Format2";
-            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
-            formatConditionRuleValue4.Value1 = "10";
-            gridFormatRule3.Rule = formatConditionRuleValue4;
-            this.gridView4.FormatRules.Add(gridFormatRule1);
-            this.gridView4.FormatRules.Add(gridFormatRule2);
-            this.gridView4.FormatRules.Add(gridFormatRule3);
+            gridFormatRule4.Column = this.colRemainingTime;
+            gridFormatRule4.ColumnApplyTo = this.gridColumn1;
+            gridFormatRule4.Name = "Format0";
+            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
+            formatConditionRuleValue5.Value1 = "20";
+            gridFormatRule4.Rule = formatConditionRuleValue5;
+            gridFormatRule5.Column = this.colRemainingTime;
+            gridFormatRule5.ColumnApplyTo = this.gridColumn1;
+            gridFormatRule5.Name = "Format1";
+            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Between;
+            formatConditionRuleValue6.Value1 = "10";
+            formatConditionRuleValue6.Value2 = "21";
+            gridFormatRule5.Rule = formatConditionRuleValue6;
+            gridFormatRule6.Column = this.colRemainingTime;
+            gridFormatRule6.ColumnApplyTo = this.gridColumn1;
+            gridFormatRule6.Name = "Format2";
+            formatConditionRuleValue7.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue7.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue7.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
+            formatConditionRuleValue7.Value1 = "10";
+            gridFormatRule6.Rule = formatConditionRuleValue7;
+            this.gridView4.FormatRules.Add(gridFormatRule4);
+            this.gridView4.FormatRules.Add(gridFormatRule5);
+            this.gridView4.FormatRules.Add(gridFormatRule6);
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.GroupCount = 1;
             this.gridView4.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -777,7 +778,7 @@
             this.tpgeRevenue.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderDetail)).EndInit();
