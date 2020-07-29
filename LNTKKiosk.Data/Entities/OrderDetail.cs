@@ -10,6 +10,8 @@ namespace LNTKKiosk.Data
     {
         public int ProductPrice { get; set; }
 
+        public int Eventprice { get; set; }
+
         public DateTime OrderTime { get; set; }
 
         public string ProductName { get; set; }

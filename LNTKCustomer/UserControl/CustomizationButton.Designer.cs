@@ -71,6 +71,7 @@
             this.sbtBurgerCustomization.Size = new System.Drawing.Size(220, 81);
             this.sbtBurgerCustomization.TabIndex = 14;
             this.sbtBurgerCustomization.Text = "재료\r\n 추가/변경";
+            this.sbtBurgerCustomization.Click += new System.EventHandler(this.sbtBurgerCustomization_Click);
             // 
             // lbcBurgerCustomization
             // 

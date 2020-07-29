@@ -98,6 +98,7 @@
             this.colReceivedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrice1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.fieldEventprice = new DevExpress.XtraPivotGrid.PivotGridField();
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).BeginInit();
             this.tctlManagement.SuspendLayout();
             this.tpgeOrder.SuspendLayout();
@@ -511,7 +512,7 @@
             xyDiagram1.AxisX.Title.Text = "카테고리 상품";
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.Label.TextPattern = "{V}";
-            xyDiagram1.AxisY.Title.Text = "Revenue";
+            xyDiagram1.AxisY.Title.Text = "Revenue Eventprice";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.MaxHorizontalPercentage = 30D;
@@ -535,7 +536,8 @@
             this.fieldOrderTime,
             this.fieldProductName,
             this.fieldProductPrice,
-            this.OrderMonth});
+            this.OrderMonth,
+            this.fieldEventprice});
             pivotGridFormatRule1.Measure = this.fieldProductPrice;
             pivotGridFormatRule1.Name = "Format0";
             formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -642,7 +644,7 @@
             // gridControl4
             // 
             this.gridControl4.DataSource = this.bdsStock;
-            this.gridControl4.Location = new System.Drawing.Point(85, 64);
+            this.gridControl4.Location = new System.Drawing.Point(28, 17);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.MenuManager = this.barManager1;
             this.gridControl4.Name = "gridControl4";
@@ -744,6 +746,13 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // fieldEventprice
+            // 
+            this.fieldEventprice.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldEventprice.AreaIndex = 1;
+            this.fieldEventprice.FieldName = "Eventprice";
+            this.fieldEventprice.Name = "fieldEventprice";
             // 
             // Management
             // 
@@ -851,6 +860,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPrice1;
         private DevExpress.XtraGrid.Columns.GridColumn colRemainingTime;
         private DevExpress.XtraGrid.Columns.GridColumn 신선도;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldEventprice;
     }
 }
 

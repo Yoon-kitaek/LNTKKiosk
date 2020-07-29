@@ -133,6 +133,7 @@
             this.sbtFriesCustomization.Size = new System.Drawing.Size(228, 62);
             this.sbtFriesCustomization.TabIndex = 15;
             this.sbtFriesCustomization.Text = "사이드 추가/변경";
+            this.sbtFriesCustomization.Click += new System.EventHandler(this.sbtFriesCustomization_Click);
             // 
             // lbcBurgerCustomization
             // 
