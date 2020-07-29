@@ -22,7 +22,7 @@ namespace LNTKManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Management());
-            Application.Run(new Management());
+            Application.Run(new GroceryManagement());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)

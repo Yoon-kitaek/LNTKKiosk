@@ -123,10 +123,11 @@
             this.tctlManagement.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tctlManagement.Appearance.Options.UseFont = true;
             this.tctlManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tctlManagement.Location = new System.Drawing.Point(0, 57);
+            this.tctlManagement.Location = new System.Drawing.Point(0, 41);
+            this.tctlManagement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tctlManagement.Name = "tctlManagement";
             this.tctlManagement.SelectedTabPage = this.tpgeOrder;
-            this.tctlManagement.Size = new System.Drawing.Size(1108, 471);
+            this.tctlManagement.Size = new System.Drawing.Size(1108, 601);
             this.tctlManagement.TabIndex = 0;
             this.tctlManagement.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tpgeOrder,
@@ -141,17 +142,20 @@
             // 
             this.tpgeOrder.Controls.Add(this.gridControl2);
             this.tpgeOrder.Controls.Add(this.gridControl1);
+            this.tpgeOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeOrder.Name = "tpgeOrder";
-            this.tpgeOrder.Size = new System.Drawing.Size(1102, 435);
+            this.tpgeOrder.Size = new System.Drawing.Size(1106, 569);
             this.tpgeOrder.Text = "주문관리";
             // 
             // gridControl2
             // 
             this.gridControl2.DataSource = this.bdsCompletedOrder;
-            this.gridControl2.Location = new System.Drawing.Point(11, 227);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl2.Location = new System.Drawing.Point(11, 272);
             this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(400, 180);
+            this.gridControl2.Size = new System.Drawing.Size(400, 216);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -166,6 +170,7 @@
             this.colOrderId1,
             this.colDate1,
             this.colIsCompleted1});
+            this.gridView2.DetailHeight = 420;
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             // 
@@ -202,10 +207,12 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bdsNonCompletedOrder;
-            this.gridControl1.Location = new System.Drawing.Point(11, 3);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.Location = new System.Drawing.Point(11, 4);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(400, 191);
+            this.gridControl1.Size = new System.Drawing.Size(400, 229);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -220,6 +227,7 @@
             this.colOrderId,
             this.colDate,
             this.colIsCompleted});
+            this.gridView1.DetailHeight = 420;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -260,18 +268,21 @@
             this.tpgeProduct.Controls.Add(this.btnUpdate);
             this.tpgeProduct.Controls.Add(this.btnAdd);
             this.tpgeProduct.Controls.Add(this.buttonContainer1);
+            this.tpgeProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeProduct.Name = "tpgeProduct";
-            this.tpgeProduct.Size = new System.Drawing.Size(1102, 435);
+            this.tpgeProduct.Size = new System.Drawing.Size(1106, 557);
             this.tpgeProduct.Text = "상품관리";
             // 
             // gridControl3
             // 
             this.gridControl3.DataSource = this.bdsProduct;
-            this.gridControl3.Location = new System.Drawing.Point(52, 142);
+            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl3.Location = new System.Drawing.Point(52, 170);
             this.gridControl3.MainView = this.gridView3;
+            this.gridControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl3.MenuManager = this.barManager1;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(652, 237);
+            this.gridControl3.Size = new System.Drawing.Size(652, 284);
             this.gridControl3.TabIndex = 5;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -288,6 +299,7 @@
             this.colName,
             this.colDescription,
             this.colPrice});
+            this.gridView3.DetailHeight = 420;
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowGroupPanel = false;
@@ -382,38 +394,43 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1108, 57);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1108, 41);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 528);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 642);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1108, 24);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1108, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 57);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 471);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 601);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1108, 57);
+            this.barDockControlRight.Location = new System.Drawing.Point(1108, 41);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 471);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 601);
             // 
             // btnDelete
             // 
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(177, 14);
+            this.btnDelete.Location = new System.Drawing.Point(177, 17);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 29);
+            this.btnDelete.Size = new System.Drawing.Size(94, 35);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -421,9 +438,10 @@
             // btnUpdate
             // 
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(294, 14);
+            this.btnUpdate.Location = new System.Drawing.Point(294, 17);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(94, 35);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -431,27 +449,29 @@
             // btnAdd
             // 
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(56, 14);
+            this.btnAdd.Location = new System.Drawing.Point(56, 17);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 29);
+            this.btnAdd.Size = new System.Drawing.Size(94, 35);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "추가";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // buttonContainer1
             // 
-            this.buttonContainer1.Location = new System.Drawing.Point(52, 66);
-            this.buttonContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonContainer1.Location = new System.Drawing.Point(52, 79);
+            this.buttonContainer1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buttonContainer1.Name = "buttonContainer1";
-            this.buttonContainer1.Size = new System.Drawing.Size(656, 69);
+            this.buttonContainer1.Size = new System.Drawing.Size(656, 83);
             this.buttonContainer1.TabIndex = 0;
             this.buttonContainer1.MenuSelected += new System.EventHandler<LNTKManager.ButtonContainer.MenuSelectedEventArgs>(this.buttonContainer1_MenuSelected);
             // 
             // tpgeRevenue
             // 
             this.tpgeRevenue.Controls.Add(this.layoutControl1);
+            this.tpgeRevenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeRevenue.Name = "tpgeRevenue";
-            this.tpgeRevenue.Size = new System.Drawing.Size(1102, 435);
+            this.tpgeRevenue.Size = new System.Drawing.Size(1106, 557);
             this.tpgeRevenue.Text = "매출조회";
             // 
             // layoutControl1
@@ -460,9 +480,10 @@
             this.layoutControl1.Controls.Add(this.pivotGridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1102, 435);
+            this.layoutControl1.Size = new System.Drawing.Size(1106, 557);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -477,7 +498,8 @@
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.MaxHorizontalPercentage = 30D;
             this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(12, 219);
+            this.chartControl1.Location = new System.Drawing.Point(12, 280);
+            this.chartControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesDataMember = "Series";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
@@ -485,7 +507,7 @@
             this.chartControl1.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             this.chartControl1.SeriesTemplate.SeriesDataMember = "Series";
             this.chartControl1.SeriesTemplate.ValueDataMembersSerializable = "Values";
-            this.chartControl1.Size = new System.Drawing.Size(1078, 204);
+            this.chartControl1.Size = new System.Drawing.Size(1082, 263);
             this.chartControl1.TabIndex = 4;
             // 
             // pivotGridControl1
@@ -511,7 +533,8 @@
             pivotGridFormatRule1.Settings = formatRuleTotalTypeSettings1;
             pivotGridFormatRule1.StopIfTrue = true;
             this.pivotGridControl1.FormatRules.Add(pivotGridFormatRule1);
-            this.pivotGridControl1.Location = new System.Drawing.Point(12, 12);
+            this.pivotGridControl1.Location = new System.Drawing.Point(12, 14);
+            this.pivotGridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsChartDataSource.ProvideColumnCustomTotals = true;
             this.pivotGridControl1.OptionsChartDataSource.ProvideColumnGrandTotals = true;
@@ -520,7 +543,7 @@
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowGrandTotals = true;
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowTotals = true;
             this.pivotGridControl1.OptionsMenu.EnableFormatRulesMenu = true;
-            this.pivotGridControl1.Size = new System.Drawing.Size(1078, 203);
+            this.pivotGridControl1.Size = new System.Drawing.Size(1082, 262);
             this.pivotGridControl1.TabIndex = 0;
             // 
             // bdsOrderDetail
@@ -572,7 +595,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1102, 435);
+            this.Root.Size = new System.Drawing.Size(1106, 557);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -580,23 +603,24 @@
             this.layoutControlItem1.Control = this.pivotGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1082, 207);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1086, 266);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.chartControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 207);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 266);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1082, 208);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1086, 267);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // tpgeShin
             // 
+            this.tpgeShin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeShin.Name = "tpgeShin";
-            this.tpgeShin.Size = new System.Drawing.Size(1102, 455);
+            this.tpgeShin.Size = new System.Drawing.Size(1106, 557);
             this.tpgeShin.Text = "재료관리";
             // 
             // timer1
@@ -606,14 +630,15 @@
             // 
             // Management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 552);
+            this.ClientSize = new System.Drawing.Size(1108, 662);
             this.Controls.Add(this.tctlManagement);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Management";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Management_Load);
