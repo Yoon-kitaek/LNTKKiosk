@@ -63,6 +63,16 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1590473693572 {
+            get {
+                object obj = ResourceManager.GetObject("_1590473693572", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3D햄버거 {
             get {
                 object obj = ResourceManager.GetObject("_3D햄버거", resourceCulture);
@@ -193,6 +203,26 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_b4_03_1380567 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_b4_03_1380567", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_b4_03_1380567__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_b4_03_1380567__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Basket_2205960 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Basket_2205960", resourceCulture);
@@ -226,6 +256,26 @@ namespace LNTKCustomer.Properties {
         internal static System.Drawing.Bitmap iconfinder_Hamburger_131964 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Hamburger_131964", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
