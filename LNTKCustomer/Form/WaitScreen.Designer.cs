@@ -53,7 +53,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(766, 1127);
+            this.layoutControl1.Size = new System.Drawing.Size(766, 1102);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -65,7 +65,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(766, 1127);
+            this.Root.Size = new System.Drawing.Size(766, 1102);
             this.Root.TextVisible = false;
             // 
             // imageSlider1
@@ -76,10 +76,10 @@
             this.imageSlider1.CurrentImageIndex = 0;
             this.imageSlider1.Images.Add(((System.Drawing.Image)(resources.GetObject("imageSlider1.Images"))));
             this.imageSlider1.Images.Add(((System.Drawing.Image)(resources.GetObject("imageSlider1.Images1"))));
-            this.imageSlider1.Location = new System.Drawing.Point(12, 552);
+            this.imageSlider1.Location = new System.Drawing.Point(12, 540);
             this.imageSlider1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.imageSlider1.Name = "imageSlider1";
-            this.imageSlider1.Size = new System.Drawing.Size(742, 563);
+            this.imageSlider1.Size = new System.Drawing.Size(742, 550);
             this.imageSlider1.StyleController = this.layoutControl1;
             this.imageSlider1.TabIndex = 5;
             this.imageSlider1.Text = "imageSlider1";
@@ -95,7 +95,7 @@
             this.imsWaitScreen.Location = new System.Drawing.Point(12, 12);
             this.imsWaitScreen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.imsWaitScreen.Name = "imsWaitScreen";
-            this.imsWaitScreen.Size = new System.Drawing.Size(742, 536);
+            this.imsWaitScreen.Size = new System.Drawing.Size(742, 524);
             this.imsWaitScreen.StyleController = this.layoutControl1;
             this.imsWaitScreen.TabIndex = 4;
             this.imsWaitScreen.Text = "imageSlider1";
@@ -106,16 +106,16 @@
             this.layoutControlItem1.Control = this.imsWaitScreen;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(746, 540);
+            this.layoutControlItem1.Size = new System.Drawing.Size(746, 528);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.imageSlider1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 540);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 528);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(746, 567);
+            this.layoutControlItem2.Size = new System.Drawing.Size(746, 554);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 1127);
+            this.ClientSize = new System.Drawing.Size(766, 1102);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
