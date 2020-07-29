@@ -32,43 +32,43 @@
             this.btnPay = new DevExpress.XtraEditors.SimpleButton();
             this.btnPutInCart = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.uscSideCustomization = new LNTKCustomer.UserControl.SideSelection();
             this.uscBeverageCustomization = new LNTKCustomer.UserControl.BeverageSelection();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.uscBurgerCustomization = new LNTKCustomer.UserControl.CustomizationButton();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
-            this.layoutControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
-            this.layoutControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
             this.layoutControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
+            this.layoutControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
+            this.layoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tablePanel1
@@ -87,7 +87,7 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 80F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1240, 99);
+            this.tablePanel1.Size = new System.Drawing.Size(546, 183);
             this.tablePanel1.TabIndex = 4;
             // 
             // btnPay
@@ -126,10 +126,10 @@
             this.btnPay.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.tablePanel1.SetColumn(this.btnPay, 3);
             this.btnPay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPay.Location = new System.Drawing.Point(747, 13);
+            this.btnPay.Location = new System.Drawing.Point(331, 21);
             this.btnPay.Name = "btnPay";
             this.tablePanel1.SetRow(this.btnPay, 1);
-            this.btnPay.Size = new System.Drawing.Size(366, 73);
+            this.btnPay.Size = new System.Drawing.Size(158, 140);
             this.btnPay.TabIndex = 1;
             this.btnPay.Text = "결제하기";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
@@ -170,10 +170,10 @@
             this.btnPutInCart.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.tablePanel1.SetColumn(this.btnPutInCart, 1);
             this.btnPutInCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPutInCart.Location = new System.Drawing.Point(127, 13);
+            this.btnPutInCart.Location = new System.Drawing.Point(58, 21);
             this.btnPutInCart.Name = "btnPutInCart";
             this.tablePanel1.SetRow(this.btnPutInCart, 1);
-            this.btnPutInCart.Size = new System.Drawing.Size(366, 73);
+            this.btnPutInCart.Size = new System.Drawing.Size(158, 140);
             this.btnPutInCart.TabIndex = 0;
             this.btnPutInCart.Text = "장바구니에 넣기";
             this.btnPutInCart.Click += new System.EventHandler(this.btnPutInCart_Click);
@@ -185,19 +185,17 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1294, 667);
+            this.Root.Size = new System.Drawing.Size(600, 1093);
             this.Root.TextVisible = false;
             // 
-            // layoutControl1
+            // layoutControlItem1
             // 
-            this.layoutControl1.Controls.Add(this.tablePanel2);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1294, 667);
-            this.layoutControl1.TabIndex = 0;
-            this.layoutControl1.Text = "layoutControl1";
+            this.layoutControlItem1.Control = this.tablePanel2;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(580, 1073);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // tablePanel2
             // 
@@ -212,76 +210,19 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 40F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 40F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F)});
-            this.tablePanel2.Size = new System.Drawing.Size(1270, 643);
+            this.tablePanel2.Size = new System.Drawing.Size(576, 1069);
             this.tablePanel2.TabIndex = 4;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.tablePanel2;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1274, 647);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // layoutControl3
-            // 
-            this.tablePanel2.SetColumn(this.layoutControl3, 0);
-            this.layoutControl3.Controls.Add(this.uscBurgerCustomization);
-            this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl3.Location = new System.Drawing.Point(3, 3);
-            this.layoutControl3.Name = "layoutControl3";
-            this.layoutControl3.Root = this.layoutControlGroup2;
-            this.tablePanel2.SetRow(this.layoutControl3, 0);
-            this.layoutControl3.Size = new System.Drawing.Size(1264, 251);
-            this.layoutControl3.TabIndex = 0;
-            this.layoutControl3.Text = "layoutControl3";
-            // 
-            // layoutControlGroup2
-            // 
-            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem5});
-            this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1264, 251);
-            this.layoutControlGroup2.TextVisible = false;
-            // 
-            // layoutControl4
-            // 
-            this.tablePanel2.SetColumn(this.layoutControl4, 0);
-            this.layoutControl4.Controls.Add(this.uscSideCustomization);
-            this.layoutControl4.Controls.Add(this.uscBeverageCustomization);
-            this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl4.Location = new System.Drawing.Point(3, 260);
-            this.layoutControl4.Name = "layoutControl4";
-            this.layoutControl4.Root = this.layoutControlGroup3;
-            this.tablePanel2.SetRow(this.layoutControl4, 1);
-            this.layoutControl4.Size = new System.Drawing.Size(1264, 251);
-            this.layoutControl4.TabIndex = 1;
-            this.layoutControl4.Text = "layoutControl4";
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup3.GroupBordersVisible = false;
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3,
-            this.layoutControlItem4});
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1264, 251);
-            this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControl5
             // 
             this.tablePanel2.SetColumn(this.layoutControl5, 0);
             this.layoutControl5.Controls.Add(this.tablePanel1);
             this.layoutControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl5.Location = new System.Drawing.Point(3, 517);
+            this.layoutControl5.Location = new System.Drawing.Point(3, 859);
             this.layoutControl5.Name = "layoutControl5";
             this.layoutControl5.Root = this.layoutControlGroup4;
             this.tablePanel2.SetRow(this.layoutControl5, 2);
-            this.layoutControl5.Size = new System.Drawing.Size(1264, 123);
+            this.layoutControl5.Size = new System.Drawing.Size(570, 207);
             this.layoutControl5.TabIndex = 2;
             this.layoutControl5.Text = "layoutControl5";
             // 
@@ -292,7 +233,7 @@
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1264, 123);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(570, 207);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // layoutControlItem2
@@ -300,30 +241,55 @@
             this.layoutControlItem2.Control = this.tablePanel1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1244, 103);
+            this.layoutControlItem2.Size = new System.Drawing.Size(550, 187);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControl4
+            // 
+            this.tablePanel2.SetColumn(this.layoutControl4, 0);
+            this.layoutControl4.Controls.Add(this.uscSideCustomization);
+            this.layoutControl4.Controls.Add(this.uscBeverageCustomization);
+            this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl4.Location = new System.Drawing.Point(3, 431);
+            this.layoutControl4.Name = "layoutControl4";
+            this.layoutControl4.Root = this.layoutControlGroup3;
+            this.tablePanel2.SetRow(this.layoutControl4, 1);
+            this.layoutControl4.Size = new System.Drawing.Size(570, 422);
+            this.layoutControl4.TabIndex = 1;
+            this.layoutControl4.Text = "layoutControl4";
             // 
             // uscSideCustomization
             // 
             this.uscSideCustomization.Location = new System.Drawing.Point(12, 12);
             this.uscSideCustomization.Name = "uscSideCustomization";
-            this.uscSideCustomization.Size = new System.Drawing.Size(1240, 111);
+            this.uscSideCustomization.Size = new System.Drawing.Size(546, 196);
             this.uscSideCustomization.TabIndex = 5;
             // 
             // uscBeverageCustomization
             // 
-            this.uscBeverageCustomization.Location = new System.Drawing.Point(12, 127);
+            this.uscBeverageCustomization.Location = new System.Drawing.Point(12, 212);
             this.uscBeverageCustomization.Name = "uscBeverageCustomization";
-            this.uscBeverageCustomization.Size = new System.Drawing.Size(1240, 112);
+            this.uscBeverageCustomization.Size = new System.Drawing.Size(546, 198);
             this.uscBeverageCustomization.TabIndex = 4;
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem4});
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(570, 422);
+            this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.uscBeverageCustomization;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 115);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 200);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1244, 116);
+            this.layoutControlItem3.Size = new System.Drawing.Size(550, 202);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -332,31 +298,65 @@
             this.layoutControlItem4.Control = this.uscSideCustomization;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1244, 115);
+            this.layoutControlItem4.Size = new System.Drawing.Size(550, 200);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControl3
+            // 
+            this.tablePanel2.SetColumn(this.layoutControl3, 0);
+            this.layoutControl3.Controls.Add(this.uscBurgerCustomization);
+            this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl3.Location = new System.Drawing.Point(3, 3);
+            this.layoutControl3.Name = "layoutControl3";
+            this.layoutControl3.Root = this.layoutControlGroup2;
+            this.tablePanel2.SetRow(this.layoutControl3, 0);
+            this.layoutControl3.Size = new System.Drawing.Size(570, 422);
+            this.layoutControl3.TabIndex = 0;
+            this.layoutControl3.Text = "layoutControl3";
             // 
             // uscBurgerCustomization
             // 
             this.uscBurgerCustomization.Location = new System.Drawing.Point(12, 12);
             this.uscBurgerCustomization.Name = "uscBurgerCustomization";
-            this.uscBurgerCustomization.Size = new System.Drawing.Size(1240, 227);
+            this.uscBurgerCustomization.Size = new System.Drawing.Size(546, 398);
             this.uscBurgerCustomization.TabIndex = 4;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem5});
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(570, 422);
+            this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.uscBurgerCustomization;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(1244, 231);
+            this.layoutControlItem5.Size = new System.Drawing.Size(550, 402);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.tablePanel2);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(600, 1093);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
             // 
             // Customization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1294, 667);
+            this.ClientSize = new System.Drawing.Size(600, 1093);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customization";
@@ -366,24 +366,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
-            this.layoutControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
-            this.layoutControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
             this.layoutControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
+            this.layoutControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
+            this.layoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

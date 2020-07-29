@@ -70,7 +70,7 @@
             this.tablePanel2.SetRow(this.sbtBurgerCustomization, 1);
             this.sbtBurgerCustomization.Size = new System.Drawing.Size(220, 81);
             this.sbtBurgerCustomization.TabIndex = 14;
-            this.sbtBurgerCustomization.Text = "재료 추가/변경";
+            this.sbtBurgerCustomization.Text = "재료 \r\n추가/변경";
             // 
             // lbcBurgerCustomization
             // 
@@ -92,7 +92,7 @@
             this.tablePanel1.SetRow(this.lbcBurgerCustomization, 1);
             this.lbcBurgerCustomization.Size = new System.Drawing.Size(458, 225);
             this.lbcBurgerCustomization.TabIndex = 13;
-            this.lbcBurgerCustomization.Text = "추가/변경하실 재료를 선택해주세요";
+            this.lbcBurgerCustomization.Text = "추가/변경하실 재료를\r\n 선택해주세요";
             // 
             // pceBurgerPicture
             // 
@@ -113,8 +113,9 @@
             this.pceOne.EditValue = global::LNTKCustomer.Properties.Resources.one;
             this.pceOne.Location = new System.Drawing.Point(3, 63);
             this.pceOne.Name = "pceOne";
+            this.pceOne.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pceOne.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceOne.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceOne.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.tablePanel3.SetRow(this.pceOne, 1);
             this.pceOne.Size = new System.Drawing.Size(104, 99);
             this.pceOne.TabIndex = 11;

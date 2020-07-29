@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.pceBeveragePicture = new DevExpress.XtraEditors.PictureEdit();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.sbtBeverageCustomization = new DevExpress.XtraEditors.SimpleButton();
             this.pceThree = new DevExpress.XtraEditors.PictureEdit();
             this.lbcBurgerCustomization = new DevExpress.XtraEditors.LabelControl();
-            this.pceBeveragePicture = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceBeveragePicture.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceThree.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceBeveragePicture.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tablePanel1
@@ -63,6 +63,18 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F)});
             this.tablePanel1.Size = new System.Drawing.Size(1196, 147);
             this.tablePanel1.TabIndex = 22;
+            // 
+            // pceBeveragePicture
+            // 
+            this.tablePanel1.SetColumn(this.pceBeveragePicture, 2);
+            this.pceBeveragePicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceBeveragePicture.Location = new System.Drawing.Point(182, 18);
+            this.pceBeveragePicture.Name = "pceBeveragePicture";
+            this.pceBeveragePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceBeveragePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceBeveragePicture, 1);
+            this.pceBeveragePicture.Size = new System.Drawing.Size(293, 112);
+            this.pceBeveragePicture.TabIndex = 22;
             // 
             // tablePanel2
             // 
@@ -106,7 +118,7 @@
             this.tablePanel2.SetRow(this.sbtBeverageCustomization, 1);
             this.sbtBeverageCustomization.Size = new System.Drawing.Size(227, 61);
             this.sbtBeverageCustomization.TabIndex = 20;
-            this.sbtBeverageCustomization.Text = "음료 추가/변경";
+            this.sbtBeverageCustomization.Text = "음료 \r\n추가/변경";
             // 
             // pceThree
             // 
@@ -115,8 +127,9 @@
             this.pceThree.EditValue = global::LNTKCustomer.Properties.Resources.three;
             this.pceThree.Location = new System.Drawing.Point(3, 18);
             this.pceThree.Name = "pceThree";
+            this.pceThree.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pceThree.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceThree.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceThree.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.tablePanel1.SetRow(this.pceThree, 1);
             this.pceThree.Size = new System.Drawing.Size(114, 112);
             this.pceThree.TabIndex = 8;
@@ -141,19 +154,7 @@
             this.tablePanel1.SetRow(this.lbcBurgerCustomization, 1);
             this.lbcBurgerCustomization.Size = new System.Drawing.Size(472, 112);
             this.lbcBurgerCustomization.TabIndex = 15;
-            this.lbcBurgerCustomization.Text = "원하시는 음료를 선택해주세요";
-            // 
-            // pceBeveragePicture
-            // 
-            this.tablePanel1.SetColumn(this.pceBeveragePicture, 2);
-            this.pceBeveragePicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceBeveragePicture.Location = new System.Drawing.Point(182, 18);
-            this.pceBeveragePicture.Name = "pceBeveragePicture";
-            this.pceBeveragePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceBeveragePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceBeveragePicture, 1);
-            this.pceBeveragePicture.Size = new System.Drawing.Size(293, 112);
-            this.pceBeveragePicture.TabIndex = 22;
+            this.lbcBurgerCustomization.Text = "원하시는 음료를 \r\n선택해주세요";
             // 
             // BeverageSelection
             // 
@@ -165,10 +166,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             this.tablePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceBeveragePicture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pceThree.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceBeveragePicture.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
