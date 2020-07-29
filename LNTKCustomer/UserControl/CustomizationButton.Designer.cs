@@ -92,7 +92,7 @@
             this.tablePanel1.SetRow(this.lbcBurgerCustomization, 1);
             this.lbcBurgerCustomization.Size = new System.Drawing.Size(458, 225);
             this.lbcBurgerCustomization.TabIndex = 13;
-            this.lbcBurgerCustomization.Text = "추가/변경하실 재료를 선택해주세요";
+            this.lbcBurgerCustomization.Text = "추가/변경하실 재료를\r\n 선택해주세요";
             // 
             // pceBurgerPicture
             // 
