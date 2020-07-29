@@ -30,39 +30,39 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductThumbnail));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail5 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail6 = new LNTKCustomer.UserControl.Thumbnail();
+            this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.pceRight = new DevExpress.XtraEditors.PictureEdit();
+            this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.pceRight = new DevExpress.XtraEditors.PictureEdit();
-            this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.uscThumbnail6 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail5 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
+            this.tablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
-            this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -79,77 +79,51 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // uscThumbnail3
+            // tablePanel1
             // 
-            this.tablePanel1.SetColumn(this.uscThumbnail3, 0);
-            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail3.Label = "label";
-            this.uscThumbnail3.Location = new System.Drawing.Point(3, 345);
-            this.uscThumbnail3.Name = "uscThumbnail3";
-            this.tablePanel1.SetRow(this.uscThumbnail3, 1);
-            this.uscThumbnail3.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail3.TabIndex = 2;
-            this.uscThumbnail3.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 50F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 50F)});
+            this.tablePanel1.Controls.Add(this.uscThumbnail6);
+            this.tablePanel1.Controls.Add(this.uscThumbnail5);
+            this.tablePanel1.Controls.Add(this.uscThumbnail4);
+            this.tablePanel1.Controls.Add(this.uscThumbnail3);
+            this.tablePanel1.Controls.Add(this.uscThumbnail1);
+            this.tablePanel1.Controls.Add(this.uscThumbnail2);
+            this.tablePanel1.Location = new System.Drawing.Point(103, 12);
+            this.tablePanel1.Name = "tablePanel1";
+            this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F)});
+            this.tablePanel1.Size = new System.Drawing.Size(569, 1027);
+            this.tablePanel1.TabIndex = 7;
             // 
-            // uscThumbnail2
+            // pceRight
             // 
-            this.tablePanel1.SetColumn(this.uscThumbnail2, 1);
-            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail2.Label = "label";
-            this.uscThumbnail2.Location = new System.Drawing.Point(288, 3);
-            this.uscThumbnail2.Name = "uscThumbnail2";
-            this.tablePanel1.SetRow(this.uscThumbnail2, 0);
-            this.uscThumbnail2.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail2.TabIndex = 1;
-            this.uscThumbnail2.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            this.pceRight.EditValue = ((object)(resources.GetObject("pceRight.EditValue")));
+            this.pceRight.Location = new System.Drawing.Point(676, 357);
+            this.pceRight.Margin = new System.Windows.Forms.Padding(5);
+            this.pceRight.Name = "pceRight";
+            this.pceRight.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceRight.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceRight.Size = new System.Drawing.Size(78, 340);
+            this.pceRight.StyleController = this.layoutControl1;
+            this.pceRight.TabIndex = 6;
+            this.pceRight.Click += new System.EventHandler(this.pceRight_Click);
             // 
-            // uscThumbnail1
+            // pceLeft
             // 
-            this.tablePanel1.SetColumn(this.uscThumbnail1, 0);
-            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail1.Label = "label";
-            this.uscThumbnail1.Location = new System.Drawing.Point(3, 3);
-            this.uscThumbnail1.Name = "uscThumbnail1";
-            this.tablePanel1.SetRow(this.uscThumbnail1, 0);
-            this.uscThumbnail1.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail1.TabIndex = 0;
-            this.uscThumbnail1.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail4
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail4, 1);
-            this.uscThumbnail4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail4.Label = "label";
-            this.uscThumbnail4.Location = new System.Drawing.Point(288, 345);
-            this.uscThumbnail4.Name = "uscThumbnail4";
-            this.tablePanel1.SetRow(this.uscThumbnail4, 1);
-            this.uscThumbnail4.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail4.TabIndex = 3;
-            this.uscThumbnail4.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail5
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail5, 0);
-            this.uscThumbnail5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail5.Label = "label";
-            this.uscThumbnail5.Location = new System.Drawing.Point(3, 687);
-            this.uscThumbnail5.Name = "uscThumbnail5";
-            this.tablePanel1.SetRow(this.uscThumbnail5, 2);
-            this.uscThumbnail5.Size = new System.Drawing.Size(279, 337);
-            this.uscThumbnail5.TabIndex = 4;
-            this.uscThumbnail5.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail6
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail6, 1);
-            this.uscThumbnail6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail6.Label = "label";
-            this.uscThumbnail6.Location = new System.Drawing.Point(288, 687);
-            this.uscThumbnail6.Name = "uscThumbnail6";
-            this.tablePanel1.SetRow(this.uscThumbnail6, 2);
-            this.uscThumbnail6.Size = new System.Drawing.Size(279, 337);
-            this.uscThumbnail6.TabIndex = 5;
-            this.uscThumbnail6.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            this.pceLeft.EditValue = ((object)(resources.GetObject("pceLeft.EditValue")));
+            this.pceLeft.Location = new System.Drawing.Point(12, 357);
+            this.pceLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.pceLeft.Name = "pceLeft";
+            this.pceLeft.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceLeft.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceLeft.Size = new System.Drawing.Size(87, 340);
+            this.pceLeft.StyleController = this.layoutControl1;
+            this.pceLeft.TabIndex = 5;
+            this.pceLeft.Click += new System.EventHandler(this.pceLeft_Click);
             // 
             // Root
             // 
@@ -184,6 +158,15 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(91, 345);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.pceLeft;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 345);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(91, 344);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
@@ -191,26 +174,6 @@
             this.emptySpaceItem4.Name = "emptySpaceItem4";
             this.emptySpaceItem4.Size = new System.Drawing.Size(11, 1031);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // tablePanel1
-            // 
-            this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 50F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 50F)});
-            this.tablePanel1.Controls.Add(this.uscThumbnail6);
-            this.tablePanel1.Controls.Add(this.uscThumbnail5);
-            this.tablePanel1.Controls.Add(this.uscThumbnail4);
-            this.tablePanel1.Controls.Add(this.uscThumbnail3);
-            this.tablePanel1.Controls.Add(this.uscThumbnail1);
-            this.tablePanel1.Controls.Add(this.uscThumbnail2);
-            this.tablePanel1.Location = new System.Drawing.Point(103, 12);
-            this.tablePanel1.Name = "tablePanel1";
-            this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F)});
-            this.tablePanel1.Size = new System.Drawing.Size(569, 1027);
-            this.tablePanel1.TabIndex = 7;
             // 
             // layoutControlItem4
             // 
@@ -220,6 +183,15 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(573, 1031);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.pceRight;
+            this.layoutControlItem3.Location = new System.Drawing.Point(664, 345);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(82, 344);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
@@ -237,49 +209,77 @@
             this.emptySpaceItem5.Size = new System.Drawing.Size(82, 342);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // pceRight
+            // uscThumbnail6
             // 
-            this.pceRight.EditValue = ((object)(resources.GetObject("pceRight.EditValue")));
-            this.pceRight.Location = new System.Drawing.Point(676, 357);
-            this.pceRight.Margin = new System.Windows.Forms.Padding(5);
-            this.pceRight.Name = "pceRight";
-            this.pceRight.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceRight.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceRight.Size = new System.Drawing.Size(78, 340);
-            this.pceRight.StyleController = this.layoutControl1;
-            this.pceRight.TabIndex = 6;
-            this.pceRight.Click += new System.EventHandler(this.pceRight_Click);
+            this.tablePanel1.SetColumn(this.uscThumbnail6, 1);
+            this.uscThumbnail6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail6.Label = "label";
+            this.uscThumbnail6.Location = new System.Drawing.Point(288, 687);
+            this.uscThumbnail6.Name = "uscThumbnail6";
+            this.tablePanel1.SetRow(this.uscThumbnail6, 2);
+            this.uscThumbnail6.Size = new System.Drawing.Size(279, 337);
+            this.uscThumbnail6.TabIndex = 5;
+            this.uscThumbnail6.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
             // 
-            // pceLeft
+            // uscThumbnail5
             // 
-            this.pceLeft.EditValue = ((object)(resources.GetObject("pceLeft.EditValue")));
-            this.pceLeft.Location = new System.Drawing.Point(12, 357);
-            this.pceLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.pceLeft.Name = "pceLeft";
-            this.pceLeft.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceLeft.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pceLeft.Size = new System.Drawing.Size(87, 340);
-            this.pceLeft.StyleController = this.layoutControl1;
-            this.pceLeft.TabIndex = 5;
-            this.pceLeft.Click += new System.EventHandler(this.pceLeft_Click);
+            this.tablePanel1.SetColumn(this.uscThumbnail5, 0);
+            this.uscThumbnail5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail5.Label = "label";
+            this.uscThumbnail5.Location = new System.Drawing.Point(3, 687);
+            this.uscThumbnail5.Name = "uscThumbnail5";
+            this.tablePanel1.SetRow(this.uscThumbnail5, 2);
+            this.uscThumbnail5.Size = new System.Drawing.Size(279, 337);
+            this.uscThumbnail5.TabIndex = 4;
+            this.uscThumbnail5.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
             // 
-            // layoutControlItem2
+            // uscThumbnail4
             // 
-            this.layoutControlItem2.Control = this.pceLeft;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 345);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(91, 344);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
+            this.tablePanel1.SetColumn(this.uscThumbnail4, 1);
+            this.uscThumbnail4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail4.Label = "label";
+            this.uscThumbnail4.Location = new System.Drawing.Point(288, 345);
+            this.uscThumbnail4.Name = "uscThumbnail4";
+            this.tablePanel1.SetRow(this.uscThumbnail4, 1);
+            this.uscThumbnail4.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail4.TabIndex = 3;
+            this.uscThumbnail4.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
             // 
-            // layoutControlItem3
+            // uscThumbnail3
             // 
-            this.layoutControlItem3.Control = this.pceRight;
-            this.layoutControlItem3.Location = new System.Drawing.Point(664, 345);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(82, 344);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
+            this.tablePanel1.SetColumn(this.uscThumbnail3, 0);
+            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail3.Label = "label";
+            this.uscThumbnail3.Location = new System.Drawing.Point(3, 345);
+            this.uscThumbnail3.Name = "uscThumbnail3";
+            this.tablePanel1.SetRow(this.uscThumbnail3, 1);
+            this.uscThumbnail3.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail3.TabIndex = 2;
+            this.uscThumbnail3.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            // 
+            // uscThumbnail1
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail1, 0);
+            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail1.Label = "label";
+            this.uscThumbnail1.Location = new System.Drawing.Point(3, 3);
+            this.uscThumbnail1.Name = "uscThumbnail1";
+            this.tablePanel1.SetRow(this.uscThumbnail1, 0);
+            this.uscThumbnail1.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail1.TabIndex = 0;
+            this.uscThumbnail1.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            // 
+            // uscThumbnail2
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail2, 1);
+            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail2.Label = "label";
+            this.uscThumbnail2.Location = new System.Drawing.Point(288, 3);
+            this.uscThumbnail2.Name = "uscThumbnail2";
+            this.tablePanel1.SetRow(this.uscThumbnail2, 0);
+            this.uscThumbnail2.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail2.TabIndex = 1;
+            this.uscThumbnail2.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
             // 
             // ProductThumbnail
             // 
@@ -292,19 +292,19 @@
             this.Load += new System.EventHandler(this.ProductThumbnail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
+            this.tablePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
-            this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceRight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceLeft.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }

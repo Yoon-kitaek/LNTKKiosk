@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.uscPackageSelection = new LNTKCustomer.UserControl.PackageSelection();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.uscPackageSelection = new LNTKCustomer.UserControl.PackageSelection();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -50,13 +50,6 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // uscPackageSelection
-            // 
-            this.uscPackageSelection.Location = new System.Drawing.Point(12, 12);
-            this.uscPackageSelection.Name = "uscPackageSelection";
-            this.uscPackageSelection.Size = new System.Drawing.Size(898, 416);
-            this.uscPackageSelection.TabIndex = 4;
-            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -66,6 +59,13 @@
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(922, 440);
             this.Root.TextVisible = false;
+            // 
+            // uscPackageSelection
+            // 
+            this.uscPackageSelection.Location = new System.Drawing.Point(12, 12);
+            this.uscPackageSelection.Name = "uscPackageSelection";
+            this.uscPackageSelection.Size = new System.Drawing.Size(898, 416);
+            this.uscPackageSelection.TabIndex = 4;
             // 
             // layoutControlItem1
             // 

@@ -17,5 +17,20 @@ namespace LNTKCustomer.Form
         {
             InitializeComponent();
         }
+
+        private void tablePanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
