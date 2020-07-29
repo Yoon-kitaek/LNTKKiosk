@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.sliLanguageSelection = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.sliPlaceSelection = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.sliLanguage = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.sliPlaceSelection = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.sliLanguageSelection = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.sliLanguage = new DevExpress.XtraLayout.SimpleLabelItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliLanguageSelection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
-            this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
+            this.tablePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliLanguageSelection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -68,60 +68,69 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(702, 702, 812, 500);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(702, 530, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1182, 703);
+            this.layoutControl1.Size = new System.Drawing.Size(784, 1027);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // Root
+            // tablePanel1
             // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.sliPlaceSelection,
-            this.sliLanguageSelection,
-            this.layoutControlItem2,
-            this.layoutControlItem1,
-            this.emptySpaceItem1});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1182, 703);
-            this.Root.TextVisible = false;
+            this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F)});
+            this.tablePanel1.Controls.Add(this.simpleButton2);
+            this.tablePanel1.Controls.Add(this.simpleButton1);
+            this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablePanel1.Location = new System.Drawing.Point(12, 913);
+            this.tablePanel1.Name = "tablePanel1";
+            this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 20F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 60F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 20F)});
+            this.tablePanel1.Size = new System.Drawing.Size(760, 102);
+            this.tablePanel1.TabIndex = 15;
             // 
-            // sliLanguageSelection
+            // simpleButton2
             // 
-            this.sliLanguageSelection.AllowHotTrack = false;
-            this.sliLanguageSelection.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.sliLanguageSelection.AppearanceItemCaption.Options.UseFont = true;
-            this.sliLanguageSelection.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.sliLanguageSelection.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.sliLanguageSelection.CustomizationFormText = "Please select your language";
-            this.sliLanguageSelection.Location = new System.Drawing.Point(0, 598);
-            this.sliLanguageSelection.Name = "sliLanguageSelection";
-            this.sliLanguageSelection.Size = new System.Drawing.Size(1162, 44);
-            this.sliLanguageSelection.Text = "Please select your language";
-            this.sliLanguageSelection.TextSize = new System.Drawing.Size(455, 40);
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.simpleButton2.AppearanceDisabled.Options.UseFont = true;
+            this.simpleButton2.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.simpleButton2.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton2.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.simpleButton2.AppearancePressed.Options.UseFont = true;
+            this.tablePanel1.SetColumn(this.simpleButton2, 3);
+            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.simpleButton2.Location = new System.Drawing.Point(459, 23);
+            this.simpleButton2.Name = "simpleButton2";
+            this.tablePanel1.SetRow(this.simpleButton2, 1);
+            this.simpleButton2.Size = new System.Drawing.Size(146, 56);
+            this.simpleButton2.TabIndex = 1;
+            this.simpleButton2.Text = "English";
             // 
-            // sliPlaceSelection
+            // simpleButton1
             // 
-            this.sliPlaceSelection.AllowHotTrack = false;
-            this.sliPlaceSelection.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.sliPlaceSelection.AppearanceItemCaption.Options.UseFont = true;
-            this.sliPlaceSelection.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.sliPlaceSelection.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.sliPlaceSelection.Location = new System.Drawing.Point(0, 0);
-            this.sliPlaceSelection.Name = "sliPlaceSelection";
-            this.sliPlaceSelection.Size = new System.Drawing.Size(1162, 55);
-            this.sliPlaceSelection.Text = "식사하실 장소를 선택해주세요";
-            this.sliPlaceSelection.TextSize = new System.Drawing.Size(455, 51);
-            // 
-            // sliLanguage
-            // 
-            this.sliLanguage.AllowHotTrack = false;
-            this.sliLanguage.Location = new System.Drawing.Point(0, 419);
-            this.sliLanguage.Name = "simpleLabelItem1";
-            this.sliLanguage.Size = new System.Drawing.Size(928, 22);
-            this.sliLanguage.TextSize = new System.Drawing.Size(192, 18);
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.simpleButton1.AppearanceDisabled.Options.UseFont = true;
+            this.simpleButton1.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.simpleButton1.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton1.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.simpleButton1.AppearancePressed.Options.UseFont = true;
+            this.tablePanel1.SetColumn(this.simpleButton1, 1);
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.simpleButton1.Location = new System.Drawing.Point(155, 23);
+            this.simpleButton1.Name = "simpleButton1";
+            this.tablePanel1.SetRow(this.simpleButton1, 1);
+            this.simpleButton1.Size = new System.Drawing.Size(146, 56);
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Text = "한국어";
             // 
             // tablePanel2
             // 
@@ -133,6 +142,7 @@
             this.tablePanel2.Controls.Add(this.labelControl1);
             this.tablePanel2.Controls.Add(this.pictureEdit2);
             this.tablePanel2.Controls.Add(this.pictureEdit1);
+            this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel2.Location = new System.Drawing.Point(12, 67);
             this.tablePanel2.Name = "tablePanel2";
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
@@ -141,66 +151,8 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 8F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F)});
-            this.tablePanel2.Size = new System.Drawing.Size(1158, 517);
+            this.tablePanel2.Size = new System.Drawing.Size(760, 766);
             this.tablePanel2.TabIndex = 14;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.tablePanel2;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 55);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1162, 521);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // pictureEdit1
-            // 
-            this.tablePanel2.SetColumn(this.pictureEdit1, 1);
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit1.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_b4_03_1380567;
-            this.pictureEdit1.Location = new System.Drawing.Point(235, 3);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.tablePanel2.SetRow(this.pictureEdit1, 0);
-            this.pictureEdit1.Size = new System.Drawing.Size(689, 170);
-            this.pictureEdit1.TabIndex = 0;
-            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
-            // 
-            // pictureEdit2
-            // 
-            this.tablePanel2.SetColumn(this.pictureEdit2, 1);
-            this.pictureEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit2.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944;
-            this.pictureEdit2.Location = new System.Drawing.Point(235, 285);
-            this.pictureEdit2.Name = "pictureEdit2";
-            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.tablePanel2.SetRow(this.pictureEdit2, 3);
-            this.pictureEdit2.Size = new System.Drawing.Size(689, 170);
-            this.pictureEdit2.TabIndex = 1;
-            this.pictureEdit2.EditValueChanged += new System.EventHandler(this.pictureEdit2_EditValueChanged);
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseTextOptions = true;
-            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl1.AppearanceDisabled.Options.UseTextOptions = true;
-            this.labelControl1.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl1.AppearanceHovered.Options.UseTextOptions = true;
-            this.labelControl1.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl1.AppearancePressed.Options.UseTextOptions = true;
-            this.labelControl1.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tablePanel2.SetColumn(this.labelControl1, 1);
-            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.labelControl1.Location = new System.Drawing.Point(235, 179);
-            this.labelControl1.Name = "labelControl1";
-            this.tablePanel2.SetRow(this.labelControl1, 1);
-            this.labelControl1.Size = new System.Drawing.Size(689, 53);
-            this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "매장 식사";
             // 
             // labelControl2
             // 
@@ -222,89 +174,142 @@
             this.labelControl2.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.tablePanel2.SetColumn(this.labelControl2, 1);
             this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl2.Location = new System.Drawing.Point(235, 461);
+            this.labelControl2.Location = new System.Drawing.Point(155, 682);
             this.labelControl2.Name = "labelControl2";
             this.tablePanel2.SetRow(this.labelControl2, 4);
-            this.labelControl2.Size = new System.Drawing.Size(689, 53);
+            this.labelControl2.Size = new System.Drawing.Size(450, 81);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "포장 주문";
             // 
-            // tablePanel1
+            // labelControl1
             // 
-            this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F)});
-            this.tablePanel1.Controls.Add(this.simpleButton2);
-            this.tablePanel1.Controls.Add(this.simpleButton1);
-            this.tablePanel1.Location = new System.Drawing.Point(12, 654);
-            this.tablePanel1.Name = "tablePanel1";
-            this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 60F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1158, 37);
-            this.tablePanel1.TabIndex = 15;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.AppearanceDisabled.Options.UseTextOptions = true;
+            this.labelControl1.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.AppearanceHovered.Options.UseTextOptions = true;
+            this.labelControl1.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.AppearancePressed.Options.UseTextOptions = true;
+            this.labelControl1.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.tablePanel2.SetColumn(this.labelControl1, 1);
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl1.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.labelControl1.Location = new System.Drawing.Point(155, 264);
+            this.labelControl1.Name = "labelControl1";
+            this.tablePanel2.SetRow(this.labelControl1, 1);
+            this.labelControl1.Size = new System.Drawing.Size(450, 81);
+            this.labelControl1.TabIndex = 2;
+            this.labelControl1.Text = "매장 식사";
+            // 
+            // pictureEdit2
+            // 
+            this.tablePanel2.SetColumn(this.pictureEdit2, 1);
+            this.pictureEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit2.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944;
+            this.pictureEdit2.Location = new System.Drawing.Point(155, 421);
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.tablePanel2.SetRow(this.pictureEdit2, 3);
+            this.pictureEdit2.Size = new System.Drawing.Size(450, 255);
+            this.pictureEdit2.TabIndex = 1;
+            this.pictureEdit2.EditValueChanged += new System.EventHandler(this.pictureEdit2_EditValueChanged);
+            // 
+            // pictureEdit1
+            // 
+            this.tablePanel2.SetColumn(this.pictureEdit1, 1);
+            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit1.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_b4_03_1380567;
+            this.pictureEdit1.Location = new System.Drawing.Point(155, 3);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.tablePanel2.SetRow(this.pictureEdit1, 0);
+            this.pictureEdit1.Size = new System.Drawing.Size(450, 255);
+            this.pictureEdit1.TabIndex = 0;
+            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.sliPlaceSelection,
+            this.sliLanguageSelection,
+            this.layoutControlItem2,
+            this.layoutControlItem1,
+            this.emptySpaceItem1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(784, 1027);
+            this.Root.TextVisible = false;
+            // 
+            // sliPlaceSelection
+            // 
+            this.sliPlaceSelection.AllowHotTrack = false;
+            this.sliPlaceSelection.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.sliPlaceSelection.AppearanceItemCaption.Options.UseFont = true;
+            this.sliPlaceSelection.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.sliPlaceSelection.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sliPlaceSelection.Location = new System.Drawing.Point(0, 0);
+            this.sliPlaceSelection.Name = "sliPlaceSelection";
+            this.sliPlaceSelection.Size = new System.Drawing.Size(764, 55);
+            this.sliPlaceSelection.Text = "식사하실 장소를 선택해주세요";
+            this.sliPlaceSelection.TextSize = new System.Drawing.Size(455, 51);
+            // 
+            // sliLanguageSelection
+            // 
+            this.sliLanguageSelection.AllowHotTrack = false;
+            this.sliLanguageSelection.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.sliLanguageSelection.AppearanceItemCaption.Options.UseFont = true;
+            this.sliLanguageSelection.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.sliLanguageSelection.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sliLanguageSelection.CustomizationFormText = "Please select your language";
+            this.sliLanguageSelection.Location = new System.Drawing.Point(0, 857);
+            this.sliLanguageSelection.Name = "sliLanguageSelection";
+            this.sliLanguageSelection.Size = new System.Drawing.Size(764, 44);
+            this.sliLanguageSelection.Text = "Please select your language";
+            this.sliLanguageSelection.TextSize = new System.Drawing.Size(455, 40);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.tablePanel2;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 55);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(764, 770);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.tablePanel1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 642);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 901);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1162, 41);
+            this.layoutControlItem1.Size = new System.Drawing.Size(764, 106);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.AppearanceDisabled.Options.UseFont = true;
-            this.simpleButton1.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton1.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.AppearancePressed.Options.UseFont = true;
-            this.tablePanel1.SetColumn(this.simpleButton1, 1);
-            this.simpleButton1.Location = new System.Drawing.Point(235, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.tablePanel1.SetRow(this.simpleButton1, 0);
-            this.simpleButton1.Size = new System.Drawing.Size(226, 29);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "한국어";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.simpleButton2.AppearanceDisabled.Options.UseFont = true;
-            this.simpleButton2.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.simpleButton2.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton2.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.simpleButton2.AppearancePressed.Options.UseFont = true;
-            this.tablePanel1.SetColumn(this.simpleButton2, 3);
-            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton2.Location = new System.Drawing.Point(698, 3);
-            this.simpleButton2.Name = "simpleButton2";
-            this.tablePanel1.SetRow(this.simpleButton2, 0);
-            this.simpleButton2.Size = new System.Drawing.Size(226, 31);
-            this.simpleButton2.TabIndex = 1;
-            this.simpleButton2.Text = "English";
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 576);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 825);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(1162, 22);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(764, 32);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // sliLanguage
+            // 
+            this.sliLanguage.AllowHotTrack = false;
+            this.sliLanguage.Location = new System.Drawing.Point(0, 419);
+            this.sliLanguage.Name = "simpleLabelItem1";
+            this.sliLanguage.Size = new System.Drawing.Size(928, 22);
+            this.sliLanguage.TextSize = new System.Drawing.Size(192, 18);
             // 
             // PlaceSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 703);
+            this.ClientSize = new System.Drawing.Size(784, 1027);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PlaceSelection";
@@ -312,20 +317,20 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliLanguageSelection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
+            this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             this.tablePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
-            this.tablePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliLanguageSelection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).EndInit();
             this.ResumeLayout(false);
 
         }
