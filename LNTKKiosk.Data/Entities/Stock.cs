@@ -9,6 +9,6 @@ namespace LNTKKiosk.Data
     public partial class Stock
     {
         public string GroceryName { get; set; }
-
+        public int RemainingTime { get; set; }
     }
 }
