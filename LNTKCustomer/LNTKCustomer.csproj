@@ -77,6 +77,12 @@
     <Compile Include="Form\CardPayment.Designer.cs">
       <DependentUpon>CardPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\CashPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CashPayment.Designer.cs">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -52,7 +52,7 @@ namespace LNTKCustomer.Form
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Payment form = new Payment();
+            Payment form = new Payment(shoppedItemList);
 
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -65,7 +65,7 @@ namespace LNTKCustomer.Form
 
         private void sbtPay_Click(object sender, EventArgs e)
         {
-            Payment payment = new Payment();
+            Payment payment = new Payment(shoppedItemList);
             payment.ShowDialog();
             Close();
         }

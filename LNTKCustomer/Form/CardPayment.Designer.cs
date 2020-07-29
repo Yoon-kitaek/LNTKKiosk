@@ -84,7 +84,7 @@
             this.labelControl1.Size = new System.Drawing.Size(492, 81);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "카드를 읽혀주세요";
+            this.labelControl1.Text = "카드를 넣어주세요";
             // 
             // layoutControl1
             // 
@@ -195,6 +195,7 @@
             this.Name = "CardPayment";
             this.Text = "CardPayment";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.CardPayment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
