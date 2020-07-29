@@ -131,12 +131,6 @@
     <Compile Include="Form\SingleOrSet.Designer.cs">
       <DependentUpon>SingleOrSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,9 +227,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\SingleOrSet.resx">
       <DependentUpon>SingleOrSet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

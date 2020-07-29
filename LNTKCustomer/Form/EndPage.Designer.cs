@@ -35,8 +35,9 @@
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -45,7 +46,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -57,7 +58,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(994, 239, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(928, 568);
+            this.layoutControl1.Size = new System.Drawing.Size(1442, 850);
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -68,10 +69,11 @@
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.tablePanel1.SetColumn(this.labelControl4, 2);
-            this.labelControl4.Location = new System.Drawing.Point(455, 102);
+            this.labelControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl4.Location = new System.Drawing.Point(712, 3);
             this.labelControl4.Name = "labelControl4";
             this.tablePanel1.SetRow(this.labelControl4, 0);
-            this.labelControl4.Size = new System.Drawing.Size(322, 100);
+            this.labelControl4.Size = new System.Drawing.Size(561, 100);
             this.labelControl4.TabIndex = 7;
             this.labelControl4.Text = "number";
             // 
@@ -79,11 +81,20 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseTextOptions = true;
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl2.AppearanceDisabled.Options.UseTextOptions = true;
+            this.labelControl2.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl2.AppearanceHovered.Options.UseTextOptions = true;
+            this.labelControl2.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl2.AppearancePressed.Options.UseTextOptions = true;
+            this.labelControl2.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.tablePanel1.SetColumn(this.labelControl2, 1);
-            this.labelControl2.Location = new System.Drawing.Point(93, 101);
+            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl2.Location = new System.Drawing.Point(145, 3);
             this.labelControl2.Name = "labelControl2";
             this.tablePanel1.SetRow(this.labelControl2, 0);
-            this.labelControl2.Size = new System.Drawing.Size(356, 101);
+            this.labelControl2.Size = new System.Drawing.Size(561, 101);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "주문번호 : ";
             // 
@@ -93,9 +104,9 @@
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
-            this.layoutControlItem1});
+            this.layoutControlItem4});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(928, 568);
+            this.Root.Size = new System.Drawing.Size(1442, 850);
             this.Root.TextVisible = false;
             // 
             // tablePanel1
@@ -107,60 +118,101 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F)});
             this.tablePanel1.Controls.Add(this.labelControl2);
             this.tablePanel1.Controls.Add(this.labelControl4);
-            this.tablePanel1.Location = new System.Drawing.Point(12, 252);
+            this.tablePanel1.Location = new System.Drawing.Point(12, 457);
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(904, 304);
+            this.tablePanel1.Size = new System.Drawing.Size(1418, 381);
             this.tablePanel1.TabIndex = 8;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.tablePanel1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 240);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 445);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(908, 308);
+            this.layoutControlItem3.Size = new System.Drawing.Size(1422, 385);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // tablePanel2
             // 
+            this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5.38F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 90.45F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 4.17F)});
             this.tablePanel2.Controls.Add(this.labelControl1);
             this.tablePanel2.Location = new System.Drawing.Point(12, 12);
             this.tablePanel2.Name = "tablePanel2";
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel2.Size = new System.Drawing.Size(904, 236);
-            this.tablePanel2.TabIndex = 9;
-            this.tablePanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tablePanel2_Paint);
+            this.tablePanel2.Size = new System.Drawing.Size(1418, 441);
+            this.tablePanel2.TabIndex = 1;
             // 
-            // layoutControlItem1
+            // labelControl3
             // 
-            this.layoutControlItem1.Control = this.tablePanel2;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(908, 240);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseTextOptions = true;
+            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl3.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.AppearanceDisabled.Options.UseFont = true;
+            this.labelControl3.AppearanceDisabled.Options.UseTextOptions = true;
+            this.labelControl3.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl3.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.AppearanceHovered.Options.UseFont = true;
+            this.labelControl3.AppearanceHovered.Options.UseTextOptions = true;
+            this.labelControl3.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl3.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.AppearancePressed.Options.UseFont = true;
+            this.labelControl3.AppearancePressed.Options.UseTextOptions = true;
+            this.labelControl3.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelControl3.Location = new System.Drawing.Point(-210, 20);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(0, 100);
+            this.labelControl3.TabIndex = 1;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(85, 68);
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.AppearanceDisabled.Options.UseFont = true;
+            this.labelControl1.AppearanceDisabled.Options.UseTextOptions = true;
+            this.labelControl1.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.AppearanceHovered.Options.UseFont = true;
+            this.labelControl1.AppearanceHovered.Options.UseTextOptions = true;
+            this.labelControl1.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.AppearancePressed.Options.UseFont = true;
+            this.labelControl1.AppearancePressed.Options.UseTextOptions = true;
+            this.labelControl1.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.tablePanel2.SetColumn(this.labelControl1, 1);
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelControl1.Location = new System.Drawing.Point(79, 337);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(800, 186);
-            this.labelControl1.TabIndex = 6;
+            this.tablePanel2.SetRow(this.labelControl1, 0);
+            this.labelControl1.Size = new System.Drawing.Size(1277, 101);
+            this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "주문이 완료되었습니다.";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click_1);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.tablePanel2;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(1422, 445);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
             // 
             // EndPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 568);
+            this.ClientSize = new System.Drawing.Size(1442, 850);
             this.Controls.Add(this.layoutControl1);
             this.Name = "EndPage";
             this.Text = "EndPage";
@@ -175,7 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             this.tablePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,10 +237,11 @@
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.Utils.Layout.TablePanel tablePanel2;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.Utils.Layout.TablePanel tablePanel2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

@@ -70,10 +70,11 @@
             this.labelControl2.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.tablePanel2.SetColumn(this.labelControl2, 1);
-            this.labelControl2.Location = new System.Drawing.Point(197, 891);
+            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl2.Location = new System.Drawing.Point(197, 882);
             this.labelControl2.Name = "labelControl2";
             this.tablePanel2.SetRow(this.labelControl2, 5);
-            this.labelControl2.Size = new System.Drawing.Size(575, 81);
+            this.labelControl2.Size = new System.Drawing.Size(575, 100);
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "카드 결제";
             // 
@@ -91,10 +92,11 @@
             this.labelControl1.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.tablePanel2.SetColumn(this.labelControl1, 1);
-            this.labelControl1.Location = new System.Drawing.Point(197, 381);
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl1.Location = new System.Drawing.Point(197, 372);
             this.labelControl1.Name = "labelControl1";
             this.tablePanel2.SetRow(this.labelControl1, 2);
-            this.labelControl1.Size = new System.Drawing.Size(575, 81);
+            this.labelControl1.Size = new System.Drawing.Size(575, 100);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "현금 결제";
             // 
@@ -177,6 +179,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Payment";
             this.Text = "Payment";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
