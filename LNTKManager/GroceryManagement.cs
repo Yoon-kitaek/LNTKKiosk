@@ -18,49 +18,14 @@ namespace LNTKManager
             InitializeComponent();
         }
 
-        private Grocery _grocery;
-
-        private void WriteToEntity()
-        {
-            _grocery.CodeCategoryId = (int?)cbbCategoryId.SelectedValue;
-
-            try
-            {
-                _grocery.Unit = int.Parse(txeUnit.Text);
-            }
-            catch (Exception)
-            {
-                Helpers.InputConstraint.OnlyIntConstraint(txeUnit);
-            }
-            _grocery.Item = txeName.Text;
-        }
+        private Grocery _grocery = new Grocery();
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (txeUnit.Text == "")
-            {
-                MessageBox.Show("1개의 g을 입력해주세요");
-                return;
-            }
-
-            if (txeName.Text == "")
-            {
-                MessageBox.Show("식재료명을 입력해주세요");
-                return;
-            }
-            _grocery = new Grocery();
-            WriteToEntity();
-
-            try
-            {
-                DataRepository.Grocery.Insert(_grocery);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            MessageBox.Show("등록되었습니다.");
-            Close();
+            GroceryInsert form = new GroceryInsert();
+            form.ShowDialog();
+            int maxId = DataRepository.Grocery.GetMaxId();
+            bdsGrocery.Add(DataRepository.Grocery.Get(maxId));
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -70,8 +35,31 @@ namespace LNTKManager
 
         private void GroceryManagement_Load(object sender, EventArgs e)
         {
-            bdsCategory.DataSource = DataRepository.CodeCategory.GetAll();
-
+            bdsGrocery.DataSource = DataRepository.Grocery.GetAllWithProperties();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Grocery grocery = bdsGrocery.Current as Grocery;
+            if (grocery == null)
+                return;
+            GroceryUpdate form = new GroceryUpdate(grocery);
+            form.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Grocery grocery = bdsGrocery.Current as Grocery;
+            if (grocery == null)
+                return;
+            if (Helpers.Helper.SureToDelete() == false)
+                return;
+
+            DataRepository.Grocery.Update(grocery);
+
+            bdsGrocery.Remove(grocery);
+        }
+
+ 
     }
 }

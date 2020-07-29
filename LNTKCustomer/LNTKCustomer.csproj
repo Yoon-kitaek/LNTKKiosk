@@ -119,6 +119,18 @@
     <Compile Include="Form\ShoppingCart.Designer.cs">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\SideOrBeverageCustomization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SideOrBeverageCustomization.Designer.cs">
+      <DependentUpon>SideOrBeverageCustomization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SingleOrSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SingleOrSet.Designer.cs">
+      <DependentUpon>SingleOrSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,11 +156,11 @@
     <Compile Include="UserControl\CustomizationButton.Designer.cs">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\FrenchFriesSelection.cs">
+    <Compile Include="UserControl\SideSelection.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\FrenchFriesSelection.Designer.cs">
-      <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    <Compile Include="UserControl\SideSelection.Designer.cs">
+      <DependentUpon>SideSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\PackageSelection.cs">
       <SubType>UserControl</SubType>
@@ -180,6 +192,12 @@
     <Compile Include="UserControl\Thumbnail.Designer.cs">
       <DependentUpon>Thumbnail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ThumbnailContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ThumbnailContainer.Designer.cs">
+      <DependentUpon>ThumbnailContainer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\CardPayment.resx">
       <DependentUpon>CardPayment.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +222,12 @@
     <EmbeddedResource Include="Form\ShoppingCart.resx">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\SideOrBeverageCustomization.resx">
+      <DependentUpon>SideOrBeverageCustomization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SingleOrSet.resx">
+      <DependentUpon>SingleOrSet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,8 +243,8 @@
     <EmbeddedResource Include="UserControl\CustomizationButton.resx">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\FrenchFriesSelection.resx">
-      <DependentUpon>FrenchFriesSelection.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\SideSelection.resx">
+      <DependentUpon>SideSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\PackageSelection.resx">
       <DependentUpon>PackageSelection.cs</DependentUpon>
@@ -236,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Thumbnail.resx">
       <DependentUpon>Thumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ThumbnailContainer.resx">
+      <DependentUpon>ThumbnailContainer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="packages.config" />
@@ -312,6 +339,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BurgerMiddleSet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CartIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BurgerIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SideIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeverageIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Basket_2205960.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_cart-9_3338943.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_cart-9_3338943 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1590473693572.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_b4-03_1380567.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_b4-03_1380567 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

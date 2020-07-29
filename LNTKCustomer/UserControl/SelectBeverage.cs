@@ -25,6 +25,10 @@ namespace LNTKCustomer.UserControl
         }
         private void SelectBeverage_Load(object sender, EventArgs e)
         {
+            if (DesignMode)
+                return;
+
+
             thumbnails.Add(uscThumbnail1);
             thumbnails.Add(uscThumbnail2);
             thumbnails.Add(uscThumbnail3);

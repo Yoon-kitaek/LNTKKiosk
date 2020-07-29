@@ -56,5 +56,17 @@ namespace LNTKCustomer.Form
         {
 
         }
+
+        private void sbtPay_Click(object sender, EventArgs e)
+        {
+            Payment payment = new Payment();
+            payment.ShowDialog();
+            Close();
+        }
+
+        private void sbtHome_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

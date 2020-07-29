@@ -34,7 +34,15 @@
             DevExpress.XtraPivotGrid.PivotGridFormatRule pivotGridFormatRule1 = new DevExpress.XtraPivotGrid.PivotGridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings formatRuleTotalTypeSettings1 = new DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.fieldProductPrice = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.colRemainingTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.신선도 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tctlManagement = new DevExpress.XtraTab.XtraTabControl();
             this.tpgeOrder = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -82,11 +90,14 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tpgeShin = new DevExpress.XtraTab.XtraTabPage();
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridControl4 = new DevExpress.XtraGrid.GridControl();
+            this.bdsStock = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colGroceryName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStockId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colReceivedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrice1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).BeginInit();
             this.tctlManagement.SuspendLayout();
             this.tpgeOrder.SuspendLayout();
@@ -112,8 +123,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.tpgeShin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // fieldProductPrice
@@ -124,6 +136,26 @@
             this.fieldProductPrice.FieldName = "ProductPrice";
             this.fieldProductPrice.Name = "fieldProductPrice";
             this.fieldProductPrice.ValueFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            // 
+            // colRemainingTime
+            // 
+            this.colRemainingTime.FieldName = "RemainingTime";
+            this.colRemainingTime.MinWidth = 25;
+            this.colRemainingTime.Name = "colRemainingTime";
+            this.colRemainingTime.OptionsColumn.AllowEdit = false;
+            this.colRemainingTime.Visible = true;
+            this.colRemainingTime.VisibleIndex = 3;
+            this.colRemainingTime.Width = 94;
+            // 
+            // 신선도
+            // 
+            this.신선도.Caption = "신선도";
+            this.신선도.FieldName = "신선도";
+            this.신선도.MinWidth = 25;
+            this.신선도.Name = "신선도";
+            this.신선도.Visible = true;
+            this.신선도.VisibleIndex = 4;
+            this.신선도.Width = 94;
             // 
             // tctlManagement
             // 
@@ -602,44 +634,116 @@
             // 
             // tpgeShin
             // 
-            this.tpgeShin.Controls.Add(this.ribbonControl1);
+            this.tpgeShin.Controls.Add(this.gridControl4);
             this.tpgeShin.Name = "tpgeShin";
             this.tpgeShin.Size = new System.Drawing.Size(1106, 459);
             this.tpgeShin.Text = "재료관리";
             // 
-            // stockBindingSource
+            // gridControl4
             // 
-            this.stockBindingSource.DataSource = typeof(LNTKKiosk.Data.Stock);
+            this.gridControl4.DataSource = this.bdsStock;
+            this.gridControl4.Location = new System.Drawing.Point(85, 64);
+            this.gridControl4.MainView = this.gridView4;
+            this.gridControl4.MenuManager = this.barManager1;
+            this.gridControl4.Name = "gridControl4";
+            this.gridControl4.Size = new System.Drawing.Size(737, 346);
+            this.gridControl4.TabIndex = 0;
+            this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // bdsStock
+            // 
+            this.bdsStock.DataSource = typeof(LNTKKiosk.Data.Stock);
+            // 
+            // gridView4
+            // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colGroceryName,
+            this.colStockId,
+            this.colReceivedDate,
+            this.colPrice1,
+            this.colRemainingTime,
+            this.신선도});
+            gridFormatRule1.Column = this.colRemainingTime;
+            gridFormatRule1.ColumnApplyTo = this.신선도;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
+            formatConditionRuleValue2.Value1 = "10";
+            gridFormatRule1.Rule = formatConditionRuleValue2;
+            gridFormatRule2.Column = this.colRemainingTime;
+            gridFormatRule2.ColumnApplyTo = this.신선도;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Between;
+            formatConditionRuleValue3.Value1 = "10";
+            formatConditionRuleValue3.Value2 = "21";
+            gridFormatRule2.Rule = formatConditionRuleValue3;
+            gridFormatRule3.Column = this.colRemainingTime;
+            gridFormatRule3.ColumnApplyTo = this.신선도;
+            gridFormatRule3.Name = "Format2";
+            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
+            formatConditionRuleValue4.Value1 = "20";
+            gridFormatRule3.Rule = formatConditionRuleValue4;
+            this.gridView4.FormatRules.Add(gridFormatRule1);
+            this.gridView4.FormatRules.Add(gridFormatRule2);
+            this.gridView4.FormatRules.Add(gridFormatRule3);
+            this.gridView4.GridControl = this.gridControl4;
+            this.gridView4.GroupCount = 1;
+            this.gridView4.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "")});
+            this.gridView4.Name = "gridView4";
+            this.gridView4.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colGroceryName, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // colGroceryName
+            // 
+            this.colGroceryName.FieldName = "GroceryName";
+            this.colGroceryName.MinWidth = 25;
+            this.colGroceryName.Name = "colGroceryName";
+            this.colGroceryName.OptionsColumn.AllowEdit = false;
+            this.colGroceryName.Visible = true;
+            this.colGroceryName.VisibleIndex = 0;
+            this.colGroceryName.Width = 94;
+            // 
+            // colStockId
+            // 
+            this.colStockId.FieldName = "StockId";
+            this.colStockId.MinWidth = 25;
+            this.colStockId.Name = "colStockId";
+            this.colStockId.OptionsColumn.AllowEdit = false;
+            this.colStockId.Visible = true;
+            this.colStockId.VisibleIndex = 0;
+            this.colStockId.Width = 94;
+            // 
+            // colReceivedDate
+            // 
+            this.colReceivedDate.FieldName = "ReceivedDate";
+            this.colReceivedDate.MinWidth = 25;
+            this.colReceivedDate.Name = "colReceivedDate";
+            this.colReceivedDate.OptionsColumn.AllowEdit = false;
+            this.colReceivedDate.Visible = true;
+            this.colReceivedDate.VisibleIndex = 1;
+            this.colReceivedDate.Width = 94;
+            // 
+            // colPrice1
+            // 
+            this.colPrice1.FieldName = "Price";
+            this.colPrice1.MinWidth = 25;
+            this.colPrice1.Name = "colPrice1";
+            this.colPrice1.OptionsColumn.AllowEdit = false;
+            this.colPrice1.Visible = true;
+            this.colPrice1.VisibleIndex = 2;
+            this.colPrice1.Width = 94;
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // ribbonControl1
-            // 
-            this.ribbonControl1.ExpandCollapseItem.Id = 0;
-            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl1.ExpandCollapseItem,
-            this.ribbonControl1.SearchEditItem});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 1;
-            this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1106, 187);
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // Management
             // 
@@ -679,9 +783,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.tpgeShin.ResumeLayout(false);
-            this.tpgeShin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -738,10 +842,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
         private DevExpress.XtraGrid.Columns.GridColumn colPrice;
-        private System.Windows.Forms.BindingSource stockBindingSource;
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraGrid.GridControl gridControl4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private System.Windows.Forms.BindingSource bdsStock;
+        private DevExpress.XtraGrid.Columns.GridColumn colGroceryName;
+        private DevExpress.XtraGrid.Columns.GridColumn colStockId;
+        private DevExpress.XtraGrid.Columns.GridColumn colReceivedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrice1;
+        private DevExpress.XtraGrid.Columns.GridColumn colRemainingTime;
+        private DevExpress.XtraGrid.Columns.GridColumn 신선도;
     }
 }
 

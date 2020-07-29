@@ -21,13 +21,7 @@ namespace LNTKCustomer.Form
         }
 
    
-
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pceTakeOut_Click(object sender, EventArgs e)
+        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
         {
             CustomerMenu form = new CustomerMenu();
             form.WindowState = FormWindowState.Maximized;
@@ -35,7 +29,7 @@ namespace LNTKCustomer.Form
             Close();
         }
 
-        private void pceAtStore_Click(object sender, EventArgs e)
+        private void pictureEdit2_EditValueChanged(object sender, EventArgs e)
         {
             CustomerMenu form = new CustomerMenu();
             form.WindowState = FormWindowState.Maximized;

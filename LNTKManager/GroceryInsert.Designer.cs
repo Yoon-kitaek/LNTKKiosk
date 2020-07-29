@@ -111,6 +111,7 @@
             this.txeUnit.Size = new System.Drawing.Size(308, 24);
             this.txeUnit.StyleController = this.layoutControl1;
             this.txeUnit.TabIndex = 5;
+            this.txeUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txeUnit_KeyPress);
             // 
             // cbbCategoryId
             // 
@@ -218,6 +219,7 @@
             this.ClientSize = new System.Drawing.Size(387, 174);
             this.Controls.Add(this.layoutControl1);
             this.Name = "GroceryInsert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "식재료등록";
             this.Load += new System.EventHandler(this.GroceryInsert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

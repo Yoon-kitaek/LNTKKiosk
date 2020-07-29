@@ -12,6 +12,11 @@ namespace LNTKCustomer
 {
     static class Program
     {
+        ////
+        ///////////////////////////ㄹㄹ
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -24,10 +29,10 @@ namespace LNTKCustomer
             //////
 
             List<ShoppedItem> shoppingList = new List<ShoppedItem>();
-            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1, 8200);
-            ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1, 0);
-            ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1, 0);
-            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1, 3000);
+            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1);
+            ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1);
+            ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1);
+            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1);
 
             shoppingList.Add(test1);
             shoppingList.Add(test2);
@@ -39,8 +44,8 @@ namespace LNTKCustomer
 
             //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
-            Application.Run(new CustomerMenu());
-          
+            Application.Run(new PlaceSelection());
+           // Application.Run(new Test());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
@@ -48,5 +53,5 @@ namespace LNTKCustomer
             Console.WriteLine($"[{e.Count}] at {DateTime.Now}");
             //
         }
-    } //
+    }
 }

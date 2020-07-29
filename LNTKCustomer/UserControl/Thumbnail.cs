@@ -53,8 +53,7 @@ namespace LNTKCustomer.UserControl
 
             DataRepository.Product.SetEventPrice(product);
             lbcPrice.Text = product.EventPrice.ToString();
-            if(name.Equals("닭갈비버거")==true)
-                SetPicture();
+            SetPicture();
         }
 
         public void SetPicture()
