@@ -37,29 +37,6 @@ namespace LNTKCustomer.Form
             shoppingList.Add(test3);
             shoppingList.Add(test4);
         }
-
-        private void btnRecommendedButton_Click(object sender, EventArgs e)
-        {
-            form.SetCategoryId(10);
-        }
-
-        private void btnBurger_Click(object sender, EventArgs e)
-        {
-            form.SetCategoryId(10);
-        }
-
-        private void btnBeverage_Click(object sender, EventArgs e)
-        {
-            form.SetCategoryId(11);
-        }
-
-        private void btnMorningSale_Click(object sender, EventArgs e)
-        {
-           
-         
-        }
-
-
         private void CustomerMenu_Load(object sender, EventArgs e)
         {           
             SetTestData();//실험용
@@ -85,6 +62,21 @@ namespace LNTKCustomer.Form
 
             //adcMenuCategory.Enabled = false;
             //adcLogo.Enabled = true;
+        }
+
+        private void tbiBurger_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            form.SetCategoryId(10);
+        }
+
+        private void tbiBeverage_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            form.SetCategoryId(11);
+        }
+
+        private void tbiSide_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            form.SetCategoryId(12);
         }
 
         private void tileBar2_Click(object sender, EventArgs e)

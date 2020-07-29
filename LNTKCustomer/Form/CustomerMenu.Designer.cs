@@ -49,16 +49,15 @@
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.tileBar2 = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.ㅌ = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tbiBurger = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup3 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tbiBeverage = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup4 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.tileBarItem3 = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tbiSide = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup7 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.tileBarItem6 = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup6 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.tileBarItem1 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tileBarGroup8 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.tbiCart = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarItem5 = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarItem4 = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup5 = new DevExpress.XtraBars.Navigation.TileBarGroup();
@@ -141,14 +140,13 @@
             this.tileBar2.Groups.Add(this.tileBarGroup4);
             this.tileBar2.Groups.Add(this.tileBarGroup7);
             this.tileBar2.Groups.Add(this.tileBarGroup6);
-            this.tileBar2.Groups.Add(this.tileBarGroup8);
-            this.tileBar2.ItemSize = 120;
+            this.tileBar2.ItemSize = 150;
             this.tileBar2.Location = new System.Drawing.Point(0, 0);
             this.tileBar2.MaxId = 13;
             this.tileBar2.Name = "tileBar2";
-            this.tileBar2.Position = 232;
+            this.tileBar2.Position = 159;
             this.tileBar2.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.tileBar2.Size = new System.Drawing.Size(747, 180);
+            this.tileBar2.Size = new System.Drawing.Size(747, 200);
             this.tileBar2.TabIndex = 23;
             this.tileBar2.Text = "tileBar2";
             this.tileBar2.WideTileWidth = 170;
@@ -156,14 +154,14 @@
             // 
             // tileBarGroup2
             // 
-            this.tileBarGroup2.Items.Add(this.ㅌ);
+            this.tileBarGroup2.Items.Add(this.tbiBurger);
             this.tileBarGroup2.Name = "tileBarGroup2";
             // 
-            // ㅌ
+            // tbiBurger
             // 
-            this.ㅌ.AppearanceItem.Normal.BackColor = System.Drawing.Color.Red;
-            this.ㅌ.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.ㅌ.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tbiBurger.AppearanceItem.Normal.BackColor = System.Drawing.Color.Red;
+            this.tbiBurger.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.tbiBurger.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement1.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement1.Appearance.Hovered.Options.UseFont = true;
             tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
@@ -178,23 +176,24 @@
             tileItemElement1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
             tileItemElement1.Text = "버거";
             tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            this.ㅌ.Elements.Add(tileItemElement1);
-            this.ㅌ.Id = 0;
-            this.ㅌ.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.ㅌ.Name = "ㅌ";
+            this.tbiBurger.Elements.Add(tileItemElement1);
+            this.tbiBurger.Id = 0;
+            this.tbiBurger.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiBurger.Name = "tbiBurger";
+            this.tbiBurger.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tbiBurger_ItemClick);
             // 
             // tileBarGroup3
             // 
-            this.tileBarGroup3.Items.Add(this.tileBarItem2);
+            this.tileBarGroup3.Items.Add(this.tbiBeverage);
             this.tileBarGroup3.Name = "tileBarGroup3";
             // 
-            // tileBarItem2
+            // tbiBeverage
             // 
-            this.tileBarItem2.AppearanceItem.Normal.BackColor = System.Drawing.Color.Yellow;
-            this.tileBarItem2.AppearanceItem.Normal.ForeColor = System.Drawing.Color.Black;
-            this.tileBarItem2.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tileBarItem2.AppearanceItem.Normal.Options.UseForeColor = true;
-            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tbiBeverage.AppearanceItem.Normal.BackColor = System.Drawing.Color.Yellow;
+            this.tbiBeverage.AppearanceItem.Normal.ForeColor = System.Drawing.Color.Black;
+            this.tbiBeverage.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.tbiBeverage.AppearanceItem.Normal.Options.UseForeColor = true;
+            this.tbiBeverage.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement2.Appearance.Hovered.Options.UseFont = true;
             tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
@@ -208,21 +207,22 @@
             tileItemElement2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
             tileItemElement2.Text = "음료";
             tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.tileBarItem2.Elements.Add(tileItemElement2);
-            this.tileBarItem2.Id = 1;
-            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem2.Name = "tileBarItem2";
+            this.tbiBeverage.Elements.Add(tileItemElement2);
+            this.tbiBeverage.Id = 1;
+            this.tbiBeverage.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiBeverage.Name = "tbiBeverage";
+            this.tbiBeverage.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tbiBeverage_ItemClick);
             // 
             // tileBarGroup4
             // 
-            this.tileBarGroup4.Items.Add(this.tileBarItem3);
+            this.tileBarGroup4.Items.Add(this.tbiSide);
             this.tileBarGroup4.Name = "tileBarGroup4";
             // 
-            // tileBarItem3
+            // tbiSide
             // 
-            this.tileBarItem3.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkOrange;
-            this.tileBarItem3.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tbiSide.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkOrange;
+            this.tbiSide.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.tbiSide.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement3.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
             tileItemElement3.Appearance.Hovered.Options.UseFont = true;
             tileItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold);
@@ -236,10 +236,11 @@
             tileItemElement3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
             tileItemElement3.Text = "사이드";
             tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.tileBarItem3.Elements.Add(tileItemElement3);
-            this.tileBarItem3.Id = 2;
-            this.tileBarItem3.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem3.Name = "tileBarItem3";
+            this.tbiSide.Elements.Add(tileItemElement3);
+            this.tbiSide.Id = 2;
+            this.tbiSide.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tbiSide.Name = "tbiSide";
+            this.tbiSide.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tbiSide_ItemClick);
             // 
             // tileBarGroup7
             // 
@@ -267,26 +268,23 @@
             // 
             // tileBarGroup6
             // 
-            this.tileBarGroup6.Items.Add(this.tileBarItem1);
+            this.tileBarGroup6.Items.Add(this.tbiCart);
             this.tileBarGroup6.Name = "tileBarGroup6";
             // 
-            // tileBarItem1
+            // tbiCart
             // 
-            this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_cart_9_3338943__1_;
+            this.tbiCart.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement5.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Left;
+            tileItemElement5.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_cart_9_3338943;
             tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileItemElement5.ImageOptions.ImageBorder = DevExpress.XtraEditors.TileItemElementImageBorderMode.None;
-            tileItemElement5.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.NoScale;
             tileItemElement5.ImageOptions.ImageSize = new System.Drawing.Size(50, 50);
             tileItemElement5.Text = "";
-            this.tileBarItem1.Elements.Add(tileItemElement5);
-            this.tileBarItem1.Id = 8;
-            this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
-            this.tileBarItem1.Name = "tileBarItem1";
-            // 
-            // tileBarGroup8
-            // 
-            this.tileBarGroup8.Name = "tileBarGroup8";
+            tileItemElement5.Width = 140;
+            this.tbiCart.Elements.Add(tileItemElement5);
+            this.tbiCart.Id = 8;
+            this.tbiCart.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
+            this.tbiCart.Name = "tbiCart";
             // 
             // tileBarItem5
             // 
@@ -382,18 +380,17 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Navigation.TileBar tileBar2;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
-        private DevExpress.XtraBars.Navigation.TileBarItem ㅌ;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiBurger;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup3;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem2;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiBeverage;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup4;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem3;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiSide;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup7;
         private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem5;
         private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem4;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup5;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup6;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem1;
+        private DevExpress.XtraBars.Navigation.TileBarItem tbiCart;
         private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem6;
-        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup8;
     }
 }
