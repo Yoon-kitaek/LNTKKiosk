@@ -173,6 +173,36 @@ namespace LNTKCustomer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Basket_2205960 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Basket_2205960", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_cart_9_3338943 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_cart_9_3338943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_cart_9_3338943__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_cart_9_3338943__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Hamburger_131964 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Hamburger_131964", resourceCulture);
