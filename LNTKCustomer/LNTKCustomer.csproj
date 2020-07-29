@@ -119,6 +119,12 @@
     <Compile Include="Form\ShoppingCart.Designer.cs">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\SideOrBeverageCustomization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SideOrBeverageCustomization.Designer.cs">
+      <DependentUpon>SideOrBeverageCustomization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\SingleOrSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ShoppingCart.resx">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SideOrBeverageCustomization.resx">
+      <DependentUpon>SideOrBeverageCustomization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\SingleOrSet.resx">
       <DependentUpon>SingleOrSet.cs</DependentUpon>

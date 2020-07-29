@@ -30,16 +30,16 @@
         {
             this.pceTwo = new DevExpress.XtraEditors.PictureEdit();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.sbtFriesCustomization = new DevExpress.XtraEditors.SimpleButton();
-            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            this.lbcBurgerCustomization = new DevExpress.XtraEditors.LabelControl();
             this.pceSidePicture = new DevExpress.XtraEditors.PictureEdit();
+            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
+            this.sbtFriesCustomization = new DevExpress.XtraEditors.SimpleButton();
+            this.lbcBurgerCustomization = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pceTwo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSidePicture.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pceSidePicture.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pceTwo
@@ -49,8 +49,9 @@
             this.pceTwo.EditValue = global::LNTKCustomer.Properties.Resources.two;
             this.pceTwo.Location = new System.Drawing.Point(3, 18);
             this.pceTwo.Name = "pceTwo";
+            this.pceTwo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pceTwo.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceTwo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceTwo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.tablePanel1.SetRow(this.pceTwo, 1);
             this.pceTwo.Size = new System.Drawing.Size(114, 114);
             this.pceTwo.TabIndex = 7;
@@ -77,6 +78,35 @@
             this.tablePanel1.Size = new System.Drawing.Size(1198, 150);
             this.tablePanel1.TabIndex = 16;
             // 
+            // pceSidePicture
+            // 
+            this.tablePanel1.SetColumn(this.pceSidePicture, 2);
+            this.pceSidePicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceSidePicture.Location = new System.Drawing.Point(183, 18);
+            this.pceSidePicture.Name = "pceSidePicture";
+            this.pceSidePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceSidePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceSidePicture, 1);
+            this.pceSidePicture.Size = new System.Drawing.Size(294, 114);
+            this.pceSidePicture.TabIndex = 17;
+            // 
+            // tablePanel2
+            // 
+            this.tablePanel1.SetColumn(this.tablePanel2, 4);
+            this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
+            this.tablePanel2.Controls.Add(this.sbtFriesCustomization);
+            this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablePanel2.Location = new System.Drawing.Point(961, 18);
+            this.tablePanel2.Name = "tablePanel2";
+            this.tablePanel1.SetRow(this.tablePanel2, 1);
+            this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 60F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F)});
+            this.tablePanel2.Size = new System.Drawing.Size(234, 114);
+            this.tablePanel2.TabIndex = 16;
+            // 
             // sbtFriesCustomization
             // 
             this.sbtFriesCustomization.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
@@ -102,24 +132,7 @@
             this.tablePanel2.SetRow(this.sbtFriesCustomization, 1);
             this.sbtFriesCustomization.Size = new System.Drawing.Size(228, 62);
             this.sbtFriesCustomization.TabIndex = 15;
-            this.sbtFriesCustomization.Text = "사이드 추가/변경";
-            // 
-            // tablePanel2
-            // 
-            this.tablePanel1.SetColumn(this.tablePanel2, 4);
-            this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
-            this.tablePanel2.Controls.Add(this.sbtFriesCustomization);
-            this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablePanel2.Location = new System.Drawing.Point(961, 18);
-            this.tablePanel2.Name = "tablePanel2";
-            this.tablePanel1.SetRow(this.tablePanel2, 1);
-            this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 60F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F)});
-            this.tablePanel2.Size = new System.Drawing.Size(234, 114);
-            this.tablePanel2.TabIndex = 16;
+            this.sbtFriesCustomization.Text = "사이드 \r\n추가/변경";
             // 
             // lbcBurgerCustomization
             // 
@@ -141,19 +154,7 @@
             this.tablePanel1.SetRow(this.lbcBurgerCustomization, 1);
             this.lbcBurgerCustomization.Size = new System.Drawing.Size(473, 114);
             this.lbcBurgerCustomization.TabIndex = 14;
-            this.lbcBurgerCustomization.Text = "원하시는 사이드메뉴를 선택해주세요";
-            // 
-            // pceSidePicture
-            // 
-            this.tablePanel1.SetColumn(this.pceSidePicture, 2);
-            this.pceSidePicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceSidePicture.Location = new System.Drawing.Point(183, 18);
-            this.pceSidePicture.Name = "pceSidePicture";
-            this.pceSidePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceSidePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceSidePicture, 1);
-            this.pceSidePicture.Size = new System.Drawing.Size(294, 114);
-            this.pceSidePicture.TabIndex = 17;
+            this.lbcBurgerCustomization.Text = "원하시는 사이드메뉴를 \r\n선택해주세요";
             // 
             // SideSelection
             // 
@@ -166,9 +167,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             this.tablePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSidePicture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pceSidePicture.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

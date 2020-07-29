@@ -118,7 +118,7 @@
             this.tablePanel2.SetRow(this.sbtBeverageCustomization, 1);
             this.sbtBeverageCustomization.Size = new System.Drawing.Size(227, 61);
             this.sbtBeverageCustomization.TabIndex = 20;
-            this.sbtBeverageCustomization.Text = "음료 추가/변경";
+            this.sbtBeverageCustomization.Text = "음료 \r\n추가/변경";
             // 
             // pceThree
             // 
@@ -127,8 +127,9 @@
             this.pceThree.EditValue = global::LNTKCustomer.Properties.Resources.three;
             this.pceThree.Location = new System.Drawing.Point(3, 18);
             this.pceThree.Name = "pceThree";
+            this.pceThree.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pceThree.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceThree.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceThree.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.tablePanel1.SetRow(this.pceThree, 1);
             this.pceThree.Size = new System.Drawing.Size(114, 112);
             this.pceThree.TabIndex = 8;

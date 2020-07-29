@@ -70,7 +70,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(829, 173, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1226, 811);
+            this.layoutControl1.Size = new System.Drawing.Size(1090, 811);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -87,9 +87,9 @@
             this.labelControl2.AppearancePressed.Options.UseTextOptions = true;
             this.labelControl2.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(649, 355);
+            this.labelControl2.Location = new System.Drawing.Point(577, 357);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(484, 81);
+            this.labelControl2.Size = new System.Drawing.Size(429, 81);
             this.labelControl2.StyleController = this.layoutControl1;
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "카드 결제";
@@ -107,9 +107,9 @@
             this.labelControl1.AppearancePressed.Options.UseTextOptions = true;
             this.labelControl1.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(102, 355);
+            this.labelControl1.Location = new System.Drawing.Point(92, 357);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(473, 81);
+            this.labelControl1.Size = new System.Drawing.Size(419, 81);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "현금 결제";
@@ -130,15 +130,15 @@
             this.layoutControlItem3,
             this.layoutControlItem4});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1226, 811);
+            this.Root.Size = new System.Drawing.Size(1090, 811);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(90, 428);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(80, 430);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(477, 363);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(423, 361);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
@@ -146,31 +146,31 @@
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 79);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(90, 712);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(80, 712);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(637, 428);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(565, 430);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(488, 363);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(433, 361);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(567, 79);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(503, 79);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(70, 712);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(62, 712);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(1125, 79);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(998, 79);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(81, 712);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(72, 712);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
@@ -178,24 +178,24 @@
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(1206, 79);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(1070, 79);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.labelControl1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(90, 343);
+            this.layoutControlItem3.Location = new System.Drawing.Point(80, 345);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(477, 85);
+            this.layoutControlItem3.Size = new System.Drawing.Size(423, 85);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.labelControl2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(637, 343);
+            this.layoutControlItem4.Location = new System.Drawing.Point(565, 345);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(488, 85);
+            this.layoutControlItem4.Size = new System.Drawing.Size(433, 85);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -203,9 +203,9 @@
             // 
             this.btnCard.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.payment;
             this.btnCard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCard.Location = new System.Drawing.Point(649, 91);
+            this.btnCard.Location = new System.Drawing.Point(577, 91);
             this.btnCard.Name = "btnCard";
-            this.btnCard.Size = new System.Drawing.Size(484, 260);
+            this.btnCard.Size = new System.Drawing.Size(429, 262);
             this.btnCard.StyleController = this.layoutControl1;
             this.btnCard.TabIndex = 5;
             this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
@@ -218,27 +218,27 @@
             this.btnCash.AppearancePressed.Options.UseBackColor = true;
             this.btnCash.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.cash;
             this.btnCash.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCash.Location = new System.Drawing.Point(102, 91);
+            this.btnCash.Location = new System.Drawing.Point(92, 91);
             this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(473, 260);
+            this.btnCash.Size = new System.Drawing.Size(419, 262);
             this.btnCash.StyleController = this.layoutControl1;
             this.btnCash.TabIndex = 4;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btnCash;
-            this.layoutControlItem1.Location = new System.Drawing.Point(90, 79);
+            this.layoutControlItem1.Location = new System.Drawing.Point(80, 79);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(477, 264);
+            this.layoutControlItem1.Size = new System.Drawing.Size(423, 266);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnCard;
-            this.layoutControlItem2.Location = new System.Drawing.Point(637, 79);
+            this.layoutControlItem2.Location = new System.Drawing.Point(565, 79);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(488, 264);
+            this.layoutControlItem2.Size = new System.Drawing.Size(433, 266);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1226, 811);
+            this.ClientSize = new System.Drawing.Size(1090, 811);
             this.Controls.Add(this.layoutControl1);
             this.Name = "Payment";
             this.Text = "Payment";
