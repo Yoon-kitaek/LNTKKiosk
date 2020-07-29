@@ -341,16 +341,16 @@
     <None Include="Resources\BurgerMiddleSet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BurgerIcon.png" />
+    <None Include="Resources\CartIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BeverageIcon.png" />
+    <None Include="Resources\BurgerIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SideIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CartIcon.png" />
+    <None Include="Resources\BeverageIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
