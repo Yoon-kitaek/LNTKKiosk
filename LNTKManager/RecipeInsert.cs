@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LNTKCustomer
+namespace LNTKManager
 {
-    public partial class Formdssd1 : DevExpress.XtraEditors.XtraForm
+    public partial class RecipeInsert : Form
     {
-        public Formdssd1()
+        public RecipeInsert()
         {
             InitializeComponent();
         }

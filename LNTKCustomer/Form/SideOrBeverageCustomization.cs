@@ -13,9 +13,16 @@ namespace LNTKCustomer.Form
 {
     public partial class SideOrBeverageCustomization : DevExpress.XtraEditors.XtraForm
     {
-        public SideOrBeverageCustomization()
+        int categoryId;
+        public SideOrBeverageCustomization(int categoryId)
         {
             InitializeComponent();
+            this.categoryId = categoryId;
+        }
+
+        private void SideOrBeverageCustomization_Load(object sender, EventArgs e)
+        {
+            uscThumbnailContainer.categoryId = categoryId;
         }
     }
 }

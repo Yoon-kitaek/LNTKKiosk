@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LNTKManager
 {
-    public partial class Management : Form
+    public partial class Management : DevExpress.XtraEditors.XtraForm
     {
         public Management()
         {
@@ -104,14 +104,12 @@ namespace LNTKManager
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ProductInsert product = new ProductInsert(bdsProduct.Current as Product);
-            product.ShowDialog();
+            
         }
 
         private void gridControl3_Click(object sender, EventArgs e)
         {
-            ProductInsert product = new ProductInsert(bdsProduct.Current as Product);
-            product.ShowDialog();
+            
         }
     }
 }

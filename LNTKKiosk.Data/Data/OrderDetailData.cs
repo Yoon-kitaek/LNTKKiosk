@@ -57,6 +57,47 @@ namespace LNTKKiosk.Data
 
             return items.ConvertAll(x => x.OrderDetail);
 
+           
+
+
+        }
+
+        public object GetwithNonCompletedOrderDetail()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.OrderDetails
+                        where x.Order.IsCompleted == false
+                        select new { OrderDetail = x,  OrderId = x.OrderId, ProductName = x.Product.Name };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.OrderDetail.OrderId = item.OrderId;
+                item.OrderDetail.ProductName = item.ProductName;
+                
+            }
+
+            return query.ToList();
+        }
+        public object GetwithCompletedOrderDetail()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.OrderDetails
+                        where x.Order.IsCompleted == true
+                        select new { OrderDetail = x, OrderId = x.OrderId, ProductName = x.Product.Name };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.OrderDetail.OrderId = item.OrderId;
+                item.OrderDetail.ProductName = item.ProductName;
+            }
+
+            return query.ToList();
         }
 
     }

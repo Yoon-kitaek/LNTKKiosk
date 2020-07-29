@@ -110,7 +110,7 @@
             // sbtFriesCustomization
             // 
             this.sbtFriesCustomization.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.sbtFriesCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.sbtFriesCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.sbtFriesCustomization.Appearance.Options.UseBackColor = true;
             this.sbtFriesCustomization.Appearance.Options.UseFont = true;
             this.sbtFriesCustomization.AppearanceDisabled.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
@@ -132,7 +132,8 @@
             this.tablePanel2.SetRow(this.sbtFriesCustomization, 1);
             this.sbtFriesCustomization.Size = new System.Drawing.Size(228, 62);
             this.sbtFriesCustomization.TabIndex = 15;
-            this.sbtFriesCustomization.Text = "사이드 \r\n추가/변경";
+            this.sbtFriesCustomization.Text = "사이드 추가/변경";
+            this.sbtFriesCustomization.Click += new System.EventHandler(this.sbtFriesCustomization_Click);
             // 
             // lbcBurgerCustomization
             // 

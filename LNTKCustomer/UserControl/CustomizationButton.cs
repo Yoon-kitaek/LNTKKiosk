@@ -33,5 +33,52 @@ namespace LNTKCustomer.UserControl
                 return img;
             }
         }
+
+        private void sbtBurgerCustomization_Click(object sender, EventArgs e)
+        {
+            OnrecipeEdit((int)pceBurgerPicture.EditValue);
+        }
+
+        #region recipeEdit event things for C# 3.0
+        public event EventHandler<recipeEditEventArgs> recipeEdit;
+
+        protected virtual void OnrecipeEdit(recipeEditEventArgs e)
+        {
+            if (recipeEdit != null)
+                recipeEdit(this, e);
+        }
+
+        private recipeEditEventArgs OnrecipeEdit(int productId)
+        {
+            recipeEditEventArgs args = new recipeEditEventArgs(productId);
+            OnrecipeEdit(args);
+
+            return args;
+        }
+
+        private recipeEditEventArgs OnrecipeEditForOut()
+        {
+            recipeEditEventArgs args = new recipeEditEventArgs();
+            OnrecipeEdit(args);
+
+            return args;
+        }
+
+        public class recipeEditEventArgs : EventArgs
+        {
+            public int ProductId { get; set; }
+
+            public recipeEditEventArgs()
+            {
+            }
+
+            public recipeEditEventArgs(int productId)
+            {
+                ProductId = productId;
+            }
+        }
+        #endregion
+
+
     }
 }
