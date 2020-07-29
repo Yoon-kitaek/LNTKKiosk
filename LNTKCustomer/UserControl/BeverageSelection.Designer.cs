@@ -119,6 +119,7 @@
             this.sbtBeverageCustomization.Size = new System.Drawing.Size(227, 61);
             this.sbtBeverageCustomization.TabIndex = 20;
             this.sbtBeverageCustomization.Text = "음료 추가/변경";
+            this.sbtBeverageCustomization.Click += new System.EventHandler(this.sbtBeverageCustomization_Click);
             // 
             // pceThree
             // 

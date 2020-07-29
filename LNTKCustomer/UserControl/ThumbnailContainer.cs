@@ -49,7 +49,7 @@ namespace LNTKCustomer.UserControl
         {
             if (isShoppingCart == false)
             {
-                List<Product> products = DataRepository.Product.FilterbyCatergory(categoryid);
+                List<Product> products = DataRepository.Product.FilterbyCatergory(categoryId);
                 for (int i = 0; i < thumbnailCount; i++)
                 {
                     if (i + j * thumbnailCount >= products.Count)
@@ -95,7 +95,7 @@ namespace LNTKCustomer.UserControl
             OnArrowClicked(args);
             int lastPage;
             if (isShoppingCart == false)
-                lastPage = (DataRepository.Product.FilterbyCatergory(categoryid).Count - 1) / thumbnailCount;
+                lastPage = (DataRepository.Product.FilterbyCatergory(categoryId).Count - 1) / thumbnailCount;
             else
                 lastPage = shoppedPackageList.Count-1;
 

@@ -33,5 +33,50 @@ namespace LNTKCustomer.UserControl
                 return img;
             }
         }
+
+        #region SideEdit event things for C# 3.0
+        public event EventHandler<SideEditEventArgs> SideEdit;
+
+        protected virtual void OnSideEdit(SideEditEventArgs e)
+        {
+            if (SideEdit != null)
+                SideEdit(this, e);
+        }
+
+        private SideEditEventArgs OnSideEdit(int productId)
+        {
+            SideEditEventArgs args = new SideEditEventArgs(productId);
+            OnSideEdit(args);
+
+            return args;
+        }
+
+        private SideEditEventArgs OnSideEditForOut()
+        {
+            SideEditEventArgs args = new SideEditEventArgs();
+            OnSideEdit(args);
+
+            return args;
+        }
+
+        public class SideEditEventArgs : EventArgs
+        {
+            public int ProductId { get; set; }
+
+            public SideEditEventArgs()
+            {
+            }
+
+            public SideEditEventArgs(int productId)
+            {
+                ProductId = productId;
+            }
+        }
+        #endregion
+
+        private void sbtFriesCustomization_Click(object sender, EventArgs e)
+        {
+            OnSideEdit((int)pceSidePicture.EditValue);
+        }
     }
 }
