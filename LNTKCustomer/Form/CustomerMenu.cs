@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraWaitForm;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraWaitForm;
 using LNTKCustomer.UserControl;
 using LNTKKiosk.Data;
 using System;
@@ -17,6 +18,8 @@ namespace LNTKCustomer.Form
     {
         ProductThumbnail form = new ProductThumbnail();
         public List<ShoppedItem> shoppingList { get; set; }
+
+        List<TileItem> tileItems = new List<TileItem>();
 
         public CustomerMenu()
         {
@@ -44,26 +47,21 @@ namespace LNTKCustomer.Form
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
-         //   tileBarItem6.ItemSize.Equals()
-         //   tileBar1.WideTileWidth = 160;
-
+            tileItems.Add(tbiBeverage);
+            tileItems.Add(tbiBurger);
+            tileItems.Add(tbiSide);
+            tileItems.Add(tbiCart);
         }
-
-        private void pceShoppingCart_Click(object sender, EventArgs e)
+        private void EnableTileItems()
         {
-            //ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
-            //shoppingCart.MdiParent = this;
-            //shoppingCart.WindowState = FormWindowState.Maximized;
-            //shoppingCart.Show();
-            //pceShoppingCart.Visible = false;
-            //pcnShoppingCart.Visible = false;
-
-
-
-            //adcMenuCategory.Enabled = false;
-            //adcLogo.Enabled = true;
+            foreach (TileItem tileItem in tileItems)
+                tileItem.Enabled = true;
         }
-
+        private void DisableTileItems()
+        {
+            foreach (TileItem tileItem in tileItems)
+                tileItem.Enabled = false;
+        }
         private void tbiBurger_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
             form.SetCategoryId(10);
@@ -79,9 +77,14 @@ namespace LNTKCustomer.Form
             form.SetCategoryId(12);
         }
 
-        private void tileBar2_Click(object sender, EventArgs e)
+        private void tbiCart_ItemClick(object sender, TileItemEventArgs e)
         {
 
+            ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
+            shoppingCart.MdiParent = this;
+            shoppingCart.WindowState = FormWindowState.Maximized;
+            shoppingCart.Show();
+            DisableTileItems();
         }
     }
 }

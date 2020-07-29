@@ -142,13 +142,11 @@
             this.tileBar2.Location = new System.Drawing.Point(0, 0);
             this.tileBar2.MaxId = 13;
             this.tileBar2.Name = "tileBar2";
-            this.tileBar2.Position = 107;
             this.tileBar2.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             this.tileBar2.Size = new System.Drawing.Size(747, 200);
             this.tileBar2.TabIndex = 23;
             this.tileBar2.Text = "tileBar2";
             this.tileBar2.WideTileWidth = 170;
-            this.tileBar2.Click += new System.EventHandler(this.tileBar2_Click);
             // 
             // tileBarGroup2
             // 
@@ -247,24 +245,8 @@
             // 
             // tbiCart
             // 
-            this.tbiCart.AppearanceItem.Hovered.BackColor = System.Drawing.Color.Silver;
-            this.tbiCart.AppearanceItem.Hovered.Options.UseBackColor = true;
-            this.tbiCart.AppearanceItem.Normal.BackColor = System.Drawing.Color.LightGray;
-            this.tbiCart.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tbiCart.AppearanceItem.Pressed.BackColor = System.Drawing.Color.LightGray;
-            this.tbiCart.AppearanceItem.Pressed.Options.UseBackColor = true;
-            this.tbiCart.AppearanceItem.Selected.BackColor = System.Drawing.Color.LightGray;
-            this.tbiCart.AppearanceItem.Selected.Options.UseBackColor = true;
             this.tbiCart.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement4.AnchorAlignment = DevExpress.Utils.AnchorAlignment.Left;
-            tileItemElement4.Appearance.Hovered.BackColor = System.Drawing.Color.LightGray;
-            tileItemElement4.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement4.Appearance.Normal.BackColor = System.Drawing.Color.LightGray;
-            tileItemElement4.Appearance.Normal.Options.UseBackColor = true;
-            tileItemElement4.Appearance.Pressed.BackColor = System.Drawing.Color.LightGray;
-            tileItemElement4.Appearance.Pressed.Options.UseBackColor = true;
-            tileItemElement4.Appearance.Selected.BackColor = System.Drawing.Color.LightGray;
-            tileItemElement4.Appearance.Selected.Options.UseBackColor = true;
             tileItemElement4.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_cart_9_3338943;
             tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileItemElement4.ImageOptions.ImageBorder = DevExpress.XtraEditors.TileItemElementImageBorderMode.None;
@@ -275,6 +257,7 @@
             this.tbiCart.Id = 8;
             this.tbiCart.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.tbiCart.Name = "tbiCart";
+            this.tbiCart.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tbiCart_ItemClick);
             // 
             // tileBarItem5
             // 
