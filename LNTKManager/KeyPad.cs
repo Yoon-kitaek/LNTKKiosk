@@ -62,7 +62,7 @@ namespace LNTKManager
 
         private void btnBackSpace_Click(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void KeyPad_Load(object sender, EventArgs e)
