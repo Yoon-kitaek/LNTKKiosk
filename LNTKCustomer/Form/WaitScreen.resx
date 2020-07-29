@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="imageSlider1.Images" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="imsWaitScreen2.Images" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAlgCWAAD/4VTERXhpZgAATU0AKgAAAAgABgEaAAUAAAABAAAAVgEbAAUAAAAB
         AAAAXgEoAAMAAAABAAIAAAITAAMAAAABAAIAAAIUAAUAAAAGAAAAZodpAAQAAAABAAAAlgAAAOYAAACW
@@ -3266,7 +3266,7 @@
         ooAKKACigAooAKKACigAooAKKACigAooAKKACigAooAKKACigAooAKKACigAooAKKAP/2Q==
 </value>
   </data>
-  <data name="imageSlider1.Images1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="imsWaitScreen2.Images1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAgEAAAAAAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
         JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
@@ -4778,7 +4778,7 @@
         k5B45oopMoTyzuADkCmys6x7t2SPUUUULViex//Z
 </value>
   </data>
-  <data name="imsWaitScreen.Images" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="imsWaitScreen1.Images" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/7gAOQWRvYmUAZAAAAAAB/+Eh0EV4aWYAAE1NACoAAAAIAAwBAAAD
         AAAAAQMqAAABAQADAAAAAQIYAAABAgADAAAAAwAAAJ4BBgADAAAAAQACAAABEgADAAAAAQABAAABFQAD
@@ -12136,7 +12136,7 @@
         8nmYqSqhxNMHc355PR7PFGOCU1W7LNN5O5JT348DZz488v8AofDj/9k=
 </value>
   </data>
-  <data name="imsWaitScreen.Images1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="imsWaitScreen1.Images1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlkAAAEsCAYAAADw/6aoAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7E
         vQd0FVeW7j9rTXgzL/TMm/TmzbRzOydsA8bGBrsxTthtwAQTTLDAgCwwYBBZgATKKGchCWWJDCZnjMhY
