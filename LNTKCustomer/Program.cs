@@ -44,7 +44,7 @@ namespace LNTKCustomer
 
             //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
-            Application.Run(new PlaceSelection());
+            Application.Run(new CustomerMenu());
            // Application.Run(new Test());
         }
 
