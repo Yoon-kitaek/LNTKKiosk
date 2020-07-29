@@ -42,7 +42,6 @@
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -67,7 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
@@ -100,11 +98,11 @@
             // 
             this.sbtEnglish.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
             this.sbtEnglish.Appearance.Options.UseFont = true;
-            this.sbtEnglish.Location = new System.Drawing.Point(633, 576);
+            this.sbtEnglish.Location = new System.Drawing.Point(633, 566);
             this.sbtEnglish.MaximumSize = new System.Drawing.Size(0, 100);
             this.sbtEnglish.MinimumSize = new System.Drawing.Size(0, 70);
             this.sbtEnglish.Name = "sbtEnglish";
-            this.sbtEnglish.Size = new System.Drawing.Size(210, 70);
+            this.sbtEnglish.Size = new System.Drawing.Size(210, 80);
             this.sbtEnglish.StyleController = this.layoutControl1;
             this.sbtEnglish.TabIndex = 10;
             this.sbtEnglish.Text = "English";
@@ -113,11 +111,11 @@
             // 
             this.sbtKorean.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
             this.sbtKorean.Appearance.Options.UseFont = true;
-            this.sbtKorean.Location = new System.Drawing.Point(339, 576);
+            this.sbtKorean.Location = new System.Drawing.Point(339, 566);
             this.sbtKorean.MaximumSize = new System.Drawing.Size(0, 100);
             this.sbtKorean.MinimumSize = new System.Drawing.Size(0, 70);
             this.sbtKorean.Name = "sbtKorean";
-            this.sbtKorean.Size = new System.Drawing.Size(225, 70);
+            this.sbtKorean.Size = new System.Drawing.Size(225, 80);
             this.sbtKorean.StyleController = this.layoutControl1;
             this.sbtKorean.TabIndex = 9;
             this.sbtKorean.Text = "한국어";
@@ -137,7 +135,6 @@
             this.emptySpaceItem6,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.emptySpaceItem7,
             this.emptySpaceItem8,
             this.emptySpaceItem9,
             this.emptySpaceItem10,
@@ -233,51 +230,43 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.sbtKorean;
-            this.layoutControlItem2.Location = new System.Drawing.Point(327, 564);
+            this.layoutControlItem2.Location = new System.Drawing.Point(327, 554);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(229, 74);
+            this.layoutControlItem2.Size = new System.Drawing.Size(229, 84);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.sbtEnglish;
-            this.layoutControlItem3.Location = new System.Drawing.Point(621, 564);
+            this.layoutControlItem3.Location = new System.Drawing.Point(621, 554);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(214, 74);
+            this.layoutControlItem3.Size = new System.Drawing.Size(214, 84);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 554);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(1162, 10);
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(556, 564);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(556, 554);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(65, 74);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(65, 84);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(835, 564);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(835, 554);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(327, 74);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(327, 84);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem10
             // 
             this.emptySpaceItem10.AllowHotTrack = false;
-            this.emptySpaceItem10.Location = new System.Drawing.Point(0, 564);
+            this.emptySpaceItem10.Location = new System.Drawing.Point(0, 554);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(327, 74);
+            this.emptySpaceItem10.Size = new System.Drawing.Size(327, 84);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
@@ -319,11 +308,14 @@
             // 
             // pceAtStore
             // 
-            this.pceAtStore.EditValue = global::LNTKCustomer.Properties.Resources.ForkAndKnife;
+            this.pceAtStore.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pceAtStore.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_b4_03_1380567;
             this.pceAtStore.Location = new System.Drawing.Point(628, 145);
             this.pceAtStore.Name = "pceAtStore";
             this.pceAtStore.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceAtStore.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceAtStore.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pceAtStore.Size = new System.Drawing.Size(455, 273);
             this.pceAtStore.StyleController = this.layoutControl1;
             this.pceAtStore.TabIndex = 12;
@@ -331,11 +323,14 @@
             // 
             // pceTakeOut
             // 
-            this.pceTakeOut.EditValue = global::LNTKCustomer.Properties.Resources.Cart;
+            this.pceTakeOut.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pceTakeOut.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944;
             this.pceTakeOut.Location = new System.Drawing.Point(97, 145);
             this.pceTakeOut.Name = "pceTakeOut";
             this.pceTakeOut.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceTakeOut.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pceTakeOut.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.pceTakeOut.Size = new System.Drawing.Size(455, 273);
             this.pceTakeOut.StyleController = this.layoutControl1;
             this.pceTakeOut.TabIndex = 11;
@@ -382,7 +377,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
@@ -417,7 +411,6 @@
         private DevExpress.XtraEditors.SimpleButton sbtKorean;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;

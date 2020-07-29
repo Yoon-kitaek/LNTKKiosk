@@ -364,6 +364,18 @@
   <ItemGroup>
     <None Include="Resources\1590473693572.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_b4-03_1380567.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_b4-03_1380567 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
