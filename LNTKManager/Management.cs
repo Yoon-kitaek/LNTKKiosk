@@ -70,6 +70,7 @@ namespace LNTKManager
             // TODO: This line of code loads data into the 'lotteNaldsTouchKingDataSet3.OrderDetail' table. You can move, or remove it, as needed.
             bdsCompletedOrder.DataSource = DataRepository.Order.GetwithCompleted();
             bdsNonCompletedOrder.DataSource = DataRepository.Order.GetwithNonCompleted();
+            stockBindingSource.DataSource = DataRepository.Stock.GetAllWithProperties();
             timer1.Start();
         }
 
@@ -97,6 +98,7 @@ namespace LNTKManager
         private void tctlManagement_Click(object sender, EventArgs e)
         {
             bdsOrderDetail.DataSource = DataRepository.OrderDetail.GetAllWithProperties();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

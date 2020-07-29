@@ -55,5 +55,25 @@ namespace LNTKKiosk.Data
             return items.ConvertAll(x => x.Stock);
 
         }
+
+        public List<Stock> GetAllWithProperties()
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.Stocks
+                        select new { Stock = x, StockReceivedDate = x.ReceivedDate, StockExhaustedDate = x.ExhaustedDate, StockExpirationDay = x.ExpirationDate };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.Stock.ReceivedDate = item.StockReceivedDate;
+                item.Stock.ExhaustedDate = item.StockExhaustedDate;
+                item.Stock.ExpirationDate = item.StockExpirationDay;
+            }
+
+            return items.ConvertAll(x => x.Stock);
+
+        }
     }
 }

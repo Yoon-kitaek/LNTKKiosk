@@ -130,6 +130,12 @@
     </Compile>
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Helpers\InputConstraint.cs" />
+    <Compile Include="KeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyPad.Designer.cs">
+      <DependentUpon>KeyPad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     <EmbeddedResource Include="GroceryManagement.resx">
       <DependentUpon>GroceryManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KeyPad.resx">
+      <DependentUpon>KeyPad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +228,7 @@
     <None Include="Properties\DataSources\LNTKKiosk.Data.OrderDetail.datasource" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.Product.datasource" />
     <None Include="Properties\DataSources\LNTKKiosk.Data.Recipe.datasource" />
+    <None Include="Properties\DataSources\LNTKKiosk.Data.Stock.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
