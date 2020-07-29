@@ -272,6 +272,14 @@
             // 
             // tileBarItem1
             // 
+            this.tileBarItem1.AppearanceItem.Hovered.BackColor = System.Drawing.Color.White;
+            this.tileBarItem1.AppearanceItem.Hovered.Options.UseBackColor = true;
+            this.tileBarItem1.AppearanceItem.Normal.BackColor = System.Drawing.Color.White;
+            this.tileBarItem1.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.tileBarItem1.AppearanceItem.Pressed.BackColor = System.Drawing.Color.White;
+            this.tileBarItem1.AppearanceItem.Pressed.Options.UseBackColor = true;
+            this.tileBarItem1.AppearanceItem.Selected.BackColor = System.Drawing.Color.White;
+            this.tileBarItem1.AppearanceItem.Selected.Options.UseBackColor = true;
             this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement5.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.iconfinder_cart_9_3338943__1_;
             tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
