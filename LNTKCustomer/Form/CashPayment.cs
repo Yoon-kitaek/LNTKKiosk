@@ -8,15 +8,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using LNTKKiosk.Data;
 
 namespace LNTKCustomer.Form
 {
-    public partial class XtraForm2 : DevExpress.XtraEditors.XtraForm
+    public partial class CashPayment : DevExpress.XtraEditors.XtraForm
     {
-        public XtraForm2()
+        List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
+        public CashPayment(List<ShoppedItem> shoppedItemList )
         {
             InitializeComponent();
-           
+            this.shoppedItemList = shoppedItemList;
         }
     }
 }

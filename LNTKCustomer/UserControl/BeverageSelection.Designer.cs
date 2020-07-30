@@ -96,7 +96,7 @@
             // sbtBeverageCustomization
             // 
             this.sbtBeverageCustomization.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.sbtBeverageCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.sbtBeverageCustomization.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.sbtBeverageCustomization.Appearance.Options.UseBackColor = true;
             this.sbtBeverageCustomization.Appearance.Options.UseFont = true;
             this.sbtBeverageCustomization.AppearanceDisabled.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
@@ -118,7 +118,8 @@
             this.tablePanel2.SetRow(this.sbtBeverageCustomization, 1);
             this.sbtBeverageCustomization.Size = new System.Drawing.Size(227, 61);
             this.sbtBeverageCustomization.TabIndex = 20;
-            this.sbtBeverageCustomization.Text = "음료 \r\n추가/변경";
+            this.sbtBeverageCustomization.Text = "음료 추가/변경";
+            this.sbtBeverageCustomization.Click += new System.EventHandler(this.sbtBeverageCustomization_Click);
             // 
             // pceThree
             // 

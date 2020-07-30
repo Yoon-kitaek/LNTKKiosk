@@ -71,6 +71,7 @@ namespace LNTKManager
             bdsCompletedOrder.DataSource = DataRepository.Order.GetwithCompleted();
             bdsNonCompletedOrder.DataSource = DataRepository.Order.GetwithNonCompleted();
             bdsStock.DataSource = DataRepository.Stock.GetAllWithProperties();
+
             timer1.Start();
         }
 
@@ -78,6 +79,7 @@ namespace LNTKManager
         {
             bdsCompletedOrder.DataSource = DataRepository.Order.GetwithCompleted();
             bdsNonCompletedOrder.DataSource = DataRepository.Order.GetwithNonCompleted();
+
         }
 
         private void tctlManagement_Click(object sender, EventArgs e)

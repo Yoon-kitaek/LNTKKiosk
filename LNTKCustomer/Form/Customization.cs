@@ -68,11 +68,6 @@ namespace LNTKCustomer.Form
 
         }
 
-        public void SetShoppingList(List<ShoppedItem> shoppingList)
-        {
-
-        }
-
         private void AddtoCart()
         {
             Product product = DataRepository.Product.GetByName(productName);
@@ -95,7 +90,7 @@ namespace LNTKCustomer.Form
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Payment form = new Payment();
+            Payment form = new Payment(shoppingList);
             form.Show();
         }
 
@@ -108,5 +103,8 @@ namespace LNTKCustomer.Form
         {
 
         }
+
+ 
+
     }
 }

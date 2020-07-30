@@ -8,79 +8,152 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using LNTKKiosk.Data;
+using LNTKCustomer.Form;
 
 namespace LNTKCustomer.UserControl
 {
     public partial class ThumbnailContainer : DevExpress.XtraEditors.XtraUserControl
     {
+        private List<ShoppedPackage> shoppedPackageList = new List<ShoppedPackage>();
+        private List<Thumbnail> thumbnails = new List<Thumbnail>();
+        private const int thumbnailCount = 4;
+        private int j = 0;
+        public int categoryId { get; set; }
+        private bool isShoppingCart = false;
+
         public ThumbnailContainer()
         {
             InitializeComponent();
-        
-            _thumbnails.Add(uscThumbnail6);
-            _thumbnails.Add(uscThumbnail5);
-            _thumbnails.Add(uscThumbnail4);
-            _thumbnails.Add(uscThumbnail3);
-            _thumbnails.Add(uscThumbnail2);
-            _thumbnails.Add(uscThumbnail1);   
-
         }
 
-    private List<Thumbnail> _thumbnails = new List<Thumbnail>();
-
-        private void uscThumbnail6_ThumbnailClicked(object sender, Thumbnail.ThumbnailClickedEventArgs e)
+        public void SetShoppedItemList(List<ShoppedPackage> shoppedPackageList)
         {
-            MessageBox.Show("Test");
-            Thumbnail thumbnail = sender as Thumbnail;
-
-            //thumbnail.Acctivate();
-
-            _thumbnails
-               .FindAll(x => x != thumbnail);
-              // .ForEach(x => x.Deactivate());
-
-            OnProductSelected(e.Name);
-
+            isShoppingCart = true;
+            this.shoppedPackageList = shoppedPackageList;
+            BindingThumbnail();
         }
-        #region ProductSelected event things for C# 3.0
-        public event EventHandler<ProductSelectedEventArgs> ProductSelected;
-
-        protected virtual void OnProductSelected(ProductSelectedEventArgs e)
+        private void ThumbnailContainer_Load(object sender, EventArgs e)
         {
-            if (ProductSelected != null)
-                ProductSelected(this, e);
+            if (DesignMode)
+                return;
+
+            thumbnails.Add(uscThumbnail1);
+            thumbnails.Add(uscThumbnail2);
+            thumbnails.Add(uscThumbnail3);
+            thumbnails.Add(uscThumbnail4);
+            BindingThumbnail();
         }
 
-        private ProductSelectedEventArgs OnProductSelected(string name)
+        private void BindingThumbnail()
         {
-            ProductSelectedEventArgs args = new ProductSelectedEventArgs(name);
-            OnProductSelected(args);
+            if (isShoppingCart == false)
+            {
+                List<Product> products = DataRepository.Product.FilterbyCatergory(categoryId);
+                for (int i = 0; i < thumbnailCount; i++)
+                {
+                    if (i + j * thumbnailCount >= products.Count)
+                    {
+                        thumbnails[i].Visible = false;
+                    }
+                    else
+                    {
+                        thumbnails[i].Visible = true;
+                        thumbnails[i].SetValues(products[i + j * thumbnailCount].Name);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < thumbnailCount; i++)
+                {
+                    if (i >= shoppedPackageList[j].productIds.Count)
+                    {
+                        thumbnails[i].Visible = false;
+                    }
+                    else
+                    {
+                        thumbnails[i].Visible = true;
+                        thumbnails[i].SetValues(DataRepository.Product.Get(shoppedPackageList[j].productIds[i]).Name);
+                    }
+                }
+            }
+        }
+
+        #region ArrowClicked event things for C# 3.0
+        public event EventHandler<ArrowClickedEventArgs> ArrowClicked;
+
+        protected virtual void OnArrowClicked(ArrowClickedEventArgs e)
+        {
+            if (ArrowClicked != null)
+                ArrowClicked(this, e);
+        }
+
+        private ArrowClickedEventArgs OnArrowClicked(bool isRight)
+        {
+            ArrowClickedEventArgs args = new ArrowClickedEventArgs(isRight);
+            OnArrowClicked(args);
+            int lastPage;
+            if (isShoppingCart == false)
+                lastPage = (DataRepository.Product.FilterbyCatergory(categoryId).Count - 1) / thumbnailCount;
+            else
+                lastPage = shoppedPackageList.Count-1;
+
+
+            if (isRight == true)
+            {
+                if (j == lastPage)
+                    j = 0;
+                else
+                    j++;
+
+            }
+            else
+            {
+                if (j == 0)
+                    j = lastPage;
+                else
+                    j--;
+            }
+            BindingThumbnail();
+            //if (isShoppingCart == true)
+            //    args.packageName = shoppedPackageList[j].packageName;
 
             return args;
         }
 
-        private ProductSelectedEventArgs OnProductSelectedForOut()
+        private ArrowClickedEventArgs OnArrowClickedForOut()
         {
-            ProductSelectedEventArgs args = new ProductSelectedEventArgs();
-            OnProductSelected(args);
+            ArrowClickedEventArgs args = new ArrowClickedEventArgs();
+            OnArrowClicked(args);
 
             return args;
         }
 
-        public class ProductSelectedEventArgs : EventArgs
+        public class ArrowClickedEventArgs : EventArgs
         {
-            public string Name { get; set; }
+            public bool isRight { get; set; }
+            //TODO : public string packageName { get; set; }
 
-            public ProductSelectedEventArgs()
+            public ArrowClickedEventArgs()
             {
             }
 
-            public ProductSelectedEventArgs(string name)
+            public ArrowClickedEventArgs(bool isRight)
             {
-                Name = name;
+                this.isRight = isRight;
             }
         }
         #endregion
 
+        private void pceLeftArrow_Click(object sender, EventArgs e)
+        {
+            OnArrowClicked(false);
+        }
+
+        private void pceRightArrow_Click(object sender, EventArgs e)
+        {
+            OnArrowClicked(true);
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace LNTKCustomer
+﻿namespace LNTKCustomer.Form
 {
-    partial class Formdssd1
+    partial class CashPayment
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Formdssd1";
+            this.Text = "CashPayment";
         }
 
         #endregion

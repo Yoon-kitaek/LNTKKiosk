@@ -77,6 +77,12 @@
     <Compile Include="Form\CardPayment.Designer.cs">
       <DependentUpon>CardPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\CashPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CashPayment.Designer.cs">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,12 +137,6 @@
     <Compile Include="Form\SingleOrSet.Designer.cs">
       <DependentUpon>SingleOrSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\WaitScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,18 +180,6 @@
     <Compile Include="UserControl\QuantityChanged.Designer.cs">
       <DependentUpon>QuantityChanged.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\SelectBeverage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\SelectBeverage.Designer.cs">
-      <DependentUpon>SelectBeverage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\ShoppedProductImages.Designer.cs">
-      <DependentUpon>ShoppedProductImages.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\Thumbnail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,9 +222,6 @@
     <EmbeddedResource Include="Form\SingleOrSet.resx">
       <DependentUpon>SingleOrSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -260,12 +245,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\QuantityChanged.resx">
       <DependentUpon>QuantityChanged.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\SelectBeverage.resx">
-      <DependentUpon>SelectBeverage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\ShoppedProductImages.resx">
-      <DependentUpon>ShoppedProductImages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Thumbnail.resx">
       <DependentUpon>Thumbnail.cs</DependentUpon>
