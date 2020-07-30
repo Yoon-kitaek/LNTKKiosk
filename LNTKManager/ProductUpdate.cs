@@ -33,9 +33,6 @@ namespace LNTKManager
 
             if(product.Picture !=null)
             pcbImage.Image = byteArrayToImage(product.Picture);
-
-            if (pcbImage.Image != null)
-                _product.Picture = ConvertImageToBinary(pcbImage.Image);
         }
 
         public Image byteArrayToImage(byte[] bytesArr)

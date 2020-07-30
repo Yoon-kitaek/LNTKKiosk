@@ -70,13 +70,13 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(387, 174);
+            this.layoutControl1.Size = new System.Drawing.Size(387, 158);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(91, 132);
+            this.btnInsert.Location = new System.Drawing.Point(91, 116);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(140, 30);
             this.btnInsert.TabIndex = 8;
@@ -86,7 +86,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(235, 132);
+            this.btnClose.Location = new System.Drawing.Point(235, 116);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(140, 30);
             this.btnClose.TabIndex = 7;
@@ -138,7 +138,7 @@
             this.layoutControlItem5,
             this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(387, 174);
+            this.Root.Size = new System.Drawing.Size(387, 158);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -155,7 +155,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 86);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(367, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(367, 18);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -179,7 +179,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnClose;
-            this.layoutControlItem4.Location = new System.Drawing.Point(223, 120);
+            this.layoutControlItem4.Location = new System.Drawing.Point(223, 104);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -191,7 +191,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnInsert;
-            this.layoutControlItem5.Location = new System.Drawing.Point(79, 120);
+            this.layoutControlItem5.Location = new System.Drawing.Point(79, 104);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -203,7 +203,7 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 120);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 104);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(79, 34);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -216,7 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 174);
+            this.ClientSize = new System.Drawing.Size(387, 158);
             this.Controls.Add(this.layoutControl1);
             this.Name = "GroceryInsert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

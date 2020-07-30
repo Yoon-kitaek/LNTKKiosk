@@ -19,7 +19,6 @@ namespace LNTKManager
             _tabButtons.Add(uscTabButton0);
             _tabButtons.Add(uscTabButton1);
             _tabButtons.Add(uscTabButton2);
-            _tabButtons.Add(uscTabButton3);
         }
 
         private List<TabButton> _tabButtons = new List<TabButton>();

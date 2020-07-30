@@ -238,8 +238,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RecipeInsert.resx">
+      <DependentUpon>RecipeInsert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecipeManagement.resx">
       <DependentUpon>RecipeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeUpdate.resx">
+      <DependentUpon>RecipeUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockInsert.resx">
       <DependentUpon>StockInsert.cs</DependentUpon>
