@@ -34,7 +34,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.cbbProductId = new System.Windows.Forms.ComboBox();
             this.cbbGroceryId = new System.Windows.Forms.ComboBox();
-            this.bdsGrocery = new System.Windows.Forms.BindingSource(this.components);
             this.txeAmount = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -45,9 +44,9 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.bdsProduct = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsGrocery = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -58,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -119,10 +119,6 @@
             this.cbbGroceryId.Size = new System.Drawing.Size(334, 23);
             this.cbbGroceryId.TabIndex = 3;
             this.cbbGroceryId.ValueMember = "GroceryId";
-            // 
-            // bdsGrocery
-            // 
-            this.bdsGrocery.DataSource = typeof(LNTKKiosk.Data.Grocery);
             // 
             // txeAmount
             // 
@@ -227,6 +223,10 @@
             // 
             this.bdsProduct.DataSource = typeof(LNTKKiosk.Data.Product);
             // 
+            // bdsGrocery
+            // 
+            this.bdsGrocery.DataSource = typeof(LNTKKiosk.Data.Grocery);
+            // 
             // RecipeUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -239,7 +239,6 @@
             this.Load += new System.EventHandler(this.RecipeUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -250,6 +249,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).EndInit();
             this.ResumeLayout(false);
 
         }

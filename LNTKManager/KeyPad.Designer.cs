@@ -48,16 +48,16 @@
             this.colOrderId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.bdsCompletedOrderDetail = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOrderId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductName1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bdsCompletedOrderDetail = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bdsNonCompletedOrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCompletedOrderDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSeven
@@ -257,10 +257,6 @@
             this.colProductName1.VisibleIndex = 1;
             this.colProductName1.Width = 94;
             // 
-            // bdsCompletedOrderDetail
-            // 
-            this.bdsCompletedOrderDetail.DataSource = typeof(LNTKKiosk.Data.OrderDetail);
-            // 
             // KeyPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -290,8 +286,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCompletedOrderDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

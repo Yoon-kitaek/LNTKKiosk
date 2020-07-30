@@ -35,7 +35,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.txeStockId = new DevExpress.XtraEditors.TextEdit();
             this.cbbGroceryId = new System.Windows.Forms.ComboBox();
-            this.bdsGrocery = new System.Windows.Forms.BindingSource(this.components);
             this.txeReceivedDate = new DevExpress.XtraEditors.TextEdit();
             this.txeExpirationDate = new DevExpress.XtraEditors.TextEdit();
             this.txePrice = new DevExpress.XtraEditors.TextEdit();
@@ -50,11 +49,11 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsGrocery = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeExhustedDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeStockId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeReceivedDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeExpirationDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).BeginInit();
@@ -69,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -136,10 +136,6 @@
             this.cbbGroceryId.Size = new System.Drawing.Size(308, 23);
             this.cbbGroceryId.TabIndex = 4;
             this.cbbGroceryId.ValueMember = "GroceryId";
-            // 
-            // bdsGrocery
-            // 
-            this.bdsGrocery.DataSource = typeof(LNTKKiosk.Data.Grocery);
             // 
             // txeReceivedDate
             // 
@@ -290,6 +286,10 @@
             this.layoutControlItem8.Text = "소진날짜";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(52, 18);
             // 
+            // bdsGrocery
+            // 
+            this.bdsGrocery.DataSource = typeof(LNTKKiosk.Data.Grocery);
+            // 
             // StockUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -304,7 +304,6 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txeExhustedDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeStockId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeReceivedDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeExpirationDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).EndInit();
@@ -319,6 +318,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGrocery)).EndInit();
             this.ResumeLayout(false);
 
         }
