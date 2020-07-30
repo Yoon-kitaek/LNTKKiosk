@@ -178,6 +178,7 @@
             this.tbxResult.TabIndex = 15;
             this.tbxResult.Text = "0";
             this.tbxResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbxResult.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxResult_KeyDown);
             // 
             // bdsNonCompletedOrderDetail
             // 
@@ -223,10 +224,10 @@
             // gridControl2
             // 
             this.gridControl2.DataSource = this.bdsCompletedOrderDetail;
-            this.gridControl2.Location = new System.Drawing.Point(58, 296);
+            this.gridControl2.Location = new System.Drawing.Point(58, 295);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(538, 200);
+            this.gridControl2.Size = new System.Drawing.Size(538, 201);
             this.gridControl2.TabIndex = 17;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

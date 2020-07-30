@@ -32,7 +32,7 @@ namespace LNTKManager
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            tbxResult.Text = "0";
+            tbxResult.Text = "";
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
@@ -76,15 +76,21 @@ namespace LNTKManager
             tbxResult.Text = "";
         }
 
-        private void btnBackSpace_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
+       
         private void KeyPad_Load(object sender, EventArgs e)
         {
             bdsNonCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithNonCompletedOrderDetail();
             //bdsCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithCompletedOrderDetail();
+
+        }
+
+        private void tbxResult_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                this.btnEnter_Click(sender, e);
+
+            else if (e.KeyCode == Keys.Delete)
+                this.btnDelete_Click(sender, e);
 
         }
     }
