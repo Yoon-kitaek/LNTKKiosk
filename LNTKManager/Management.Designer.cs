@@ -29,19 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.colRemainingTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.신선도 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.fieldProductPrice = new DevExpress.XtraPivotGrid.PivotGridField();
             this.tctlManagement = new DevExpress.XtraTab.XtraTabControl();
             this.tpgeOrder = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.bdsNonCompletedOrder = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colOrderId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblCompletedOrder = new System.Windows.Forms.Label();
             this.lblNoncompletdOrder = new System.Windows.Forms.Label();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -49,11 +54,11 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOrderId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bdsNonCompletedOrder = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tpgeProduct = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.btnProductInsert = new System.Windows.Forms.Button();
@@ -111,24 +116,22 @@
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colOrderId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).BeginInit();
             this.tctlManagement.SuspendLayout();
             this.tpgeOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNonCompletedOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCompletedOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsNonCompletedOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             this.tpgeProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
@@ -148,7 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -168,9 +171,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             this.SuspendLayout();
             // 
             // colRemainingTime
@@ -245,6 +245,50 @@
             this.layoutControl4.TabIndex = 2;
             this.layoutControl4.Text = "layoutControl4";
             // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.bdsNonCompletedOrder;
+            this.gridControl1.Location = new System.Drawing.Point(12, 69);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(454, 494);
+            this.gridControl1.TabIndex = 6;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // bdsNonCompletedOrder
+            // 
+            this.bdsNonCompletedOrder.DataSource = typeof(LNTKKiosk.Data.Order);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colOrderId,
+            this.colDate});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colOrderId
+            // 
+            this.colOrderId.FieldName = "OrderId";
+            this.colOrderId.MinWidth = 25;
+            this.colOrderId.Name = "colOrderId";
+            this.colOrderId.OptionsColumn.AllowEdit = false;
+            this.colOrderId.Visible = true;
+            this.colOrderId.VisibleIndex = 0;
+            this.colOrderId.Width = 150;
+            // 
+            // colDate
+            // 
+            this.colDate.FieldName = "Date";
+            this.colDate.MinWidth = 25;
+            this.colDate.Name = "colDate";
+            this.colDate.OptionsColumn.AllowEdit = false;
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 1;
+            this.colDate.Width = 274;
+            // 
             // lblCompletedOrder
             // 
             this.lblCompletedOrder.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -288,6 +332,7 @@
             this.gridView2.DetailHeight = 420;
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // colOrderId1
             // 
@@ -308,10 +353,6 @@
             this.colDate1.Visible = true;
             this.colDate1.VisibleIndex = 1;
             this.colDate1.Width = 275;
-            // 
-            // bdsNonCompletedOrder
-            // 
-            this.bdsNonCompletedOrder.DataSource = typeof(LNTKKiosk.Data.Order);
             // 
             // layoutControlGroup3
             // 
@@ -352,6 +393,15 @@
             this.layoutControlItem17.Size = new System.Drawing.Size(459, 57);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.gridControl1;
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 57);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(458, 498);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem14.TextVisible = false;
             // 
             // tpgeProduct
             // 
@@ -636,12 +686,12 @@
             // chartControl1
             // 
             this.chartControl1.DataSource = this.pivotGridControl1;
-            xyDiagram2.AxisX.Title.Text = "카테고리 상품";
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.Label.TextPattern = "{V}";
-            xyDiagram2.AxisY.Title.Text = "매출";
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram2;
+            xyDiagram1.AxisX.Title.Text = "카테고리 상품";
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Label.TextPattern = "{V}";
+            xyDiagram1.AxisY.Title.Text = "매출";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.MaxHorizontalPercentage = 30D;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(12, 289);
@@ -838,34 +888,34 @@
             this.colRemainingTime,
             this.신선도});
             this.gridView4.DetailHeight = 420;
-            gridFormatRule4.Column = this.colRemainingTime;
-            gridFormatRule4.ColumnApplyTo = this.신선도;
-            gridFormatRule4.Name = "Format0";
-            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
-            formatConditionRuleValue4.Value1 = "10";
-            gridFormatRule4.Rule = formatConditionRuleValue4;
-            gridFormatRule5.Column = this.colRemainingTime;
-            gridFormatRule5.ColumnApplyTo = this.신선도;
-            gridFormatRule5.Name = "Format1";
-            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Between;
-            formatConditionRuleValue5.Value1 = "10";
-            formatConditionRuleValue5.Value2 = "21";
-            gridFormatRule5.Rule = formatConditionRuleValue5;
-            gridFormatRule6.Column = this.colRemainingTime;
-            gridFormatRule6.ColumnApplyTo = this.신선도;
-            gridFormatRule6.Name = "Format2";
-            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.Lime;
-            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
-            formatConditionRuleValue6.Value1 = "20";
-            gridFormatRule6.Rule = formatConditionRuleValue6;
-            this.gridView4.FormatRules.Add(gridFormatRule4);
-            this.gridView4.FormatRules.Add(gridFormatRule5);
-            this.gridView4.FormatRules.Add(gridFormatRule6);
+            gridFormatRule1.Column = this.colRemainingTime;
+            gridFormatRule1.ColumnApplyTo = this.신선도;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
+            formatConditionRuleValue1.Value1 = "10";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.Column = this.colRemainingTime;
+            gridFormatRule2.ColumnApplyTo = this.신선도;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Between;
+            formatConditionRuleValue2.Value1 = "10";
+            formatConditionRuleValue2.Value2 = "21";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            gridFormatRule3.Column = this.colRemainingTime;
+            gridFormatRule3.ColumnApplyTo = this.신선도;
+            gridFormatRule3.Name = "Format2";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
+            formatConditionRuleValue3.Value1 = "20";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            this.gridView4.FormatRules.Add(gridFormatRule1);
+            this.gridView4.FormatRules.Add(gridFormatRule2);
+            this.gridView4.FormatRules.Add(gridFormatRule3);
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.GroupCount = 1;
             this.gridView4.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -1012,54 +1062,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.bdsNonCompletedOrder;
-            this.gridControl1.Location = new System.Drawing.Point(12, 69);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(454, 494);
-            this.gridControl1.TabIndex = 6;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colOrderId,
-            this.colDate});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.gridControl1;
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 57);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(458, 498);
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem14.TextVisible = false;
-            // 
-            // colOrderId
-            // 
-            this.colOrderId.FieldName = "OrderId";
-            this.colOrderId.MinWidth = 25;
-            this.colOrderId.Name = "colOrderId";
-            this.colOrderId.OptionsColumn.AllowEdit = false;
-            this.colOrderId.Visible = true;
-            this.colOrderId.VisibleIndex = 0;
-            this.colOrderId.Width = 150;
-            // 
-            // colDate
-            // 
-            this.colDate.FieldName = "Date";
-            this.colDate.MinWidth = 25;
-            this.colDate.Name = "colDate";
-            this.colDate.OptionsColumn.AllowEdit = false;
-            this.colDate.Visible = true;
-            this.colDate.VisibleIndex = 1;
-            this.colDate.Width = 274;
-            // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1076,14 +1078,17 @@
             this.tpgeOrder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNonCompletedOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCompletedOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsNonCompletedOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             this.tpgeProduct.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
@@ -1102,7 +1107,7 @@
             this.tpgeRevenue.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderDetail)).EndInit();
@@ -1123,9 +1128,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             this.ResumeLayout(false);
 
         }
