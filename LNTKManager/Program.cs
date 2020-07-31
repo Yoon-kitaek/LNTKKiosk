@@ -23,7 +23,6 @@ namespace LNTKManager
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Management());
             Application.Run(new Management());
-            //
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)

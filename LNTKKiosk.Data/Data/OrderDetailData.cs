@@ -8,6 +8,7 @@ namespace LNTKKiosk.Data
 {
     public class OrderDetailData : EntityData<OrderDetail>
     {
+
         public OrderDetail Get(int orderId, int productId)
         {
             LNTKEntities context = CreateContext();
@@ -67,6 +68,42 @@ namespace LNTKKiosk.Data
             return items.ConvertAll(x => x.OrderDetail);
         }
 
+        public int GetCountByOrder(int orderId)
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.OrderDetails
+                        where x.OrderId == orderId
+                        select x;
+
+            return query.Count();
+        }
+
+        public List<OrderDetail> GetByOrderWithProduct(int orderId)
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.OrderDetails
+                        where x.OrderId == orderId
+                        select new
+                        {
+                            OrderDetail = x,
+                            ProductName = x.Product.Name
+                        };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.OrderDetail.ProductName = item.ProductName;
+            }
+
+            return items.ConvertAll(x => x.OrderDetail);
+        }
+
+        public int GetMaxId()
+        {
+            LNTKEntities context = CreateContext();
 
 
         public object GetwithNonCompletedOrderDetail()
@@ -101,10 +138,12 @@ namespace LNTKKiosk.Data
             foreach (var item in items)
             {
                 item.OrderDetail.OrderId = item.OrderId;
-                item.OrderDetail.ProductName = item.ProductName;
+                item.OrderDetail.ProductName = item.ProductName;      
             }
+            
+            
 
-            return query.ToList();
+            return items.ConvertAll(x=> x.OrderDetail).OrderByDescending(x=> x.OrderId).Take(5);
         }
 
     }

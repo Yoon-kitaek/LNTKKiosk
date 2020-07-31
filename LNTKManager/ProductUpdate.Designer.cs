@@ -39,7 +39,6 @@
             this.txeID = new DevExpress.XtraEditors.TextEdit();
             this.txePath = new DevExpress.XtraEditors.TextEdit();
             this.cbbCategoryId = new System.Windows.Forms.ComboBox();
-            this.bdsCategory = new System.Windows.Forms.BindingSource(this.components);
             this.txePrice = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -54,13 +53,13 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.bdsCategory = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePath.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
@@ -74,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -184,10 +184,6 @@
             this.cbbCategoryId.Size = new System.Drawing.Size(270, 23);
             this.cbbCategoryId.TabIndex = 14;
             this.cbbCategoryId.ValueMember = "CodeCategoryId";
-            // 
-            // bdsCategory
-            // 
-            this.bdsCategory.DataSource = typeof(LNTKKiosk.Data.CodeCategory);
             // 
             // txePrice
             // 
@@ -342,6 +338,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // bdsCategory
+            // 
+            this.bdsCategory.DataSource = typeof(LNTKKiosk.Data.CodeCategory);
+            // 
             // ProductUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -358,7 +358,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePath.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -372,6 +371,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCategory)).EndInit();
             this.ResumeLayout(false);
 
         }

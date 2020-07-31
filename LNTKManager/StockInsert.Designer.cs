@@ -75,13 +75,13 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(370, 213);
+            this.layoutControl1.Size = new System.Drawing.Size(387, 188);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(74, 171);
+            this.btnInsert.Location = new System.Drawing.Point(91, 146);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(140, 30);
             this.btnInsert.TabIndex = 9;
@@ -91,7 +91,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(218, 171);
+            this.btnClose.Location = new System.Drawing.Point(235, 146);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(140, 30);
             this.btnClose.TabIndex = 8;
@@ -104,7 +104,7 @@
             this.txePrice.Location = new System.Drawing.Point(67, 98);
             this.txePrice.Margin = new System.Windows.Forms.Padding(4);
             this.txePrice.Name = "txePrice";
-            this.txePrice.Size = new System.Drawing.Size(291, 24);
+            this.txePrice.Size = new System.Drawing.Size(308, 24);
             this.txePrice.StyleController = this.layoutControl1;
             this.txePrice.TabIndex = 7;
             this.txePrice.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.txePrice_EditValueChanging);
@@ -114,7 +114,7 @@
             this.txeExpirationDate.Location = new System.Drawing.Point(67, 70);
             this.txeExpirationDate.Margin = new System.Windows.Forms.Padding(4);
             this.txeExpirationDate.Name = "txeExpirationDate";
-            this.txeExpirationDate.Size = new System.Drawing.Size(291, 24);
+            this.txeExpirationDate.Size = new System.Drawing.Size(308, 24);
             this.txeExpirationDate.StyleController = this.layoutControl1;
             this.txeExpirationDate.TabIndex = 6;
             this.txeExpirationDate.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.txeExpirationDate_EditValueChanging);
@@ -124,7 +124,7 @@
             this.txeReceivedDate.Location = new System.Drawing.Point(67, 42);
             this.txeReceivedDate.Margin = new System.Windows.Forms.Padding(4);
             this.txeReceivedDate.Name = "txeReceivedDate";
-            this.txeReceivedDate.Size = new System.Drawing.Size(291, 24);
+            this.txeReceivedDate.Size = new System.Drawing.Size(308, 24);
             this.txeReceivedDate.StyleController = this.layoutControl1;
             this.txeReceivedDate.TabIndex = 5;
             this.txeReceivedDate.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.txeReceivedDate_EditValueChanging);
@@ -138,7 +138,7 @@
             this.cbbGroceryId.FormattingEnabled = true;
             this.cbbGroceryId.Location = new System.Drawing.Point(67, 12);
             this.cbbGroceryId.Name = "cbbGroceryId";
-            this.cbbGroceryId.Size = new System.Drawing.Size(291, 23);
+            this.cbbGroceryId.Size = new System.Drawing.Size(308, 23);
             this.cbbGroceryId.TabIndex = 4;
             this.cbbGroceryId.ValueMember = "GroceryId";
             // 
@@ -156,7 +156,7 @@
             this.layoutControlItem6,
             this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(370, 213);
+            this.Root.Size = new System.Drawing.Size(387, 188);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -164,7 +164,7 @@
             this.layoutControlItem1.Control = this.cbbGroceryId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(350, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(367, 30);
             this.layoutControlItem1.Text = "식재료명";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -173,7 +173,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 114);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(350, 45);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(367, 20);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -181,7 +181,7 @@
             this.layoutControlItem2.Control = this.txeReceivedDate;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(350, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem2.Text = "입고날짜";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -190,7 +190,7 @@
             this.layoutControlItem3.Control = this.txeExpirationDate;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(350, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem3.Text = "유효기간";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -199,14 +199,14 @@
             this.layoutControlItem4.Control = this.txePrice;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 86);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(350, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem4.Text = "가격";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnClose;
-            this.layoutControlItem5.Location = new System.Drawing.Point(206, 159);
+            this.layoutControlItem5.Location = new System.Drawing.Point(223, 134);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -218,7 +218,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnInsert;
-            this.layoutControlItem6.Location = new System.Drawing.Point(62, 159);
+            this.layoutControlItem6.Location = new System.Drawing.Point(79, 134);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem6.Name = "layoutControlItem6";
@@ -230,9 +230,9 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 159);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 134);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(62, 34);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(79, 34);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // bdsGrocery
@@ -243,9 +243,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 213);
+            this.ClientSize = new System.Drawing.Size(387, 188);
             this.Controls.Add(this.layoutControl1);
             this.Name = "StockInsert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "재고등록";
             this.Load += new System.EventHandler(this.StockInsert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

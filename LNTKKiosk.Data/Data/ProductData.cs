@@ -107,14 +107,59 @@ namespace LNTKKiosk.Data
         }
 
 
-        public List<Product> SearchByCategoryId(int categoryId)
+        public List<ProductPartial> SearchByCategoryId(int categoryId)
         {
             var context = CreateContext();
 
-            return context.Products.Where(x => x.CodeCategoryId == categoryId).ToList();
+            var query = from x in context.Products
+                        where x.CodeCategoryId == categoryId
+                        select new { x.ProductId, x.Name, x.Description, x.Price };
+
+            var items = query.ToList();
+
+            List<ProductPartial> partials = new List<ProductPartial>();
+            
+            foreach (var item in items)
+            {
+                ProductPartial partial = new ProductPartial();
+                partial.ProductId = item.ProductId;
+                partial.Name = item.Name;
+                partial.Description = item.Description;
+                partial.Price = item.Price;
+
+                partials.Add(partial);
+            }
+
+            return partials;
         }
 
-     
+        public List<ProductPartial> GetAllPartial()
+        {
+            var context = CreateContext();
+
+            var query = from x in context.Products
+                        select new { x.ProductId, x.Name, x.Description, x.Price };
+
+            var items = query.ToList();
+
+            List<ProductPartial> partials = new List<ProductPartial>();
+
+            foreach (var item in items)
+            {
+                ProductPartial partial = new ProductPartial();
+                partial.ProductId = item.ProductId;
+                partial.Name = item.Name;
+                partial.Description = item.Description;
+                partial.Price = item.Price;
+
+                partials.Add(partial);
+            }
+
+            return partials;
+        }
+
+
+
     }
 
 
