@@ -24,7 +24,16 @@ namespace LNTKKiosk.Data
 
             Delete(orderDetail);
         }
+        public int GetMaxId()
+        {
+            LNTKEntities context = CreateContext();
 
+            var query = from x in context.OrderDetails
+                        orderby x.OrderDetailId descending
+                        select x.OrderDetailId;
+
+            return query.FirstOrDefault();
+        }
         public List<OrderDetail> GetByOrder(int orderId)
         {
             List<OrderDetail> orderDetails = DataRepository.OrderDetail.GetAll();
@@ -58,16 +67,7 @@ namespace LNTKKiosk.Data
             return items.ConvertAll(x => x.OrderDetail);
         }
 
-        public int GetMaxId()
-        {
-            LNTKEntities context = CreateContext();
 
-            var query = from x in context.OrderDetails
-                        orderby x.OrderDetailId descending
-                        select x.OrderDetailId;
-
-            return query.FirstOrDefault();
-        }
 
         public object GetwithNonCompletedOrderDetail()
         {

@@ -39,7 +39,7 @@ namespace LNTKCustomer.Form
                 orderDetail.ProductId = shoppedItem.productId;
                 orderDetail.IsCompleted = false;
                 orderDetail.OrderDetailId = DataRepository.OrderDetail.GetMaxId() + 1;
-                DataRepository.OrderDetail.Insert(orderDetail);
+                    DataRepository.OrderDetail.Insert(orderDetail);
             }
             lbcOrderId.Text = orderId.ToString();
         }

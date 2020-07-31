@@ -19,7 +19,7 @@ namespace LNTKCustomer.Form
         public CardPayment(List<ShoppedItem> shoppedItemList)
         {
             InitializeComponent();
-
+            this.shoppedItemList = shoppedItemList;
 
         }
 

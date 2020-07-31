@@ -56,6 +56,7 @@ namespace LNTKCustomer.Form
 
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+            Close();
         }
 
         private void grcShoppedItemList_Click(object sender, EventArgs e)
