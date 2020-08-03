@@ -30,12 +30,12 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            this.btnCash = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCard = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnCash = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCard = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
@@ -78,36 +78,6 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 50F)});
             this.tablePanel2.Size = new System.Drawing.Size(969, 1036);
             this.tablePanel2.TabIndex = 15;
-            // 
-            // btnCash
-            // 
-            this.btnCash.AppearanceHovered.BackColor = System.Drawing.Color.Transparent;
-            this.btnCash.AppearanceHovered.Options.UseBackColor = true;
-            this.btnCash.AppearancePressed.BackColor = System.Drawing.Color.Transparent;
-            this.btnCash.AppearancePressed.Options.UseBackColor = true;
-            this.tablePanel2.SetColumn(this.btnCash, 1);
-            this.btnCash.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCash.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.cash;
-            this.btnCash.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCash.Location = new System.Drawing.Point(197, 53);
-            this.btnCash.Name = "btnCash";
-            this.tablePanel2.SetRow(this.btnCash, 1);
-            this.btnCash.Size = new System.Drawing.Size(575, 313);
-            this.btnCash.TabIndex = 4;
-            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
-            // 
-            // btnCard
-            // 
-            this.tablePanel2.SetColumn(this.btnCard, 1);
-            this.btnCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCard.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.payment;
-            this.btnCard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCard.Location = new System.Drawing.Point(197, 563);
-            this.btnCard.Name = "btnCard";
-            this.tablePanel2.SetRow(this.btnCard, 4);
-            this.btnCard.Size = new System.Drawing.Size(575, 313);
-            this.btnCard.TabIndex = 5;
-            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
             // 
             // labelControl1
             // 
@@ -171,6 +141,36 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(973, 1040);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // btnCash
+            // 
+            this.btnCash.AppearanceHovered.BackColor = System.Drawing.Color.Transparent;
+            this.btnCash.AppearanceHovered.Options.UseBackColor = true;
+            this.btnCash.AppearancePressed.BackColor = System.Drawing.Color.Transparent;
+            this.btnCash.AppearancePressed.Options.UseBackColor = true;
+            this.tablePanel2.SetColumn(this.btnCash, 1);
+            this.btnCash.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCash.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.cash;
+            this.btnCash.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnCash.Location = new System.Drawing.Point(197, 53);
+            this.btnCash.Name = "btnCash";
+            this.tablePanel2.SetRow(this.btnCash, 1);
+            this.btnCash.Size = new System.Drawing.Size(575, 313);
+            this.btnCash.TabIndex = 4;
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
+            // 
+            // btnCard
+            // 
+            this.tablePanel2.SetColumn(this.btnCard, 1);
+            this.btnCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCard.ImageOptions.Image = global::LNTKCustomer.Properties.Resources.payment;
+            this.btnCard.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnCard.Location = new System.Drawing.Point(197, 563);
+            this.btnCard.Name = "btnCard";
+            this.tablePanel2.SetRow(this.btnCard, 4);
+            this.btnCard.Size = new System.Drawing.Size(575, 313);
+            this.btnCard.TabIndex = 5;
+            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
             // 
             // Payment
             // 

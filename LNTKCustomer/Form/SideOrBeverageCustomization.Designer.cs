@@ -61,6 +61,7 @@
             // 
             // uscThumbnailContainer
             // 
+            this.uscThumbnailContainer.categoryId = 0;
             this.uscThumbnailContainer.Location = new System.Drawing.Point(12, 12);
             this.uscThumbnailContainer.Name = "uscThumbnailContainer";
             this.uscThumbnailContainer.Size = new System.Drawing.Size(698, 612);
