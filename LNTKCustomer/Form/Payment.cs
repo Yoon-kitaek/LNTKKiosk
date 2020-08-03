@@ -24,7 +24,7 @@ namespace LNTKCustomer.Form
         private void btnCard_Click(object sender, EventArgs e)
         {
             CardPayment cardPayment = new CardPayment(shoppedItemList);
-            cardPayment.ShowDialog();
+            cardPayment.Show();
             Close();
         }
 
@@ -39,7 +39,7 @@ namespace LNTKCustomer.Form
         private void btnCash_Click(object sender, EventArgs e)
         {
             CashPayment cashPayment = new CashPayment(shoppedItemList);
-            cashPayment.ShowDialog();
+            cashPayment.Show();
             Close();
         }
     }

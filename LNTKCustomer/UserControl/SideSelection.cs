@@ -15,6 +15,7 @@ namespace LNTKCustomer.UserControl
 {
     public partial class SideSelection : DevExpress.XtraEditors.XtraUserControl
     {
+        private int productId;
         public SideSelection()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace LNTKCustomer.UserControl
         public void SetPicture(int productId)
         {
             pceSidePicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
+            this.productId = productId;
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -76,7 +78,7 @@ namespace LNTKCustomer.UserControl
 
         private void sbtFriesCustomization_Click(object sender, EventArgs e)
         {
-            OnSideEdit((int)pceSidePicture.EditValue);
+            OnSideEdit(productId);
         }
     }
 }

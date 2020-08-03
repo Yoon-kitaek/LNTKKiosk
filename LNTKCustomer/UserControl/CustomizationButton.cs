@@ -15,6 +15,7 @@ namespace LNTKCustomer.UserControl
 {
     public partial class CustomizationButton : DevExpress.XtraEditors.XtraUserControl
     {
+        private int productId;
         public CustomizationButton()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace LNTKCustomer.UserControl
         public void SetPicture(int productId)
         {
             pceBurgerPicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
+            this.productId = productId;
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -36,7 +38,7 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBurgerCustomization_Click(object sender, EventArgs e)
         {
-            OnrecipeEdit((int)pceBurgerPicture.EditValue);
+            OnrecipeEdit(productId);
         }
 
         #region recipeEdit event things for C# 3.0

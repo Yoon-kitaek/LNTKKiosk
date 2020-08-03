@@ -15,6 +15,7 @@ namespace LNTKCustomer.UserControl
 {
     public partial class BeverageSelection : DevExpress.XtraEditors.XtraUserControl
     {
+        private int productId;
         public BeverageSelection()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace LNTKCustomer.UserControl
         public void SetPicture(int productId)
         {
             pceBeveragePicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
+            this.productId = productId;
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -36,7 +38,7 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBeverageCustomization_Click(object sender, EventArgs e)
         {
-            OnBeverageEdit((int)pceBeveragePicture.EditValue);
+            OnBeverageEdit(productId);
         }
 
         #region BeverageEdit event things for C# 3.0

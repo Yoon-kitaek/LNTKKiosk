@@ -101,11 +101,6 @@ namespace LNTKKiosk.Data
             return items.ConvertAll(x => x.OrderDetail);
         }
 
-        public int GetMaxId()
-        {
-            LNTKEntities context = CreateContext();
-
-
         public object GetwithNonCompletedOrderDetail()
         {
             LNTKEntities context = CreateContext();

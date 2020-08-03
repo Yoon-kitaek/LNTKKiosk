@@ -25,11 +25,14 @@ namespace LNTKCustomer.Form
 
         private void CardPayment_Load(object sender, EventArgs e)
         {
-            Thread.Sleep(5000);
+            
+        }
 
-            EndPage endPage = new EndPage(shoppedItemList);
-            endPage.Show();
-            Close();
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            EndPage endPage = new EndPage(shoppedItemList);      
+            endPage.Show(); 
+            Close();  
         }
     }
 }

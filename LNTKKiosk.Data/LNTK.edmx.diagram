@@ -5,11 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7aaff4a0df6d49c6beacf9afe568f96d" Name="Diagram1" ZoomLevel="87">
-        <EntityTypeShape EntityType="LNTKModel.CodeCategory" Width="1.5" PointX="0.75" PointY="7" />
         <EntityTypeShape EntityType="LNTKModel.Event" Width="1.5" PointX="6" PointY="14.5" />
-        <EntityTypeShape EntityType="LNTKModel.EventProduct" Width="1.5" PointX="8.25" PointY="10.5" />
+        <EntityTypeShape EntityType="LNTKModel.CodeCategory" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="LNTKModel.EventProduct" Width="1.5" PointX="8.625" PointY="11.875" />
         <EntityTypeShape EntityType="LNTKModel.Grocery" Width="1.5" PointX="3" PointY="4.875" />
         <EntityTypeShape EntityType="LNTKModel.Order" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="LNTKModel.OrderDetail" Width="1.5" PointX="5.25" PointY="11.5" />
         <EntityTypeShape EntityType="LNTKModel.OrderStock" Width="1.5" PointX="7.5" PointY="7.75" />
         <EntityTypeShape EntityType="LNTKModel.Product" Width="1.5" PointX="3" PointY="8" />
         <EntityTypeShape EntityType="LNTKModel.Recipe" Width="1.5" PointX="5.25" PointY="3.875" />
@@ -20,13 +21,12 @@
         <AssociationConnector Association="LNTKModel.FK_EventProduct_Product" />
         <AssociationConnector Association="LNTKModel.FK_Recipe_Grocery" />
         <AssociationConnector Association="LNTKModel.FK_Stock_Grocery" />
+        <AssociationConnector Association="LNTKModel.FK_OrderDetail_Order" />
         <AssociationConnector Association="LNTKModel.FK_OrderStock_Order" />
+        <AssociationConnector Association="LNTKModel.FK_OrderDetail_Product" />
         <AssociationConnector Association="LNTKModel.FK_OrderStock_Stock" />
         <AssociationConnector Association="LNTKModel.FK_Recipe_Product" />
-        <EntityTypeShape EntityType="LNTKModel.OrderDetail" Width="1.5" PointX="7.5" PointY="4.75" />
-        <AssociationConnector Association="LNTKModel.FK_OrderDetail_Order" />
-        <AssociationConnector Association="LNTKModel.FK_OrderDetail_Product" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

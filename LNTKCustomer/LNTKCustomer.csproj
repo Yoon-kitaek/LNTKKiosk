@@ -163,6 +163,12 @@
     <Compile Include="UserControl\CustomizationButton.Designer.cs">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\IngredientThumbnail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\IngredientThumbnail.Designer.cs">
+      <DependentUpon>IngredientThumbnail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\SideSelection.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\CustomizationButton.resx">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\IngredientThumbnail.resx">
+      <DependentUpon>IngredientThumbnail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SideSelection.resx">
       <DependentUpon>SideSelection.cs</DependentUpon>

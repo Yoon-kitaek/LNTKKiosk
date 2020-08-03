@@ -35,8 +35,6 @@
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.pceTakeOut = new DevExpress.XtraEditors.PictureEdit();
-            this.pceEatAtRestaurant = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.sliPlaceSelection = new DevExpress.XtraLayout.SimpleLabelItem();
             this.sliLanguageSelection = new DevExpress.XtraLayout.SimpleLabelItem();
@@ -45,14 +43,14 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.sliLanguage = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.pceTakeOut = new DevExpress.XtraEditors.PictureEdit();
+            this.pceEatAtRestaurant = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceEatAtRestaurant.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliLanguageSelection)).BeginInit();
@@ -61,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceEatAtRestaurant.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -203,33 +203,6 @@
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "매장 식사";
             // 
-            // pceTakeOut
-            // 
-            this.tablePanel2.SetColumn(this.pceTakeOut, 1);
-            this.pceTakeOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceTakeOut.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944;
-            this.pceTakeOut.Location = new System.Drawing.Point(171, 326);
-            this.pceTakeOut.Name = "pceTakeOut";
-            this.pceTakeOut.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceTakeOut.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.tablePanel2.SetRow(this.pceTakeOut, 3);
-            this.pceTakeOut.Size = new System.Drawing.Size(497, 196);
-            this.pceTakeOut.TabIndex = 1;
-            this.pceTakeOut.Click += new System.EventHandler(this.pceTakeOut_Click);
-            // 
-            // pceEatAtRestaurant
-            // 
-            this.tablePanel2.SetColumn(this.pceEatAtRestaurant, 1);
-            this.pceEatAtRestaurant.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceEatAtRestaurant.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_b4_03_1380567;
-            this.pceEatAtRestaurant.Location = new System.Drawing.Point(171, 3);
-            this.pceEatAtRestaurant.Name = "pceEatAtRestaurant";
-            this.pceEatAtRestaurant.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.tablePanel2.SetRow(this.pceEatAtRestaurant, 0);
-            this.pceEatAtRestaurant.Size = new System.Drawing.Size(497, 196);
-            this.pceEatAtRestaurant.TabIndex = 0;
-            this.pceEatAtRestaurant.Click += new System.EventHandler(this.pceEatAtRestaurant_Click);
-            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -314,6 +287,33 @@
             this.sliLanguage.Size = new System.Drawing.Size(928, 22);
             this.sliLanguage.TextSize = new System.Drawing.Size(192, 18);
             // 
+            // pceTakeOut
+            // 
+            this.tablePanel2.SetColumn(this.pceTakeOut, 1);
+            this.pceTakeOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceTakeOut.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_takeaway_food_box_to_go_hamburger_delivery0_6172944;
+            this.pceTakeOut.Location = new System.Drawing.Point(171, 326);
+            this.pceTakeOut.Name = "pceTakeOut";
+            this.pceTakeOut.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceTakeOut.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.tablePanel2.SetRow(this.pceTakeOut, 3);
+            this.pceTakeOut.Size = new System.Drawing.Size(497, 196);
+            this.pceTakeOut.TabIndex = 1;
+            this.pceTakeOut.Click += new System.EventHandler(this.pceTakeOut_Click);
+            // 
+            // pceEatAtRestaurant
+            // 
+            this.tablePanel2.SetColumn(this.pceEatAtRestaurant, 1);
+            this.pceEatAtRestaurant.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceEatAtRestaurant.EditValue = global::LNTKCustomer.Properties.Resources.iconfinder_b4_03_1380567;
+            this.pceEatAtRestaurant.Location = new System.Drawing.Point(171, 3);
+            this.pceEatAtRestaurant.Name = "pceEatAtRestaurant";
+            this.pceEatAtRestaurant.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.tablePanel2.SetRow(this.pceEatAtRestaurant, 0);
+            this.pceEatAtRestaurant.Size = new System.Drawing.Size(497, 196);
+            this.pceEatAtRestaurant.TabIndex = 0;
+            this.pceEatAtRestaurant.Click += new System.EventHandler(this.pceEatAtRestaurant_Click);
+            // 
             // PlaceSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -331,8 +331,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             this.tablePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceEatAtRestaurant.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliPlaceSelection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliLanguageSelection)).EndInit();
@@ -341,6 +339,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliLanguage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceTakeOut.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceEatAtRestaurant.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

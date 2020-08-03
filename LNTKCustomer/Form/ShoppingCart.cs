@@ -67,7 +67,7 @@ namespace LNTKCustomer.Form
         private void sbtPay_Click(object sender, EventArgs e)
         {
             Payment payment = new Payment(shoppedItemList);
-            payment.ShowDialog();
+            payment.Show();
             Close();
         }
 
