@@ -18,8 +18,8 @@ namespace LNTKKiosk.Data
         public Product()
         {
             this.EventProducts = new HashSet<EventProduct>();
-            this.Recipes = new HashSet<Recipe>();
             this.OrderDetails = new HashSet<OrderDetail>();
+            this.Recipes = new HashSet<Recipe>();
         }
     
         public int ProductId { get; set; }
@@ -33,8 +33,8 @@ namespace LNTKKiosk.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EventProduct> EventProducts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Recipe> Recipes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Recipe> Recipes { get; set; }
     }
 }

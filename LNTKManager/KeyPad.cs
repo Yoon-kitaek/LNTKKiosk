@@ -13,6 +13,9 @@ namespace LNTKManager
 {
     public partial class KeyPad : Form
     {
+        int orderCount = 0;
+        List<OrderDetail> orders = new List<OrderDetail>();
+
         public KeyPad()
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace LNTKManager
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            tbxResult.Text = "0";
+            tbxResult.Text = "";
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
@@ -50,26 +53,45 @@ namespace LNTKManager
                 return;
             }
 
+
+            orderCount++;
+            if (orderCount > 5)
+            {
+                orders.RemoveRange(0, DataRepository.OrderDetail.GetCountByOrder(orders[0].OrderId));
+                orderCount--;
+            }
+
+            List<OrderDetail> orderDetails = DataRepository.OrderDetail.GetByOrderWithProduct(order.OrderId);
+            orders.AddRange(orderDetails);
+
             order.IsCompleted = true;
 
             DataRepository.Order.Update(order);
 
+            bdsCompletedOrderDetail.DataSource = null;
+            bdsCompletedOrderDetail.DataSource = orders;
             bdsNonCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithNonCompletedOrderDetail();
-            bdsCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithCompletedOrderDetail();
+            //bdsCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithCompletedOrderDetail();
 
             tbxResult.Text = "";
         }
 
-        private void btnBackSpace_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
+       
         private void KeyPad_Load(object sender, EventArgs e)
         {
             bdsNonCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithNonCompletedOrderDetail();
-            bdsCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithCompletedOrderDetail();
-            
+            //bdsCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithCompletedOrderDetail();
+
+        }
+
+        private void tbxResult_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                this.btnEnter_Click(sender, e);
+
+            else if (e.KeyCode == Keys.Delete)
+                this.btnDelete_Click(sender, e);
+
         }
     }
 }

@@ -17,81 +17,31 @@ namespace LNTKManager
         {
             InitializeComponent();
         }
-
-        private Recipe _recipe = new Recipe();
-
-        private void WriteToEntity()
-        {
-            _recipe.ProductId = (int)cbbProductId.SelectedValue;
-            _recipe.GroceryId = (int)cbbGroceryId.SelectedValue;
-
-            try
-            {
-                _recipe.Amount = int.Parse(txeAmount.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-        }
-
-        private void cbbProductId_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if(cbbProductId.SelectedValue != null)
-           bdsRecipe.DataSource = DataRepository.Recipe.GetByProductIdWithProperties((int?)cbbProductId.SelectedValue);
-        }
-
+        
         private void RecipeManagement_Load(object sender, EventArgs e)
         {
-            bdsGrocery.DataSource = DataRepository.Grocery.GetAll();
-            bdsProduct.DataSource = DataRepository.Product.GetAll();
+            bdsRecipe.DataSource = DataRepository.Recipe.GetAllWithProperties();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if(txeAmount.Text == "")
-            {
-                MessageBox.Show("수량을 입력해주세요");
-                return;
-            }
-
-            WriteToEntity();
-           
-            if (_recipe.Amount == 0)
-                return;
-            try
-            {
-                DataRepository.Recipe.Insert(_recipe);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            MessageBox.Show("등록되었습니다.");
-            
-            bdsRecipe.DataSource = DataRepository.Recipe.GetByProductIdWithProperties((int?)cbbProductId.SelectedValue);
-
+            RecipeInsert form = new RecipeInsert();
+            form.ShowDialog();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Recipe recipe = bdsRecipe.Current as Recipe;
             if (recipe == null)
                 return;
-            DataRepository.Recipe.Update(recipe);
-            MessageBox.Show("수정되었습니다.");
 
+            RecipeUpdate form = new RecipeUpdate(recipe);
+            form.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
             Recipe recipe = bdsRecipe.Current as Recipe;
             if (recipe == null)
                 return;
@@ -103,9 +53,10 @@ namespace LNTKManager
             bdsRecipe.Remove(recipe);
         }
 
-        private void txeAmount_EditValueChanged(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            Helpers.InputConstraint.OnlyIntConstraint(txeAmount);
+            Close();
         }
+
     }
 }

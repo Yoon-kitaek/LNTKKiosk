@@ -52,7 +52,7 @@ namespace LNTKCustomer.UserControl
                 lbcDiscountSticker.Visible = false;
 
             DataRepository.Product.SetEventPrice(product);
-            lbcPrice.Text = product.EventPrice.ToString();
+            lbcPrice.Text = String.Format("{0:#,###}",product.EventPrice).ToString();
             SetPicture();
         }
 

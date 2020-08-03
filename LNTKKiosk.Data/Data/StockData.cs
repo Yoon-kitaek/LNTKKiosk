@@ -62,6 +62,7 @@ namespace LNTKKiosk.Data
             LNTKEntities context = CreateContext();
 
             var query = from x in context.Stocks
+                        where x.ExhaustedDate == null
                         select new
                         {
                             Stock = x,

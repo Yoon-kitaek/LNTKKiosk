@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lbcPackageName = new DevExpress.XtraEditors.LabelControl();
             this.uscThumbnailContainer = new LNTKCustomer.UserControl.ThumbnailContainer();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.sbtHome = new DevExpress.XtraEditors.SimpleButton();
@@ -51,13 +52,12 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEventPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tileViewColumn1 = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.lbcPackageName = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -75,8 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -93,8 +93,35 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // lbcPackageName
+            // 
+            this.lbcPackageName.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.Appearance.Options.UseFont = true;
+            this.lbcPackageName.Appearance.Options.UseTextOptions = true;
+            this.lbcPackageName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.AppearanceDisabled.Options.UseFont = true;
+            this.lbcPackageName.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.AppearanceHovered.Options.UseFont = true;
+            this.lbcPackageName.AppearanceHovered.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.lbcPackageName.AppearancePressed.Options.UseFont = true;
+            this.lbcPackageName.AppearancePressed.Options.UseTextOptions = true;
+            this.lbcPackageName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbcPackageName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbcPackageName.Location = new System.Drawing.Point(12, 12);
+            this.lbcPackageName.Name = "lbcPackageName";
+            this.lbcPackageName.Size = new System.Drawing.Size(710, 51);
+            this.lbcPackageName.StyleController = this.layoutControl1;
+            this.lbcPackageName.TabIndex = 6;
+            this.lbcPackageName.Text = "세트 이름";
+            // 
             // uscThumbnailContainer
             // 
+            this.uscThumbnailContainer.categoryId = 0;
             this.uscThumbnailContainer.Location = new System.Drawing.Point(12, 67);
             this.uscThumbnailContainer.Name = "uscThumbnailContainer";
             this.uscThumbnailContainer.Size = new System.Drawing.Size(710, 589);
@@ -321,6 +348,15 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.lbcPackageName;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(714, 55);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
             // gridView1
             // 
             this.gridView1.Name = "gridView1";
@@ -359,41 +395,6 @@
             // 
             this.tileViewColumn1.Name = "tileViewColumn1";
             // 
-            // lbcPackageName
-            // 
-            this.lbcPackageName.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.lbcPackageName.Appearance.Options.UseFont = true;
-            this.lbcPackageName.Appearance.Options.UseTextOptions = true;
-            this.lbcPackageName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.lbcPackageName.AppearanceDisabled.Options.UseFont = true;
-            this.lbcPackageName.AppearanceDisabled.Options.UseTextOptions = true;
-            this.lbcPackageName.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.lbcPackageName.AppearanceHovered.Options.UseFont = true;
-            this.lbcPackageName.AppearanceHovered.Options.UseTextOptions = true;
-            this.lbcPackageName.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.lbcPackageName.AppearancePressed.Options.UseFont = true;
-            this.lbcPackageName.AppearancePressed.Options.UseTextOptions = true;
-            this.lbcPackageName.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lbcPackageName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbcPackageName.Location = new System.Drawing.Point(12, 12);
-            this.lbcPackageName.Name = "lbcPackageName";
-            this.lbcPackageName.Size = new System.Drawing.Size(710, 51);
-            this.lbcPackageName.StyleController = this.layoutControl1;
-            this.lbcPackageName.TabIndex = 6;
-            this.lbcPackageName.Text = "세트 이름";
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.lbcPackageName;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(714, 55);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
             // ShoppingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -420,8 +421,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

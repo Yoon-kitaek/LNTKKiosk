@@ -61,10 +61,23 @@ namespace LNTKKiosk.Data
 
         public int GetDiscountRate(Product product)
         {
+            int t = DateTime.Now.Hour * 100 + DateTime.Now.Minute;
+            return CalculateDiscountRate(product, t);
+          
+        }
+        
+        public int GetDiscountRate(Product product , DateTime orderTime)
+        {
+            int t = orderTime.Hour * 100 + orderTime.Minute;
+            return CalculateDiscountRate(product, t);
+        }
+
+        private int CalculateDiscountRate(Product product, int t)
+        {
             List<EventProduct> list = DataRepository.EventProduct.GetByProduct(product.ProductId);
             List<EventProduct> listfiltered = new List<EventProduct>();
             Event @event = new Event();
-            int t = DateTime.Now.Hour * 100 + DateTime.Now.Minute;
+
             if (list.Count() > 0)
             {
                 foreach (EventProduct eventProduct in list)
@@ -73,7 +86,7 @@ namespace LNTKKiosk.Data
                     if (t > @event.StartTime && t < @event.EndTime)
                     {
                         listfiltered.Add(eventProduct);
-                    } 
+                    }
                 }
 
                 if (listfiltered.Count() > 0)
@@ -93,6 +106,61 @@ namespace LNTKKiosk.Data
             return;
         }
 
-       
+
+        public List<ProductPartial> SearchByCategoryId(int categoryId)
+        {
+            var context = CreateContext();
+
+            var query = from x in context.Products
+                        where x.CodeCategoryId == categoryId
+                        select new { x.ProductId, x.Name, x.Description, x.Price };
+
+            var items = query.ToList();
+
+            List<ProductPartial> partials = new List<ProductPartial>();
+            
+            foreach (var item in items)
+            {
+                ProductPartial partial = new ProductPartial();
+                partial.ProductId = item.ProductId;
+                partial.Name = item.Name;
+                partial.Description = item.Description;
+                partial.Price = item.Price;
+
+                partials.Add(partial);
+            }
+
+            return partials;
+        }
+
+        public List<ProductPartial> GetAllPartial()
+        {
+            var context = CreateContext();
+
+            var query = from x in context.Products
+                        select new { x.ProductId, x.Name, x.Description, x.Price };
+
+            var items = query.ToList();
+
+            List<ProductPartial> partials = new List<ProductPartial>();
+
+            foreach (var item in items)
+            {
+                ProductPartial partial = new ProductPartial();
+                partial.ProductId = item.ProductId;
+                partial.Name = item.Name;
+                partial.Description = item.Description;
+                partial.Price = item.Price;
+
+                partials.Add(partial);
+            }
+
+            return partials;
+        }
+
+
+
     }
+
+
 }

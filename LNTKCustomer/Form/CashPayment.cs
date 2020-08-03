@@ -8,31 +8,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Threading;
 using LNTKKiosk.Data;
 
 namespace LNTKCustomer.Form
 {
-    public partial class CardPayment : DevExpress.XtraEditors.XtraForm
+    public partial class CashPayment : DevExpress.XtraEditors.XtraForm
     {
         List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
-        public CardPayment(List<ShoppedItem> shoppedItemList)
+        public CashPayment(List<ShoppedItem> shoppedItemList )
         {
             InitializeComponent();
             this.shoppedItemList = shoppedItemList;
-
-        }
-
-        private void CardPayment_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnPay_Click(object sender, EventArgs e)
-        {
-            EndPage endPage = new EndPage(shoppedItemList);      
-            endPage.Show(); 
-            Close();  
         }
     }
 }

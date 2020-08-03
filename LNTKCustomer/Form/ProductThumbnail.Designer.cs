@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductThumbnail));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.uscThumbnail6 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail5 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
+            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -42,12 +48,6 @@
             this.pceLeft = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.uscThumbnail6 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail5 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
-            this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
@@ -98,6 +98,78 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33F)});
             this.tablePanel1.Size = new System.Drawing.Size(569, 1027);
             this.tablePanel1.TabIndex = 7;
+            // 
+            // uscThumbnail6
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail6, 1);
+            this.uscThumbnail6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail6.Label = "label";
+            this.uscThumbnail6.Location = new System.Drawing.Point(288, 687);
+            this.uscThumbnail6.Name = "uscThumbnail6";
+            this.tablePanel1.SetRow(this.uscThumbnail6, 2);
+            this.uscThumbnail6.Size = new System.Drawing.Size(279, 337);
+            this.uscThumbnail6.TabIndex = 5;
+            this.uscThumbnail6.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            // 
+            // uscThumbnail5
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail5, 0);
+            this.uscThumbnail5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail5.Label = "label";
+            this.uscThumbnail5.Location = new System.Drawing.Point(3, 687);
+            this.uscThumbnail5.Name = "uscThumbnail5";
+            this.tablePanel1.SetRow(this.uscThumbnail5, 2);
+            this.uscThumbnail5.Size = new System.Drawing.Size(279, 337);
+            this.uscThumbnail5.TabIndex = 4;
+            this.uscThumbnail5.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            // 
+            // uscThumbnail4
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail4, 1);
+            this.uscThumbnail4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail4.Label = "label";
+            this.uscThumbnail4.Location = new System.Drawing.Point(288, 345);
+            this.uscThumbnail4.Name = "uscThumbnail4";
+            this.tablePanel1.SetRow(this.uscThumbnail4, 1);
+            this.uscThumbnail4.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail4.TabIndex = 3;
+            this.uscThumbnail4.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            // 
+            // uscThumbnail3
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail3, 0);
+            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail3.Label = "label";
+            this.uscThumbnail3.Location = new System.Drawing.Point(3, 345);
+            this.uscThumbnail3.Name = "uscThumbnail3";
+            this.tablePanel1.SetRow(this.uscThumbnail3, 1);
+            this.uscThumbnail3.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail3.TabIndex = 2;
+            this.uscThumbnail3.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            // 
+            // uscThumbnail1
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail1, 0);
+            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail1.Label = "label";
+            this.uscThumbnail1.Location = new System.Drawing.Point(3, 3);
+            this.uscThumbnail1.Name = "uscThumbnail1";
+            this.tablePanel1.SetRow(this.uscThumbnail1, 0);
+            this.uscThumbnail1.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail1.TabIndex = 0;
+            this.uscThumbnail1.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
+            // 
+            // uscThumbnail2
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail2, 1);
+            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail2.Label = "label";
+            this.uscThumbnail2.Location = new System.Drawing.Point(288, 3);
+            this.uscThumbnail2.Name = "uscThumbnail2";
+            this.tablePanel1.SetRow(this.uscThumbnail2, 0);
+            this.uscThumbnail2.Size = new System.Drawing.Size(279, 336);
+            this.uscThumbnail2.TabIndex = 1;
+            this.uscThumbnail2.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
             // 
             // Root
             // 
@@ -208,78 +280,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(82, 344);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // uscThumbnail6
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail6, 1);
-            this.uscThumbnail6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail6.Label = "label";
-            this.uscThumbnail6.Location = new System.Drawing.Point(288, 687);
-            this.uscThumbnail6.Name = "uscThumbnail6";
-            this.tablePanel1.SetRow(this.uscThumbnail6, 2);
-            this.uscThumbnail6.Size = new System.Drawing.Size(279, 337);
-            this.uscThumbnail6.TabIndex = 5;
-            this.uscThumbnail6.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail5
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail5, 0);
-            this.uscThumbnail5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail5.Label = "label";
-            this.uscThumbnail5.Location = new System.Drawing.Point(3, 687);
-            this.uscThumbnail5.Name = "uscThumbnail5";
-            this.tablePanel1.SetRow(this.uscThumbnail5, 2);
-            this.uscThumbnail5.Size = new System.Drawing.Size(279, 337);
-            this.uscThumbnail5.TabIndex = 4;
-            this.uscThumbnail5.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail4
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail4, 1);
-            this.uscThumbnail4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail4.Label = "label";
-            this.uscThumbnail4.Location = new System.Drawing.Point(288, 345);
-            this.uscThumbnail4.Name = "uscThumbnail4";
-            this.tablePanel1.SetRow(this.uscThumbnail4, 1);
-            this.uscThumbnail4.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail4.TabIndex = 3;
-            this.uscThumbnail4.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail3
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail3, 0);
-            this.uscThumbnail3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail3.Label = "label";
-            this.uscThumbnail3.Location = new System.Drawing.Point(3, 345);
-            this.uscThumbnail3.Name = "uscThumbnail3";
-            this.tablePanel1.SetRow(this.uscThumbnail3, 1);
-            this.uscThumbnail3.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail3.TabIndex = 2;
-            this.uscThumbnail3.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail1
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail1, 0);
-            this.uscThumbnail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail1.Label = "label";
-            this.uscThumbnail1.Location = new System.Drawing.Point(3, 3);
-            this.uscThumbnail1.Name = "uscThumbnail1";
-            this.tablePanel1.SetRow(this.uscThumbnail1, 0);
-            this.uscThumbnail1.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail1.TabIndex = 0;
-            this.uscThumbnail1.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
-            // 
-            // uscThumbnail2
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail2, 1);
-            this.uscThumbnail2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail2.Label = "label";
-            this.uscThumbnail2.Location = new System.Drawing.Point(288, 3);
-            this.uscThumbnail2.Name = "uscThumbnail2";
-            this.tablePanel1.SetRow(this.uscThumbnail2, 0);
-            this.uscThumbnail2.Size = new System.Drawing.Size(279, 336);
-            this.uscThumbnail2.TabIndex = 1;
-            this.uscThumbnail2.ThumbnailClicked += new System.EventHandler<LNTKCustomer.UserControl.Thumbnail.ThumbnailClickedEventArgs>(this.uscThumbnail_ThumbnailClicked);
             // 
             // ProductThumbnail
             // 

@@ -80,13 +80,13 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(800, 394);
+            this.layoutControl1.Size = new System.Drawing.Size(802, 393);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(216, 353);
+            this.btnUpdate.Location = new System.Drawing.Point(218, 352);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(140, 29);
             this.btnUpdate.TabIndex = 10;
@@ -96,7 +96,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(360, 353);
+            this.btnDelete.Location = new System.Drawing.Point(362, 352);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 29);
             this.btnDelete.TabIndex = 9;
@@ -106,7 +106,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(648, 353);
+            this.btnClose.Location = new System.Drawing.Point(650, 352);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(140, 29);
             this.btnClose.TabIndex = 8;
@@ -116,7 +116,7 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(504, 353);
+            this.btnInsert.Location = new System.Drawing.Point(506, 352);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(140, 29);
             this.btnInsert.TabIndex = 7;
@@ -130,7 +130,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 337);
+            this.gridControl1.Size = new System.Drawing.Size(778, 336);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -221,7 +221,7 @@
             this.layoutControlItem5,
             this.layoutControlItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(800, 394);
+            this.Root.Size = new System.Drawing.Size(802, 393);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -229,22 +229,22 @@
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 341);
+            this.layoutControlItem1.Size = new System.Drawing.Size(782, 340);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 341);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 340);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(204, 33);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(206, 33);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnDelete;
-            this.layoutControlItem7.Location = new System.Drawing.Point(348, 341);
+            this.layoutControlItem7.Location = new System.Drawing.Point(350, 340);
             this.layoutControlItem7.MaxSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem7.Name = "layoutControlItem7";
@@ -256,7 +256,7 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnUpdate;
-            this.layoutControlItem8.Location = new System.Drawing.Point(204, 341);
+            this.layoutControlItem8.Location = new System.Drawing.Point(206, 340);
             this.layoutControlItem8.MaxSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem8.MinSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem8.Name = "layoutControlItem8";
@@ -268,7 +268,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnInsert;
-            this.layoutControlItem5.Location = new System.Drawing.Point(492, 341);
+            this.layoutControlItem5.Location = new System.Drawing.Point(494, 340);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -280,7 +280,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnClose;
-            this.layoutControlItem6.Location = new System.Drawing.Point(636, 341);
+            this.layoutControlItem6.Location = new System.Drawing.Point(638, 340);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(144, 33);
             this.layoutControlItem6.Name = "layoutControlItem6";
@@ -305,9 +305,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 394);
+            this.ClientSize = new System.Drawing.Size(802, 393);
             this.Controls.Add(this.layoutControl1);
             this.Name = "GroceryManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "식재료관리";
             this.Load += new System.EventHandler(this.GroceryManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

@@ -71,6 +71,7 @@ namespace LNTKManager
             bdsCompletedOrder.DataSource = DataRepository.Order.GetwithCompleted();
             bdsNonCompletedOrder.DataSource = DataRepository.Order.GetwithNonCompleted();
             bdsStock.DataSource = DataRepository.Stock.GetAllWithProperties();
+
             timer1.Start();
         }
 
@@ -78,36 +79,94 @@ namespace LNTKManager
         {
             bdsCompletedOrder.DataSource = DataRepository.Order.GetwithCompleted();
             bdsNonCompletedOrder.DataSource = DataRepository.Order.GetwithNonCompleted();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
 
         }
 
         private void tctlManagement_Click(object sender, EventArgs e)
         {
-            bdsOrderDetail.DataSource = DataRepository.OrderDetail.GetAllWithProperties();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             
+            bdsOrderDetail.DataSource = DataRepository.OrderDetail.GetAllWithProperties();
         }
 
         private void gridControl3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnRecipe_Click(object sender, EventArgs e)
+        {
+            RecipeManagement form = new RecipeManagement();
+            form.ShowDialog();
+        }
+
+        private void btnGrocery_Click(object sender, EventArgs e)
+        {
+            GroceryManagement form = new GroceryManagement();
+            form.ShowDialog();
+        }
+
+        private void btnStockInsert_Click(object sender, EventArgs e)
+        {
+            StockInsert form = new StockInsert();
+            form.ShowDialog();
+            
+        }
+
+        private void btnStockUpdate_Click(object sender, EventArgs e)
+        {
+            Stock stock = bdsStock.Current as Stock;
+            if (stock == null)
+                return;
+
+            StockUpdate form = new StockUpdate(stock);
+            form.ShowDialog();
+
+        }
+
+        private void btnStockDelete_Click(object sender, EventArgs e)
+        {
+            Stock stock = bdsStock.Current as Stock;
+            if (stock == null)
+                return;
+            if (Helpers.Helper.SureToDelete() == false)
+                return;
+
+            DataRepository.Stock.Delete(stock);
+
+            bdsStock.Remove(stock);
+        }
+
+        private void btnProductInsert_Click(object sender, EventArgs e)
+        {
+            ProductInsert form = new ProductInsert();
+            form.ShowDialog();
+       
+        }
+
+        private void btnProductUpdate_Click(object sender, EventArgs e)
+        {
+            ProductPartial dummy = bdsProduct.Current as ProductPartial;
+            Product product = DataRepository.Product.Get(dummy.ProductId);
+            if (product == null)
+                return;
+            
+            ProductUpdate form = new ProductUpdate(product);
+            form.ShowDialog();
+
+        }
+
+        private void btnProductDelete_Click(object sender, EventArgs e)
+        {
+            Product product = bdsProduct.Current as Product;
+            if (product == null)
+                return;
+            if (Helpers.Helper.SureToDelete() == false)
+                return;
+
+            DataRepository.Product.Delete(product);
+
+            bdsProduct.Remove(product);
+
         }
     }
 }

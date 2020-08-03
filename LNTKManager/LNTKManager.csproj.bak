@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -142,7 +143,9 @@
     <Compile Include="KeyPad.Designer.cs">
       <DependentUpon>KeyPad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Management.cs" />
+    <Compile Include="Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management.Designer.cs">
       <DependentUpon>Management.cs</DependentUpon>
     </Compile>
@@ -245,8 +248,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RecipeInsert.resx">
+      <DependentUpon>RecipeInsert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecipeManagement.resx">
       <DependentUpon>RecipeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeUpdate.resx">
+      <DependentUpon>RecipeUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockInsert.resx">
       <DependentUpon>StockInsert.cs</DependentUpon>

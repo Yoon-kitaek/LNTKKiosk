@@ -8,6 +8,7 @@ namespace LNTKKiosk.Data
 {
     public class OrderDetailData : EntityData<OrderDetail>
     {
+
         public OrderDetail Get(int orderId, int productId)
         {
             LNTKEntities context = CreateContext();
@@ -24,7 +25,16 @@ namespace LNTKKiosk.Data
 
             Delete(orderDetail);
         }
+        public int GetMaxId()
+        {
+            LNTKEntities context = CreateContext();
 
+            var query = from x in context.OrderDetails
+                        orderby x.OrderDetailId descending
+                        select x.OrderDetailId;
+
+            return query.FirstOrDefault();
+        }
         public List<OrderDetail> GetByOrder(int orderId)
         {
             List<OrderDetail> orderDetails = DataRepository.OrderDetail.GetAll();
@@ -39,23 +49,56 @@ namespace LNTKKiosk.Data
             LNTKEntities context = CreateContext();
 
             var query = from x in context.OrderDetails
-                        select new { OrderDetail = x, ProductPrice = x.Product.Price, OrderDate = x.Order.Date, ProductName = x.Product.Name, CategoryName = x.Product.CodeCategory.Item };
+                        select new { OrderDetail = x, 
+                            Product = x.Product, 
+                            OrderDate = x.Order.Date, 
+                            ProductName = x.Product.Name, 
+                            CategoryName = x.Product.CodeCategory.Item };
 
             var items = query.ToList();
 
             foreach (var item in items)
             {
-                item.OrderDetail.ProductPrice = item.ProductPrice;
+                item.OrderDetail.ProductPrice = item.Product.Price *(100- DataRepository.Product.GetDiscountRate(item.Product, item.OrderDate))/100;
                 item.OrderDetail.OrderTime = item.OrderDate;
                 item.OrderDetail.ProductName = item.ProductName;
                 item.OrderDetail.CategoryName = item.CategoryName;
             }
 
             return items.ConvertAll(x => x.OrderDetail);
+        }
 
-           
+        public int GetCountByOrder(int orderId)
+        {
+            LNTKEntities context = CreateContext();
 
+            var query = from x in context.OrderDetails
+                        where x.OrderId == orderId
+                        select x;
 
+            return query.Count();
+        }
+
+        public List<OrderDetail> GetByOrderWithProduct(int orderId)
+        {
+            LNTKEntities context = CreateContext();
+
+            var query = from x in context.OrderDetails
+                        where x.OrderId == orderId
+                        select new
+                        {
+                            OrderDetail = x,
+                            ProductName = x.Product.Name
+                        };
+
+            var items = query.ToList();
+
+            foreach (var item in items)
+            {
+                item.OrderDetail.ProductName = item.ProductName;
+            }
+
+            return items.ConvertAll(x => x.OrderDetail);
         }
 
         public object GetwithNonCompletedOrderDetail()
@@ -90,10 +133,13 @@ namespace LNTKKiosk.Data
             foreach (var item in items)
             {
                 item.OrderDetail.OrderId = item.OrderId;
-                item.OrderDetail.ProductName = item.ProductName;
+                item.OrderDetail.ProductName = item.ProductName;      
             }
+            
+            
 
-            return query.ToList();
+            return items.ConvertAll(x=> x.OrderDetail).OrderByDescending(x=> x.OrderId).Take(5);
         }
+
     }
 }

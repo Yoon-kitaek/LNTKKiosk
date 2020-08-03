@@ -18,7 +18,7 @@ namespace LNTKManager
         {
             InitializeComponent();
         }
-        public StockUpdate(Stock stock)
+        public StockUpdate(Stock stock) : this()
         {
             txeStockId.Text = stock.StockId.ToString();
             cbbGroceryId.SelectedItem = stock.GroceryId;

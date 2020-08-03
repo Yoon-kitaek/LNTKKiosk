@@ -51,10 +51,9 @@
           <Key>
             <PropertyRef Name="OrderDetailId" />
           </Key>
-          <Property Name="OrderDetailId" Type="int" Nullable="false" />
+          <Property Name="OrderDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderId" Type="int" Nullable="false" />
           <Property Name="ProductId" Type="int" Nullable="false" />
-          <Property Name="IsCompleted" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="OrderStock">
           <Key>
@@ -289,11 +288,12 @@
     <edmx:ConceptualModels>
       <Schema Namespace="LNTKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="LNTKEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CodeCategories" EntityType="LNTKModel.CodeCategory" />
           <EntitySet Name="Events" EntityType="LNTKModel.Event" />
+          <EntitySet Name="CodeCategories" EntityType="LNTKModel.CodeCategory" />
           <EntitySet Name="EventProducts" EntityType="LNTKModel.EventProduct" />
           <EntitySet Name="Groceries" EntityType="LNTKModel.Grocery" />
           <EntitySet Name="Orders" EntityType="LNTKModel.Order" />
+          <EntitySet Name="OrderDetails" EntityType="LNTKModel.OrderDetail" />
           <EntitySet Name="OrderStocks" EntityType="LNTKModel.OrderStock" />
           <EntitySet Name="Products" EntityType="LNTKModel.Product" />
           <EntitySet Name="Recipes" EntityType="LNTKModel.Recipe" />
@@ -322,9 +322,17 @@
             <End Role="Grocery" EntitySet="Groceries" />
             <End Role="Stock" EntitySet="Stocks" />
           </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Order" Association="LNTKModel.FK_OrderDetail_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
           <AssociationSet Name="FK_OrderStock_Order" Association="LNTKModel.FK_OrderStock_Order">
             <End Role="Order" EntitySet="Orders" />
             <End Role="OrderStock" EntitySet="OrderStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Product" Association="LNTKModel.FK_OrderDetail_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
           <AssociationSet Name="FK_OrderStock_Stock" Association="LNTKModel.FK_OrderStock_Stock">
             <End Role="Stock" EntitySet="Stocks" />
@@ -334,25 +342,7 @@
             <End Role="Product" EntitySet="Products" />
             <End Role="Recipe" EntitySet="Recipes" />
           </AssociationSet>
-          <EntitySet Name="OrderDetails" EntityType="LNTKModel.OrderDetail" />
-          <AssociationSet Name="FK_OrderDetail_Order" Association="LNTKModel.FK_OrderDetail_Order">
-            <End Role="Order" EntitySet="Orders" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_Product" Association="LNTKModel.FK_OrderDetail_Product">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-        </EntityContainer>
-        <EntityType Name="CodeCategory">
-          <Key>
-            <PropertyRef Name="CodeCategoryId" />
-          </Key>
-          <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
-          <Property Name="Item" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Groceries" Relationship="LNTKModel.FK_Grocery_CodeCategory" FromRole="CodeCategory" ToRole="Grocery" />
-          <NavigationProperty Name="Products" Relationship="LNTKModel.FK_Product_CodeCategory" FromRole="CodeCategory" ToRole="Product" />
-        </EntityType>
+          </EntityContainer>
         <EntityType Name="Event">
           <Key>
             <PropertyRef Name="EventId" />
@@ -362,6 +352,15 @@
           <Property Name="StartTime" Type="Int32" Nullable="false" />
           <Property Name="EndTime" Type="Int32" Nullable="false" />
           <NavigationProperty Name="EventProducts" Relationship="LNTKModel.FK_EventProduct_Event" FromRole="Event" ToRole="EventProduct" />
+        </EntityType>
+        <EntityType Name="CodeCategory">
+          <Key>
+            <PropertyRef Name="CodeCategoryId" />
+          </Key>
+          <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Groceries" Relationship="LNTKModel.FK_Grocery_CodeCategory" FromRole="CodeCategory" ToRole="Grocery" />
+          <NavigationProperty Name="Products" Relationship="LNTKModel.FK_Product_CodeCategory" FromRole="CodeCategory" ToRole="Product" />
         </EntityType>
         <EntityType Name="EventProduct">
           <Key>
@@ -393,8 +392,18 @@
           <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="OrderStocks" Relationship="LNTKModel.FK_OrderStock_Order" FromRole="Order" ToRole="OrderStock" />
           <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+          <NavigationProperty Name="OrderStocks" Relationship="LNTKModel.FK_OrderStock_Order" FromRole="Order" ToRole="OrderStock" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetailId" />
+          </Key>
+          <Property Name="OrderDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="LNTKModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="LNTKModel.FK_OrderDetail_Product" FromRole="OrderDetail" ToRole="Product" />
         </EntityType>
         <EntityType Name="OrderStock">
           <Key>
@@ -419,8 +428,8 @@
           <Property Name="CodeCategoryId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CodeCategory" Relationship="LNTKModel.FK_Product_CodeCategory" FromRole="Product" ToRole="CodeCategory" />
           <NavigationProperty Name="EventProducts" Relationship="LNTKModel.FK_EventProduct_Product" FromRole="Product" ToRole="EventProduct" />
-          <NavigationProperty Name="Recipes" Relationship="LNTKModel.FK_Recipe_Product" FromRole="Product" ToRole="Recipe" />
           <NavigationProperty Name="OrderDetails" Relationship="LNTKModel.FK_OrderDetail_Product" FromRole="Product" ToRole="OrderDetail" />
+          <NavigationProperty Name="Recipes" Relationship="LNTKModel.FK_Recipe_Product" FromRole="Product" ToRole="Recipe" />
         </EntityType>
         <EntityType Name="Recipe">
           <Key>
@@ -518,6 +527,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_OrderDetail_Order">
+          <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_OrderStock_Order">
           <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
           <End Type="LNTKModel.OrderStock" Role="OrderStock" Multiplicity="*" />
@@ -527,6 +548,18 @@
             </Principal>
             <Dependent Role="OrderStock">
               <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Product">
+          <End Type="LNTKModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -554,55 +587,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="OrderDetail">
-          <Key>
-            <PropertyRef Name="OrderDetailId" />
-          </Key>
-          <Property Name="OrderDetailId" Type="Int32" Nullable="false" />
-          <Property Name="OrderId" Type="Int32" Nullable="false" />
-          <Property Name="ProductId" Type="Int32" Nullable="false" />
-          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="LNTKModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
-          <NavigationProperty Name="Product" Relationship="LNTKModel.FK_OrderDetail_Product" FromRole="OrderDetail" ToRole="Product" />
-        </EntityType>
-        <Association Name="FK_OrderDetail_Order">
-          <End Type="LNTKModel.Order" Role="Order" Multiplicity="1" />
-          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Order">
-              <PropertyRef Name="OrderId" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="OrderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderDetail_Product">
-          <End Type="LNTKModel.Product" Role="Product" Multiplicity="1" />
-          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductId" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="ProductId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="LNTKModelStoreContainer" CdmEntityContainer="LNTKEntities">
-          <EntitySetMapping Name="CodeCategories">
-            <EntityTypeMapping TypeName="LNTKModel.CodeCategory">
-              <MappingFragment StoreEntitySet="CodeCategory">
-                <ScalarProperty Name="Item" ColumnName="Item" />
-                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Events">
             <EntityTypeMapping TypeName="LNTKModel.Event">
               <MappingFragment StoreEntitySet="Event">
@@ -610,6 +600,14 @@
                 <ScalarProperty Name="StartTime" ColumnName="StartTime" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="EventId" ColumnName="EventId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CodeCategories">
+            <EntityTypeMapping TypeName="LNTKModel.CodeCategory">
+              <MappingFragment StoreEntitySet="CodeCategory">
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -638,6 +636,15 @@
                 <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="LNTKModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -683,17 +690,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="OrderDetails">
-            <EntityTypeMapping TypeName="LNTKModel.OrderDetail">
-              <MappingFragment StoreEntitySet="OrderDetail">
-                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

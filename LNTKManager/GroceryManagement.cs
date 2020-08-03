@@ -18,14 +18,10 @@ namespace LNTKManager
             InitializeComponent();
         }
 
-        private Grocery _grocery = new Grocery();
-
         private void btnInsert_Click(object sender, EventArgs e)
         {
             GroceryInsert form = new GroceryInsert();
             form.ShowDialog();
-            int maxId = DataRepository.Grocery.GetMaxId();
-            bdsGrocery.Add(DataRepository.Grocery.Get(maxId));
         }
 
         private void btnClose_Click(object sender, EventArgs e)
