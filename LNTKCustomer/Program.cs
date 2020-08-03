@@ -20,11 +20,11 @@ namespace LNTKCustomer
         [STAThread]
         static void Main()
         {
-            ProcessKiller.Instance.ShutDown += ProcessKiller_ShutDown;
-            ProcessKiller.Instance.Start(interval: 500);
+            //ProcessKiller.Instance.ShutDown += ProcessKiller_ShutDown;
+            //ProcessKiller.Instance.Start(interval: 500);
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
             
             //////
 
@@ -44,8 +44,8 @@ namespace LNTKCustomer
 
             //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
-            Application.Run(new CustomerMenu());
-           // Application.Run(new Test());
+            //Application.Run(new CustomerMenu());
+           Application.Run(new XtraForm1());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)

@@ -10,11 +10,15 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
 using LNTKKiosk.Data;
+using DevExpress.XtraLayout.Customization;
+using LNTKCustomer.Form;
+using DevExpress.Utils.DirectXPaint.Svg;
 
 namespace LNTKCustomer.UserControl
 {
     public partial class SideSelection : DevExpress.XtraEditors.XtraUserControl
     {
+        public int categoryId = 12;
         public SideSelection()
         {
             InitializeComponent();
@@ -22,6 +26,8 @@ namespace LNTKCustomer.UserControl
 
         public void SetPicture(int productId)
         {
+            DataRepository.Product.FilterbyCatergory(categoryId);
+
             pceSidePicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
         }
 
@@ -76,7 +82,15 @@ namespace LNTKCustomer.UserControl
 
         private void sbtFriesCustomization_Click(object sender, EventArgs e)
         {
-            OnSideEdit((int)pceSidePicture.EditValue);
+            OnSideEdit(categoryId);
+            OpenSideOrBeverateCustomization(categoryId);
         }
+
+        private void OpenSideOrBeverateCustomization(int categoryId)
+        {
+            SideOrBeverageCustomization sideOrBeverageCustomization = new SideOrBeverageCustomization(categoryId);
+            sideOrBeverageCustomization.ShowDialog();
+        }
+
     }
 }

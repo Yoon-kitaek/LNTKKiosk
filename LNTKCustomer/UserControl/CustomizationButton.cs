@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
 using System.IO;
+using LNTKCustomer.Form;
 
 namespace LNTKCustomer.UserControl
 {
     public partial class CustomizationButton : DevExpress.XtraEditors.XtraUserControl
     {
+        public int productId { get; set; }
         public CustomizationButton()
         {
             InitializeComponent();
@@ -22,7 +24,9 @@ namespace LNTKCustomer.UserControl
 
         public void SetPicture(int productId)
         {
+           
             pceBurgerPicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
+    
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -36,7 +40,10 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBurgerCustomization_Click(object sender, EventArgs e)
         {
-            OnrecipeEdit((int)pceBurgerPicture.EditValue);
+            Product product = DataRepository.Product.Get(productId);
+            int productid = product.ProductId;
+            OnrecipeEdit(productid);
+
         }
 
         #region recipeEdit event things for C# 3.0
@@ -78,6 +85,12 @@ namespace LNTKCustomer.UserControl
             }
         }
         #endregion
+
+        private void OpenCustomizationRecipe(int ProductId)
+        {
+            //야채
+        }
+        
 
 
     }

@@ -45,7 +45,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(722, 636);
+            this.layoutControl1.Size = new System.Drawing.Size(1032, 1060);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -56,14 +56,15 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(722, 636);
+            this.Root.Size = new System.Drawing.Size(1032, 1060);
             this.Root.TextVisible = false;
             // 
             // uscThumbnailContainer
             // 
+            this.uscThumbnailContainer.categoryId = 0;
             this.uscThumbnailContainer.Location = new System.Drawing.Point(12, 12);
             this.uscThumbnailContainer.Name = "uscThumbnailContainer";
-            this.uscThumbnailContainer.Size = new System.Drawing.Size(698, 612);
+            this.uscThumbnailContainer.Size = new System.Drawing.Size(1008, 1036);
             this.uscThumbnailContainer.TabIndex = 4;
             // 
             // layoutControlItem1
@@ -71,7 +72,7 @@
             this.layoutControlItem1.Control = this.uscThumbnailContainer;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(702, 616);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1012, 1040);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -79,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 636);
+            this.ClientSize = new System.Drawing.Size(1032, 1060);
             this.Controls.Add(this.layoutControl1);
             this.Name = "SideOrBeverageCustomization";
             this.Text = "SideOrBeverageCustomization";

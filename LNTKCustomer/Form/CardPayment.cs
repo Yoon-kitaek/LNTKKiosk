@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Threading;
 
 
 namespace LNTKCustomer.Form
@@ -19,11 +18,30 @@ namespace LNTKCustomer.Form
         {
             InitializeComponent();
 
+            Delay(3000);
+            Close();
             EndPage form = new EndPage();
             form.Show();
+            
 
 
         }
+
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
+
 
 
     }

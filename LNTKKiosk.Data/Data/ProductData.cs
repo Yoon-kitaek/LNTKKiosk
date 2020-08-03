@@ -93,11 +93,6 @@ namespace LNTKKiosk.Data
             return;
         }
 
-        public List<Product> SearchByCategoryId(int categoryId)
-        {
-            var context = CreateContext();
-
-            return context.Products.Where(x => x.CodeCategoryId == categoryId).ToList();
-        }
+       
     }
 }

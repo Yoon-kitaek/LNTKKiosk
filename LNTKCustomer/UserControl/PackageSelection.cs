@@ -31,7 +31,6 @@ namespace LNTKCustomer.UserControl
             lbcSinglePrice.Text = price.ToString();
             lbcMiddleSetPrice.Text = (price + MiddleSizePrice).ToString();
             lbcLargeSetPrice.Text = (price + LargeSizePrice).ToString();
-
         
         }
 
