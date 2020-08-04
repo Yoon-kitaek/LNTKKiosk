@@ -30,8 +30,8 @@ namespace LNTKCustomer
             }
         }
         #endregion
-        public bool IsTakeOut { get; set; }
-        public int OrderId { get; set; }
+        public bool isTakeOut { get; set; }
+        public int orderId { get; set; }
         public List<ShoppedItem> shoppedItemList { get; set; }
         public List<Recipe> changedRecipe { get; set; }
     }
