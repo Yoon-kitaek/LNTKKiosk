@@ -16,15 +16,24 @@ namespace LNTKCustomer.UserControl
     public partial class CustomizationButton : DevExpress.XtraEditors.XtraUserControl
     {
         private int productId;
+        private List<Recipe> recipe=new List<Recipe>();
         public CustomizationButton()
         {
             InitializeComponent();
         }
 
+        public CustomizationButton(int productId, List<Recipe> recipe)
+        {
+            InitializeComponent();
+            this.productId = productId;
+            this.recipe = recipe;
+        }
+
+
         public void SetPicture(int productId)
         {
             pceBurgerPicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
-            this.productId = productId;
+        
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -38,49 +47,56 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBurgerCustomization_Click(object sender, EventArgs e)
         {
-            OnrecipeEdit(productId);
+            OnIngredientEdit(productId,recipe);
+            OpenIngredientCustomization(productId,recipe);
         }
 
-        #region recipeEdit event things for C# 3.0
-        public event EventHandler<recipeEditEventArgs> recipeEdit;
 
-        protected virtual void OnrecipeEdit(recipeEditEventArgs e)
+        private void OpenIngredientCustomization(int productId)
         {
-            if (recipeEdit != null)
-                recipeEdit(this, e);
+            IngredientThumbnail ingredientThumbnail = new IngredientThumbnail(productId,recipe);
+            ingredientThumbnail.Show();
         }
 
-        private recipeEditEventArgs OnrecipeEdit(int productId)
+        #region IngredientEdit event things for C# 3.0
+        public event EventHandler<IngredientEditEventArgs> IngredientEdit;
+
+        protected virtual void OnIngredientEdit(IngredientEditEventArgs e)
         {
-            recipeEditEventArgs args = new recipeEditEventArgs(productId);
-            OnrecipeEdit(args);
+            if (IngredientEdit != null)
+                IngredientEdit(this, e);
+        }
+
+        private IngredientEditEventArgs OnIngredientEdit(int productId)
+        {
+            IngredientEditEventArgs args = new IngredientEditEventArgs(productId);
+            OnIngredientEdit(args);
 
             return args;
         }
 
-        private recipeEditEventArgs OnrecipeEditForOut()
+        private IngredientEditEventArgs OnIngredientEditForOut()
         {
-            recipeEditEventArgs args = new recipeEditEventArgs();
-            OnrecipeEdit(args);
+            IngredientEditEventArgs args = new IngredientEditEventArgs();
+            OnIngredientEdit(args);
 
             return args;
         }
 
-        public class recipeEditEventArgs : EventArgs
+        public class IngredientEditEventArgs : EventArgs
         {
             public int ProductId { get; set; }
 
-            public recipeEditEventArgs()
+            public IngredientEditEventArgs()
             {
             }
 
-            public recipeEditEventArgs(int productId)
+            public IngredientEditEventArgs(int productId)
             {
                 ProductId = productId;
             }
         }
         #endregion
-
 
     }
 }

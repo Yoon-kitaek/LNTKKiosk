@@ -117,5 +117,7 @@ namespace LNTKCustomer.UserControl
             quantity--;
             lbcQuantity.Text = quantity.ToString();
         }
+
+
     }
 }

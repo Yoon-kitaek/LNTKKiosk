@@ -21,12 +21,14 @@ namespace LNTKCustomer.Form
         private List<Grocery> groceries = new List<Grocery>();
         private List<IngredientCustomization> thumbnails = new List<IngredientCustomization>();
         private List<Recipe> changedRecipe = new List<Recipe>();
-        int i, productId;
-        public IngredientThumbnail()
+        public int productId;
+        int i;
+
+        public IngredientThumbnail(int productId)
         {
             InitializeComponent();
+            this.productId = productId;
 
-            this.productId = 1;
             thumbnails.Add(uscIngredient1);
             thumbnails.Add(uscIngredient2);
             thumbnails.Add(uscIngredient3);
@@ -36,20 +38,18 @@ namespace LNTKCustomer.Form
             i = 0;
             pceLeft.Enabled = false;
             codeCategories = DataRepository.CodeCategory.GetAll();
-            List<string> ingredientOrder = new List<string> { "빵", "패티", "야채","토핑", "소스", "육류", "치즈" };
+            List<string> ingredientOrder = new List<string> { "빵", "패티", "야채", "토핑", "소스", "육류", "치즈" };
             foreach (string ingredientName in ingredientOrder)
             {
                 categoryNumber.Add(codeCategories.FirstOrDefault(x => x.Item.Equals(ingredientName)).CodeCategoryId);
             }
             SetThumbnail();
-           
-
-            //ingredientCustomization1.SetValues(1,7);
         }
+
 
         private void pceRight_Click(object sender, EventArgs e)
         {
-           
+
             if (i == 0)
             {
                 int j = 0;
@@ -63,7 +63,7 @@ namespace LNTKCustomer.Form
                 pceLeft.Enabled = true;
             }
 
-            for (int j = 0; j<groceries.Count();j++)
+            for (int j = 0; j < groceries.Count(); j++)
             {
                 Recipe recipe = thumbnails[j].SaveChange();
                 if (recipe == null)
@@ -88,13 +88,13 @@ namespace LNTKCustomer.Form
                 MessageBox.Show("버거 커스터마이징 끝");
                 //TODO 다음 페이지 열기
                 return;
-            } 
-            
+            }
+
             i++;
             SetThumbnail();
-               
-            
-               
+
+
+
         }
 
         private void pceLeft_Click(object sender, EventArgs e)
@@ -102,7 +102,7 @@ namespace LNTKCustomer.Form
 
             if (i == 0)
                 pceLeft.Enabled = false;
-             i--;           
+            i--;
             SetThumbnail();
         }
 
@@ -122,9 +122,9 @@ namespace LNTKCustomer.Form
             {
                 for (int j = groceries.Count; j < 4; j++)
                     thumbnails[j].Visible = false;
-            
+
             }
-        
+
         }
     }
 }

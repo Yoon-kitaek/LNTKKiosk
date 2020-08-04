@@ -17,9 +17,16 @@ namespace LNTKCustomer.UserControl
         bool isChecked;
         int quantity;
         Product product = new Product();
+        private int productId;
+
         public IngredientThumbnail()
         {
             InitializeComponent();
+        }
+
+        public IngredientThumbnail(int productId)
+        {
+            this.productId = productId;
         }
 
         public void SetValues(int productId, int groceryId)
