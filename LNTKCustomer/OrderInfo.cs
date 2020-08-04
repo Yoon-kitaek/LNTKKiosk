@@ -14,7 +14,9 @@ namespace LNTKCustomer
 
         #region singleton
         private OrderInfo()
-        { 
+        {
+            List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
+            List<Recipe> changedRecipe = new List<Recipe>();
         }
 
         private static OrderInfo _instance = null;
@@ -37,8 +39,8 @@ namespace LNTKCustomer
 
         public void Reset()
         {
-            shoppedItemList = null;
-            changedRecipe = null;
+            shoppedItemList.Clear();
+            changedRecipe.Clear();
         }
     }
 }
