@@ -84,7 +84,7 @@ namespace LNTKCustomer.Form
             if (i == categoryNumber.Count - 1)
             {
                 MessageBox.Show("버거 커스터마이징 끝");
-                
+                OrderInfo.Instance.changedRecipe.AddRange(changedRecipe);
                 Close();
                 return;
             } 

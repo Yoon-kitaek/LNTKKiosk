@@ -200,12 +200,6 @@
     <Compile Include="UserControl\PackageSelection.Designer.cs">
       <DependentUpon>PackageSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\QuantityChanged.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\QuantityChanged.Designer.cs">
-      <DependentUpon>QuantityChanged.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\Thumbnail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -280,9 +274,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\PackageSelection.resx">
       <DependentUpon>PackageSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\QuantityChanged.resx">
-      <DependentUpon>QuantityChanged.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Thumbnail.resx">
       <DependentUpon>Thumbnail.cs</DependentUpon>

@@ -42,6 +42,7 @@ namespace LNTKCustomer.Form
                 DataRepository.OrderDetail.Insert(orderDetail);
             }
             lbcOrderId.Text = orderId.ToString();
+            OrderInfo.Instance.Reset();
         }
     }
 }

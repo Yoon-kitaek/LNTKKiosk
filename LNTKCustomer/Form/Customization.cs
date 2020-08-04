@@ -25,16 +25,11 @@ namespace LNTKCustomer.Form
         const int FrenchFriesL = 20;
         const int ColaL = 21;
 
-
-
-        List<ShoppedItem> shoppingList = new List<ShoppedItem>();
-
         public Customization(string packageName, string package)
         {
             InitializeComponent();
             productName = packageName;
             this.package = package;
-
         }
 
         private void Customization_Load(object sender, EventArgs e)
@@ -72,7 +67,7 @@ namespace LNTKCustomer.Form
         {
             Product product = DataRepository.Product.GetByName(productName);
             ShoppedItem shoppedItem = new ShoppedItem(Name + package, product.ProductId, 1);
-            shoppingList.Add(shoppedItem);
+            OrderInfo.Instance.shoppedItemList.Add(shoppedItem);
 
             beverageId = 13;//for test
             SideId = 12;//for test
@@ -81,8 +76,8 @@ namespace LNTKCustomer.Form
             {
                 ShoppedItem beverage = new ShoppedItem(Name + package, beverageId, 1);
                 ShoppedItem side = new ShoppedItem(Name + package, SideId, 1);
-                shoppingList.Add(beverage);
-                shoppingList.Add(side);
+                OrderInfo.Instance.shoppedItemList.Add(beverage);
+                OrderInfo.Instance.shoppedItemList.Add(side);
             }
         }
 
@@ -90,7 +85,7 @@ namespace LNTKCustomer.Form
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            OrderInfo.Instance.shoppedItemList = shoppingList;
+            AddtoCart();
             Payment form = new Payment();
             form.Show();
         }
