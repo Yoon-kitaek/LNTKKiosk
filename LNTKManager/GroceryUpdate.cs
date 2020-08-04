@@ -28,6 +28,7 @@ namespace LNTKManager
             cbbCategoryId.SelectedItem = grocery.CodeCategoryId;
             txeUnit.Text = grocery.Unit.ToString();
             txeName.Text = grocery.Item;
+            txePrice.Text = grocery.Price.ToString();
             if (grocery.Picture != null)
                 pcbImage.Image = byteArrayToImage(grocery.Picture);
         }
@@ -65,6 +66,7 @@ namespace LNTKManager
         {
             _grocery.GroceryId = int.Parse(txeGroceryId.Text);
             _grocery.CodeCategoryId = (int?)cbbCategoryId.SelectedValue;
+            _grocery.Price = int.Parse(txePrice.Text);
             try
             {
                 _grocery.Unit = int.Parse(txeUnit.Text);
@@ -119,5 +121,6 @@ namespace LNTKManager
                 txePath.Text = file_Path.Split('\\')[file_Path.Split('\\').Length - 1];
             }
         }
+
     }
 }
