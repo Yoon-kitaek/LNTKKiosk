@@ -67,7 +67,7 @@ namespace LNTKCustomer.UserControl
         }
 
         public void SetQuantity(int quantity)
-        {
+        {//
             initialQuantity += quantity;
             this.quantity += quantity;
            
