@@ -89,13 +89,13 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(594, 264);
+            this.layoutControl1.Size = new System.Drawing.Size(594, 263);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(106, 222);
+            this.btnUpdate.Location = new System.Drawing.Point(106, 221);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(140, 30);
             this.btnUpdate.TabIndex = 8;
@@ -105,7 +105,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(250, 222);
+            this.btnClose.Location = new System.Drawing.Point(250, 221);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(140, 30);
             this.btnClose.TabIndex = 7;
@@ -174,7 +174,7 @@
             this.layoutControlItem4,
             this.layoutControlItem8});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(594, 264);
+            this.Root.Size = new System.Drawing.Size(594, 263);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -221,13 +221,13 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 143);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(382, 67);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(382, 66);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnClose;
-            this.layoutControlItem2.Location = new System.Drawing.Point(238, 210);
+            this.layoutControlItem2.Location = new System.Drawing.Point(238, 209);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -239,7 +239,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnUpdate;
-            this.layoutControlItem3.Location = new System.Drawing.Point(94, 210);
+            this.layoutControlItem3.Location = new System.Drawing.Point(94, 209);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem3.Name = "layoutControlItem3";
@@ -251,7 +251,7 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 210);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 209);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(94, 34);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -294,7 +294,7 @@
             // 
             this.pcbImage.Location = new System.Drawing.Point(394, 12);
             this.pcbImage.Name = "pcbImage";
-            this.pcbImage.Size = new System.Drawing.Size(188, 240);
+            this.pcbImage.Size = new System.Drawing.Size(188, 239);
             this.pcbImage.TabIndex = 12;
             this.pcbImage.TabStop = false;
             // 
@@ -303,7 +303,7 @@
             this.layoutControlItem8.Control = this.pcbImage;
             this.layoutControlItem8.Location = new System.Drawing.Point(382, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(192, 244);
+            this.layoutControlItem8.Size = new System.Drawing.Size(192, 243);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -315,7 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 264);
+            this.ClientSize = new System.Drawing.Size(594, 263);
             this.Controls.Add(this.layoutControl1);
             this.Name = "GroceryUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

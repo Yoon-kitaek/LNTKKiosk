@@ -84,21 +84,21 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(592, 263);
+            this.layoutControl1.Size = new System.Drawing.Size(594, 263);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // pcbImage
             // 
-            this.pcbImage.Location = new System.Drawing.Point(393, 12);
+            this.pcbImage.Location = new System.Drawing.Point(394, 12);
             this.pcbImage.Name = "pcbImage";
-            this.pcbImage.Size = new System.Drawing.Size(187, 239);
+            this.pcbImage.Size = new System.Drawing.Size(188, 239);
             this.pcbImage.TabIndex = 11;
             this.pcbImage.TabStop = false;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(263, 98);
+            this.btnSearch.Location = new System.Drawing.Point(264, 98);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(126, 25);
             this.btnSearch.TabIndex = 10;
@@ -110,12 +110,12 @@
             // 
             this.txePath.Location = new System.Drawing.Point(67, 98);
             this.txePath.Name = "txePath";
-            this.txePath.Size = new System.Drawing.Size(192, 25);
+            this.txePath.Size = new System.Drawing.Size(193, 25);
             this.txePath.TabIndex = 9;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(105, 221);
+            this.btnInsert.Location = new System.Drawing.Point(106, 221);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(140, 30);
             this.btnInsert.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(249, 221);
+            this.btnClose.Location = new System.Drawing.Point(250, 221);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(140, 30);
             this.btnClose.TabIndex = 7;
@@ -138,7 +138,7 @@
             this.txeName.Location = new System.Drawing.Point(67, 70);
             this.txeName.Margin = new System.Windows.Forms.Padding(4);
             this.txeName.Name = "txeName";
-            this.txeName.Size = new System.Drawing.Size(322, 24);
+            this.txeName.Size = new System.Drawing.Size(323, 24);
             this.txeName.StyleController = this.layoutControl1;
             this.txeName.TabIndex = 6;
             // 
@@ -147,7 +147,7 @@
             this.txeUnit.Location = new System.Drawing.Point(67, 42);
             this.txeUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txeUnit.Name = "txeUnit";
-            this.txeUnit.Size = new System.Drawing.Size(322, 24);
+            this.txeUnit.Size = new System.Drawing.Size(323, 24);
             this.txeUnit.StyleController = this.layoutControl1;
             this.txeUnit.TabIndex = 5;
             this.txeUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txeUnit_KeyPress);
@@ -160,7 +160,7 @@
             this.cbbCategoryId.FormattingEnabled = true;
             this.cbbCategoryId.Location = new System.Drawing.Point(67, 12);
             this.cbbCategoryId.Name = "cbbCategoryId";
-            this.cbbCategoryId.Size = new System.Drawing.Size(322, 23);
+            this.cbbCategoryId.Size = new System.Drawing.Size(323, 23);
             this.cbbCategoryId.TabIndex = 4;
             this.cbbCategoryId.ValueMember = "CodeCategoryId";
             // 
@@ -184,7 +184,7 @@
             this.layoutControlItem6,
             this.layoutControlItem7});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(592, 263);
+            this.Root.Size = new System.Drawing.Size(594, 263);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -192,7 +192,7 @@
             this.layoutControlItem1.Control = this.cbbCategoryId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(381, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(382, 30);
             this.layoutControlItem1.Text = "카테고리";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -201,7 +201,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 115);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(381, 94);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(382, 94);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -209,7 +209,7 @@
             this.layoutControlItem2.Control = this.txeUnit;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(381, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(382, 28);
             this.layoutControlItem2.Text = "단위";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -218,14 +218,14 @@
             this.layoutControlItem3.Control = this.txeName;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(381, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(382, 28);
             this.layoutControlItem3.Text = "식품명";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnClose;
-            this.layoutControlItem4.Location = new System.Drawing.Point(237, 209);
+            this.layoutControlItem4.Location = new System.Drawing.Point(238, 209);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -237,7 +237,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnInsert;
-            this.layoutControlItem5.Location = new System.Drawing.Point(93, 209);
+            this.layoutControlItem5.Location = new System.Drawing.Point(94, 209);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(144, 34);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -251,7 +251,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 209);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(93, 34);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(94, 34);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // 파일경로
@@ -259,13 +259,13 @@
             this.파일경로.Control = this.txePath;
             this.파일경로.Location = new System.Drawing.Point(0, 86);
             this.파일경로.Name = "파일경로";
-            this.파일경로.Size = new System.Drawing.Size(251, 29);
+            this.파일경로.Size = new System.Drawing.Size(252, 29);
             this.파일경로.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnSearch;
-            this.layoutControlItem6.Location = new System.Drawing.Point(251, 86);
+            this.layoutControlItem6.Location = new System.Drawing.Point(252, 86);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(130, 29);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -274,9 +274,9 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.pcbImage;
-            this.layoutControlItem7.Location = new System.Drawing.Point(381, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(382, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(191, 243);
+            this.layoutControlItem7.Size = new System.Drawing.Size(192, 243);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -288,7 +288,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 263);
+            this.ClientSize = new System.Drawing.Size(594, 263);
             this.Controls.Add(this.layoutControl1);
             this.Name = "GroceryInsert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
