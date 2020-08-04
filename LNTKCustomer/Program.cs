@@ -44,8 +44,8 @@ namespace LNTKCustomer
 
             //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
-            //Application.Run(new CustomerMenu());
-           Application.Run(new IngredientThumbnail());
+           Application.Run(new CustomerMenu());
+          // Application.Run(new IngredientThumbnail());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)

@@ -22,11 +22,12 @@ namespace LNTKCustomer.Form
         private List<IngredientCustomization> thumbnails = new List<IngredientCustomization>();
         private List<Recipe> changedRecipe = new List<Recipe>();
         int i, productId;
-        public IngredientThumbnail()
+        public IngredientThumbnail(int productId, List<Recipe> changedRecipe)
         {
             InitializeComponent();
 
-            this.productId = 1;
+            this.productId = productId;
+            this.changedRecipe = changedRecipe;
             thumbnails.Add(uscIngredient1);
             thumbnails.Add(uscIngredient2);
             thumbnails.Add(uscIngredient3);
@@ -42,9 +43,6 @@ namespace LNTKCustomer.Form
                 categoryNumber.Add(codeCategories.FirstOrDefault(x => x.Item.Equals(ingredientName)).CodeCategoryId);
             }
             SetThumbnail();
-           
-
-            //ingredientCustomization1.SetValues(1,7);
         }
 
         private void pceRight_Click(object sender, EventArgs e)
@@ -86,7 +84,8 @@ namespace LNTKCustomer.Form
             if (i == categoryNumber.Count - 1)
             {
                 MessageBox.Show("버거 커스터마이징 끝");
-                //TODO 다음 페이지 열기
+                
+                Close();
                 return;
             } 
             

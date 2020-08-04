@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
 using LNTKCustomer.Form;
+using System.Runtime.CompilerServices;
+using DevExpress.Utils.Extensions;
 
 namespace LNTKCustomer.UserControl
 {
@@ -77,6 +79,7 @@ namespace LNTKCustomer.UserControl
         private void pceSingle_Click(object sender, EventArgs e)
         {
             OnMenuClicked(lbcSingle.Text);
+            (SideOrBeverageCustomization)(this.Owner)
             OpenCustomizationMenu(Name,"");
         }
 
