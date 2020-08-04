@@ -36,19 +36,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -70,75 +71,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevKiller\ProcessKiller.cs" />
-    <Compile Include="Form\CardPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\CardPayment.cs" />
     <Compile Include="Form\CardPayment.Designer.cs">
       <DependentUpon>CardPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\CashPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\CashPayment.cs" />
     <Compile Include="Form\CashPayment.Designer.cs">
       <DependentUpon>CashPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\CustomerMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\CustomerMenu.cs" />
     <Compile Include="Form\CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Customization.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\Customization.cs" />
     <Compile Include="Form\Customization.Designer.cs">
       <DependentUpon>Customization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\EndPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\EndPage.cs" />
     <Compile Include="Form\EndPage.Designer.cs">
       <DependentUpon>EndPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Payment.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\Payment.cs" />
     <Compile Include="Form\Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\PlaceSelection.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\PlaceSelection.cs" />
     <Compile Include="Form\PlaceSelection.Designer.cs">
       <DependentUpon>PlaceSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ProductThumbnail.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\ProductThumbnail.cs" />
     <Compile Include="Form\ProductThumbnail.Designer.cs">
       <DependentUpon>ProductThumbnail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ShoppingCart.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\ShoppingCart.cs" />
     <Compile Include="Form\ShoppingCart.Designer.cs">
       <DependentUpon>ShoppingCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\SideOrBeverageCustomization.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\SideOrBeverageCustomization.cs" />
     <Compile Include="Form\SideOrBeverageCustomization.Designer.cs">
       <DependentUpon>SideOrBeverageCustomization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\SingleOrSet.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\SingleOrSet.cs" />
     <Compile Include="Form\SingleOrSet.Designer.cs">
       <DependentUpon>SingleOrSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\WaitScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form\WaitScreen.cs" />
     <Compile Include="Form\WaitScreen.Designer.cs">
       <DependentUpon>WaitScreen.cs</DependentUpon>
     </Compile>
@@ -149,45 +126,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\BeverageSelection.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControl\BeverageSelection.cs" />
     <Compile Include="UserControl\BeverageSelection.Designer.cs">
       <DependentUpon>BeverageSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\CustomizationButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControl\CustomizationButton.cs" />
     <Compile Include="UserControl\CustomizationButton.Designer.cs">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\SideSelection.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControl\SideSelection.cs" />
     <Compile Include="UserControl\SideSelection.Designer.cs">
       <DependentUpon>SideSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\PackageSelection.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControl\PackageSelection.cs" />
     <Compile Include="UserControl\PackageSelection.Designer.cs">
       <DependentUpon>PackageSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\QuantityChanged.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControl\QuantityChanged.cs" />
     <Compile Include="UserControl\QuantityChanged.Designer.cs">
       <DependentUpon>QuantityChanged.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\Thumbnail.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControl\Thumbnail.cs" />
     <Compile Include="UserControl\Thumbnail.Designer.cs">
       <DependentUpon>Thumbnail.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ThumbnailContainer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControl\ThumbnailContainer.cs" />
     <Compile Include="UserControl\ThumbnailContainer.Designer.cs">
       <DependentUpon>ThumbnailContainer.cs</DependentUpon>
     </Compile>
