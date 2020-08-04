@@ -24,7 +24,8 @@ namespace LNTKCustomer.Form
         public CustomerMenu()
         {
             InitializeComponent();
-            SetTestData();
+            shoppingList = OrderInfo.Instance.shoppedItemList;
+          //  SetTestData();
         }
 
         private void SetTestData()

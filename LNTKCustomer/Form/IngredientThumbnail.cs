@@ -22,13 +22,16 @@ namespace LNTKCustomer.Form
         private List<IngredientCustomization> thumbnails = new List<IngredientCustomization>();
         private List<Recipe> changedRecipe = new List<Recipe>();
         int i, productId;
-        public IngredientThumbnail(int productId, List<Recipe> changedRecipe)
+        public IngredientThumbnail(int productId)
         {
             InitializeComponent();
 
             this.productId = productId;
-            this.changedRecipe = changedRecipe;
-      
+            this.changedRecipe = OrderInfo.Instance.changedRecipe;
+            thumbnails.Add(uscIngredient1);
+            thumbnails.Add(uscIngredient2);
+            thumbnails.Add(uscIngredient3);
+            thumbnails.Add(uscIngredient4);
 
 
             i = 0;
@@ -100,14 +103,6 @@ namespace LNTKCustomer.Form
                 pceLeft.Enabled = false;
              i--;           
             SetThumbnail();
-        }
-
-        private void IngredientThumbnail_Load(object sender, EventArgs e)
-        {
-            thumbnails.Add(uscIngredient1);
-            thumbnails.Add(uscIngredient2);
-            thumbnails.Add(uscIngredient3);
-            thumbnails.Add(uscIngredient4);
         }
 
         private void SetThumbnail()

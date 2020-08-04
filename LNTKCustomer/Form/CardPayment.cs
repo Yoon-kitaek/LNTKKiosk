@@ -15,12 +15,9 @@ namespace LNTKCustomer.Form
 {
     public partial class CardPayment : DevExpress.XtraEditors.XtraForm
     {
-        List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
-        public CardPayment(List<ShoppedItem> shoppedItemList)
+        public CardPayment()
         {
             InitializeComponent();
-            this.shoppedItemList = shoppedItemList;
-
         }
 
         private void CardPayment_Load(object sender, EventArgs e)
@@ -30,7 +27,7 @@ namespace LNTKCustomer.Form
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            EndPage endPage = new EndPage(shoppedItemList);      
+            EndPage endPage = new EndPage();      
             endPage.Show(); 
             Close();  
         }
