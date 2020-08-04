@@ -20,6 +20,7 @@ namespace LNTKCustomer.Form
         private List<int> categoryNumber = new List<int>();
         private List<Grocery> groceries = new List<Grocery>();
         private List<IngredientCustomization> thumbnails = new List<IngredientCustomization>();
+        private List<Recipe> changedRecipe = new List<Recipe>();
         int i, productId;
         public IngredientThumbnail()
         {
@@ -61,6 +62,27 @@ namespace LNTKCustomer.Form
                 }
                 pceLeft.Enabled = true;
             }
+
+            for (int j = 0; j<groceries.Count();j++)
+            {
+                Recipe recipe = thumbnails[j].SaveChange();
+                if (recipe == null)
+                    continue;
+                else
+                {
+                    int index = changedRecipe.FindIndex(x => x.GroceryId == groceries[j].GroceryId);
+                    if (index != -1)
+                    {
+                        changedRecipe[index].Amount += recipe.Amount;
+                        if (changedRecipe[index].Amount == 0)
+                            changedRecipe.RemoveAt(index);
+                    }
+                    else
+                        changedRecipe.Add(recipe);
+                }
+
+            }
+
             if (i == categoryNumber.Count - 1)
             {
                 MessageBox.Show("버거 커스터마이징 끝");
@@ -92,6 +114,9 @@ namespace LNTKCustomer.Form
             {
                 thumbnails[j].Visible = true;
                 thumbnails[j].SetValues(productId, groceries[j].GroceryId);
+                int index = changedRecipe.FindIndex(x => x.GroceryId == groceries[j].GroceryId);
+                if (index != -1)
+                    thumbnails[j].SetQuantity(changedRecipe[index].Amount);
             }
             if (groceries.Count() < 4)
             {

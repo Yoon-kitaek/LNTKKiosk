@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
+using DevExpress.XtraScheduler.iCalendar.Components;
 
 namespace LNTKCustomer.UserControl
 {
@@ -16,6 +17,8 @@ namespace LNTKCustomer.UserControl
     {
         bool isChecked;
         public int quantity;
+        int initialQuantity;
+        int groceryId;
         Product product = new Product();
         public IngredientCustomization()
         {
@@ -30,12 +33,14 @@ namespace LNTKCustomer.UserControl
             //pceThumbnail.Image = grocery.Picture;
             lbcName.Text = grocery.Item;
             //lbcPrice.Text = grocery.Price;
+            this.groceryId = groceryId;
 
             Recipe recipe = recipes.FirstOrDefault(x => x.GroceryId == groceryId);
             if (recipe != null)
             {
                 isChecked = true;
                 quantity = recipe.Amount;
+                initialQuantity = recipe.Amount;
             }
 
             else
@@ -45,6 +50,34 @@ namespace LNTKCustomer.UserControl
             }
             SetCheckBoxImage();
             lbcQuantity.Text = quantity.ToString();
+        }
+
+        public Recipe SaveChange()
+        {
+            if (quantity == initialQuantity)
+                return null;
+            else 
+            {
+                Recipe recipe = new Recipe();
+                recipe.Amount = quantity-initialQuantity;
+                //recipe.ProductId = product.ProductId;
+                recipe.GroceryId = groceryId;
+                return recipe;
+            }
+        }
+
+        public void SetQuantity(int quantity)
+        {
+            initialQuantity += quantity;
+            this.quantity += quantity;
+           
+            if (this.quantity == 0)
+                isChecked = false;
+            else
+                isChecked = true;
+            SetCheckBoxImage();
+            lbcQuantity.Text = this.quantity.ToString();
+
         }
 
         private void pceCheckBox_Click(object sender, EventArgs e)
