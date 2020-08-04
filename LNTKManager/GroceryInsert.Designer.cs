@@ -98,11 +98,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(324, 98);
+            this.btnSearch.Location = new System.Drawing.Point(263, 98);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(65, 25);
+            this.btnSearch.Size = new System.Drawing.Size(126, 25);
             this.btnSearch.TabIndex = 10;
-            this.btnSearch.Text = "찾기(S)";
+            this.btnSearch.Text = "찾기(&S)";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -110,7 +110,7 @@
             // 
             this.txePath.Location = new System.Drawing.Point(67, 98);
             this.txePath.Name = "txePath";
-            this.txePath.Size = new System.Drawing.Size(253, 25);
+            this.txePath.Size = new System.Drawing.Size(192, 25);
             this.txePath.TabIndex = 9;
             // 
             // btnInsert
@@ -259,15 +259,15 @@
             this.파일경로.Control = this.txePath;
             this.파일경로.Location = new System.Drawing.Point(0, 86);
             this.파일경로.Name = "파일경로";
-            this.파일경로.Size = new System.Drawing.Size(312, 29);
+            this.파일경로.Size = new System.Drawing.Size(251, 29);
             this.파일경로.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnSearch;
-            this.layoutControlItem6.Location = new System.Drawing.Point(312, 86);
+            this.layoutControlItem6.Location = new System.Drawing.Point(251, 86);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(69, 29);
+            this.layoutControlItem6.Size = new System.Drawing.Size(130, 29);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 

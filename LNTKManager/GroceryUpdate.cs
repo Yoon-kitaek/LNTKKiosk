@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +28,37 @@ namespace LNTKManager
             cbbCategoryId.SelectedItem = grocery.CodeCategoryId;
             txeUnit.Text = grocery.Unit.ToString();
             txeName.Text = grocery.Item;
+            if (grocery.Picture != null)
+                pcbImage.Image = byteArrayToImage(grocery.Picture);
+        }
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
+        }
+
+        private byte[] ConvertImageToBinary(Image image)
+        {
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                if (ImageFormat.Jpeg.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Jpeg);
+                }
+                else if (ImageFormat.Png.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Png);
+                }
+                else if (ImageFormat.Gif.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Gif);
+                }
+                return memoryStream.ToArray();
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -42,6 +75,8 @@ namespace LNTKManager
             }
             _grocery.Item = txeName.Text;
 
+            if (pcbImage.Image != null)
+                _grocery.Picture = ConvertImageToBinary(pcbImage.Image);
             try
             {
                 DataRepository.Grocery.Update(_grocery);
@@ -69,6 +104,19 @@ namespace LNTKManager
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))    //숫자와 백스페이스를 제외한 나머지를 바로 처리
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            txePath.Text = "";
+            String file_Path = null;
+            openFileDialog1.InitialDirectory = "C:\\";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pcbImage.Image = Image.FromFile(openFileDialog1.FileName);
+                file_Path = openFileDialog1.FileName;
+                txePath.Text = file_Path.Split('\\')[file_Path.Split('\\').Length - 1];
             }
         }
     }
