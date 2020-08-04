@@ -32,23 +32,23 @@
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.lbcQuantity = new DevExpress.XtraEditors.LabelControl();
             this.pceCheckBox = new DevExpress.XtraEditors.PictureEdit();
-            this.uscThumbnail = new LNTKCustomer.UserControl.Thumbnail();
-            this.pceMinus = new DevExpress.XtraEditors.PictureEdit();
-            this.pcePlus = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.pceMinus = new DevExpress.XtraEditors.PictureEdit();
+            this.pcePlus = new DevExpress.XtraEditors.PictureEdit();
+            this.uscThumbnail = new LNTKCustomer.UserControl.Thumbnail();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceCheckBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceMinus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcePlus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceMinus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcePlus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tablePanel1
@@ -58,7 +58,6 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 90F)});
             this.tablePanel1.Controls.Add(this.tablePanel2);
             this.tablePanel1.Controls.Add(this.uscThumbnail);
-            this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel1.Location = new System.Drawing.Point(12, 12);
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
@@ -131,43 +130,6 @@
             this.pceCheckBox.Size = new System.Drawing.Size(67, 164);
             this.pceCheckBox.TabIndex = 0;
             // 
-            // uscThumbnail
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail, 1);
-            this.uscThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail.Label = "label";
-            this.uscThumbnail.Location = new System.Drawing.Point(82, 3);
-            this.uscThumbnail.Name = "uscThumbnail";
-            this.tablePanel1.SetRow(this.uscThumbnail, 0);
-            this.uscThumbnail.Size = new System.Drawing.Size(701, 851);
-            this.uscThumbnail.TabIndex = 1;
-            // 
-            // pceMinus
-            // 
-            this.tablePanel2.SetColumn(this.pceMinus, 0);
-            this.pceMinus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceMinus.EditValue = global::LNTKCustomer.Properties.Resources.Minus;
-            this.pceMinus.Location = new System.Drawing.Point(3, 683);
-            this.pceMinus.Name = "pceMinus";
-            this.pceMinus.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceMinus.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.tablePanel2.SetRow(this.pceMinus, 3);
-            this.pceMinus.Size = new System.Drawing.Size(67, 165);
-            this.pceMinus.TabIndex = 2;
-            // 
-            // pcePlus
-            // 
-            this.tablePanel2.SetColumn(this.pcePlus, 0);
-            this.pcePlus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcePlus.EditValue = global::LNTKCustomer.Properties.Resources.Plus;
-            this.pcePlus.Location = new System.Drawing.Point(3, 173);
-            this.pcePlus.Name = "pcePlus";
-            this.pcePlus.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pcePlus.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.tablePanel2.SetRow(this.pcePlus, 1);
-            this.pcePlus.Size = new System.Drawing.Size(67, 164);
-            this.pcePlus.TabIndex = 1;
-            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.tablePanel1);
@@ -198,6 +160,43 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // pceMinus
+            // 
+            this.tablePanel2.SetColumn(this.pceMinus, 0);
+            this.pceMinus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceMinus.EditValue = global::LNTKCustomer.Properties.Resources.Minus;
+            this.pceMinus.Location = new System.Drawing.Point(3, 683);
+            this.pceMinus.Name = "pceMinus";
+            this.pceMinus.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceMinus.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.tablePanel2.SetRow(this.pceMinus, 3);
+            this.pceMinus.Size = new System.Drawing.Size(67, 165);
+            this.pceMinus.TabIndex = 2;
+            // 
+            // pcePlus
+            // 
+            this.tablePanel2.SetColumn(this.pcePlus, 0);
+            this.pcePlus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcePlus.EditValue = global::LNTKCustomer.Properties.Resources.Plus;
+            this.pcePlus.Location = new System.Drawing.Point(3, 173);
+            this.pcePlus.Name = "pcePlus";
+            this.pcePlus.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pcePlus.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.tablePanel2.SetRow(this.pcePlus, 1);
+            this.pcePlus.Size = new System.Drawing.Size(67, 164);
+            this.pcePlus.TabIndex = 1;
+            // 
+            // uscThumbnail
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail, 1);
+            this.uscThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail.Label = "label";
+            this.uscThumbnail.Location = new System.Drawing.Point(82, 3);
+            this.uscThumbnail.Name = "uscThumbnail";
+            this.tablePanel1.SetRow(this.uscThumbnail, 0);
+            this.uscThumbnail.Size = new System.Drawing.Size(701, 851);
+            this.uscThumbnail.TabIndex = 1;
+            // 
             // IngredientThumbnail
             // 
             this.Controls.Add(this.layoutControl1);
@@ -208,12 +207,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pceCheckBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pceMinus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcePlus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceMinus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcePlus.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
