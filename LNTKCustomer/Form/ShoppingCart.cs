@@ -33,6 +33,7 @@ namespace LNTKCustomer.Form
                 shoppedPackage.productIds = shoppedItemList.Where(x => x.packageName.Equals(name)).Select(y => y.productId).Distinct().ToList();
                 shoppedPackageList.Add(shoppedPackage);
             }
+
         }
 
         private void ShoppingCart_Load(object sender, EventArgs e)

@@ -74,14 +74,19 @@ namespace LNTKCustomer.Form
 
         private void tbiCart_ItemClick(object sender, TileItemEventArgs e)
         {
-
-            ShoppingCart shoppingCart = new ShoppingCart();
-            shoppingCart.MdiParent = this;
-            shoppingCart.WindowState = FormWindowState.Maximized;
-      //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)
-            TileItemsClickable(false);
-            shoppingCart.Show();
-
+            if (OrderInfo.Instance.shoppedItemList != null)
+            {
+                ShoppingCart shoppingCart = new ShoppingCart();
+                shoppingCart.MdiParent = this;
+                shoppingCart.WindowState = FormWindowState.Maximized;
+                //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)
+                TileItemsClickable(false);
+                shoppingCart.Show();
+            }
+            else
+            {
+                MessageBox.Show("카트에 추가하신 상품이 없습니다.");
+            }
         }
 
 
