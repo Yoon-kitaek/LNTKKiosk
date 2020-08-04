@@ -23,7 +23,8 @@ namespace LNTKCustomer.Form
 
         private void btnCard_Click(object sender, EventArgs e)
         {
-            CardPayment cardPayment = new CardPayment(shoppedItemList);
+            OrderInfo.Instance.shoppedItemList = shoppedItemList;
+           // CardPayment cardPayment = new CardPayment(shoppedItemList);
             cardPayment.Show();
             Close();
         }

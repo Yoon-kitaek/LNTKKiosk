@@ -271,7 +271,6 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "IngredientThumbnail";
             this.Text = "IngredientThumbnail";
-            this.Load += new System.EventHandler(this.IngredientThumbnail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();

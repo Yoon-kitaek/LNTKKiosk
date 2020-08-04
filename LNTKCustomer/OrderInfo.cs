@@ -34,5 +34,7 @@ namespace LNTKCustomer
         public int orderId { get; set; }
         public List<ShoppedItem> shoppedItemList { get; set; }
         public List<Recipe> changedRecipe { get; set; }
+
+
     }
 }
