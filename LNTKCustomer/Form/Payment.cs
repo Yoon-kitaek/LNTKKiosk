@@ -14,17 +14,14 @@ namespace LNTKCustomer.Form
 {
     public partial class Payment : DevExpress.XtraEditors.XtraForm
     {
-        List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
-        public Payment(List<ShoppedItem> shoppedItemList)
+        public Payment()
         {
             InitializeComponent();
-            this.shoppedItemList = shoppedItemList;
         }
 
         private void btnCard_Click(object sender, EventArgs e)
         {
-            OrderInfo.Instance.shoppedItemList = shoppedItemList;
-           CardPayment cardPayment = new CardPayment(shoppedItemList);
+            CardPayment cardPayment = new CardPayment();
             cardPayment.Show();
             Close();
         }
@@ -39,7 +36,7 @@ namespace LNTKCustomer.Form
 
         private void btnCash_Click(object sender, EventArgs e)
         {
-            CashPayment cashPayment = new CashPayment(shoppedItemList);
+            CashPayment cashPayment = new CashPayment();
             cashPayment.Show();
             Close();
         }

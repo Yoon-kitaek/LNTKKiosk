@@ -14,12 +14,10 @@ namespace LNTKCustomer.Form
 {
     public partial class SingleOrSet : DevExpress.XtraEditors.XtraForm
     {
-        private List<ShoppedItem> shoppingList = new List<ShoppedItem>();
-        public SingleOrSet(string packageName, List<ShoppedItem> shoppingList)
+        public SingleOrSet(string packageName )
         {
             InitializeComponent();
             this.Text = packageName;
-            this.shoppingList = shoppingList;
             uscPackageSelection.Name = packageName;
             uscPackageSelection.SetPrice();
         }

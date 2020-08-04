@@ -17,10 +17,10 @@ namespace LNTKCustomer.Form
         private int orderId;
         List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
 
-        public EndPage(List<ShoppedItem> shoppedItemList)
+        public EndPage()
         {
             InitializeComponent();
-            this.shoppedItemList = shoppedItemList;
+            shoppedItemList = OrderInfo.Instance.shoppedItemList;
         }
         private void EndPage_Load(object sender, EventArgs e)
         {

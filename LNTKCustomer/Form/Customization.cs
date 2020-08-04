@@ -90,7 +90,8 @@ namespace LNTKCustomer.Form
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Payment form = new Payment(shoppingList);
+            OrderInfo.Instance.shoppedItemList = shoppingList;
+            Payment form = new Payment();
             form.Show();
         }
 

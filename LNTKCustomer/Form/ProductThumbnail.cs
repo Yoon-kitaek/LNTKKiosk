@@ -32,14 +32,8 @@ namespace LNTKCustomer.Form
         public ProductThumbnail()
         {
             InitializeComponent();
+            shoppingList = OrderInfo.Instance.shoppedItemList;
         }
-
-        public void GetShoppedItemList(List<ShoppedItem> shoppingList)
-        {
-            this.shoppingList = shoppingList;
-        }
-
-
 
         private void ProductThumbnail_Load(object sender, EventArgs e)
         {
@@ -96,7 +90,7 @@ namespace LNTKCustomer.Form
             Thumbnail thumbnail = sender as Thumbnail;
             if (thumbnail.Label.Contains("버거") == true)
             {
-                SingleOrSet form = new SingleOrSet(thumbnail.Label, shoppingList);
+                SingleOrSet form = new SingleOrSet(thumbnail.Label);
                 form.Show();
             }
             else
