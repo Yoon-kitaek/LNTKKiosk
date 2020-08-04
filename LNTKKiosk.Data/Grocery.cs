@@ -25,6 +25,8 @@ namespace LNTKKiosk.Data
         public Nullable<int> CodeCategoryId { get; set; }
         public int Unit { get; set; }
         public string Item { get; set; }
+        public byte[] Picture { get; set; }
+        public Nullable<int> Price { get; set; }
     
         public virtual CodeCategory CodeCategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

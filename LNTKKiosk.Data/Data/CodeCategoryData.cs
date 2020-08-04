@@ -26,5 +26,7 @@ namespace LNTKKiosk.Data
             return codeCategories;
         }
 
+     
+
     }
 }

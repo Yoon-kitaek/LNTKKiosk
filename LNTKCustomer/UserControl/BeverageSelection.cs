@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
 using System.IO;
+using LNTKCustomer.Form;
 
 namespace LNTKCustomer.UserControl
 {
     public partial class BeverageSelection : DevExpress.XtraEditors.XtraUserControl
     {
-        private int productId;
+        public const int categoryId= 11;
         public BeverageSelection()
         {
             InitializeComponent();
@@ -23,8 +24,8 @@ namespace LNTKCustomer.UserControl
         
         public void SetPicture(int productId)
         {
+            DataRepository.Product.FilterbyCatergory(categoryId);
             pceBeveragePicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
-            this.productId = productId;
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -38,7 +39,8 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBeverageCustomization_Click(object sender, EventArgs e)
         {
-            OnBeverageEdit(productId);
+            OnBeverageEdit(categoryId);
+            OpenSideOrBeverateCustomization(categoryId);
         }
 
         #region BeverageEdit event things for C# 3.0
@@ -50,9 +52,9 @@ namespace LNTKCustomer.UserControl
                 BeverageEdit(this, e);
         }
 
-        private BeverageEditEventArgs OnBeverageEdit(int productId)
+        private BeverageEditEventArgs OnBeverageEdit(int categoryId)
         {
-            BeverageEditEventArgs args = new BeverageEditEventArgs(productId);
+            BeverageEditEventArgs args = new BeverageEditEventArgs(categoryId);
             OnBeverageEdit(args);
 
             return args;
@@ -68,18 +70,23 @@ namespace LNTKCustomer.UserControl
 
         public class BeverageEditEventArgs : EventArgs
         {
-            public int ProductId { get; set; }
+            public int CategoryId { get; set; }
 
             public BeverageEditEventArgs()
             {
             }
 
-            public BeverageEditEventArgs(int productId)
+            public BeverageEditEventArgs(int categoryId)
             {
-                ProductId = productId;
+                CategoryId = categoryId;
             }
         }
         #endregion
 
+        private void OpenSideOrBeverateCustomization(int categoryId)
+        {
+            SideOrBeverageCustomization sideOrBeverageCustomization = new SideOrBeverageCustomization(categoryId);
+            sideOrBeverageCustomization.ShowDialog();
+        }
     }
 }

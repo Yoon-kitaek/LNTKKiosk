@@ -35,12 +35,12 @@
             this.tablePanel3 = new DevExpress.Utils.Layout.TablePanel();
             this.pceRightArrow = new DevExpress.XtraEditors.PictureEdit();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uscThumbnail4 = new LNTKCustomer.UserControl.Thumbnail();
             this.uscThumbnail3 = new LNTKCustomer.UserControl.Thumbnail();
             this.uscThumbnail2 = new LNTKCustomer.UserControl.Thumbnail();
             this.uscThumbnail1 = new LNTKCustomer.UserControl.Thumbnail();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
@@ -166,6 +166,25 @@
             this.tablePanel1.Size = new System.Drawing.Size(588, 679);
             this.tablePanel1.TabIndex = 4;
             // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(767, 709);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.tablePanel2;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(747, 689);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // uscThumbnail4
             // 
             this.tablePanel1.SetColumn(this.uscThumbnail4, 1);
@@ -209,25 +228,7 @@
             this.tablePanel1.SetRow(this.uscThumbnail1, 0);
             this.uscThumbnail1.Size = new System.Drawing.Size(288, 334);
             this.uscThumbnail1.TabIndex = 0;
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(767, 709);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.tablePanel2;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(747, 689);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
+            this.uscThumbnail1.Click += new System.EventHandler(this.uscThumbnail1_Click);
             // 
             // ThumbnailContainer
             // 
