@@ -44,7 +44,6 @@ namespace LNTKCustomer.Form
         private void CustomerMenu_Load(object sender, EventArgs e)
         {           
             SetTestData();//실험용
-            form.GetShoppedItemList(shoppingList);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -76,7 +75,7 @@ namespace LNTKCustomer.Form
         private void tbiCart_ItemClick(object sender, TileItemEventArgs e)
         {
 
-            ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
+            ShoppingCart shoppingCart = new ShoppingCart();
             shoppingCart.MdiParent = this;
             shoppingCart.WindowState = FormWindowState.Maximized;
       //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)

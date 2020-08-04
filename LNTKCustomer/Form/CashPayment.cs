@@ -14,11 +14,9 @@ namespace LNTKCustomer.Form
 {
     public partial class CashPayment : DevExpress.XtraEditors.XtraForm
     {
-        List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
-        public CashPayment(List<ShoppedItem> shoppedItemList )
+        public CashPayment( )
         {
             InitializeComponent();
-            this.shoppedItemList = shoppedItemList;
         }
     }
 }

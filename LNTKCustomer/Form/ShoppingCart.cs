@@ -20,10 +20,10 @@ namespace LNTKCustomer.Form
         List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
         private List<ShoppedPackage> shoppedPackageList = new List<ShoppedPackage>();
 
-        public ShoppingCart(List<ShoppedItem> shoppedItems)
+        public ShoppingCart()
         {
             InitializeComponent();
-            this.shoppedItemList = shoppedItems;
+            shoppedItemList = OrderInfo.Instance.shoppedItemList;
             productBindingSource.DataSource = this.shoppedItemList;
 
             foreach (string name in shoppedItemList.Select(x => x.packageName).Distinct())
@@ -52,7 +52,7 @@ namespace LNTKCustomer.Form
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Payment form = new Payment(shoppedItemList);
+            Payment form = new Payment();
 
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -66,7 +66,7 @@ namespace LNTKCustomer.Form
 
         private void sbtPay_Click(object sender, EventArgs e)
         {
-            Payment payment = new Payment(shoppedItemList);
+            Payment payment = new Payment();
             payment.Show();
             Close();
         }
