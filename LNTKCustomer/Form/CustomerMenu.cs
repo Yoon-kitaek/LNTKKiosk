@@ -52,15 +52,10 @@ namespace LNTKCustomer.Form
             tileItems.Add(tbiSide);
             tileItems.Add(tbiCart);
         }
-        private void EnableTileItems()
+        public void TileItemsClickable(bool clickable)
         {
             foreach (TileItem tileItem in tileItems)
-                tileItem.Enabled = true;
-        }
-        private void DisableTileItems()
-        {
-            foreach (TileItem tileItem in tileItems)
-                tileItem.Enabled = false;
+                tileItem.Enabled = clickable;
         }
         private void tbiBurger_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
@@ -83,8 +78,17 @@ namespace LNTKCustomer.Form
             ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
             shoppingCart.MdiParent = this;
             shoppingCart.WindowState = FormWindowState.Maximized;
+      //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)
+            TileItemsClickable(false);
             shoppingCart.Show();
-            DisableTileItems();
+
+        }
+
+
+        private void ShoppingCartClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        
         }
     }
 }

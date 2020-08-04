@@ -155,5 +155,51 @@ namespace LNTKCustomer.UserControl
         {
             OnArrowClicked(true);
         }
+
+
+        #region SideOrBeverageEdit event things for C# 3.0
+        public event EventHandler<SideOrBeverageEditEventArgs> SideOrBeverageEdit;
+
+        protected virtual void OnSideOrBeverageEdit(SideOrBeverageEditEventArgs e)
+        {
+            if (SideOrBeverageEdit != null)
+                SideOrBeverageEdit(this, e);
+        }
+
+        private SideOrBeverageEditEventArgs OnSideOrBeverageEdit(int categoryId)
+        {
+            SideOrBeverageEditEventArgs args = new SideOrBeverageEditEventArgs(categoryId);
+            OnSideOrBeverageEdit(args);
+
+            return args;
+        }
+
+        private SideOrBeverageEditEventArgs OnSideOrBeverageEditForOut()
+        {
+            SideOrBeverageEditEventArgs args = new SideOrBeverageEditEventArgs();
+            OnSideOrBeverageEdit(args);
+
+            return args;
+        }
+
+        public class SideOrBeverageEditEventArgs : EventArgs
+        {
+            public int CategoryId { get; set; }
+
+            public SideOrBeverageEditEventArgs()
+            {
+            }
+
+            public SideOrBeverageEditEventArgs(int categoryId)
+            {
+                CategoryId = categoryId;
+            }
+        }
+        #endregion
+
+        private void uscThumbnail1_Click(object sender, EventArgs e)
+        {
+            //OnSideOrBeverageEdit()
+        }
     }
 }

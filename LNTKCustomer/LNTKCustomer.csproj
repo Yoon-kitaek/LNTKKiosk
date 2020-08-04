@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,6 +50,7 @@
     <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -100,6 +102,12 @@
     <Compile Include="Form\EndPage.Designer.cs">
       <DependentUpon>EndPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\IngredientThumbnail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\IngredientThumbnail.Designer.cs">
+      <DependentUpon>IngredientThumbnail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Payment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +150,12 @@
     <Compile Include="Form\WaitScreen.Designer.cs">
       <DependentUpon>WaitScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\XtraForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\XtraForm2.Designer.cs">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -160,6 +174,18 @@
     </Compile>
     <Compile Include="UserControl\CustomizationButton.Designer.cs">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\IngredientCustomization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\IngredientCustomization.Designer.cs">
+      <DependentUpon>IngredientCustomization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\IngredientThumbnail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\IngredientThumbnail.Designer.cs">
+      <DependentUpon>IngredientThumbnail.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\SideSelection.cs">
       <SubType>UserControl</SubType>
@@ -203,6 +229,9 @@
     <EmbeddedResource Include="Form\EndPage.resx">
       <DependentUpon>EndPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\IngredientThumbnail.resx">
+      <DependentUpon>IngredientThumbnail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +250,9 @@
     <EmbeddedResource Include="Form\SingleOrSet.resx">
       <DependentUpon>SingleOrSet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\XtraForm2.resx">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -235,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\CustomizationButton.resx">
       <DependentUpon>CustomizationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\IngredientCustomization.resx">
+      <DependentUpon>IngredientCustomization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\IngredientThumbnail.resx">
+      <DependentUpon>IngredientThumbnail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SideSelection.resx">
       <DependentUpon>SideSelection.cs</DependentUpon>
@@ -362,6 +400,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconfinder_b4-03_1380567 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Uncheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\피클.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\베이컨.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\계란후라이.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\스트링치즈.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\타르타르소스.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\토마토케첩.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\블랙올리브.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\머스타드소스.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\참깨방.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\체다치즈.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\양파.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\양상추.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\할라피뇨.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\963513_20170616175437_922_0001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\통밀빵.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\토마토 슬라이스.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

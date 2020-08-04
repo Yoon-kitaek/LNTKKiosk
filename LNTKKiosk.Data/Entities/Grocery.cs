@@ -10,5 +10,6 @@ namespace LNTKKiosk.Data
     {
         public string CategoryName { get; set; }
 
+
     }
 }

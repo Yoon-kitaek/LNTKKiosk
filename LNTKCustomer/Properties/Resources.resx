@@ -238,4 +238,64 @@
   <data name="_1590473693572" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1590473693572.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Uncheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Uncheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_963513_20170616175437_922_0001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\963513_20170616175437_922_0001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="계란후라이" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\계란후라이.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="머스타드소스" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\머스타드소스.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="베이컨" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\베이컨.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="블랙올리브" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\블랙올리브.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="스트링치즈" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\스트링치즈.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="양상추" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\양상추.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="양파" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\양파.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="참깨방" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\참깨방.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="체다치즈" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\체다치즈.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="타르타르소스" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\타르타르소스.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="토마토_슬라이스" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\토마토 슬라이스.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="토마토케첩" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\토마토케첩.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="통밀빵" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\통밀빵.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="피클" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\피클.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="할라피뇨" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\할라피뇨.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

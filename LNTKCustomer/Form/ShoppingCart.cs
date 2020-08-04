@@ -56,6 +56,7 @@ namespace LNTKCustomer.Form
 
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+            Close();
         }
 
         private void grcShoppedItemList_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace LNTKCustomer.Form
         private void sbtPay_Click(object sender, EventArgs e)
         {
             Payment payment = new Payment(shoppedItemList);
-            payment.ShowDialog();
+            payment.Show();
             Close();
         }
 
