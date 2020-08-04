@@ -31,20 +31,20 @@
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.lbcQuantity = new DevExpress.XtraEditors.LabelControl();
-            this.pceCheckBox = new DevExpress.XtraEditors.PictureEdit();
-            this.uscThumbnail = new LNTKCustomer.UserControl.Thumbnail();
             this.pceMinus = new DevExpress.XtraEditors.PictureEdit();
             this.pcePlus = new DevExpress.XtraEditors.PictureEdit();
+            this.pceCheckBox = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.uscThumbnail = new LNTKCustomer.UserControl.Thumbnail();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pceCheckBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceMinus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcePlus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceCheckBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -58,7 +58,6 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 90F)});
             this.tablePanel1.Controls.Add(this.tablePanel2);
             this.tablePanel1.Controls.Add(this.uscThumbnail);
-            this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel1.Location = new System.Drawing.Point(12, 12);
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
@@ -119,29 +118,6 @@
             this.lbcQuantity.TabIndex = 3;
             this.lbcQuantity.Text = "수량";
             // 
-            // pceCheckBox
-            // 
-            this.tablePanel2.SetColumn(this.pceCheckBox, 0);
-            this.pceCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceCheckBox.Location = new System.Drawing.Point(3, 3);
-            this.pceCheckBox.Name = "pceCheckBox";
-            this.pceCheckBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceCheckBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel2.SetRow(this.pceCheckBox, 0);
-            this.pceCheckBox.Size = new System.Drawing.Size(67, 164);
-            this.pceCheckBox.TabIndex = 0;
-            // 
-            // uscThumbnail
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail, 1);
-            this.uscThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail.Label = "label";
-            this.uscThumbnail.Location = new System.Drawing.Point(82, 3);
-            this.uscThumbnail.Name = "uscThumbnail";
-            this.tablePanel1.SetRow(this.uscThumbnail, 0);
-            this.uscThumbnail.Size = new System.Drawing.Size(701, 851);
-            this.uscThumbnail.TabIndex = 1;
-            // 
             // pceMinus
             // 
             this.tablePanel2.SetColumn(this.pceMinus, 0);
@@ -167,6 +143,18 @@
             this.tablePanel2.SetRow(this.pcePlus, 1);
             this.pcePlus.Size = new System.Drawing.Size(67, 164);
             this.pcePlus.TabIndex = 1;
+            // 
+            // pceCheckBox
+            // 
+            this.tablePanel2.SetColumn(this.pceCheckBox, 0);
+            this.pceCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceCheckBox.Location = new System.Drawing.Point(3, 3);
+            this.pceCheckBox.Name = "pceCheckBox";
+            this.pceCheckBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceCheckBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel2.SetRow(this.pceCheckBox, 0);
+            this.pceCheckBox.Size = new System.Drawing.Size(67, 164);
+            this.pceCheckBox.TabIndex = 0;
             // 
             // layoutControl1
             // 
@@ -198,6 +186,17 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // uscThumbnail
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail, 1);
+            this.uscThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail.Label = "label";
+            this.uscThumbnail.Location = new System.Drawing.Point(82, 3);
+            this.uscThumbnail.Name = "uscThumbnail";
+            this.tablePanel1.SetRow(this.uscThumbnail, 0);
+            this.uscThumbnail.Size = new System.Drawing.Size(701, 851);
+            this.uscThumbnail.TabIndex = 1;
+            // 
             // IngredientThumbnail
             // 
             this.Controls.Add(this.layoutControl1);
@@ -207,9 +206,9 @@
             this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pceCheckBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceMinus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcePlus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceCheckBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
