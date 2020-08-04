@@ -20,6 +20,7 @@ namespace LNTKCustomer.Form
         List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
         private List<ShoppedPackage> shoppedPackageList = new List<ShoppedPackage>();
 
+
         public ShoppingCart()
         {
             InitializeComponent();

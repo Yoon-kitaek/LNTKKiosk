@@ -25,6 +25,7 @@ namespace LNTKCustomer.Form
         const int FrenchFriesL = 20;
         const int ColaL = 21;
 
+
         public Customization(string packageName, string package)
         {
             InitializeComponent();
@@ -66,7 +67,7 @@ namespace LNTKCustomer.Form
         private void AddtoCart()
         {
             Product product = DataRepository.Product.GetByName(productName);
-            ShoppedItem shoppedItem = new ShoppedItem(Name + package, product.ProductId, 1);
+            ShoppedItem shoppedItem = new ShoppedItem(productName + package, product.ProductId, 1);
             OrderInfo.Instance.shoppedItemList.Add(shoppedItem);
 
             beverageId = 13;//for test
@@ -74,8 +75,8 @@ namespace LNTKCustomer.Form
 
             if (package.Equals("") != true)
             {
-                ShoppedItem beverage = new ShoppedItem(Name + package, beverageId, 1);
-                ShoppedItem side = new ShoppedItem(Name + package, SideId, 1);
+                ShoppedItem beverage = new ShoppedItem(productName + package, beverageId, 1);
+                ShoppedItem side = new ShoppedItem(productName + package, SideId, 1);
                 OrderInfo.Instance.shoppedItemList.Add(beverage);
                 OrderInfo.Instance.shoppedItemList.Add(side);
             }
@@ -93,6 +94,7 @@ namespace LNTKCustomer.Form
         private void btnPutInCart_Click(object sender, EventArgs e)
         {
             AddtoCart();
+            Close();
         }
 
         private void btnPay_Click(object sender, EventArgs e)

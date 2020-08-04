@@ -215,6 +215,9 @@
     <EmbeddedResource Include="Form\CardPayment.resx">
       <DependentUpon>CardPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\CashPayment.resx">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>

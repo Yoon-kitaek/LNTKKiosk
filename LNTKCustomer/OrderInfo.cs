@@ -15,8 +15,8 @@ namespace LNTKCustomer
         #region singleton
         private OrderInfo()
         {
-            List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
-            List<Recipe> changedRecipe = new List<Recipe>();
+            shoppedItemList = new List<ShoppedItem>();
+            changedRecipe = new List<Recipe>();
         }
 
         private static OrderInfo _instance = null;
@@ -34,8 +34,8 @@ namespace LNTKCustomer
         #endregion
         public bool isTakeOut { get; set; }
     //    public int orderId { get; set; }
-        public List<ShoppedItem> shoppedItemList { get; set; }
-        public List<Recipe> changedRecipe { get; set; }
+        public List<ShoppedItem> shoppedItemList { get; set; } 
+        public List<Recipe> changedRecipe { get; set; } 
 
         public void Reset()
         {
