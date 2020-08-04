@@ -16,17 +16,17 @@ namespace LNTKCustomer.UserControl
     public partial class CustomizationButton : DevExpress.XtraEditors.XtraUserControl
     {
         private int productId;
-        private List<Recipe> recipe=new List<Recipe>();
+        private List<Recipe> changedRecipe = new List<Recipe>();
         public CustomizationButton()
         {
             InitializeComponent();
         }
 
-        public CustomizationButton(int productId, List<Recipe> recipe)
+        public CustomizationButton(int productId, List<Recipe> changedRecipe)
         {
             InitializeComponent();
             this.productId = productId;
-            this.recipe = recipe;
+            this.changedRecipe = changedRecipe;
         }
 
 
@@ -35,6 +35,8 @@ namespace LNTKCustomer.UserControl
             pceBurgerPicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);
         
         }
+
+
 
         public Image byteArrayToImage(byte[] bytesArr)
         {
@@ -47,14 +49,14 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBurgerCustomization_Click(object sender, EventArgs e)
         {
-            OnIngredientEdit(productId,recipe);
-            OpenIngredientCustomization(productId,recipe);
+            OnIngredientEdit(productId, changedRecipe);
+            OpenIngredientCustomization(productId, changedRecipe);
         }
 
 
-        private void OpenIngredientCustomization(int productId)
+        private void OpenIngredientCustomization(int productId, List<Recipe> changedRecipe)
         {
-            IngredientThumbnail ingredientThumbnail = new IngredientThumbnail(productId,recipe);
+            IngredientThumbnail ingredientThumbnail = new IngredientThumbnail(productId, changedRecipe);
             ingredientThumbnail.Show();
         }
 
@@ -67,9 +69,9 @@ namespace LNTKCustomer.UserControl
                 IngredientEdit(this, e);
         }
 
-        private IngredientEditEventArgs OnIngredientEdit(int productId)
+        private IngredientEditEventArgs OnIngredientEdit(int productId, List<Recipe> changedRecipe)
         {
-            IngredientEditEventArgs args = new IngredientEditEventArgs(productId);
+            IngredientEditEventArgs args = new IngredientEditEventArgs(productId, changedRecipe);
             OnIngredientEdit(args);
 
             return args;
@@ -86,17 +88,27 @@ namespace LNTKCustomer.UserControl
         public class IngredientEditEventArgs : EventArgs
         {
             public int ProductId { get; set; }
+            public List<Recipe> ChangedRecipe { get; set; }
 
             public IngredientEditEventArgs()
             {
             }
 
-            public IngredientEditEventArgs(int productId)
+            public IngredientEditEventArgs(int productId, List<Recipe> changedRecipe)
             {
                 ProductId = productId;
+                ChangedRecipe = changedRecipe;
             }
         }
         #endregion
+
+
+
+
+
+
+
+
 
     }
 }

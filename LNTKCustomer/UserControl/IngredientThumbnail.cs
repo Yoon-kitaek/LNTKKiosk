@@ -19,6 +19,7 @@ namespace LNTKCustomer.UserControl
         int quantity;
         Product product = new Product();
         private int productId;
+        private List<Recipe> changedRecipe;
 
         public IngredientThumbnail()
         {
@@ -28,6 +29,11 @@ namespace LNTKCustomer.UserControl
         public IngredientThumbnail(int productId)
         {
             this.productId = productId;
+        }
+
+        public IngredientThumbnail(int productId, List<Recipe> changedRecipe) : this(productId)
+        {
+            this.changedRecipe = changedRecipe;
         }
 
         public void SetValues(int productId, int groceryId)

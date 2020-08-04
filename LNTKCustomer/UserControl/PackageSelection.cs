@@ -79,7 +79,7 @@ namespace LNTKCustomer.UserControl
         private void pceSingle_Click(object sender, EventArgs e)
         {
             OnMenuClicked(lbcSingle.Text);
-            (SideOrBeverageCustomization)(this.Owner)
+           // (SideOrBeverageCustomization)(this.Owner);
             OpenCustomizationMenu(Name,"");
         }
 
