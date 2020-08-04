@@ -38,6 +38,8 @@
           <Property Name="CodeCategoryId" Type="int" />
           <Property Name="Unit" Type="int" Nullable="false" />
           <Property Name="Item" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture" Type="varbinary(max)" />
+          <Property Name="Price" Type="int" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -384,6 +386,8 @@
           <NavigationProperty Name="CodeCategory" Relationship="LNTKModel.FK_Grocery_CodeCategory" FromRole="Grocery" ToRole="CodeCategory" />
           <NavigationProperty Name="Recipes" Relationship="LNTKModel.FK_Recipe_Grocery" FromRole="Grocery" ToRole="Recipe" />
           <NavigationProperty Name="Stocks" Relationship="LNTKModel.FK_Stock_Grocery" FromRole="Grocery" ToRole="Stock" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Price" Type="Int32" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -623,6 +627,8 @@
           <EntitySetMapping Name="Groceries">
             <EntityTypeMapping TypeName="LNTKModel.Grocery">
               <MappingFragment StoreEntitySet="Grocery">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
                 <ScalarProperty Name="Item" ColumnName="Item" />
                 <ScalarProperty Name="Unit" ColumnName="Unit" />
                 <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
