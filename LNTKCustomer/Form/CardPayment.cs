@@ -28,8 +28,9 @@ namespace LNTKCustomer.Form
         private void btnPay_Click(object sender, EventArgs e)
         {
             EndPage endPage = new EndPage();      
-            endPage.Show(); 
+             
             Close();  
+            endPage.Show();
         }
     }
 }

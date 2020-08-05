@@ -52,15 +52,6 @@ namespace LNTKCustomer.Form
 
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Payment form = new Payment();
-
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
-            Close();
-        }
-
         private void grcShoppedItemList_Click(object sender, EventArgs e)
         {
 
