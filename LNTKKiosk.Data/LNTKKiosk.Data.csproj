@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangedRecipe.cs">
+      <DependentUpon>LNTK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="CodeCategory.cs">
       <DependentUpon>LNTK.tt</DependentUpon>
