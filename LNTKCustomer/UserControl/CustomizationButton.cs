@@ -21,6 +21,12 @@ namespace LNTKCustomer.UserControl
             InitializeComponent();
         }
 
+        public CustomizationButton(int productId)
+        {
+            InitializeComponent();
+            this.productId = productId;
+        }
+
         public void SetPicture(int productId)
         {
             pceBurgerPicture.Image = byteArrayToImage(DataRepository.Product.Get(productId).Picture);

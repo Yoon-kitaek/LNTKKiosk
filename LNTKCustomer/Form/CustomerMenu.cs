@@ -59,16 +59,19 @@ namespace LNTKCustomer.Form
         }
         private void tbiBurger_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
+            form.page = 0;          
             form.SetCategoryId(10);
         }
 
         private void tbiBeverage_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
-        {
+        {            
+            form.page = 0;
             form.SetCategoryId(11);
         }
 
         private void tbiSide_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
+            form.page = 0;
             form.SetCategoryId(12);
         }
 

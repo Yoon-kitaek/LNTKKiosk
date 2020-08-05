@@ -18,7 +18,7 @@ namespace LNTKCustomer.UserControl
         private List<ShoppedPackage> shoppedPackageList = new List<ShoppedPackage>();
         private List<Thumbnail> thumbnails = new List<Thumbnail>();
         private const int thumbnailCount = 4;
-        private int j = 0;
+        private int page = 0;
         public int categoryId { get; set; }
         private bool isShoppingCart = false;
 
@@ -52,14 +52,14 @@ namespace LNTKCustomer.UserControl
                 List<Product> products = DataRepository.Product.FilterbyCatergory(categoryId);
                 for (int i = 0; i < thumbnailCount; i++)
                 {
-                    if (i + j * thumbnailCount >= products.Count)
+                    if (i + page * thumbnailCount >= products.Count)
                     {
                         thumbnails[i].Visible = false;
                     }
                     else
                     {
                         thumbnails[i].Visible = true;
-                        thumbnails[i].SetValues(products[i + j * thumbnailCount].Name);
+                        thumbnails[i].SetValues(products[i + page * thumbnailCount].Name);
                     }
                 }
             }
@@ -67,14 +67,14 @@ namespace LNTKCustomer.UserControl
             {
                 for (int i = 0; i < thumbnailCount; i++)
                 {
-                    if (i >= shoppedPackageList[j].productIds.Count)
+                    if (i >= shoppedPackageList[page].productIds.Count)
                     {
                         thumbnails[i].Visible = false;
                     }
                     else
                     {
                         thumbnails[i].Visible = true;
-                        thumbnails[i].SetValues(DataRepository.Product.Get(shoppedPackageList[j].productIds[i]).Name);
+                        thumbnails[i].SetValues(DataRepository.Product.Get(shoppedPackageList[page].productIds[i]).Name);
                     }
                 }
             }
@@ -102,18 +102,18 @@ namespace LNTKCustomer.UserControl
 
             if (isRight == true)
             {
-                if (j == lastPage)
-                    j = 0;
+                if (page == lastPage)
+                    page = 0;
                 else
-                    j++;
+                    page++;
 
             }
             else
             {
-                if (j == 0)
-                    j = lastPage;
+                if (page == 0)
+                    page = lastPage;
                 else
-                    j--;
+                    page--;
             }
             BindingThumbnail();
             //if (isShoppingCart == true)
