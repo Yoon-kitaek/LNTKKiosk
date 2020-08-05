@@ -38,6 +38,7 @@ namespace LNTKCustomer.Form
                 return;
             int productId = DataRepository.Product.GetByName(productName).ProductId;
             uscBurgerCustomization.SetPicture(productId);
+            uscBurgerCustomization.productId = productId;
 
             if (package.Equals("") == true)
             {
@@ -93,6 +94,7 @@ namespace LNTKCustomer.Form
         private void btnPutInCart_Click(object sender, EventArgs e)
         {
             AddtoCart();
+            Close();
         }
 
         private void btnPay_Click(object sender, EventArgs e)

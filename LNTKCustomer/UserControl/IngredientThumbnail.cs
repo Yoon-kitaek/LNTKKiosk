@@ -31,11 +31,6 @@ namespace LNTKCustomer.UserControl
             this.productId = productId;
         }
 
-        public IngredientThumbnail(int productId, List<Recipe> changedRecipe) : this(productId)
-        {
-            this.changedRecipe = changedRecipe;
-        }
-
         public void SetValues(int productId, int groceryId)
         {
             product = DataRepository.Product.Get(productId);

@@ -15,20 +15,11 @@ namespace LNTKCustomer.UserControl
 {
     public partial class CustomizationButton : DevExpress.XtraEditors.XtraUserControl
     {
-        private int productId;
-        private List<Recipe> changedRecipe = new List<Recipe>();
+        public int productId { get; set; }
         public CustomizationButton()
         {
             InitializeComponent();
         }
-
-        public CustomizationButton(int productId, List<Recipe> changedRecipe)
-        {
-            InitializeComponent();
-            this.productId = productId;
-            this.changedRecipe = changedRecipe;
-        }
-
 
         public void SetPicture(int productId)
         {
@@ -49,14 +40,14 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBurgerCustomization_Click(object sender, EventArgs e)
         {
-            OnIngredientEdit(productId, changedRecipe);
-            OpenIngredientCustomization(productId, changedRecipe);
+            OnIngredientEdit(productId);
+            OpenIngredientCustomization(productId);
         }
 
 
-        private void OpenIngredientCustomization(int productId, List<Recipe> changedRecipe)
+        private void OpenIngredientCustomization(int productId)
         {
-            IngredientThumbnail ingredientThumbnail = new IngredientThumbnail(productId, changedRecipe);
+            IngredientThumbnail ingredientThumbnail = new IngredientThumbnail(productId);
             ingredientThumbnail.Show();
         }
 
@@ -69,9 +60,9 @@ namespace LNTKCustomer.UserControl
                 IngredientEdit(this, e);
         }
 
-        private IngredientEditEventArgs OnIngredientEdit(int productId, List<Recipe> changedRecipe)
+        private IngredientEditEventArgs OnIngredientEdit(int productId)
         {
-            IngredientEditEventArgs args = new IngredientEditEventArgs(productId, changedRecipe);
+            IngredientEditEventArgs args = new IngredientEditEventArgs(productId);
             OnIngredientEdit(args);
 
             return args;
@@ -88,20 +79,17 @@ namespace LNTKCustomer.UserControl
         public class IngredientEditEventArgs : EventArgs
         {
             public int ProductId { get; set; }
-            public List<Recipe> ChangedRecipe { get; set; }
 
             public IngredientEditEventArgs()
             {
             }
 
-            public IngredientEditEventArgs(int productId, List<Recipe> changedRecipe)
+            public IngredientEditEventArgs(int productId)
             {
                 ProductId = productId;
-                ChangedRecipe = changedRecipe;
             }
         }
         #endregion
-
 
 
 
