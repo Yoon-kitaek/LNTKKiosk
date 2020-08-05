@@ -19,6 +19,17 @@ namespace LNTKCustomer.Form
         public CashPayment( )
         {
             InitializeComponent();
+        }
+
+        private void SetInstructionText(int price)
+        {
+            string head = "현금투입기에 ";
+            string tail = "원을 넣어주세요.";
+            lbcInstruction.Text = head + $"{remainingPayment}" + tail;
+        }
+
+        private void CashPayment_Load(object sender, EventArgs e)
+        {
             remainingPayment = 0;
             foreach (ShoppedItem shoppedItem in OrderInfo.Instance.shoppedItemList)
                 remainingPayment += shoppedItem.price;
@@ -27,9 +38,9 @@ namespace LNTKCustomer.Form
             SetInstructionText(remainingPayment);
             while (remainingPayment > 0)
             {
-                Thread.Sleep(1000);
                 remainingPayment += -1000;
                 SetInstructionText(remainingPayment);
+                Delay(1000);
             }
 
             if (remainingPayment < 0)
@@ -40,16 +51,30 @@ namespace LNTKCustomer.Form
             EndPage endPage = new EndPage();
             endPage.Show();
             Close();
-            
         }
 
-        private void SetInstructionText(int price)
+        private static DateTime Delay(int MS)
+
         {
-            string head = "현금투입기에 ";
-            string tail = "원을 넣어주세요.";
-            lbcInstruction.Text = head + $"{remainingPayment}" + tail;
+
+            DateTime ThisMoment = DateTime.Now;
+
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+
+            {
+
+                System.Windows.Forms.Application.DoEvents();
+
+                ThisMoment = DateTime.Now;
+
+            }
+
+            return DateTime.Now;
+
         }
-
-
     }
 }
