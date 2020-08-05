@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pceCashInput = new DevExpress.XtraEditors.PictureEdit();
             this.lbcInstruction = new DevExpress.XtraEditors.LabelControl();
+            this.pceCashInput = new DevExpress.XtraEditors.PictureEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceCashInput.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -53,16 +53,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(1154, 528);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1154, 528);
-            this.Root.TextVisible = false;
             // 
             // tablePanel1
             // 
@@ -82,28 +72,6 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F)});
             this.tablePanel1.Size = new System.Drawing.Size(1130, 504);
             this.tablePanel1.TabIndex = 4;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.tablePanel1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1134, 508);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // pceCashInput
-            // 
-            this.tablePanel1.SetColumn(this.pceCashInput, 1);
-            this.pceCashInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pceCashInput.EditValue = global::LNTKCustomer.Properties.Resources.CashInput;
-            this.pceCashInput.Location = new System.Drawing.Point(173, 59);
-            this.pceCashInput.Name = "pceCashInput";
-            this.pceCashInput.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pceCashInput.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.tablePanel1.SetRow(this.pceCashInput, 1);
-            this.pceCashInput.Size = new System.Drawing.Size(785, 218);
-            this.pceCashInput.TabIndex = 0;
             // 
             // lbcInstruction
             // 
@@ -136,6 +104,38 @@
             this.lbcInstruction.TabIndex = 1;
             this.lbcInstruction.Text = "현금투입구에 돈을 투입해주세요\r\n";
             // 
+            // pceCashInput
+            // 
+            this.tablePanel1.SetColumn(this.pceCashInput, 1);
+            this.pceCashInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pceCashInput.EditValue = global::LNTKCustomer.Properties.Resources.CashInput;
+            this.pceCashInput.Location = new System.Drawing.Point(173, 59);
+            this.pceCashInput.Name = "pceCashInput";
+            this.pceCashInput.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pceCashInput.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.tablePanel1.SetRow(this.pceCashInput, 1);
+            this.pceCashInput.Size = new System.Drawing.Size(785, 218);
+            this.pceCashInput.TabIndex = 0;
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1154, 528);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.tablePanel1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1134, 508);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
             // CashPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -144,14 +144,15 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "CashPayment";
             this.Text = "CashPayment";
+            this.Load += new System.EventHandler(this.CashPayment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             this.tablePanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pceCashInput.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }

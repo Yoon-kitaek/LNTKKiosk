@@ -65,7 +65,7 @@ namespace LNTKManager
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             _grocery.GroceryId = int.Parse(txeGroceryId.Text);
-            _grocery.CodeCategoryId = (int?)cbbCategoryId.SelectedValue;
+            _grocery.CodeCategoryId = (int)cbbCategoryId.SelectedValue;
             _grocery.Price = int.Parse(txePrice.Text);
             try
             {

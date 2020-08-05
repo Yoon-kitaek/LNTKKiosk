@@ -21,9 +21,9 @@ namespace LNTKCustomer.Form
 
         private void btnCard_Click(object sender, EventArgs e)
         {
-            CardPayment cardPayment = new CardPayment();
-            cardPayment.Show();
             Close();
+            CardPayment cardPayment = new CardPayment();
+            cardPayment.ShowDialog();
         }
 
         private void Payment_Load(object sender, EventArgs e)
@@ -36,9 +36,10 @@ namespace LNTKCustomer.Form
 
         private void btnCash_Click(object sender, EventArgs e)
         {
-            CashPayment cashPayment = new CashPayment();
-            cashPayment.Show();
             Close();
+            CashPayment cashPayment = new CashPayment();
+            cashPayment.ShowDialog();
+           
         }
     }
 }
