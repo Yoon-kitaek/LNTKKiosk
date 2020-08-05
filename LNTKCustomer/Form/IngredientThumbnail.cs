@@ -41,7 +41,7 @@ namespace LNTKCustomer.Form
                     j += ingredientCustomization.quantity;
                 if (j != 1)
                 {
-                    MessageBox.Show("빵은 하나만");
+                    MessageBox.Show("빵은 하나만 선택하실 수 있습니다.");
                     return;
                 }
                 pceLeft.Enabled = true;
@@ -69,7 +69,7 @@ namespace LNTKCustomer.Form
 
             if (i == categoryNumber.Count - 1)
             {
-                MessageBox.Show("버거 커스터마이징 끝");
+                MessageBox.Show("버거 커스터마이징이 완료되었습니다.");
                 OrderInfo.Instance.changedRecipe.AddRange(changedRecipe);
                 Close();
                 return;
