@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LNTKKiosk.Data
 {
-    partial class Product
+    public partial class Product
     {
         public int EventPrice { get; set; }
 

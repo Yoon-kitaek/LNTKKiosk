@@ -28,21 +28,7 @@ namespace LNTKCustomer.Form
 
             this.productId = productId;
             this.changedRecipe = OrderInfo.Instance.changedRecipe;
-            thumbnails.Add(uscIngredient1);
-            thumbnails.Add(uscIngredient2);
-            thumbnails.Add(uscIngredient3);
-            thumbnails.Add(uscIngredient4);
-
-
-            i = 0;
-            pceLeft.Enabled = false;
-            codeCategories = DataRepository.CodeCategory.GetAll();
-            List<string> ingredientOrder = new List<string> { "빵", "패티", "야채","토핑", "소스", "육류", "치즈" };
-            foreach (string ingredientName in ingredientOrder)
-            {
-                categoryNumber.Add(codeCategories.FirstOrDefault(x => x.Item.Equals(ingredientName)).CodeCategoryId);
-            }
-            SetThumbnail();
+            
         }
 
         private void pceRight_Click(object sender, EventArgs e)
@@ -103,6 +89,29 @@ namespace LNTKCustomer.Form
                 pceLeft.Enabled = false;
              i--;           
             SetThumbnail();
+        }
+
+        private void IngredientThumbnail_Load(object sender, EventArgs e)
+        {
+            if (DesignMode)
+                return;
+
+            thumbnails.Add(uscIngredient1);
+            thumbnails.Add(uscIngredient2);
+            thumbnails.Add(uscIngredient3);
+            thumbnails.Add(uscIngredient4);
+
+
+            i = 0;
+            pceLeft.Enabled = false;
+            codeCategories = DataRepository.CodeCategory.GetAll();
+            List<string> ingredientOrder = new List<string> { "빵", "패티", "야채", "토핑", "소스", "육류", "치즈" };
+            foreach (string ingredientName in ingredientOrder)
+            {
+                categoryNumber.Add(codeCategories.FirstOrDefault(x => x.Item.Equals(ingredientName)).CodeCategoryId);
+            }
+            SetThumbnail();
+
         }
 
         private void SetThumbnail()

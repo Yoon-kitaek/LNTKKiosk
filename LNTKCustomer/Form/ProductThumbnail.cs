@@ -17,7 +17,7 @@ namespace LNTKCustomer.Form
     {
         private const int thumbnailCount = 6;
         private List<UserControl.Thumbnail> thumbnails = new List<UserControl.Thumbnail>();
-        private int page = 0;
+        public int page = 0;
         private int categoryId;
         List<ShoppedItem> shoppingList = new List<ShoppedItem>();
         public void SetCategoryId(int categoryId)
@@ -95,10 +95,12 @@ namespace LNTKCustomer.Form
             }
             else
             {
+                MessageBox.Show($"{thumbnail.Label}를(을) 장바구니에 담았습니다.");
                 Product product = DataRepository.Product.GetByName(thumbnail.Label);
                 shoppingList.Add(new ShoppedItem(product.Name, product.ProductId, 1));
             }
 
+            
 
             OnThumbnailClicked(e.Name);
 

@@ -39,6 +39,7 @@ namespace LNTKCustomer.Form
                 return;
             int productId = DataRepository.Product.GetByName(productName).ProductId;
             uscBurgerCustomization.SetPicture(productId);
+            uscBurgerCustomization.productId = productId;
 
             if (package.Equals("") == true)
             {
