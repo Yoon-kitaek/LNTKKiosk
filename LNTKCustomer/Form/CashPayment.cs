@@ -22,6 +22,8 @@ namespace LNTKCustomer.Form
             remainingPayment = 0;
             foreach (ShoppedItem shoppedItem in OrderInfo.Instance.shoppedItemList)
                 remainingPayment += shoppedItem.price;
+            foreach (Recipe recipe in OrderInfo.Instance.changedRecipe)
+                remainingPayment += (recipe.Amount * DataRepository.Grocery.Get(recipe.GroceryId).Price);
             SetInstructionText(remainingPayment);
             while (remainingPayment > 0)
             {
