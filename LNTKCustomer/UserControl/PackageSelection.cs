@@ -19,7 +19,7 @@ namespace LNTKCustomer.UserControl
     {
         public string Name { get; set; }
         const int MiddleSizePrice = 1200;
-        const int LargeSizePrice = 1600; 
+        const int LargeSizePrice = 1600;
         public PackageSelection()
         {
             InitializeComponent();

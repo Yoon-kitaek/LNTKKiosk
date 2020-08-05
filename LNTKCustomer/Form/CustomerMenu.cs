@@ -76,12 +76,15 @@ namespace LNTKCustomer.Form
         {
             if (OrderInfo.Instance.shoppedItemList != null)
             {
-                ShoppingCart shoppingCart = new ShoppingCart();
-                shoppingCart.MdiParent = this;
-                shoppingCart.WindowState = FormWindowState.Maximized;
-                //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)
-                TileItemsClickable(false);
-                shoppingCart.Show();
+                if (Application.OpenForms.OfType<ShoppingCart>().Count() ==0)
+                {
+                    ShoppingCart shoppingCart = new ShoppingCart();
+                    shoppingCart.MdiParent = this;
+                    shoppingCart.WindowState = FormWindowState.Maximized;
+                    //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)
+                    //   TileItemsClickable(false);
+                    shoppingCart.Show();
+                }
             }
             else
             {

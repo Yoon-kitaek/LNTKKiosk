@@ -35,9 +35,9 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.uscThumbnail = new LNTKCustomer.UserControl.Thumbnail();
             this.pceMinus = new DevExpress.XtraEditors.PictureEdit();
             this.pcePlus = new DevExpress.XtraEditors.PictureEdit();
-            this.uscThumbnail = new LNTKCustomer.UserControl.Thumbnail();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
@@ -160,6 +160,17 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // uscThumbnail
+            // 
+            this.tablePanel1.SetColumn(this.uscThumbnail, 1);
+            this.uscThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscThumbnail.Label = "label";
+            this.uscThumbnail.Location = new System.Drawing.Point(82, 3);
+            this.uscThumbnail.Name = "uscThumbnail";
+            this.tablePanel1.SetRow(this.uscThumbnail, 0);
+            this.uscThumbnail.Size = new System.Drawing.Size(701, 851);
+            this.uscThumbnail.TabIndex = 1;
+            // 
             // pceMinus
             // 
             this.tablePanel2.SetColumn(this.pceMinus, 0);
@@ -185,17 +196,6 @@
             this.tablePanel2.SetRow(this.pcePlus, 1);
             this.pcePlus.Size = new System.Drawing.Size(67, 164);
             this.pcePlus.TabIndex = 1;
-            // 
-            // uscThumbnail
-            // 
-            this.tablePanel1.SetColumn(this.uscThumbnail, 1);
-            this.uscThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscThumbnail.Label = "label";
-            this.uscThumbnail.Location = new System.Drawing.Point(82, 3);
-            this.uscThumbnail.Name = "uscThumbnail";
-            this.tablePanel1.SetRow(this.uscThumbnail, 0);
-            this.uscThumbnail.Size = new System.Drawing.Size(701, 851);
-            this.uscThumbnail.TabIndex = 1;
             // 
             // IngredientThumbnail
             // 

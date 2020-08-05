@@ -20,6 +20,7 @@ namespace LNTKCustomer.Form
         List<ShoppedItem> shoppedItemList = new List<ShoppedItem>();
         private List<ShoppedPackage> shoppedPackageList = new List<ShoppedPackage>();
 
+
         public ShoppingCart()
         {
             InitializeComponent();
@@ -49,15 +50,6 @@ namespace LNTKCustomer.Form
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Payment form = new Payment();
-
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
-            Close();
         }
 
         private void grcShoppedItemList_Click(object sender, EventArgs e)
