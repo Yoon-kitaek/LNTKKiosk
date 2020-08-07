@@ -97,41 +97,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonContainer.cs">
+    <Compile Include="UserControl\ButtonContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ButtonContainer.Designer.cs">
+    <Compile Include="UserControl\ButtonContainer.Designer.cs">
       <DependentUpon>ButtonContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="DevKiller\ProcessKiller.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Form\GroceryInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GroceryInsert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GroceryInsert.Designer.cs">
+    <Compile Include="Form\GroceryInsert.Designer.cs">
       <DependentUpon>GroceryInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="GroceryManagement.cs">
+    <Compile Include="Form\GroceryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GroceryManagement.Designer.cs">
+    <Compile Include="Form\GroceryManagement.Designer.cs">
       <DependentUpon>GroceryManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="GroceryUpdate.cs">
+    <Compile Include="Form\GroceryUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GroceryUpdate.Designer.cs">
+    <Compile Include="Form\GroceryUpdate.Designer.cs">
       <DependentUpon>GroceryUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Helper.cs" />
@@ -142,99 +130,84 @@
     <Compile Include="KeyPad.Designer.cs">
       <DependentUpon>KeyPad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Management.cs">
+    <Compile Include="Form\Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Management.Designer.cs">
+    <Compile Include="Form\Management.Designer.cs">
       <DependentUpon>Management.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductInsert.cs">
+    <Compile Include="Form\ProductInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductInsert.Designer.cs">
+    <Compile Include="Form\ProductInsert.Designer.cs">
       <DependentUpon>ProductInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductManagement\AddForm.cs">
+    <Compile Include="Form\ProductUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductManagement\AddForm.Designer.cs">
-      <DependentUpon>AddForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductUpdate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductUpdate.Designer.cs">
+    <Compile Include="Form\ProductUpdate.Designer.cs">
       <DependentUpon>ProductUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecipeInsert.cs">
+    <Compile Include="Form\RecipeInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecipeInsert.Designer.cs">
+    <Compile Include="Form\RecipeInsert.Designer.cs">
       <DependentUpon>RecipeInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecipeManagement.cs">
+    <Compile Include="Form\RecipeManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecipeManagement.Designer.cs">
+    <Compile Include="Form\RecipeManagement.Designer.cs">
       <DependentUpon>RecipeManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecipeUpdate.cs">
+    <Compile Include="Form\RecipeUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecipeUpdate.Designer.cs">
+    <Compile Include="Form\RecipeUpdate.Designer.cs">
       <DependentUpon>RecipeUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="StockInsert.cs">
+    <Compile Include="Form\StockInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockInsert.Designer.cs">
+    <Compile Include="Form\StockInsert.Designer.cs">
       <DependentUpon>StockInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="StockUpdate.cs">
+    <Compile Include="Form\StockUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockUpdate.Designer.cs">
+    <Compile Include="Form\StockUpdate.Designer.cs">
       <DependentUpon>StockUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabButton.cs">
+    <Compile Include="UserControl\TabButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabButton.Designer.cs">
+    <Compile Include="UserControl\TabButton.Designer.cs">
       <DependentUpon>TabButton.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ButtonContainer.resx">
+    <EmbeddedResource Include="UserControl\ButtonContainer.resx">
       <DependentUpon>ButtonContainer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GroceryInsert.resx">
+    <EmbeddedResource Include="Form\GroceryInsert.resx">
       <DependentUpon>GroceryInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GroceryManagement.resx">
+    <EmbeddedResource Include="Form\GroceryManagement.resx">
       <DependentUpon>GroceryManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KeyPad.resx">
       <DependentUpon>KeyPad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GroceryUpdate.resx">
+    <EmbeddedResource Include="Form\GroceryUpdate.resx">
       <DependentUpon>GroceryUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Management.resx">
+    <EmbeddedResource Include="Form\Management.resx">
       <DependentUpon>Management.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductInsert.resx">
+    <EmbeddedResource Include="Form\ProductInsert.resx">
       <DependentUpon>ProductInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductManagement\AddForm.resx">
-      <DependentUpon>AddForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductUpdate.resx">
+    <EmbeddedResource Include="Form\ProductUpdate.resx">
       <DependentUpon>ProductUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -247,22 +220,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RecipeInsert.resx">
+    <EmbeddedResource Include="Form\RecipeInsert.resx">
       <DependentUpon>RecipeInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecipeManagement.resx">
+    <EmbeddedResource Include="Form\RecipeManagement.resx">
       <DependentUpon>RecipeManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecipeUpdate.resx">
+    <EmbeddedResource Include="Form\RecipeUpdate.resx">
       <DependentUpon>RecipeUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockInsert.resx">
+    <EmbeddedResource Include="Form\StockInsert.resx">
       <DependentUpon>StockInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockUpdate.resx">
+    <EmbeddedResource Include="Form\StockUpdate.resx">
       <DependentUpon>StockUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabButton.resx">
+    <EmbeddedResource Include="UserControl\TabButton.resx">
       <DependentUpon>TabButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DevKiller\DevExpressKiller.csproj" />
@@ -293,6 +266,7 @@
       <Name>LNTKKiosk.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
