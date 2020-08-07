@@ -1,0 +1,2 @@
+LotteNaldsTouchKing Kiosk (юлго LNTKK)
+----------------------------------------------

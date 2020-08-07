@@ -69,7 +69,7 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(737, 868);
+            this.Root.Size = new System.Drawing.Size(856, 868);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -77,7 +77,7 @@
             this.layoutControlItem2.Control = this.layoutControl2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(717, 848);
+            this.layoutControlItem2.Size = new System.Drawing.Size(836, 848);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -87,7 +87,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(12, 12);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(713, 844);
+            this.layoutControl2.Size = new System.Drawing.Size(832, 844);
             this.layoutControl2.TabIndex = 5;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -106,7 +106,7 @@
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 90F)});
-            this.tablePanel1.Size = new System.Drawing.Size(689, 820);
+            this.tablePanel1.Size = new System.Drawing.Size(808, 820);
             this.tablePanel1.TabIndex = 4;
             // 
             // pceLeft
@@ -119,7 +119,7 @@
             this.pceLeft.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pceLeft.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.tablePanel1.SetRow(this.pceLeft, 1);
-            this.pceLeft.Size = new System.Drawing.Size(61, 340);
+            this.pceLeft.Size = new System.Drawing.Size(73, 340);
             this.pceLeft.StyleController = this.layoutControl1;
             this.pceLeft.TabIndex = 8;
             this.pceLeft.Click += new System.EventHandler(this.pceLeft_Click);
@@ -131,7 +131,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(737, 868);
+            this.layoutControl1.Size = new System.Drawing.Size(856, 868);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -139,13 +139,13 @@
             // 
             this.tablePanel1.SetColumn(this.pceRight, 2);
             this.pceRight.EditValue = ((object)(resources.GetObject("pceRight.EditValue")));
-            this.pceRight.Location = new System.Drawing.Point(625, 281);
+            this.pceRight.Location = new System.Drawing.Point(732, 281);
             this.pceRight.Margin = new System.Windows.Forms.Padding(5);
             this.pceRight.Name = "pceRight";
             this.pceRight.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pceRight.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.tablePanel1.SetRow(this.pceRight, 1);
-            this.pceRight.Size = new System.Drawing.Size(59, 340);
+            this.pceRight.Size = new System.Drawing.Size(71, 340);
             this.pceRight.StyleController = this.layoutControl1;
             this.pceRight.TabIndex = 7;
             this.pceRight.Click += new System.EventHandler(this.pceRight_Click);
@@ -169,10 +169,10 @@
             this.lbcGroceryName.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.tablePanel1.SetColumn(this.lbcGroceryName, 1);
             this.lbcGroceryName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbcGroceryName.Location = new System.Drawing.Point(72, 3);
+            this.lbcGroceryName.Location = new System.Drawing.Point(84, 3);
             this.lbcGroceryName.Name = "lbcGroceryName";
             this.tablePanel1.SetRow(this.lbcGroceryName, 0);
-            this.lbcGroceryName.Size = new System.Drawing.Size(545, 76);
+            this.lbcGroceryName.Size = new System.Drawing.Size(640, 76);
             this.lbcGroceryName.TabIndex = 1;
             this.lbcGroceryName.Text = "Grocery Name";
             // 
@@ -187,23 +187,23 @@
             this.tablePanel2.Controls.Add(this.uscIngredient2);
             this.tablePanel2.Controls.Add(this.uscIngredient1);
             this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablePanel2.Location = new System.Drawing.Point(72, 85);
+            this.tablePanel2.Location = new System.Drawing.Point(84, 85);
             this.tablePanel2.Name = "tablePanel2";
             this.tablePanel1.SetRow(this.tablePanel2, 1);
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 50F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 50F)});
-            this.tablePanel2.Size = new System.Drawing.Size(545, 732);
+            this.tablePanel2.Size = new System.Drawing.Size(640, 732);
             this.tablePanel2.TabIndex = 0;
             // 
             // uscIngredient4
             // 
             this.tablePanel2.SetColumn(this.uscIngredient4, 1);
             this.uscIngredient4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscIngredient4.Location = new System.Drawing.Point(276, 369);
+            this.uscIngredient4.Location = new System.Drawing.Point(323, 369);
             this.uscIngredient4.Name = "uscIngredient4";
             this.tablePanel2.SetRow(this.uscIngredient4, 1);
-            this.uscIngredient4.Size = new System.Drawing.Size(267, 360);
+            this.uscIngredient4.Size = new System.Drawing.Size(314, 360);
             this.uscIngredient4.TabIndex = 4;
             // 
             // uscIngredient3
@@ -213,17 +213,17 @@
             this.uscIngredient3.Location = new System.Drawing.Point(3, 369);
             this.uscIngredient3.Name = "uscIngredient3";
             this.tablePanel2.SetRow(this.uscIngredient3, 1);
-            this.uscIngredient3.Size = new System.Drawing.Size(267, 360);
+            this.uscIngredient3.Size = new System.Drawing.Size(314, 360);
             this.uscIngredient3.TabIndex = 3;
             // 
             // uscIngredient2
             // 
             this.tablePanel2.SetColumn(this.uscIngredient2, 1);
             this.uscIngredient2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscIngredient2.Location = new System.Drawing.Point(276, 3);
+            this.uscIngredient2.Location = new System.Drawing.Point(323, 3);
             this.uscIngredient2.Name = "uscIngredient2";
             this.tablePanel2.SetRow(this.uscIngredient2, 0);
-            this.uscIngredient2.Size = new System.Drawing.Size(267, 360);
+            this.uscIngredient2.Size = new System.Drawing.Size(314, 360);
             this.uscIngredient2.TabIndex = 2;
             // 
             // uscIngredient1
@@ -233,7 +233,7 @@
             this.uscIngredient1.Location = new System.Drawing.Point(3, 3);
             this.uscIngredient1.Name = "uscIngredient1";
             this.tablePanel2.SetRow(this.uscIngredient1, 0);
-            this.uscIngredient1.Size = new System.Drawing.Size(267, 360);
+            this.uscIngredient1.Size = new System.Drawing.Size(314, 360);
             this.uscIngredient1.TabIndex = 1;
             // 
             // layoutControlGroup1
@@ -243,7 +243,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(713, 844);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(832, 844);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem3
@@ -251,7 +251,7 @@
             this.layoutControlItem3.Control = this.tablePanel1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(693, 824);
+            this.layoutControlItem3.Size = new System.Drawing.Size(812, 824);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -267,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 868);
+            this.ClientSize = new System.Drawing.Size(856, 868);
             this.Controls.Add(this.layoutControl1);
             this.Name = "IngredientThumbnail";
             this.Text = "IngredientThumbnail";
