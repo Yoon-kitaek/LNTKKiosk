@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
 using DevExpress.XtraScheduler.iCalendar.Components;
+using System.IO;
 
 namespace LNTKCustomer.UserControl
 {
@@ -30,9 +31,9 @@ namespace LNTKCustomer.UserControl
             product = DataRepository.Product.Get(productId);
             List<Recipe> recipes = DataRepository.Recipe.GetByProduct(productId);
             Grocery grocery = DataRepository.Grocery.Get(groceryId);
-            //pceThumbnail.Image = grocery.Picture;
+            pceThumbnail.Image = byteArrayToImage( grocery.Picture);
             lbcName.Text = grocery.Item;
-            //lbcPrice.Text = grocery.Price;
+            lbcPrice.Text = grocery.Price.ToString();
             this.groceryId = groceryId;
 
             Recipe recipe = recipes.FirstOrDefault(x => x.GroceryId == groceryId);
@@ -91,7 +92,6 @@ namespace LNTKCustomer.UserControl
                 pceCheckBox.Image = Properties.Resources.Check;
             else
                 pceCheckBox.Image = Properties.Resources.Uncheck;
-         //   pceCheckBox.LoadImage();
         }
 
         private void pcePlus_Click(object sender, EventArgs e)
@@ -116,6 +116,15 @@ namespace LNTKCustomer.UserControl
             }
             quantity--;
             lbcQuantity.Text = quantity.ToString();
+        }
+
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
         }
     }
 }

@@ -22,29 +22,13 @@ namespace LNTKCustomer.Form
         private List<IngredientCustomization> thumbnails = new List<IngredientCustomization>();
         private List<Recipe> changedRecipe = new List<Recipe>();
         int i, productId;
-        public IngredientThumbnail()
+        public IngredientThumbnail(int productId)
         {
             InitializeComponent();
 
-            this.productId = 1;
-            thumbnails.Add(uscIngredient1);
-            thumbnails.Add(uscIngredient2);
-            thumbnails.Add(uscIngredient3);
-            thumbnails.Add(uscIngredient4);
-
-
-            i = 0;
-            pceLeft.Enabled = false;
-            codeCategories = DataRepository.CodeCategory.GetAll();
-            List<string> ingredientOrder = new List<string> { "빵", "패티", "야채","토핑", "소스", "육류", "치즈" };
-            foreach (string ingredientName in ingredientOrder)
-            {
-                categoryNumber.Add(codeCategories.FirstOrDefault(x => x.Item.Equals(ingredientName)).CodeCategoryId);
-            }
-            SetThumbnail();
-           
-
-            //ingredientCustomization1.SetValues(1,7);
+            this.productId = productId;
+            this.changedRecipe = OrderInfo.Instance.changedRecipe;
+            
         }
 
         private void pceRight_Click(object sender, EventArgs e)
@@ -57,7 +41,7 @@ namespace LNTKCustomer.Form
                     j += ingredientCustomization.quantity;
                 if (j != 1)
                 {
-                    MessageBox.Show("빵은 하나만");
+                    MessageBox.Show("빵은 하나만 선택하실 수 있습니다.");
                     return;
                 }
                 pceLeft.Enabled = true;
@@ -85,8 +69,9 @@ namespace LNTKCustomer.Form
 
             if (i == categoryNumber.Count - 1)
             {
-                MessageBox.Show("버거 커스터마이징 끝");
-                //TODO 다음 페이지 열기
+                MessageBox.Show("버거 커스터마이징이 완료되었습니다.");
+                OrderInfo.Instance.changedRecipe.AddRange(changedRecipe);
+                Close();
                 return;
             } 
             
@@ -104,6 +89,29 @@ namespace LNTKCustomer.Form
                 pceLeft.Enabled = false;
              i--;           
             SetThumbnail();
+        }
+
+        private void IngredientThumbnail_Load(object sender, EventArgs e)
+        {
+            if (DesignMode)
+                return;
+
+            thumbnails.Add(uscIngredient1);
+            thumbnails.Add(uscIngredient2);
+            thumbnails.Add(uscIngredient3);
+            thumbnails.Add(uscIngredient4);
+
+
+            i = 0;
+            pceLeft.Enabled = false;
+            codeCategories = DataRepository.CodeCategory.GetAll();
+            List<string> ingredientOrder = new List<string> { "빵", "패티", "야채", "토핑", "소스", "육류", "치즈" };
+            foreach (string ingredientName in ingredientOrder)
+            {
+                categoryNumber.Add(codeCategories.FirstOrDefault(x => x.Item.Equals(ingredientName)).CodeCategoryId);
+            }
+            SetThumbnail();
+
         }
 
         private void SetThumbnail()

@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardPayment));
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnPay = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -40,14 +43,13 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnPay = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.imageSlider1 = new DevExpress.XtraEditors.Controls.ImageSlider();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -57,8 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,16 @@
             this.layoutControl2.TabIndex = 4;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // btnPay
+            // 
+            this.btnPay.Location = new System.Drawing.Point(12, 12);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(980, 27);
+            this.btnPay.StyleController = this.layoutControl2;
+            this.btnPay.TabIndex = 4;
+            this.btnPay.Text = "simpleButton1";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -84,6 +94,23 @@
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1004, 62);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btnPay;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(984, 31);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 31);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(984, 11);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // labelControl1
             // 
@@ -176,33 +203,6 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(496, 43);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // btnPay
-            // 
-            this.btnPay.Location = new System.Drawing.Point(12, 12);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(980, 27);
-            this.btnPay.StyleController = this.layoutControl2;
-            this.btnPay.TabIndex = 4;
-            this.btnPay.Text = "simpleButton1";
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.btnPay;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(984, 31);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 31);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(984, 11);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // imageSlider1
             // 
             this.imageSlider1.CurrentImageIndex = 0;
@@ -237,6 +237,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             this.layoutControl1.PerformLayout();
@@ -247,8 +249,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);

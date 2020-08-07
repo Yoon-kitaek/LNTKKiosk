@@ -27,8 +27,8 @@ namespace LNTKKiosk.Data
         public Nullable<int> Price { get; set; }
         public Nullable<System.DateTime> ExhaustedDate { get; set; }
     
-        public virtual Grocery Grocery { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderStock> OrderStocks { get; set; }
+        public virtual Grocery Grocery { get; set; }
     }
 }

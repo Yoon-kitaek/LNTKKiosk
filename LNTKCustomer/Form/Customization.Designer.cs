@@ -340,6 +340,7 @@
             // 
             this.uscBurgerCustomization.Location = new System.Drawing.Point(12, 12);
             this.uscBurgerCustomization.Name = "uscBurgerCustomization";
+            this.uscBurgerCustomization.productId = 0;
             this.uscBurgerCustomization.Size = new System.Drawing.Size(1048, 401);
             this.uscBurgerCustomization.TabIndex = 4;
             // 

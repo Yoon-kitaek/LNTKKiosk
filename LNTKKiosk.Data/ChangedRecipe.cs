@@ -12,13 +12,13 @@ namespace LNTKKiosk.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Recipe
+    public partial class ChangedRecipe
     {
-        public int ProductId { get; set; }
+        public int OrderDetailId { get; set; }
         public int GroceryId { get; set; }
         public int Amount { get; set; }
     
-        public virtual Product Product { get; set; }
         public virtual Grocery Grocery { get; set; }
+        public virtual OrderDetail OrderDetail { get; set; }
     }
 }

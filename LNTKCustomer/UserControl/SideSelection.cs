@@ -10,12 +10,15 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
 using LNTKKiosk.Data;
+using LNTKCustomer.Form;
 
 namespace LNTKCustomer.UserControl
 {
     public partial class SideSelection : DevExpress.XtraEditors.XtraUserControl
     {
         private int productId;
+        public const int categoryId = 12;
+
         public SideSelection()
         {
             InitializeComponent();
@@ -78,7 +81,15 @@ namespace LNTKCustomer.UserControl
 
         private void sbtFriesCustomization_Click(object sender, EventArgs e)
         {
-            OnSideEdit(productId);
+            OnSideEdit(categoryId);
+            OpenSideOrBeverateCustomization(categoryId);
+        }
+
+
+        private void OpenSideOrBeverateCustomization(int categoryId)
+        {
+            SideOrBeverageCustomization sideOrBeverageCustomization = new SideOrBeverageCustomization(categoryId);
+            sideOrBeverageCustomization.ShowDialog();
         }
     }
 }
