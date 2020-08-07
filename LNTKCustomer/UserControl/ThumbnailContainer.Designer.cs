@@ -228,7 +228,6 @@
             this.tablePanel1.SetRow(this.uscThumbnail1, 0);
             this.uscThumbnail1.Size = new System.Drawing.Size(288, 334);
             this.uscThumbnail1.TabIndex = 0;
-            this.uscThumbnail1.Click += new System.EventHandler(this.uscThumbnail1_Click);
             // 
             // ThumbnailContainer
             // 

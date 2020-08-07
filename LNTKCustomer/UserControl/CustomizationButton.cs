@@ -46,8 +46,8 @@ namespace LNTKCustomer.UserControl
 
         private void sbtBurgerCustomization_Click(object sender, EventArgs e)
         {
-            OnIngredientEdit(productId);
-            OpenIngredientCustomization(productId);
+            LNTKCustomer.Form.IngredientThumbnail ingredientThumbnail = new LNTKCustomer.Form.IngredientThumbnail(productId);
+            ingredientThumbnail.Show();
         }
 
 
@@ -57,48 +57,43 @@ namespace LNTKCustomer.UserControl
             ingredientThumbnail.Show();
         }
 
-        #region IngredientEdit event things for C# 3.0
-        public event EventHandler<IngredientEditEventArgs> IngredientEdit;
+        #region MenuClicked event things for C# 3.0
+        public event EventHandler<MenuClickedEventArgs> MenuClicked;
 
-        protected virtual void OnIngredientEdit(IngredientEditEventArgs e)
+        protected virtual void OnMenuClicked(MenuClickedEventArgs e)
         {
-            if (IngredientEdit != null)
-                IngredientEdit(this, e);
+            if (MenuClicked != null)
+                MenuClicked(this, e);
         }
 
-        private IngredientEditEventArgs OnIngredientEdit(int productId)
+        private MenuClickedEventArgs OnMenuClicked()
         {
-            IngredientEditEventArgs args = new IngredientEditEventArgs(productId);
-            OnIngredientEdit(args);
+            MenuClickedEventArgs args = new MenuClickedEventArgs();
+            OnMenuClicked(args);
 
             return args;
         }
 
-        private IngredientEditEventArgs OnIngredientEditForOut()
+        private MenuClickedEventArgs OnMenuClickedForOut()
         {
-            IngredientEditEventArgs args = new IngredientEditEventArgs();
-            OnIngredientEdit(args);
+            MenuClickedEventArgs args = new MenuClickedEventArgs();
+            OnMenuClicked(args);
 
             return args;
         }
 
-        public class IngredientEditEventArgs : EventArgs
+        public class MenuClickedEventArgs : EventArgs
         {
-            public int ProductId { get; set; }
 
-            public IngredientEditEventArgs()
+            public MenuClickedEventArgs()
             {
             }
 
-            public IngredientEditEventArgs(int productId)
+            public MenuClickedEventArgs(string name)
             {
-                ProductId = productId;
             }
         }
         #endregion
-
-
-
 
 
 
