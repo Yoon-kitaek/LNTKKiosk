@@ -16,8 +16,7 @@
 3. 기능3
 #### 사용자 기능
 1. 장바구니에 담기   
-   <p align="center"><img src="https://user-images.githubusercontent.com/63761587/89606787-e323c180-d8ab-11ea-9e8c-c3856c0709cc.png" height="60%" width="30%"></img>　　
-　　　<img src="https://user-images.githubusercontent.com/63761587/89606821-f767be80-d8ab-11ea-8893-1d0a2f7f17fb.png" height="60%" width="30%"></img> </p>
+   <p align="center"><img src="https://user-images.githubusercontent.com/63761587/89606787-e323c180-d8ab-11ea-9e8c-c3856c0709cc.png" height="60%" width="30%"></img>　　<img src="https://user-images.githubusercontent.com/63761587/89606821-f767be80-d8ab-11ea-8893-1d0a2f7f17fb.png" height="60%" width="30%"></img> </p>
    
 2. 커스터마이징       
    <p align="center"><img src="https://user-images.githubusercontent.com/63761587/89606836-02baea00-d8ac-11ea-9e08-4a9147580d32.png" height="60%" width="30%" align="center"></img></p>
