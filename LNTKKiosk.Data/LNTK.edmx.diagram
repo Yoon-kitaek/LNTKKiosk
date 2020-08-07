@@ -5,17 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7aaff4a0df6d49c6beacf9afe568f96d" Name="Diagram1" ZoomLevel="13">
-        <EntityTypeShape EntityType="LNTKModel.ChangedRecipe" Width="1.5" PointX="7.5" PointY="6" />
+        <EntityTypeShape EntityType="LNTKModel.ChangedRecipe" Width="1.5" PointX="7.5" PointY="7.5" />
         <EntityTypeShape EntityType="LNTKModel.CodeCategory" Width="1.5" PointX="0.75" PointY="7.5" />
-        <EntityTypeShape EntityType="LNTKModel.Event" Width="1.5" PointX="3" PointY="13.5" />
-        <EntityTypeShape EntityType="LNTKModel.EventProduct" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="LNTKModel.Event" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="LNTKModel.EventProduct" Width="1.5" PointX="5.25" PointY="2.5" />
         <EntityTypeShape EntityType="LNTKModel.Grocery" Width="1.5" PointX="3" PointY="8.75" />
-        <EntityTypeShape EntityType="LNTKModel.Order" Width="1.5" PointX="3" PointY="1.5" />
-        <EntityTypeShape EntityType="LNTKModel.OrderDetail" Width="1.5" PointX="5.25" PointY="2.375" />
-        <EntityTypeShape EntityType="LNTKModel.OrderStock" Width="1.5" PointX="7.5" PointY="14.625" />
+        <EntityTypeShape EntityType="LNTKModel.Order" Width="1.5" PointX="3" PointY="13.5" />
+        <EntityTypeShape EntityType="LNTKModel.OrderDetail" Width="1.5" PointX="5.25" PointY="5.375" />
+        <EntityTypeShape EntityType="LNTKModel.OrderStock" Width="1.5" PointX="7.5" PointY="11.875" />
         <EntityTypeShape EntityType="LNTKModel.Product" Width="1.5" PointX="3" PointY="5" />
         <EntityTypeShape EntityType="LNTKModel.Recipe" Width="1.5" PointX="5.25" PointY="8.375" />
-        <EntityTypeShape EntityType="LNTKModel.Stock" Width="1.5" PointX="5.25" PointY="14.375" />
+        <EntityTypeShape EntityType="LNTKModel.Stock" Width="1.5" PointX="5.25" PointY="11.625" />
         <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_Grocery" />
         <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_OrderDetail" />
         <AssociationConnector Association="LNTKModel.FK_Grocery_CodeCategory" />

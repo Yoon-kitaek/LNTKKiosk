@@ -10,19 +10,38 @@
 
 
 ## 2. 기능목록
+
 #### 관리자 기능
+
 ##### 1. 주문관리
 - 키오스크에서 넘어온 고객의 주문정보들을 실시간으로 볼 수 있습니다.
 ![Order Management](Documents/OrderManagement.png)
+
+- 주방에서 주문을 확인하고 준비 중인 주문이 완료되면 준비 완료로 변경해주는 기능을 수행합니다.
+ ![Chef](Documents/Chef.png)
+
 ##### 2. 상품관리  
-- 상품의 등록, 수정, 삭제 기능을 수행합니다.
 - 좌측 상단의 버튼을 통해 상품들을 분류하여 볼 수 있습니다.
 ![Product Management](Documents/ProductManagement.png)
+
+- 상품의 등록, 수정, 삭제 기능을 수행합니다.
+![Product Insert](Documents/ProductInsert.png)
+![Product Update](Documents/ProductUpdate.png)
+
 - 우측 상단의 레시피관리 버튼을 통해 레시피의 등록, 수정, 삭제 기능을 수행합니다.
  ![Recipe Management](Documents/RecipeManagement.png)
+
 ##### 3. 매출조회
-- 상품별 판매
+- 상품의 매출 정보를 그래프와 함께 볼 수 있습니다.
+- 또한 특정 상품들을 선택하고 조건(연도별, 월별등)을 설정하여 비교하여 볼 수 있습니다.
+![Revenue Management](Documents/RevenueManagement.png)
+
 ##### 4. 재료관리
+- 매장에 있는 재료들의 재고를 관리합니다
+![Stock Management](Documents/StockManagement.png)
+
+- 우측 상단의 식재료관리 버튼으로 식재료를 관리합니다.
+ ![Grocery Management](Documents/GroceryManagement.png)
 #### 사용자 기능
 1. 장바구니에 담기   
    <p align="center"><img src="https://user-images.githubusercontent.com/63761587/89606787-e323c180-d8ab-11ea-9e8c-c3856c0709cc.png" height="60%" width="30%"></img>　　<img src="https://user-images.githubusercontent.com/63761587/89606821-f767be80-d8ab-11ea-8893-1d0a2f7f17fb.png" height="60%" width="30%"></img> </p>
@@ -66,6 +85,7 @@
 
 
 ## 6. Point Of Interest
+
 ### 프로그램의 병목현상
  >#### 증상   
  >메뉴를 띄우는 화면에서 그림들이 다 로딩되기까지 시간이 많이 걸림
@@ -82,8 +102,12 @@
  >#### 결과     
  >해결 방법으로는 이벤트 이용하는 법, 인터페이스를 사용하는 법, singleton 패턴를 사용하는 방법이 있었음. 이 중에서 가장 간단히 문제를 해결할 수 있는 방법인 singleton 패턴을 사용해서 문제를 해결했음   
 
-
-
-
-
-#### 문제3
+### 데이터로드의 속도문제
+ >#### 증상
+  >관리자 폼의 상품관리 탭에서 상품에 대한 데이터소스를 여러개 가져올 때 속도저하 현상 발생
+ >#### 원인
+  >상품 테이블의 속성에 이미지가 있어 데이터로드시 속도 저하발생
+ >#### 결과
+  >그리드 뷰에서는 이미지속성이 필요하지 않아 그리드뷰에서 필요한 속성만 가진 클래스를 만들고 필요한 속성만 선택하는 쿼리를 작성하여 해결
+  >![Product Partial Class](Documents/ProductPartialClass.PNG)
+  >![Product Partial](Documents/ProductPartial.PNG)

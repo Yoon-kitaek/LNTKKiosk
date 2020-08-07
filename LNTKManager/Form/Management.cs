@@ -144,8 +144,8 @@ namespace LNTKManager
 
         private void btnProductUpdate_Click(object sender, EventArgs e)
         {
-            ProductPartial dummy = bdsProduct.Current as ProductPartial;
-            Product product = DataRepository.Product.Get(dummy.ProductId);
+            ProductPartial partial = bdsProduct.Current as ProductPartial;
+            Product product = DataRepository.Product.Get(partial.ProductId);
             if (product == null)
                 return;
             
@@ -156,7 +156,8 @@ namespace LNTKManager
 
         private void btnProductDelete_Click(object sender, EventArgs e)
         {
-            Product product = bdsProduct.Current as Product;
+            ProductPartial partial = bdsProduct.Current as ProductPartial;
+            Product product = DataRepository.Product.Get(partial.ProductId);
             if (product == null)
                 return;
             if (Helpers.Helper.SureToDelete() == false)

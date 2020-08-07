@@ -52,17 +52,34 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOrderId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNonCompletedOrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCompletedOrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSeven
             // 
-            this.btnSeven.Location = new System.Drawing.Point(734, 181);
+            this.btnSeven.Location = new System.Drawing.Point(730, 115);
             this.btnSeven.Name = "btnSeven";
             this.btnSeven.Size = new System.Drawing.Size(60, 60);
             this.btnSeven.TabIndex = 2;
@@ -71,7 +88,7 @@
             // 
             // btnEight
             // 
-            this.btnEight.Location = new System.Drawing.Point(817, 181);
+            this.btnEight.Location = new System.Drawing.Point(813, 115);
             this.btnEight.Name = "btnEight";
             this.btnEight.Size = new System.Drawing.Size(60, 60);
             this.btnEight.TabIndex = 3;
@@ -80,7 +97,7 @@
             // 
             // btnNine
             // 
-            this.btnNine.Location = new System.Drawing.Point(904, 181);
+            this.btnNine.Location = new System.Drawing.Point(900, 115);
             this.btnNine.Name = "btnNine";
             this.btnNine.Size = new System.Drawing.Size(60, 60);
             this.btnNine.TabIndex = 4;
@@ -89,7 +106,7 @@
             // 
             // btnSix
             // 
-            this.btnSix.Location = new System.Drawing.Point(904, 247);
+            this.btnSix.Location = new System.Drawing.Point(900, 181);
             this.btnSix.Name = "btnSix";
             this.btnSix.Size = new System.Drawing.Size(60, 60);
             this.btnSix.TabIndex = 7;
@@ -98,7 +115,7 @@
             // 
             // btnFive
             // 
-            this.btnFive.Location = new System.Drawing.Point(817, 247);
+            this.btnFive.Location = new System.Drawing.Point(813, 181);
             this.btnFive.Name = "btnFive";
             this.btnFive.Size = new System.Drawing.Size(60, 60);
             this.btnFive.TabIndex = 6;
@@ -107,7 +124,7 @@
             // 
             // btnFour
             // 
-            this.btnFour.Location = new System.Drawing.Point(734, 247);
+            this.btnFour.Location = new System.Drawing.Point(730, 181);
             this.btnFour.Name = "btnFour";
             this.btnFour.Size = new System.Drawing.Size(60, 60);
             this.btnFour.TabIndex = 5;
@@ -116,7 +133,7 @@
             // 
             // btnThree
             // 
-            this.btnThree.Location = new System.Drawing.Point(904, 313);
+            this.btnThree.Location = new System.Drawing.Point(900, 247);
             this.btnThree.Name = "btnThree";
             this.btnThree.Size = new System.Drawing.Size(60, 60);
             this.btnThree.TabIndex = 10;
@@ -125,7 +142,7 @@
             // 
             // btnTwo
             // 
-            this.btnTwo.Location = new System.Drawing.Point(817, 313);
+            this.btnTwo.Location = new System.Drawing.Point(813, 247);
             this.btnTwo.Name = "btnTwo";
             this.btnTwo.Size = new System.Drawing.Size(60, 60);
             this.btnTwo.TabIndex = 9;
@@ -134,7 +151,7 @@
             // 
             // btnOne
             // 
-            this.btnOne.Location = new System.Drawing.Point(734, 313);
+            this.btnOne.Location = new System.Drawing.Point(730, 247);
             this.btnOne.Name = "btnOne";
             this.btnOne.Size = new System.Drawing.Size(60, 60);
             this.btnOne.TabIndex = 8;
@@ -143,7 +160,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(904, 379);
+            this.btnDelete.Location = new System.Drawing.Point(900, 313);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(60, 60);
             this.btnDelete.TabIndex = 13;
@@ -152,7 +169,7 @@
             // 
             // btnZero
             // 
-            this.btnZero.Location = new System.Drawing.Point(734, 379);
+            this.btnZero.Location = new System.Drawing.Point(730, 313);
             this.btnZero.Name = "btnZero";
             this.btnZero.Size = new System.Drawing.Size(143, 60);
             this.btnZero.TabIndex = 11;
@@ -161,7 +178,7 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(987, 181);
+            this.btnEnter.Location = new System.Drawing.Point(983, 115);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(102, 258);
             this.btnEnter.TabIndex = 14;
@@ -171,7 +188,7 @@
             // tbxResult
             // 
             this.tbxResult.Font = new System.Drawing.Font("Gulim", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tbxResult.Location = new System.Drawing.Point(734, 117);
+            this.tbxResult.Location = new System.Drawing.Point(730, 51);
             this.tbxResult.Multiline = true;
             this.tbxResult.Name = "tbxResult";
             this.tbxResult.Size = new System.Drawing.Size(355, 48);
@@ -187,10 +204,11 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bdsNonCompletedOrderDetail;
-            this.gridControl1.Location = new System.Drawing.Point(58, 41);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(538, 224);
+            this.gridControl1.Size = new System.Drawing.Size(657, 287);
             this.gridControl1.TabIndex = 16;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -224,10 +242,11 @@
             // gridControl2
             // 
             this.gridControl2.DataSource = this.bdsCompletedOrderDetail;
-            this.gridControl2.Location = new System.Drawing.Point(58, 295);
+            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(538, 201);
+            this.gridControl2.Size = new System.Drawing.Size(657, 291);
             this.gridControl2.TabIndex = 17;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -258,13 +277,87 @@
             this.colProductName1.VisibleIndex = 1;
             this.colProductName1.Width = 94;
             // 
-            // KeyPad
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Gulim", 20F);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 34);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "준비중";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(12, 12);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer1.Size = new System.Drawing.Size(657, 658);
+            this.splitContainer1.SplitterDistance = 326;
+            this.splitContainer1.TabIndex = 19;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.gridControl1);
+            this.splitContainer2.Size = new System.Drawing.Size(657, 326);
+            this.splitContainer2.SplitterDistance = 35;
+            this.splitContainer2.TabIndex = 17;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.label2);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.gridControl2);
+            this.splitContainer3.Size = new System.Drawing.Size(657, 328);
+            this.splitContainer3.SplitterDistance = 33;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Gulim", 20F);
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 34);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "완료";
+            // 
+            // Chef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 523);
-            this.Controls.Add(this.gridControl2);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(1119, 685);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.tbxResult);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnDelete);
@@ -279,9 +372,9 @@
             this.Controls.Add(this.btnEight);
             this.Controls.Add(this.btnSeven);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "KeyPad";
+            this.Name = "Chef";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KeyPad";
+            this.Text = "Chef";
             this.Load += new System.EventHandler(this.KeyPad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bdsNonCompletedOrderDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -289,6 +382,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCompletedOrderDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +426,10 @@
         private System.Windows.Forms.BindingSource bdsCompletedOrderDetail;
         private DevExpress.XtraGrid.Columns.GridColumn colOrderId1;
         private DevExpress.XtraGrid.Columns.GridColumn colProductName1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Label label2;
     }
 }

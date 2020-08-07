@@ -105,7 +105,15 @@ namespace LNTKCustomer.Form
         {
             Close();
         }
+        private void SetSideImage()
+        {
+            uscSideCustomization.SetPicture(OrderInfo.Instance.selectedSide);
 
-      //  private void O
+        }
+        private void SetBeverageImage()
+        {
+            uscSideCustomization.SetPicture(OrderInfo.Instance.selectedSide);
+        }
+
     }
 }
