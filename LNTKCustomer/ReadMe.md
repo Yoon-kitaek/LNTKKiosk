@@ -43,6 +43,7 @@
 .
 
 >## 5. 데이터베이스 스키마
+![3차프로젝트DB](https://user-images.githubusercontent.com/63761587/89601718-2b3ce700-d8a0-11ea-9536-92203291b205.png)
 
 .
 
