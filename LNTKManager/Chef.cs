@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace LNTKManager
 {
-    public partial class KeyPad : Form
+    public partial class Chef : Form
     {
         int orderCount = 0;
         List<OrderDetail> orders = new List<OrderDetail>();
 
-        public KeyPad()
+        public Chef()
         {
             InitializeComponent();
         }

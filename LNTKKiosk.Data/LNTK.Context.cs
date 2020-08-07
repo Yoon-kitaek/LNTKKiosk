@@ -28,13 +28,13 @@ namespace LNTKKiosk.Data
         public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<CodeCategory> CodeCategories { get; set; }
         public virtual DbSet<EventProduct> EventProducts { get; set; }
-        public virtual DbSet<Grocery> Groceries { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<OrderStock> OrderStocks { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Recipe> Recipes { get; set; }
         public virtual DbSet<Stock> Stocks { get; set; }
+        public virtual DbSet<Grocery> Groceries { get; set; }
         public virtual DbSet<ChangedRecipe> ChangedRecipes { get; set; }
     }
 }

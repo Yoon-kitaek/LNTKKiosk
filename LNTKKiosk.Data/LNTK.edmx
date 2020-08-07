@@ -373,16 +373,7 @@
             <End Role="Product" EntitySet="Products" />
             <End Role="Recipe" EntitySet="Recipes" />
           </AssociationSet>
-          <EntitySet Name="ChangedRecipes" EntityType="LNTKModel.ChangedRecipe" />
           <EntitySet Name="Groceries" EntityType="LNTKModel.Grocery" />
-          <AssociationSet Name="FK_ChagedRecipe_Grocery" Association="LNTKModel.FK_ChagedRecipe_Grocery">
-            <End Role="Grocery" EntitySet="Groceries" />
-            <End Role="ChangedRecipe" EntitySet="ChangedRecipes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ChagedRecipe_OrderDetail" Association="LNTKModel.FK_ChagedRecipe_OrderDetail">
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-            <End Role="ChangedRecipe" EntitySet="ChangedRecipes" />
-          </AssociationSet>
           <AssociationSet Name="FK_Grocery_CodeCategory" Association="LNTKModel.FK_Grocery_CodeCategory">
             <End Role="CodeCategory" EntitySet="CodeCategories" />
             <End Role="Grocery" EntitySet="Groceries" />
@@ -394,6 +385,15 @@
           <AssociationSet Name="FK_Stock_Grocery" Association="LNTKModel.FK_Stock_Grocery">
             <End Role="Grocery" EntitySet="Groceries" />
             <End Role="Stock" EntitySet="Stocks" />
+          </AssociationSet>
+          <EntitySet Name="ChangedRecipes" EntityType="LNTKModel.ChangedRecipe" />
+          <AssociationSet Name="FK_ChagedRecipe_Grocery" Association="LNTKModel.FK_ChagedRecipe_Grocery">
+            <End Role="Grocery" EntitySet="Groceries" />
+            <End Role="ChangedRecipe" EntitySet="ChangedRecipes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChagedRecipe_OrderDetail" Association="LNTKModel.FK_ChagedRecipe_OrderDetail">
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+            <End Role="ChangedRecipe" EntitySet="ChangedRecipes" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="Event">
@@ -593,17 +593,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="ChangedRecipe">
-          <Key>
-            <PropertyRef Name="OrderDetailId" />
-            <PropertyRef Name="GroceryId" />
-          </Key>
-          <Property Name="OrderDetailId" Type="Int32" Nullable="false" />
-          <Property Name="GroceryId" Type="Int32" Nullable="false" />
-          <Property Name="Amount" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Grocery" Relationship="LNTKModel.FK_ChagedRecipe_Grocery" FromRole="ChangedRecipe" ToRole="Grocery" />
-          <NavigationProperty Name="OrderDetail" Relationship="LNTKModel.FK_ChagedRecipe_OrderDetail" FromRole="ChangedRecipe" ToRole="OrderDetail" />
-        </EntityType>
         <EntityType Name="Grocery">
           <Key>
             <PropertyRef Name="GroceryId" />
@@ -614,35 +603,11 @@
           <Property Name="Item" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ChangedRecipes" Relationship="LNTKModel.FK_ChagedRecipe_Grocery" FromRole="Grocery" ToRole="ChangedRecipe" />
           <NavigationProperty Name="CodeCategory" Relationship="LNTKModel.FK_Grocery_CodeCategory" FromRole="Grocery" ToRole="CodeCategory" />
           <NavigationProperty Name="Recipes" Relationship="LNTKModel.FK_Recipe_Grocery" FromRole="Grocery" ToRole="Recipe" />
           <NavigationProperty Name="Stocks" Relationship="LNTKModel.FK_Stock_Grocery" FromRole="Grocery" ToRole="Stock" />
+          <NavigationProperty Name="ChangedRecipes" Relationship="LNTKModel.FK_ChagedRecipe_Grocery" FromRole="Grocery" ToRole="ChangedRecipe" />
         </EntityType>
-        <Association Name="FK_ChagedRecipe_Grocery">
-          <End Type="LNTKModel.Grocery" Role="Grocery" Multiplicity="1" />
-          <End Type="LNTKModel.ChangedRecipe" Role="ChangedRecipe" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Grocery">
-              <PropertyRef Name="GroceryId" />
-            </Principal>
-            <Dependent Role="ChangedRecipe">
-              <PropertyRef Name="GroceryId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ChagedRecipe_OrderDetail">
-          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="1" />
-          <End Type="LNTKModel.ChangedRecipe" Role="ChangedRecipe" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="OrderDetail">
-              <PropertyRef Name="OrderDetailId" />
-            </Principal>
-            <Dependent Role="ChangedRecipe">
-              <PropertyRef Name="OrderDetailId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Grocery_CodeCategory">
           <End Type="LNTKModel.CodeCategory" Role="CodeCategory" Multiplicity="1" />
           <End Type="LNTKModel.Grocery" Role="Grocery" Multiplicity="*" />
@@ -676,6 +641,41 @@
             </Principal>
             <Dependent Role="Stock">
               <PropertyRef Name="GroceryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ChangedRecipe">
+          <Key>
+            <PropertyRef Name="OrderDetailId" />
+            <PropertyRef Name="GroceryId" />
+          </Key>
+          <Property Name="OrderDetailId" Type="Int32" Nullable="false" />
+          <Property Name="GroceryId" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Grocery" Relationship="LNTKModel.FK_ChagedRecipe_Grocery" FromRole="ChangedRecipe" ToRole="Grocery" />
+          <NavigationProperty Name="OrderDetail" Relationship="LNTKModel.FK_ChagedRecipe_OrderDetail" FromRole="ChangedRecipe" ToRole="OrderDetail" />
+        </EntityType>
+        <Association Name="FK_ChagedRecipe_Grocery">
+          <End Type="LNTKModel.Grocery" Role="Grocery" Multiplicity="1" />
+          <End Type="LNTKModel.ChangedRecipe" Role="ChangedRecipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grocery">
+              <PropertyRef Name="GroceryId" />
+            </Principal>
+            <Dependent Role="ChangedRecipe">
+              <PropertyRef Name="GroceryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChagedRecipe_OrderDetail">
+          <End Type="LNTKModel.OrderDetail" Role="OrderDetail" Multiplicity="1" />
+          <End Type="LNTKModel.ChangedRecipe" Role="ChangedRecipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderDetail">
+              <PropertyRef Name="OrderDetailId" />
+            </Principal>
+            <Dependent Role="ChangedRecipe">
+              <PropertyRef Name="OrderDetailId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -772,15 +772,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ChangedRecipes">
-            <EntityTypeMapping TypeName="LNTKModel.ChangedRecipe">
-              <MappingFragment StoreEntitySet="ChangedRecipe">
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
-                <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Groceries">
             <EntityTypeMapping TypeName="LNTKModel.Grocery">
               <MappingFragment StoreEntitySet="Grocery">
@@ -790,6 +781,15 @@
                 <ScalarProperty Name="Unit" ColumnName="Unit" />
                 <ScalarProperty Name="CodeCategoryId" ColumnName="CodeCategoryId" />
                 <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChangedRecipes">
+            <EntityTypeMapping TypeName="LNTKModel.ChangedRecipe">
+              <MappingFragment StoreEntitySet="ChangedRecipe">
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="GroceryId" ColumnName="GroceryId" />
+                <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
