@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraWaitForm;
 using LNTKKiosk.Data;
+using LNTKCustomer.UserControl;
 
 namespace LNTKCustomer.Form
 {
@@ -18,8 +19,7 @@ namespace LNTKCustomer.Form
     {
         string productName;
         string package;
-        public int beverageId { get; set; }
-        public int SideId { get; set; }
+
         const int FrenchFriesM = 12;
         const int ColaM = 13;
         const int FrenchFriesL = 20;
@@ -53,11 +53,15 @@ namespace LNTKCustomer.Form
                 {
                     uscSideCustomization.SetPicture(FrenchFriesM);
                     uscBeverageCustomization.SetPicture(ColaM);
+                    OrderInfo.Instance.selectedBeverage = ColaM;
+                    OrderInfo.Instance.selectedSide = FrenchFriesM;
                 }
                 else
                 {
                     uscSideCustomization.SetPicture(FrenchFriesL);
                     uscBeverageCustomization.SetPicture(ColaL);
+                    OrderInfo.Instance.selectedBeverage = ColaL;
+                    OrderInfo.Instance.selectedSide = FrenchFriesL;
                 }
 
             }
@@ -71,13 +75,11 @@ namespace LNTKCustomer.Form
             ShoppedItem shoppedItem = new ShoppedItem(productName + package, product.ProductId, 1);
             OrderInfo.Instance.shoppedItemList.Add(shoppedItem);
 
-            beverageId = 13;//for test
-            SideId = 12;//for test
-
             if (package.Equals("") != true)
             {
-                ShoppedItem beverage = new ShoppedItem(productName + package, beverageId, 1);
-                ShoppedItem side = new ShoppedItem(productName + package, SideId, 1);
+                //if(Side)
+                ShoppedItem beverage = new ShoppedItem(productName + package, OrderInfo.Instance.selectedBeverage, 1);
+                ShoppedItem side = new ShoppedItem(productName + package, OrderInfo.Instance.selectedSide, 1);
                 OrderInfo.Instance.shoppedItemList.Add(beverage);
                 OrderInfo.Instance.shoppedItemList.Add(side);
             }
@@ -99,6 +101,11 @@ namespace LNTKCustomer.Form
             Close();
         }
 
-      
+        private void sbtCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+      //  private void O
     }
 }

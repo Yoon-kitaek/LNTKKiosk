@@ -19,7 +19,7 @@ namespace LNTKCustomer.UserControl
         private List<Thumbnail> thumbnails = new List<Thumbnail>();
         private const int thumbnailCount = 4;
         private int page = 0;
-        public int categoryId { get; set; }
+        public int categoryId;
         private bool isShoppingCart = false;
 
         public ThumbnailContainer()
@@ -33,6 +33,14 @@ namespace LNTKCustomer.UserControl
             this.shoppedPackageList = shoppedPackageList;
             BindingThumbnail();
         }
+
+        public void SetCatergoryId(int categoryId)
+        {
+            isShoppingCart = false;
+            this.categoryId = categoryId;
+            BindingThumbnail();
+        }
+
         private void ThumbnailContainer_Load(object sender, EventArgs e)
         {
             if (DesignMode)
@@ -80,6 +88,66 @@ namespace LNTKCustomer.UserControl
             }
         }
 
+        private void uscTabButton_ButtonClicked(object sender, Thumbnail.ThumbnailClickedEventArgs e)
+        {
+            if (isShoppingCart == false)
+            {
+                Thumbnail thumbnail = sender as Thumbnail;
+
+                OnMenuSelected(e.Name);
+                if (categoryId == 11)
+                    OrderInfo.Instance.selectedBeverage = DataRepository.Product.GetByName(e.Name).ProductId;
+                if (categoryId == 12)
+                    OrderInfo.Instance.selectedSide = DataRepository.Product.GetByName(e.Name).ProductId;
+                SideOrBeverageCustomization sideOrBeverageCustomization = this.Parent.Parent as SideOrBeverageCustomization;
+                sideOrBeverageCustomization.Close();
+            }
+
+
+        }
+
+        #region MenuSelected event things for C# 3.0
+        public event EventHandler<MenuSelectedEventArgs> MenuSelected;
+
+        protected virtual void OnMenuSelected(MenuSelectedEventArgs e)
+        {
+            if (MenuSelected != null)
+                MenuSelected(this, e);
+        }
+
+        private MenuSelectedEventArgs OnMenuSelected(string label)
+        {
+            MenuSelectedEventArgs args = new MenuSelectedEventArgs(label);
+            OnMenuSelected(args);
+
+            return args;
+        }
+
+        private MenuSelectedEventArgs OnMenuSelectedForOut()
+        {
+            MenuSelectedEventArgs args = new MenuSelectedEventArgs();
+            OnMenuSelected(args);
+
+            return args;
+        }
+
+        public class MenuSelectedEventArgs : EventArgs
+        {
+            public string Name { get; set; }
+
+            public MenuSelectedEventArgs()
+            {
+            }
+
+            public MenuSelectedEventArgs(string name)
+            {
+                Name = name;
+            }
+        }
+        #endregion
+
+
+
         #region ArrowClicked event things for C# 3.0
         public event EventHandler<ArrowClickedEventArgs> ArrowClicked;
 
@@ -97,7 +165,7 @@ namespace LNTKCustomer.UserControl
             if (isShoppingCart == false)
                 lastPage = (DataRepository.Product.FilterbyCatergory(categoryId).Count - 1) / thumbnailCount;
             else
-                lastPage = shoppedPackageList.Count-1;
+                lastPage = shoppedPackageList.Count - 1;
 
 
             if (isRight == true)
@@ -156,50 +224,5 @@ namespace LNTKCustomer.UserControl
             OnArrowClicked(true);
         }
 
-
-        #region SideOrBeverageEdit event things for C# 3.0
-        public event EventHandler<SideOrBeverageEditEventArgs> SideOrBeverageEdit;
-
-        protected virtual void OnSideOrBeverageEdit(SideOrBeverageEditEventArgs e)
-        {
-            if (SideOrBeverageEdit != null)
-                SideOrBeverageEdit(this, e);
-        }
-
-        private SideOrBeverageEditEventArgs OnSideOrBeverageEdit(int categoryId)
-        {
-            SideOrBeverageEditEventArgs args = new SideOrBeverageEditEventArgs(categoryId);
-            OnSideOrBeverageEdit(args);
-
-            return args;
-        }
-
-        private SideOrBeverageEditEventArgs OnSideOrBeverageEditForOut()
-        {
-            SideOrBeverageEditEventArgs args = new SideOrBeverageEditEventArgs();
-            OnSideOrBeverageEdit(args);
-
-            return args;
-        }
-
-        public class SideOrBeverageEditEventArgs : EventArgs
-        {
-            public int CategoryId { get; set; }
-
-            public SideOrBeverageEditEventArgs()
-            {
-            }
-
-            public SideOrBeverageEditEventArgs(int categoryId)
-            {
-                CategoryId = categoryId;
-            }
-        }
-        #endregion
-
-        private void uscThumbnail1_Click(object sender, EventArgs e)
-        {
-            //OnSideOrBeverageEdit()
-        }
     }
 }

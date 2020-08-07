@@ -48,6 +48,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.uscBurgerCustomization = new LNTKCustomer.UserControl.CustomizationButton();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.sbtCancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -76,9 +77,12 @@
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F)});
+            this.tablePanel1.Controls.Add(this.sbtCancel);
             this.tablePanel1.Controls.Add(this.btnPay);
             this.tablePanel1.Controls.Add(this.btnPutInCart);
             this.tablePanel1.Location = new System.Drawing.Point(12, 12);
@@ -124,12 +128,12 @@
             this.btnPay.AppearancePressed.Options.UseForeColor = true;
             this.btnPay.AppearancePressed.Options.UseTextOptions = true;
             this.btnPay.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tablePanel1.SetColumn(this.btnPay, 3);
+            this.tablePanel1.SetColumn(this.btnPay, 5);
             this.btnPay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPay.Location = new System.Drawing.Point(632, 22);
+            this.btnPay.Location = new System.Drawing.Point(729, 22);
             this.btnPay.Name = "btnPay";
             this.tablePanel1.SetRow(this.btnPay, 1);
-            this.btnPay.Size = new System.Drawing.Size(308, 143);
+            this.btnPay.Size = new System.Drawing.Size(236, 143);
             this.btnPay.TabIndex = 1;
             this.btnPay.Text = "결제하기";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
@@ -168,12 +172,12 @@
             this.btnPutInCart.AppearancePressed.Options.UseForeColor = true;
             this.btnPutInCart.AppearancePressed.Options.UseTextOptions = true;
             this.btnPutInCart.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tablePanel1.SetColumn(this.btnPutInCart, 1);
+            this.tablePanel1.SetColumn(this.btnPutInCart, 3);
             this.btnPutInCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPutInCart.Location = new System.Drawing.Point(108, 22);
+            this.btnPutInCart.Location = new System.Drawing.Point(406, 22);
             this.btnPutInCart.Name = "btnPutInCart";
             this.tablePanel1.SetRow(this.btnPutInCart, 1);
-            this.btnPutInCart.Size = new System.Drawing.Size(308, 143);
+            this.btnPutInCart.Size = new System.Drawing.Size(236, 143);
             this.btnPutInCart.TabIndex = 0;
             this.btnPutInCart.Text = "장바구니에 넣기";
             this.btnPutInCart.Click += new System.EventHandler(this.btnPutInCart_Click);
@@ -353,6 +357,49 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // sbtCancel
+            // 
+            this.sbtCancel.Appearance.BackColor = System.Drawing.Color.DarkOrange;
+            this.sbtCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.sbtCancel.Appearance.ForeColor = System.Drawing.Color.White;
+            this.sbtCancel.Appearance.Options.UseBackColor = true;
+            this.sbtCancel.Appearance.Options.UseFont = true;
+            this.sbtCancel.Appearance.Options.UseForeColor = true;
+            this.sbtCancel.Appearance.Options.UseTextOptions = true;
+            this.sbtCancel.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sbtCancel.AppearanceDisabled.BackColor = System.Drawing.Color.DarkOrange;
+            this.sbtCancel.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.sbtCancel.AppearanceDisabled.ForeColor = System.Drawing.Color.White;
+            this.sbtCancel.AppearanceDisabled.Options.UseBackColor = true;
+            this.sbtCancel.AppearanceDisabled.Options.UseFont = true;
+            this.sbtCancel.AppearanceDisabled.Options.UseForeColor = true;
+            this.sbtCancel.AppearanceDisabled.Options.UseTextOptions = true;
+            this.sbtCancel.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sbtCancel.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.sbtCancel.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.sbtCancel.AppearanceHovered.ForeColor = System.Drawing.Color.White;
+            this.sbtCancel.AppearanceHovered.Options.UseBackColor = true;
+            this.sbtCancel.AppearanceHovered.Options.UseFont = true;
+            this.sbtCancel.AppearanceHovered.Options.UseForeColor = true;
+            this.sbtCancel.AppearanceHovered.Options.UseTextOptions = true;
+            this.sbtCancel.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sbtCancel.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.sbtCancel.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.sbtCancel.AppearancePressed.ForeColor = System.Drawing.Color.White;
+            this.sbtCancel.AppearancePressed.Options.UseBackColor = true;
+            this.sbtCancel.AppearancePressed.Options.UseFont = true;
+            this.sbtCancel.AppearancePressed.Options.UseForeColor = true;
+            this.sbtCancel.AppearancePressed.Options.UseTextOptions = true;
+            this.sbtCancel.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.tablePanel1.SetColumn(this.sbtCancel, 1);
+            this.sbtCancel.Location = new System.Drawing.Point(84, 22);
+            this.sbtCancel.Name = "sbtCancel";
+            this.tablePanel1.SetRow(this.sbtCancel, 1);
+            this.sbtCancel.Size = new System.Drawing.Size(236, 143);
+            this.sbtCancel.TabIndex = 2;
+            this.sbtCancel.Text = "취소";
+            this.sbtCancel.Click += new System.EventHandler(this.sbtCancel_Click);
+            // 
             // Customization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -410,5 +457,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private UserControl.CustomizationButton uscBurgerCustomization;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.SimpleButton sbtCancel;
     }
 }

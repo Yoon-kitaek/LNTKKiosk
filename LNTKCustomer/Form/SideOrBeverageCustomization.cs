@@ -22,7 +22,7 @@ namespace LNTKCustomer.Form
 
         private void SideOrBeverageCustomization_Load(object sender, EventArgs e)
         {
-            uscThumbnailContainer.categoryId = categoryId;
+            uscThumbnailContainer.SetCatergoryId(categoryId);
         }
     }
 }

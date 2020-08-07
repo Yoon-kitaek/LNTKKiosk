@@ -124,11 +124,11 @@
     </Compile>
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Helpers\InputConstraint.cs" />
-    <Compile Include="KeyPad.cs">
+    <Compile Include="Chef.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KeyPad.Designer.cs">
-      <DependentUpon>KeyPad.cs</DependentUpon>
+    <Compile Include="Chef.Designer.cs">
+      <DependentUpon>Chef.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Management.cs">
       <SubType>Form</SubType>
@@ -195,8 +195,8 @@
     <EmbeddedResource Include="Form\GroceryManagement.resx">
       <DependentUpon>GroceryManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KeyPad.resx">
-      <DependentUpon>KeyPad.cs</DependentUpon>
+    <EmbeddedResource Include="Chef.resx">
+      <DependentUpon>Chef.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\GroceryUpdate.resx">
       <DependentUpon>GroceryUpdate.cs</DependentUpon>
