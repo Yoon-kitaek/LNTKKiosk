@@ -19,7 +19,6 @@ namespace LNTKKiosk.Data
         {
             this.Recipes = new HashSet<Recipe>();
             this.Stocks = new HashSet<Stock>();
-            this.ChangedRecipes = new HashSet<ChangedRecipe>();
         }
     
         public int GroceryId { get; set; }

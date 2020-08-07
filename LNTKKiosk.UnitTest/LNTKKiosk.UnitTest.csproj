@@ -61,7 +61,12 @@
     <Compile Include="EventDataTest.cs" />
     <Compile Include="EventProductDataTest.cs" />
     <Compile Include="GroceryDataTest.cs" />
+    <Compile Include="OrderDataTest.cs" />
+    <Compile Include="OrderDetailDataTest.cs" />
+    <Compile Include="ProductDataTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeDataTest.cs" />
+    <Compile Include="StockDataTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
