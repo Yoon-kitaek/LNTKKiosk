@@ -22,13 +22,13 @@
         <AssociationConnector Association="LNTKModel.FK_OrderDetail_Product" />
         <AssociationConnector Association="LNTKModel.FK_OrderStock_Stock" />
         <AssociationConnector Association="LNTKModel.FK_Recipe_Product" />
-        <EntityTypeShape EntityType="LNTKModel.ChangedRecipe" Width="1.5" PointX="7.5" PointY="4.5" />
         <EntityTypeShape EntityType="LNTKModel.Grocery" Width="1.5" PointX="3" PointY="3.375" />
-        <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_Grocery" />
-        <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_OrderDetail" />
         <AssociationConnector Association="LNTKModel.FK_Grocery_CodeCategory" />
         <AssociationConnector Association="LNTKModel.FK_Recipe_Grocery" />
         <AssociationConnector Association="LNTKModel.FK_Stock_Grocery" />
+        <EntityTypeShape EntityType="LNTKModel.ChangedRecipe" Width="1.5" PointX="7.5" PointY="4.5" />
+        <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_Grocery" />
+        <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_OrderDetail" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
