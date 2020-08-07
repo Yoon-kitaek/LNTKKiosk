@@ -26,12 +26,6 @@ namespace LNTKKiosk.Data
             return context.Set<T>().ToList();
         }
 
-        public int GetCount()
-        {
-            var context = CreateContext();
-
-            return context.Set<T>().Count();
-        }
 
         public void Insert(T entity)
         {
