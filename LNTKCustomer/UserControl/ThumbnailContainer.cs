@@ -19,7 +19,7 @@ namespace LNTKCustomer.UserControl
         private List<Thumbnail> thumbnails = new List<Thumbnail>();
         private const int thumbnailCount = 4;
         private int page = 0;
-        public int categoryId { get; set; }
+        public int categoryId;
         private bool isShoppingCart = false;
 
         public ThumbnailContainer()
@@ -33,6 +33,14 @@ namespace LNTKCustomer.UserControl
             this.shoppedPackageList = shoppedPackageList;
             BindingThumbnail();
         }
+
+        public void SetCatergoryId(int categoryId)
+        {
+            isShoppingCart = false;
+            this.categoryId = categoryId;
+            BindingThumbnail();
+        }
+
         private void ThumbnailContainer_Load(object sender, EventArgs e)
         {
             if (DesignMode)
@@ -82,13 +90,19 @@ namespace LNTKCustomer.UserControl
 
         private void uscTabButton_ButtonClicked(object sender, Thumbnail.ThumbnailClickedEventArgs e)
         {
-            Thumbnail thumbnail = sender as Thumbnail; 
+            if (isShoppingCart == false)
+            {
+                Thumbnail thumbnail = sender as Thumbnail;
 
-            OnMenuSelected(e.Name);
+                OnMenuSelected(e.Name);
+                if (categoryId == 11)
+                    OrderInfo.Instance.selectedBeverage = DataRepository.Product.GetByName(e.Name).ProductId;
+                if (categoryId == 12)
+                    OrderInfo.Instance.selectedSide = DataRepository.Product.GetByName(e.Name).ProductId;
+                SideOrBeverageCustomization sideOrBeverageCustomization = this.Parent.Parent as SideOrBeverageCustomization;
+                sideOrBeverageCustomization.Close();
+            }
 
-            SideOrBeverageCustomization sideOrBeverageCustomization = (this.Parent.Parent as SideOrBeverageCustomization); 
-
-            sideOrBeverageCustomization.selectedProductId = DataRepository.Product.GetByName(e.Name).ProductId;
 
         }
 

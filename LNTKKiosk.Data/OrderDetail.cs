@@ -24,9 +24,9 @@ namespace LNTKKiosk.Data
         public int OrderId { get; set; }
         public int ProductId { get; set; }
     
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChangedRecipe> ChangedRecipes { get; set; }
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

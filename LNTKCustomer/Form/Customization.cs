@@ -19,8 +19,7 @@ namespace LNTKCustomer.Form
     {
         string productName;
         string package;
-        public int beverageId { get; set; }
-        public int SideId { get; set; }
+
         const int FrenchFriesM = 12;
         const int ColaM = 13;
         const int FrenchFriesL = 20;
@@ -54,15 +53,15 @@ namespace LNTKCustomer.Form
                 {
                     uscSideCustomization.SetPicture(FrenchFriesM);
                     uscBeverageCustomization.SetPicture(ColaM);
-                    beverageId = ColaM;
-                    SideId = FrenchFriesM;
+                    OrderInfo.Instance.selectedBeverage = ColaM;
+                    OrderInfo.Instance.selectedSide = FrenchFriesM;
                 }
                 else
                 {
                     uscSideCustomization.SetPicture(FrenchFriesL);
                     uscBeverageCustomization.SetPicture(ColaL);
-                    beverageId = ColaL;
-                    SideId = FrenchFriesL;
+                    OrderInfo.Instance.selectedBeverage = ColaL;
+                    OrderInfo.Instance.selectedSide = FrenchFriesL;
                 }
 
             }
@@ -79,8 +78,8 @@ namespace LNTKCustomer.Form
             if (package.Equals("") != true)
             {
                 //if(Side)
-                ShoppedItem beverage = new ShoppedItem(productName + package, beverageId, 1);
-                ShoppedItem side = new ShoppedItem(productName + package, SideId, 1);
+                ShoppedItem beverage = new ShoppedItem(productName + package, OrderInfo.Instance.selectedBeverage, 1);
+                ShoppedItem side = new ShoppedItem(productName + package, OrderInfo.Instance.selectedSide, 1);
                 OrderInfo.Instance.shoppedItemList.Add(beverage);
                 OrderInfo.Instance.shoppedItemList.Add(side);
             }
@@ -106,5 +105,7 @@ namespace LNTKCustomer.Form
         {
             Close();
         }
+
+      //  private void O
     }
 }
