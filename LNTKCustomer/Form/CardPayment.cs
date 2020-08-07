@@ -22,7 +22,16 @@ namespace LNTKCustomer.Form
 
         private void CardPayment_Load(object sender, EventArgs e)
         {
-            
+            int remainingPayment = 0;
+            foreach (ShoppedItem shoppedItem in OrderInfo.Instance.shoppedItemList)
+                remainingPayment += shoppedItem.price;
+            foreach (ShoppedItem shoppedItem in OrderInfo.Instance.shoppedItemList)
+            {
+                if (shoppedItem.packageName.Contains("세트") == true)
+                    remainingPayment += -300;
+            }
+
+            lbcInstruction.Text = $"카드를 넣어 {remainingPayment}원을 결제해주세요.";
         }
 
         private void btnPay_Click(object sender, EventArgs e)

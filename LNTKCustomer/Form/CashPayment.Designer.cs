@@ -144,6 +144,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "CashPayment";
             this.Text = "CashPayment";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.CashPayment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
