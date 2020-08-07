@@ -24,7 +24,8 @@ namespace LNTKCustomer.Form
         public CustomerMenu()
         {
             InitializeComponent();
-            SetTestData();
+            shoppingList = OrderInfo.Instance.shoppedItemList;
+          //  SetTestData();
         }
 
         private void SetTestData()
@@ -43,7 +44,6 @@ namespace LNTKCustomer.Form
         private void CustomerMenu_Load(object sender, EventArgs e)
         {           
             SetTestData();//실험용
-            form.GetShoppedItemList(shoppingList);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -59,29 +59,40 @@ namespace LNTKCustomer.Form
         }
         private void tbiBurger_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
+            form.page = 0;          
             form.SetCategoryId(10);
         }
 
         private void tbiBeverage_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
-        {
+        {            
+            form.page = 0;
             form.SetCategoryId(11);
         }
 
         private void tbiSide_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
+            form.page = 0;
             form.SetCategoryId(12);
         }
 
         private void tbiCart_ItemClick(object sender, TileItemEventArgs e)
         {
-
-            ShoppingCart shoppingCart = new ShoppingCart(shoppingList);
-            shoppingCart.MdiParent = this;
-            shoppingCart.WindowState = FormWindowState.Maximized;
-      //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)
-            TileItemsClickable(false);
-            shoppingCart.Show();
-
+            if (OrderInfo.Instance.shoppedItemList != null)
+            {
+                if (Application.OpenForms.OfType<ShoppingCart>().Count() ==0)
+                {
+                    ShoppingCart shoppingCart = new ShoppingCart();
+                    shoppingCart.MdiParent = this;
+                    shoppingCart.WindowState = FormWindowState.Maximized;
+                    //      shoppingCart.FormClosing += new System.Windows.Forms.FormClosedEventHandler(shoppingCart.)
+                    //   TileItemsClickable(false);
+                    shoppingCart.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("카트에 추가하신 상품이 없습니다.");
+            }
         }
 
 

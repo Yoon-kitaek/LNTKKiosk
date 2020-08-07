@@ -25,7 +25,7 @@ namespace LNTKManager
 
         private void WriteToEntity()
         {
-            _grocery.CodeCategoryId = (int?)cbbCategoryId.SelectedValue;
+            _grocery.CodeCategoryId = (int)cbbCategoryId.SelectedValue;
             if (pcbImage.Image != null)
                 _grocery.Picture = ConvertImageToBinary(pcbImage.Image);
 

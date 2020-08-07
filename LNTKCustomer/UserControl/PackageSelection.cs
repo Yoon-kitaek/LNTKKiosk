@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LNTKKiosk.Data;
 using LNTKCustomer.Form;
+using System.Runtime.CompilerServices;
+using DevExpress.Utils.Extensions;
 
 namespace LNTKCustomer.UserControl
 {
@@ -17,7 +19,7 @@ namespace LNTKCustomer.UserControl
     {
         public string Name { get; set; }
         const int MiddleSizePrice = 1200;
-        const int LargeSizePrice = 1600; 
+        const int LargeSizePrice = 1600;
         public PackageSelection()
         {
             InitializeComponent();
@@ -31,8 +33,14 @@ namespace LNTKCustomer.UserControl
             lbcSinglePrice.Text = price.ToString();
             lbcMiddleSetPrice.Text = (price + MiddleSizePrice).ToString();
             lbcLargeSetPrice.Text = (price + LargeSizePrice).ToString();
-        
         }
+
+        public void CloseForm()
+        {
+            SingleOrSet singleOrSet = (SingleOrSet)this.Parent.Parent;
+            singleOrSet.Close();
+        }
+
 
         #region MenuClicked event things for C# 3.0
         public event EventHandler<MenuClickedEventArgs> MenuClicked;
@@ -78,18 +86,21 @@ namespace LNTKCustomer.UserControl
         {
             OnMenuClicked(lbcSingle.Text);
             OpenCustomizationMenu(Name,"");
+            CloseForm();
         }
 
         private void pceMiddleSet_Click(object sender, EventArgs e)
         {
             OnMenuClicked(lbcMiddleSet.Text);
             OpenCustomizationMenu(Name ,lbcMiddleSet.Text);
+            CloseForm();
         }
 
         private void pceLargetSet_Click(object sender, EventArgs e)
         {
             OnMenuClicked(lbcLargeSet.Text);
             OpenCustomizationMenu(Name , lbcLargeSet.Text);
+            CloseForm();
         }
 
         private void OpenCustomizationMenu(string productName, string package)

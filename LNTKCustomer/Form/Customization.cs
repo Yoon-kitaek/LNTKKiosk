@@ -26,15 +26,11 @@ namespace LNTKCustomer.Form
         const int ColaL = 21;
 
 
-
-        List<ShoppedItem> shoppingList = new List<ShoppedItem>();
-
         public Customization(string packageName, string package)
         {
             InitializeComponent();
             productName = packageName;
             this.package = package;
-
         }
 
         private void Customization_Load(object sender, EventArgs e)
@@ -43,6 +39,7 @@ namespace LNTKCustomer.Form
                 return;
             int productId = DataRepository.Product.GetByName(productName).ProductId;
             uscBurgerCustomization.SetPicture(productId);
+            uscBurgerCustomization.productId = productId;
 
             if (package.Equals("") == true)
             {
@@ -71,37 +68,35 @@ namespace LNTKCustomer.Form
         private void AddtoCart()
         {
             Product product = DataRepository.Product.GetByName(productName);
-            ShoppedItem shoppedItem = new ShoppedItem(Name + package, product.ProductId, 1);
-            shoppingList.Add(shoppedItem);
+            ShoppedItem shoppedItem = new ShoppedItem(productName + package, product.ProductId, 1);
+            OrderInfo.Instance.shoppedItemList.Add(shoppedItem);
 
             beverageId = 13;//for test
             SideId = 12;//for test
 
             if (package.Equals("") != true)
             {
-                ShoppedItem beverage = new ShoppedItem(Name + package, beverageId, 1);
-                ShoppedItem side = new ShoppedItem(Name + package, SideId, 1);
-                shoppingList.Add(beverage);
-                shoppingList.Add(side);
+                ShoppedItem beverage = new ShoppedItem(productName + package, beverageId, 1);
+                ShoppedItem side = new ShoppedItem(productName + package, SideId, 1);
+                OrderInfo.Instance.shoppedItemList.Add(beverage);
+                OrderInfo.Instance.shoppedItemList.Add(side);
             }
         }
 
 
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Payment form = new Payment(shoppingList);
-            form.Show();
-        }
-
         private void btnPutInCart_Click(object sender, EventArgs e)
         {
             AddtoCart();
+            Close();
         }
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-
+            AddtoCart();
+            Payment payment = new Payment();
+            payment.Show();
+            Close();
         }
 
       

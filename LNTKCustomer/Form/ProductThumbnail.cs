@@ -17,7 +17,7 @@ namespace LNTKCustomer.Form
     {
         private const int thumbnailCount = 6;
         private List<UserControl.Thumbnail> thumbnails = new List<UserControl.Thumbnail>();
-        private int page = 0;
+        public int page = 0;
         private int categoryId;
         List<ShoppedItem> shoppingList = new List<ShoppedItem>();
         public void SetCategoryId(int categoryId)
@@ -32,14 +32,8 @@ namespace LNTKCustomer.Form
         public ProductThumbnail()
         {
             InitializeComponent();
+            shoppingList = OrderInfo.Instance.shoppedItemList;
         }
-
-        public void GetShoppedItemList(List<ShoppedItem> shoppingList)
-        {
-            this.shoppingList = shoppingList;
-        }
-
-
 
         private void ProductThumbnail_Load(object sender, EventArgs e)
         {
@@ -96,15 +90,17 @@ namespace LNTKCustomer.Form
             Thumbnail thumbnail = sender as Thumbnail;
             if (thumbnail.Label.Contains("버거") == true)
             {
-                SingleOrSet form = new SingleOrSet(thumbnail.Label, shoppingList);
+                SingleOrSet form = new SingleOrSet(thumbnail.Label);
                 form.Show();
             }
             else
             {
+                MessageBox.Show($"{thumbnail.Label}를(을) 장바구니에 담았습니다.");
                 Product product = DataRepository.Product.GetByName(thumbnail.Label);
                 shoppingList.Add(new ShoppedItem(product.Name, product.ProductId, 1));
             }
 
+            
 
             OnThumbnailClicked(e.Name);
 

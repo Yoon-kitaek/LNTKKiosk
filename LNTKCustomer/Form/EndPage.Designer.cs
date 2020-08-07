@@ -32,8 +32,8 @@
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.lbcOrderId = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lbcOrderId = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -99,7 +99,7 @@
             this.labelControl1.Location = new System.Drawing.Point(60, 337);
             this.labelControl1.Name = "labelControl1";
             this.tablePanel2.SetRow(this.labelControl1, 0);
-            this.labelControl1.Size = new System.Drawing.Size(958, 101);
+            this.labelControl1.Size = new System.Drawing.Size(761, 101);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "주문이 완료되었습니다.";
             // 
@@ -119,21 +119,6 @@
             this.tablePanel1.Size = new System.Drawing.Size(1066, 381);
             this.tablePanel1.TabIndex = 8;
             // 
-            // lbcOrderId
-            // 
-            this.lbcOrderId.Appearance.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
-            this.lbcOrderId.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lbcOrderId.Appearance.Options.UseFont = true;
-            this.lbcOrderId.Appearance.Options.UseForeColor = true;
-            this.tablePanel1.SetColumn(this.lbcOrderId, 2);
-            this.lbcOrderId.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbcOrderId.Location = new System.Drawing.Point(536, 3);
-            this.lbcOrderId.Name = "lbcOrderId";
-            this.tablePanel1.SetRow(this.lbcOrderId, 0);
-            this.lbcOrderId.Size = new System.Drawing.Size(420, 100);
-            this.lbcOrderId.TabIndex = 7;
-            this.lbcOrderId.Text = "number";
-            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
@@ -151,9 +136,24 @@
             this.labelControl2.Location = new System.Drawing.Point(110, 3);
             this.labelControl2.Name = "labelControl2";
             this.tablePanel1.SetRow(this.labelControl2, 0);
-            this.labelControl2.Size = new System.Drawing.Size(420, 101);
+            this.labelControl2.Size = new System.Drawing.Size(365, 101);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "주문번호 : ";
+            // 
+            // lbcOrderId
+            // 
+            this.lbcOrderId.Appearance.Font = new System.Drawing.Font("Tahoma", 50F, System.Drawing.FontStyle.Bold);
+            this.lbcOrderId.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbcOrderId.Appearance.Options.UseFont = true;
+            this.lbcOrderId.Appearance.Options.UseForeColor = true;
+            this.tablePanel1.SetColumn(this.lbcOrderId, 2);
+            this.lbcOrderId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbcOrderId.Location = new System.Drawing.Point(536, 3);
+            this.lbcOrderId.Name = "lbcOrderId";
+            this.tablePanel1.SetRow(this.lbcOrderId, 0);
+            this.lbcOrderId.Size = new System.Drawing.Size(322, 100);
+            this.lbcOrderId.TabIndex = 7;
+            this.lbcOrderId.Text = "number";
             // 
             // Root
             // 

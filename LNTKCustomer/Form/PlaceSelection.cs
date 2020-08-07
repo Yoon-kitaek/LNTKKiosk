@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpressKiller;
+using LNTKKiosk.Data;
 
 namespace LNTKCustomer.Form
 {
@@ -16,12 +17,12 @@ namespace LNTKCustomer.Form
     {
         public PlaceSelection()
         {
-
             InitializeComponent();
         }
 
         private void pceEatAtRestaurant_Click(object sender, EventArgs e)
         {
+            OrderInfo.Instance.isTakeOut = false;
             CustomerMenu form = new CustomerMenu();
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -30,6 +31,7 @@ namespace LNTKCustomer.Form
 
         private void pceTakeOut_Click(object sender, EventArgs e)
         {
+            OrderInfo.Instance.isTakeOut = true;
             CustomerMenu form = new CustomerMenu();
             form.WindowState = FormWindowState.Maximized;
             form.Show();
