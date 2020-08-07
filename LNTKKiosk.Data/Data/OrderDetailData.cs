@@ -9,16 +9,16 @@ namespace LNTKKiosk.Data
     public class OrderDetailData : EntityData<OrderDetail>
     {
 
-        public OrderDetail Get(int orderId, int productId)
+        public OrderDetail Get(int orderDetailId)
         {
             LNTKEntities context = CreateContext();
 
-            return context.OrderDetails.FirstOrDefault(a => a.OrderId == orderId && a.ProductId == productId);
+            return context.OrderDetails.FirstOrDefault(a => a.OrderDetailId == orderDetailId);
         }
 
-        public void Delete(int orderId, int productId)
+        public void Delete(int orderDetailId)
         {
-            OrderDetail orderDetail = Get(orderId, productId);
+            OrderDetail orderDetail = Get(orderDetailId);
 
             if (orderDetail == null)
                 return;
@@ -120,6 +120,7 @@ namespace LNTKKiosk.Data
 
             return query.ToList();
         }
+        
         public object GetwithCompletedOrderDetail()
         {
             LNTKEntities context = CreateContext();

@@ -24,6 +24,7 @@ namespace LNTKKiosk.Data
             var context = CreateContext();
 
             return context.Set<T>().ToList();
+            
         }
 
         public int GetCount()

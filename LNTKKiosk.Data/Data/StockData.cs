@@ -57,6 +57,36 @@ namespace LNTKKiosk.Data
 
         }
 
+        public void CheckUsage(int orderDetailId)
+        {
+            OrderDetail orderDetail = DataRepository.OrderDetail.Get(orderDetailId);
+            List<Recipe> originals = DataRepository.Recipe.GetByProduct(orderDetail.ProductId);
+            List<ChangedRecipe> changes = DataRepository.ChangedRecipe.GetByOrderDetailId(orderDetailId);
+
+            foreach (Recipe recipe in originals)
+            {
+                int index = changes.FindIndex(x => x.GroceryId == recipe.GroceryId);
+                if (index != -1)
+                    recipe.Amount += changes[index].Amount;
+                
+                if (recipe.Amount > 0)
+                {
+                    List<Stock> stocks = GetByGroceryId(recipe.GroceryId)
+                                        .OrderBy(x => x.ReceivedDate)
+                                        .SkipWhile(x => x.ExhaustedDate == null && (DateTime.Now - x.ReceivedDate).Days >= x.ExpirationDate)
+                                        .Take(recipe.Amount)
+                                        .ToList();
+
+                    foreach (var stock in stocks)
+                    {
+                        stock.ExhaustedDate = DateTime.Now;
+                    }
+                }
+            }
+
+        
+        }
+
         public List<Stock> GetAllWithProperties()
         {
             LNTKEntities context = CreateContext();
