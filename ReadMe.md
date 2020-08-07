@@ -28,15 +28,15 @@
 
 
 ## 4. 사용 기술
-#### 언어
+### 언어
  - C# 3.0+
-#### 프레임워크
+### 프레임워크
  - .Net FrameWork 4.8+
  - WinForm
  - Entity FrameWork 6.2+
-#### 3rd Party Control
+### 3rd Party Control
  - Devexpress WinForm
-#### 데이터베이스
+### 데이터베이스
  - MSSQL Server 2019
 
 
