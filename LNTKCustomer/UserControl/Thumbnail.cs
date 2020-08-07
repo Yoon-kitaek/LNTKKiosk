@@ -58,7 +58,7 @@ namespace LNTKCustomer.UserControl
 
         public void SetPicture()
         {
-            pceThumbnail.Image = byteArrayToImage(DataRepository.Product.GetByName(lbcName.Text).Picture);
+            pceThumbnail.EditValue = DataRepository.Product.GetByName(lbcName.Text).Picture;
         }
         public Image byteArrayToImage(byte[] bytesArr)
         {

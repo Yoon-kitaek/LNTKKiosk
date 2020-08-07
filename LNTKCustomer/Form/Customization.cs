@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraWaitForm;
 using LNTKKiosk.Data;
+using LNTKCustomer.UserControl;
 
 namespace LNTKCustomer.Form
 {
@@ -53,11 +54,15 @@ namespace LNTKCustomer.Form
                 {
                     uscSideCustomization.SetPicture(FrenchFriesM);
                     uscBeverageCustomization.SetPicture(ColaM);
+                    beverageId = ColaM;
+                    SideId = FrenchFriesM;
                 }
                 else
                 {
                     uscSideCustomization.SetPicture(FrenchFriesL);
                     uscBeverageCustomization.SetPicture(ColaL);
+                    beverageId = ColaL;
+                    SideId = FrenchFriesL;
                 }
 
             }
@@ -71,11 +76,9 @@ namespace LNTKCustomer.Form
             ShoppedItem shoppedItem = new ShoppedItem(productName + package, product.ProductId, 1);
             OrderInfo.Instance.shoppedItemList.Add(shoppedItem);
 
-            beverageId = 13;//for test
-            SideId = 12;//for test
-
             if (package.Equals("") != true)
             {
+                //if(Side)
                 ShoppedItem beverage = new ShoppedItem(productName + package, beverageId, 1);
                 ShoppedItem side = new ShoppedItem(productName + package, SideId, 1);
                 OrderInfo.Instance.shoppedItemList.Add(beverage);
@@ -99,6 +102,9 @@ namespace LNTKCustomer.Form
             Close();
         }
 
-      
+        private void sbtCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

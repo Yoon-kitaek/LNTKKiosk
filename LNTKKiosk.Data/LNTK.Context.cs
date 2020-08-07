@@ -34,7 +34,7 @@ namespace LNTKKiosk.Data
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Recipe> Recipes { get; set; }
         public virtual DbSet<Stock> Stocks { get; set; }
-        public virtual DbSet<ChangedRecipe> ChangedRecipes { get; set; }
         public virtual DbSet<Grocery> Groceries { get; set; }
+        public virtual DbSet<ChangedRecipe> ChangedRecipes { get; set; }
     }
 }

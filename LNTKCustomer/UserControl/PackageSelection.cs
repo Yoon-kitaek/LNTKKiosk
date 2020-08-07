@@ -93,7 +93,6 @@ namespace LNTKCustomer.UserControl
         {
             OnMenuClicked(lbcMiddleSet.Text);
             OpenCustomizationMenu(Name ,lbcMiddleSet.Text);
-            CloseForm();
         }
 
         private void pceLargetSet_Click(object sender, EventArgs e)

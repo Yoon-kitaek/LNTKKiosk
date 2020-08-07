@@ -42,5 +42,6 @@ namespace LNTKCustomer
             shoppedItemList.Clear();
             changedRecipe.Clear();
         }
+
     }
 }

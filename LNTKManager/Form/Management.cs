@@ -83,8 +83,7 @@ namespace LNTKManager
         }
 
         private void tctlManagement_Click(object sender, EventArgs e)
-        {
-            
+        { 
             bdsOrderDetail.DataSource = DataRepository.OrderDetail.GetAllWithProperties();
         }
 

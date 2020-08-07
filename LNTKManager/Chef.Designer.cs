@@ -1,6 +1,6 @@
 ﻿namespace LNTKManager
 {
-    partial class KeyPad
+    partial class Chef
     {
         /// <summary>
         /// Required designer variable.

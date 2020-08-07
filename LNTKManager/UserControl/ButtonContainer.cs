@@ -26,7 +26,7 @@ namespace LNTKManager
         private void uscTabButton_ButtonClicked(object sender, TabButton.ButtonClickedEventArgs e)
         {
             TabButton tabButton = sender as TabButton;
-
+            
             tabButton.Acctivate();
 
             _tabButtons
