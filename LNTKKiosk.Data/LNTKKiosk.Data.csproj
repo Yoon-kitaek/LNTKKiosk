@@ -54,11 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangedRecipe.cs">
+      <DependentUpon>LNTK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="CodeCategory.cs">
       <DependentUpon>LNTK.tt</DependentUpon>
     </Compile>
     <Compile Include="DataRepository.cs" />
+    <Compile Include="Data\ChangedRecipeData.cs" />
     <Compile Include="Data\CodeCategoryData.cs" />
     <Compile Include="Data\EntityData.cs" />
     <Compile Include="Data\EventData.cs" />

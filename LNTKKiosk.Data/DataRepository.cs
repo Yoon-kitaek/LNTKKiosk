@@ -18,5 +18,6 @@ namespace LNTKKiosk.Data
         public static RecipeData Recipe { get; } = new RecipeData();
         public static StockData Stock { get; } = new StockData();
         public static CodeCategoryData CodeCategory { get; } = new CodeCategoryData();
+        public static ChangedRecipeData ChangedRecipe { get; } = new ChangedRecipeData();
     }
 }

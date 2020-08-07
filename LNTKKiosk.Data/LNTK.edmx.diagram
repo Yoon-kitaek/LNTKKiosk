@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7aaff4a0df6d49c6beacf9afe568f96d" Name="Diagram1" ZoomLevel="87">
+      <Diagram DiagramId="7aaff4a0df6d49c6beacf9afe568f96d" Name="Diagram1" ZoomLevel="65">
         <EntityTypeShape EntityType="LNTKModel.Event" Width="1.5" PointX="6" PointY="14.5" />
         <EntityTypeShape EntityType="LNTKModel.CodeCategory" Width="1.5" PointX="0.75" PointY="7" />
         <EntityTypeShape EntityType="LNTKModel.EventProduct" Width="1.5" PointX="8.625" PointY="11.875" />
@@ -26,6 +26,9 @@
         <AssociationConnector Association="LNTKModel.FK_OrderDetail_Product" />
         <AssociationConnector Association="LNTKModel.FK_OrderStock_Stock" />
         <AssociationConnector Association="LNTKModel.FK_Recipe_Product" />
+        <EntityTypeShape EntityType="LNTKModel.ChangedRecipe" Width="1.5" PointX="10.5" PointY="8.25" />
+        <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_Grocery" />
+        <AssociationConnector Association="LNTKModel.FK_ChagedRecipe_OrderDetail" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

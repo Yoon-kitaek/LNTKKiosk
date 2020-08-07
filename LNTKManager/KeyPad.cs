@@ -66,12 +66,14 @@ namespace LNTKManager
 
             order.IsCompleted = true;
 
+            foreach (var orderDetail in orderDetails)
+                DataRepository.Stock.CheckUsage(orderDetail.OrderDetailId);
+
             DataRepository.Order.Update(order);
 
             bdsCompletedOrderDetail.DataSource = null;
             bdsCompletedOrderDetail.DataSource = orders;
             bdsNonCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithNonCompletedOrderDetail();
-            //bdsCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithCompletedOrderDetail();
 
             tbxResult.Text = "";
         }
@@ -80,7 +82,6 @@ namespace LNTKManager
         private void KeyPad_Load(object sender, EventArgs e)
         {
             bdsNonCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithNonCompletedOrderDetail();
-            //bdsCompletedOrderDetail.DataSource = DataRepository.OrderDetail.GetwithCompletedOrderDetail();
 
         }
 

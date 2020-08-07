@@ -145,5 +145,7 @@ namespace LNTKManager
         {
             bdsCategory.DataSource = DataRepository.CodeCategory.GetMenuCategory();
         }
+
+
     }
 }
