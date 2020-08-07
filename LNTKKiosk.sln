@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LNTKCustomer", "LNTKCustome
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LNTKKiosk.Data", "LNTKKiosk.Data\LNTKKiosk.Data.csproj", "{D44B547C-7DD0-4633-9A91-23E425D4F333}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{78FEAE65-4A2C-4269-9A53-1318CA3FA82B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61A41ABD-6678-4DD1-8F96-9E836E345D89}"
 	ProjectSection(SolutionItems) = preProject
-		LNTKCustomer\ReadMe.md = LNTKCustomer\ReadMe.md
+		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
 Global

@@ -304,7 +304,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.md" />
     <None Include="Resources\ForkAndKnife.png" />
   </ItemGroup>
   <ItemGroup>
