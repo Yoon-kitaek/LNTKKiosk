@@ -77,7 +77,6 @@ namespace LNTKCustomer.Form
 
             if (package.Equals("") != true)
             {
-                //if(Side)
                 ShoppedItem beverage = new ShoppedItem(productName + package, OrderInfo.Instance.selectedBeverage, 1);
                 ShoppedItem side = new ShoppedItem(productName + package, OrderInfo.Instance.selectedSide, 1);
                 OrderInfo.Instance.shoppedItemList.Add(beverage);
@@ -106,6 +105,14 @@ namespace LNTKCustomer.Form
             Close();
         }
 
-      //  private void O
+        private void SelectedBeverageChange()
+        {
+            uscBeverageCustomization.SetPicture(OrderInfo.Instance.selectedBeverage);
+        }
+
+        private void SelectedSideChange()
+        {
+            uscSideCustomization.SetPicture(OrderInfo.Instance.selectedSide);
+        }
     }
 }
