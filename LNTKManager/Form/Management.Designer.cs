@@ -36,6 +36,8 @@
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.colRemainingTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.신선도 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.fieldProductPrice = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -205,14 +207,12 @@
             // 
             // tctlManagement
             // 
-            this.tctlManagement.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tctlManagement.Appearance.Options.UseFont = true;
             this.tctlManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tctlManagement.Location = new System.Drawing.Point(0, 0);
             this.tctlManagement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tctlManagement.Name = "tctlManagement";
             this.tctlManagement.SelectedTabPage = this.tpgeOrder;
-            this.tctlManagement.Size = new System.Drawing.Size(939, 607);
+            this.tctlManagement.Size = new System.Drawing.Size(859, 480);
             this.tctlManagement.TabIndex = 0;
             this.tctlManagement.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tpgeOrder,
@@ -228,7 +228,7 @@
             this.tpgeOrder.Controls.Add(this.layoutControl4);
             this.tpgeOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeOrder.Name = "tpgeOrder";
-            this.tpgeOrder.Size = new System.Drawing.Size(932, 571);
+            this.tpgeOrder.Size = new System.Drawing.Size(852, 444);
             this.tpgeOrder.Text = "주문관리";
             // 
             // layoutControl4
@@ -241,17 +241,17 @@
             this.layoutControl4.Location = new System.Drawing.Point(0, 0);
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.Root = this.layoutControlGroup3;
-            this.layoutControl4.Size = new System.Drawing.Size(932, 571);
+            this.layoutControl4.Size = new System.Drawing.Size(852, 444);
             this.layoutControl4.TabIndex = 2;
             this.layoutControl4.Text = "layoutControl4";
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bdsNonCompletedOrder;
-            this.gridControl1.Location = new System.Drawing.Point(12, 69);
+            this.gridControl1.Location = new System.Drawing.Point(12, 56);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(451, 490);
+            this.gridControl1.Size = new System.Drawing.Size(411, 376);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -292,9 +292,9 @@
             // lblCompletedOrder
             // 
             this.lblCompletedOrder.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompletedOrder.Location = new System.Drawing.Point(467, 12);
+            this.lblCompletedOrder.Location = new System.Drawing.Point(427, 12);
             this.lblCompletedOrder.Name = "lblCompletedOrder";
-            this.lblCompletedOrder.Size = new System.Drawing.Size(453, 53);
+            this.lblCompletedOrder.Size = new System.Drawing.Size(413, 40);
             this.lblCompletedOrder.TabIndex = 5;
             this.lblCompletedOrder.Text = "준비완료";
             // 
@@ -303,7 +303,7 @@
             this.lblNoncompletdOrder.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoncompletdOrder.Location = new System.Drawing.Point(12, 12);
             this.lblNoncompletdOrder.Name = "lblNoncompletdOrder";
-            this.lblNoncompletdOrder.Size = new System.Drawing.Size(451, 53);
+            this.lblNoncompletdOrder.Size = new System.Drawing.Size(411, 40);
             this.lblNoncompletdOrder.TabIndex = 4;
             this.lblNoncompletdOrder.Text = "준비중...";
             // 
@@ -311,11 +311,11 @@
             // 
             this.gridControl2.DataSource = this.bdsCompletedOrder;
             this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl2.Location = new System.Drawing.Point(467, 69);
+            this.gridControl2.Location = new System.Drawing.Point(427, 56);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(453, 490);
+            this.gridControl2.Size = new System.Drawing.Size(413, 376);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -364,15 +364,15 @@
             this.layoutControlItem17,
             this.layoutControlItem14});
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(932, 571);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(852, 444);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.gridControl2;
-            this.layoutControlItem15.Location = new System.Drawing.Point(455, 57);
+            this.layoutControlItem15.Location = new System.Drawing.Point(415, 44);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(457, 494);
+            this.layoutControlItem15.Size = new System.Drawing.Size(417, 380);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
@@ -381,25 +381,25 @@
             this.layoutControlItem16.Control = this.lblNoncompletdOrder;
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(455, 57);
+            this.layoutControlItem16.Size = new System.Drawing.Size(415, 44);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.lblCompletedOrder;
-            this.layoutControlItem17.Location = new System.Drawing.Point(455, 0);
+            this.layoutControlItem17.Location = new System.Drawing.Point(415, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(457, 57);
+            this.layoutControlItem17.Size = new System.Drawing.Size(417, 44);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.gridControl1;
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 57);
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 44);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(455, 494);
+            this.layoutControlItem14.Size = new System.Drawing.Size(415, 380);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
@@ -408,7 +408,7 @@
             this.tpgeProduct.Controls.Add(this.layoutControl2);
             this.tpgeProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeProduct.Name = "tpgeProduct";
-            this.tpgeProduct.Size = new System.Drawing.Size(932, 571);
+            this.tpgeProduct.Size = new System.Drawing.Size(852, 444);
             this.tpgeProduct.Text = "상품관리";
             // 
             // layoutControl2
@@ -423,15 +423,16 @@
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(932, 571);
+            this.layoutControl2.Size = new System.Drawing.Size(852, 444);
             this.layoutControl2.TabIndex = 7;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // btnProductInsert
             // 
-            this.btnProductInsert.Location = new System.Drawing.Point(492, 502);
+            this.btnProductInsert.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnProductInsert.Location = new System.Drawing.Point(412, 375);
             this.btnProductInsert.Name = "btnProductInsert";
-            this.btnProductInsert.Size = new System.Drawing.Size(140, 41);
+            this.btnProductInsert.Size = new System.Drawing.Size(140, 57);
             this.btnProductInsert.TabIndex = 9;
             this.btnProductInsert.Text = "상품등록(&I)";
             this.btnProductInsert.UseVisualStyleBackColor = true;
@@ -439,9 +440,10 @@
             // 
             // btnProductUpdate
             // 
-            this.btnProductUpdate.Location = new System.Drawing.Point(636, 502);
+            this.btnProductUpdate.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnProductUpdate.Location = new System.Drawing.Point(556, 375);
             this.btnProductUpdate.Name = "btnProductUpdate";
-            this.btnProductUpdate.Size = new System.Drawing.Size(140, 41);
+            this.btnProductUpdate.Size = new System.Drawing.Size(140, 57);
             this.btnProductUpdate.TabIndex = 8;
             this.btnProductUpdate.Text = "상품수정(&U)";
             this.btnProductUpdate.UseVisualStyleBackColor = true;
@@ -449,7 +451,8 @@
             // 
             // btnProductDelete
             // 
-            this.btnProductDelete.Location = new System.Drawing.Point(780, 502);
+            this.btnProductDelete.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnProductDelete.Location = new System.Drawing.Point(700, 375);
             this.btnProductDelete.Name = "btnProductDelete";
             this.btnProductDelete.Size = new System.Drawing.Size(140, 57);
             this.btnProductDelete.TabIndex = 7;
@@ -469,7 +472,7 @@
             // btnRecipe
             // 
             this.btnRecipe.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecipe.Location = new System.Drawing.Point(780, 12);
+            this.btnRecipe.Location = new System.Drawing.Point(700, 12);
             this.btnRecipe.Name = "btnRecipe";
             this.btnRecipe.Size = new System.Drawing.Size(140, 61);
             this.btnRecipe.TabIndex = 6;
@@ -485,7 +488,7 @@
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(908, 421);
+            this.gridControl3.Size = new System.Drawing.Size(828, 294);
             this.gridControl3.TabIndex = 5;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -575,7 +578,7 @@
             this.layoutControlItem8,
             this.emptySpaceItem2});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(932, 571);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(852, 444);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem3
@@ -583,14 +586,14 @@
             this.layoutControlItem3.Control = this.gridControl3;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 65);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(912, 425);
+            this.layoutControlItem3.Size = new System.Drawing.Size(832, 298);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnRecipe;
-            this.layoutControlItem4.Location = new System.Drawing.Point(768, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(688, 0);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(144, 65);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(144, 65);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -616,13 +619,13 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(620, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(148, 65);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(68, 65);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnProductDelete;
-            this.layoutControlItem6.Location = new System.Drawing.Point(768, 490);
+            this.layoutControlItem6.Location = new System.Drawing.Point(688, 363);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(144, 61);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(144, 61);
             this.layoutControlItem6.Name = "layoutControlItem6";
@@ -634,9 +637,9 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnProductUpdate;
-            this.layoutControlItem7.Location = new System.Drawing.Point(624, 490);
-            this.layoutControlItem7.MaxSize = new System.Drawing.Size(144, 45);
-            this.layoutControlItem7.MinSize = new System.Drawing.Size(144, 45);
+            this.layoutControlItem7.Location = new System.Drawing.Point(544, 363);
+            this.layoutControlItem7.MaxSize = new System.Drawing.Size(144, 61);
+            this.layoutControlItem7.MinSize = new System.Drawing.Size(144, 61);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(144, 61);
             this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -646,9 +649,9 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnProductInsert;
-            this.layoutControlItem8.Location = new System.Drawing.Point(480, 490);
-            this.layoutControlItem8.MaxSize = new System.Drawing.Size(144, 45);
-            this.layoutControlItem8.MinSize = new System.Drawing.Size(144, 45);
+            this.layoutControlItem8.Location = new System.Drawing.Point(400, 363);
+            this.layoutControlItem8.MaxSize = new System.Drawing.Size(144, 61);
+            this.layoutControlItem8.MinSize = new System.Drawing.Size(144, 61);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(144, 61);
             this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -658,9 +661,9 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 490);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 363);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(480, 61);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(400, 61);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // tpgeRevenue
@@ -668,7 +671,7 @@
             this.tpgeRevenue.Controls.Add(this.layoutControl1);
             this.tpgeRevenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeRevenue.Name = "tpgeRevenue";
-            this.tpgeRevenue.Size = new System.Drawing.Size(932, 571);
+            this.tpgeRevenue.Size = new System.Drawing.Size(852, 444);
             this.tpgeRevenue.Text = "매출조회";
             // 
             // layoutControl1
@@ -680,7 +683,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(932, 571);
+            this.layoutControl1.Size = new System.Drawing.Size(852, 444);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -695,7 +698,7 @@
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.MaxHorizontalPercentage = 30D;
             this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(12, 287);
+            this.chartControl1.Location = new System.Drawing.Point(12, 224);
             this.chartControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesDataMember = "Series";
@@ -704,7 +707,7 @@
             this.chartControl1.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             this.chartControl1.SeriesTemplate.SeriesDataMember = "Series";
             this.chartControl1.SeriesTemplate.ValueDataMembersSerializable = "Values";
-            this.chartControl1.Size = new System.Drawing.Size(908, 272);
+            this.chartControl1.Size = new System.Drawing.Size(828, 208);
             this.chartControl1.TabIndex = 4;
             // 
             // pivotGridControl1
@@ -726,7 +729,7 @@
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowGrandTotals = true;
             this.pivotGridControl1.OptionsChartDataSource.ProvideRowTotals = true;
             this.pivotGridControl1.OptionsMenu.EnableFormatRulesMenu = true;
-            this.pivotGridControl1.Size = new System.Drawing.Size(908, 271);
+            this.pivotGridControl1.Size = new System.Drawing.Size(828, 208);
             this.pivotGridControl1.TabIndex = 0;
             // 
             // bdsOrderDetail
@@ -778,7 +781,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(932, 571);
+            this.Root.Size = new System.Drawing.Size(852, 444);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -786,16 +789,16 @@
             this.layoutControlItem1.Control = this.pivotGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(912, 275);
+            this.layoutControlItem1.Size = new System.Drawing.Size(832, 212);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.chartControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 275);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 212);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(912, 276);
+            this.layoutControlItem2.Size = new System.Drawing.Size(832, 212);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -804,7 +807,7 @@
             this.tpgeShin.Controls.Add(this.layoutControl3);
             this.tpgeShin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpgeShin.Name = "tpgeShin";
-            this.tpgeShin.Size = new System.Drawing.Size(932, 571);
+            this.tpgeShin.Size = new System.Drawing.Size(852, 444);
             this.tpgeShin.Text = "재료관리";
             // 
             // layoutControl3
@@ -818,15 +821,16 @@
             this.layoutControl3.Location = new System.Drawing.Point(0, 0);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup2;
-            this.layoutControl3.Size = new System.Drawing.Size(932, 571);
+            this.layoutControl3.Size = new System.Drawing.Size(852, 444);
             this.layoutControl3.TabIndex = 1;
             this.layoutControl3.Text = "layoutControl3";
             // 
             // btnStockInsert
             // 
-            this.btnStockInsert.Location = new System.Drawing.Point(492, 518);
+            this.btnStockInsert.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnStockInsert.Location = new System.Drawing.Point(412, 375);
             this.btnStockInsert.Name = "btnStockInsert";
-            this.btnStockInsert.Size = new System.Drawing.Size(140, 41);
+            this.btnStockInsert.Size = new System.Drawing.Size(140, 57);
             this.btnStockInsert.TabIndex = 7;
             this.btnStockInsert.Text = "재고등록(&I)";
             this.btnStockInsert.UseVisualStyleBackColor = true;
@@ -834,9 +838,10 @@
             // 
             // btnStockUpdate
             // 
-            this.btnStockUpdate.Location = new System.Drawing.Point(636, 518);
+            this.btnStockUpdate.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnStockUpdate.Location = new System.Drawing.Point(556, 375);
             this.btnStockUpdate.Name = "btnStockUpdate";
-            this.btnStockUpdate.Size = new System.Drawing.Size(140, 41);
+            this.btnStockUpdate.Size = new System.Drawing.Size(140, 57);
             this.btnStockUpdate.TabIndex = 6;
             this.btnStockUpdate.Text = "재고수정(&U)";
             this.btnStockUpdate.UseVisualStyleBackColor = true;
@@ -844,9 +849,10 @@
             // 
             // btnStockDelete
             // 
-            this.btnStockDelete.Location = new System.Drawing.Point(780, 518);
+            this.btnStockDelete.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnStockDelete.Location = new System.Drawing.Point(700, 375);
             this.btnStockDelete.Name = "btnStockDelete";
-            this.btnStockDelete.Size = new System.Drawing.Size(140, 41);
+            this.btnStockDelete.Size = new System.Drawing.Size(140, 57);
             this.btnStockDelete.TabIndex = 5;
             this.btnStockDelete.Text = "재고삭제(&D)";
             this.btnStockDelete.UseVisualStyleBackColor = true;
@@ -854,7 +860,8 @@
             // 
             // btnGrocery
             // 
-            this.btnGrocery.Location = new System.Drawing.Point(780, 12);
+            this.btnGrocery.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.btnGrocery.Location = new System.Drawing.Point(700, 12);
             this.btnGrocery.Name = "btnGrocery";
             this.btnGrocery.Size = new System.Drawing.Size(140, 61);
             this.btnGrocery.TabIndex = 4;
@@ -870,7 +877,7 @@
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(908, 437);
+            this.gridControl4.Size = new System.Drawing.Size(828, 294);
             this.gridControl4.TabIndex = 0;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -914,9 +921,18 @@
             formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
             formatConditionRuleValue3.Value1 = "20";
             gridFormatRule3.Rule = formatConditionRuleValue3;
+            gridFormatRule4.Column = this.colRemainingTime;
+            gridFormatRule4.ColumnApplyTo = this.신선도;
+            gridFormatRule4.Name = "Format3";
+            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Less;
+            formatConditionRuleValue4.Value1 = "0";
+            gridFormatRule4.Rule = formatConditionRuleValue4;
             this.gridView4.FormatRules.Add(gridFormatRule1);
             this.gridView4.FormatRules.Add(gridFormatRule2);
             this.gridView4.FormatRules.Add(gridFormatRule3);
+            this.gridView4.FormatRules.Add(gridFormatRule4);
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.GroupCount = 1;
             this.gridView4.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -982,7 +998,7 @@
             this.layoutControlItem13,
             this.emptySpaceItem4});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(932, 571);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(852, 444);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem9
@@ -990,14 +1006,14 @@
             this.layoutControlItem9.Control = this.gridControl4;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 65);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(912, 441);
+            this.layoutControlItem9.Size = new System.Drawing.Size(832, 298);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnGrocery;
-            this.layoutControlItem10.Location = new System.Drawing.Point(768, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(688, 0);
             this.layoutControlItem10.MaxSize = new System.Drawing.Size(144, 65);
             this.layoutControlItem10.MinSize = new System.Drawing.Size(144, 65);
             this.layoutControlItem10.Name = "layoutControlItem10";
@@ -1011,17 +1027,17 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(768, 65);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(688, 65);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnStockDelete;
-            this.layoutControlItem11.Location = new System.Drawing.Point(768, 506);
-            this.layoutControlItem11.MaxSize = new System.Drawing.Size(144, 45);
-            this.layoutControlItem11.MinSize = new System.Drawing.Size(144, 45);
+            this.layoutControlItem11.Location = new System.Drawing.Point(688, 363);
+            this.layoutControlItem11.MaxSize = new System.Drawing.Size(144, 61);
+            this.layoutControlItem11.MinSize = new System.Drawing.Size(144, 61);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(144, 45);
+            this.layoutControlItem11.Size = new System.Drawing.Size(144, 61);
             this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
@@ -1029,11 +1045,11 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.btnStockUpdate;
-            this.layoutControlItem12.Location = new System.Drawing.Point(624, 506);
-            this.layoutControlItem12.MaxSize = new System.Drawing.Size(144, 45);
-            this.layoutControlItem12.MinSize = new System.Drawing.Size(144, 45);
+            this.layoutControlItem12.Location = new System.Drawing.Point(544, 363);
+            this.layoutControlItem12.MaxSize = new System.Drawing.Size(144, 61);
+            this.layoutControlItem12.MinSize = new System.Drawing.Size(144, 61);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(144, 45);
+            this.layoutControlItem12.Size = new System.Drawing.Size(144, 61);
             this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
@@ -1041,11 +1057,11 @@
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.btnStockInsert;
-            this.layoutControlItem13.Location = new System.Drawing.Point(480, 506);
-            this.layoutControlItem13.MaxSize = new System.Drawing.Size(144, 45);
-            this.layoutControlItem13.MinSize = new System.Drawing.Size(144, 45);
+            this.layoutControlItem13.Location = new System.Drawing.Point(400, 363);
+            this.layoutControlItem13.MaxSize = new System.Drawing.Size(144, 61);
+            this.layoutControlItem13.MinSize = new System.Drawing.Size(144, 61);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(144, 45);
+            this.layoutControlItem13.Size = new System.Drawing.Size(144, 61);
             this.layoutControlItem13.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
@@ -1053,9 +1069,9 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 506);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 363);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(480, 45);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(400, 61);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // timer1
@@ -1067,11 +1083,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 607);
+            this.ClientSize = new System.Drawing.Size(859, 480);
             this.Controls.Add(this.tctlManagement);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Management";
-            this.Text = "Form1";
+            this.Text = "Management";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tctlManagement)).EndInit();

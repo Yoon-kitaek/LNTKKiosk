@@ -11,9 +11,18 @@
 
 ## 2. 기능목록
 #### 관리자 기능
-1. 기능1
-2. 기능2
-3. 기능3
+##### 1. 주문관리
+- 키오스크에서 넘어온 고객의 주문정보들을 실시간으로 볼 수 있습니다.
+![Order Management](Documents/OrderManagement.png)
+##### 2. 상품관리  
+- 상품의 등록, 수정, 삭제 기능을 수행합니다.
+- 좌측 상단의 버튼을 통해 상품들을 분류하여 볼 수 있습니다.
+![Product Management](Documents/ProductManagement.png)
+- 우측 상단의 레시피관리 버튼을 통해 레시피의 등록, 수정, 삭제 기능을 수행합니다.
+ ![Recipe Management](Documents/RecipeManagement.png)
+##### 3. 매출조회
+- 상품별 판매
+##### 4. 재료관리
 #### 사용자 기능
 1. 장바구니에 담기   
    <p align="center"><img src="https://user-images.githubusercontent.com/63761587/89606787-e323c180-d8ab-11ea-9e8c-c3856c0709cc.png" height="60%" width="30%"></img>　　<img src="https://user-images.githubusercontent.com/63761587/89606821-f767be80-d8ab-11ea-8893-1d0a2f7f17fb.png" height="60%" width="30%"></img> </p>

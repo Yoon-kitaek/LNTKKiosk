@@ -33,6 +33,8 @@ namespace LNTKManager
 
             if(product.Picture !=null)
             pcbImage.Image = byteArrayToImage(product.Picture);
+
+            _product = product;
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -111,7 +113,7 @@ namespace LNTKManager
 
             _product.Description = txbDescription.Text;
 
-            if (pcbImage.Image != null)
+            if (pcbImage.Image != null && txePath.Text != "")
                 _product.Picture = ConvertImageToBinary(pcbImage.Image);
 
             if(txePrice.Text == null)

@@ -22,7 +22,7 @@ namespace LNTKManager
         private void buttonContainer1_MenuSelected(object sender, ButtonContainer.MenuSelectedEventArgs e)
         {
             
-            
+           
                 if (e.Label == "버거")
                 {
                     int buggerId = 10;
