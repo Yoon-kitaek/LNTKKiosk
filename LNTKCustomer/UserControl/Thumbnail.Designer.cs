@@ -84,6 +84,7 @@
             this.pceThumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pceThumbnail.Location = new System.Drawing.Point(3, 3);
             this.pceThumbnail.Name = "pceThumbnail";
+            this.pceThumbnail.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.pceThumbnail.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pceThumbnail.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pceThumbnail.Size = new System.Drawing.Size(645, 333);
