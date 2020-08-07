@@ -14,7 +14,7 @@ namespace LNTKKiosk.UnitTest
         [TestMethod]
         public void Get()
         {
-            Recipe recipe = DataRepository.Recipe.Get(1, 1);
+            Recipe recipe = DataRepository.Recipe.Get(1, 2);
 
             Assert.AreEqual(1, recipe.Amount);
         }
