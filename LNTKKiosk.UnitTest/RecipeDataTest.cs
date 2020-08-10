@@ -18,5 +18,21 @@ namespace LNTKKiosk.UnitTest
 
             Assert.AreEqual(1, recipe.Amount);
         }
+
+        [TestMethod]
+        public void GetByProduct()
+        {
+            List<Recipe> recipes = DataRepository.Recipe.GetByProduct(1);
+
+            Assert.IsTrue(recipes.Count > 0);
+        }
+
+        [TestMethod]
+        public void GetAllWithProperties()
+        {
+            List<Recipe> recipes = DataRepository.Recipe.GetAllWithProperties();
+
+            Assert.IsTrue(recipes.Count > 0);
+        }
     }
 }

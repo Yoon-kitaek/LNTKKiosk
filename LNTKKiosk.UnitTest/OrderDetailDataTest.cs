@@ -19,5 +19,37 @@ namespace LNTKKiosk.UnitTest
 
             Assert.AreEqual(1, orderDetail.ProductId);
         }
+
+        [TestMethod]
+        public void GetAllWithProperties()
+        {
+            List<OrderDetail> orderDetails = DataRepository.OrderDetail.GetAllWithProperties();
+
+            Assert.IsTrue(orderDetails.Count > 0);
+        }
+
+        [TestMethod]
+        public void GetCountByOrder()
+        {
+            int count = DataRepository.OrderDetail.GetCountByOrder(1);
+
+            Assert.AreEqual(2, count);
+        }
+
+        [TestMethod]
+        public void GetByOrderWithProduct()
+        {
+            List<OrderDetail> orderDetails = DataRepository.OrderDetail.GetByOrderWithProduct(1);
+
+            Assert.AreEqual(2, orderDetails.Count);
+        }
+
+        [TestMethod]
+        public void GetwithNonCompletedOrderDetail()
+        {
+            var order = DataRepository.OrderDetail.GetwithNonCompletedOrderDetail();
+
+            Assert.IsNotNull(order);
+        }
     }
 }

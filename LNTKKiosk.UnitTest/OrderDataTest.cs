@@ -18,5 +18,21 @@ namespace LNTKKiosk.UnitTest
 
             Assert.AreEqual(true, order.IsCompleted);
         }
+
+        [TestMethod]
+        public void GetwithCompleted()
+        {
+            var order = DataRepository.Order.GetwithCompleted();
+
+            Assert.IsNotNull(order);
+        }
+
+        [TestMethod]
+        public void GetwithNonCompleted()
+        {
+            var order = DataRepository.Order.GetwithNonCompleted();
+
+            Assert.IsNotNull(order);
+        }
     }
 }

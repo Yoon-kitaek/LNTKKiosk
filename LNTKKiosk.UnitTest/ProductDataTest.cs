@@ -18,5 +18,22 @@ namespace LNTKKiosk.UnitTest
 
             Assert.AreEqual("치킨불고기버거", product.Name);
         }
+
+        [TestMethod]
+        public void FilterbyCatergory()
+        {
+            List<Product> products = DataRepository.Product.FilterbyCatergory(10);
+
+            Assert.IsTrue(products.Count > 0);
+        }
+
+        [TestMethod]
+        public void GetByName()
+        {
+            Product product = DataRepository.Product.GetByName("치킨불고기버거");
+
+            Assert.AreEqual(product.Name, "치킨불고기버거");
+        }
+
     }
 }

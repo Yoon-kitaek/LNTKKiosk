@@ -19,5 +19,21 @@ namespace LNTKKiosk.UnitTest
             Assert.AreEqual("소고기패티", grocery.Item);
         }
 
+        [TestMethod]
+        public void GetbyCodeCategory()
+        {
+            List<Grocery> groceries = DataRepository.Grocery.GetbyCodeCategory(1);
+
+            Assert.AreEqual(4, groceries.Count);
+        }
+
+        [TestMethod]
+        public void GetAllWithProperties()
+        {
+            List<Grocery> groceries = DataRepository.Grocery.GetAllWithProperties();
+
+            Assert.AreEqual(27, groceries.Count);
+        }
+
     }
 }
