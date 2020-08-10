@@ -18,5 +18,21 @@ namespace LNTKKiosk.UnitTest
 
             Assert.AreEqual(800, stock.Price);
         }
+
+        [TestMethod]
+        public void GetByGroceryId()
+        {
+            List<Stock> stocks = DataRepository.Stock.GetByGroceryId(2);
+
+            Assert.AreEqual(2, stocks.Count);
+        }
+
+        [TestMethod]
+        public void GetAllWithProperties()
+        {
+            List<Stock> stocks = DataRepository.Stock.GetAllWithProperties();
+
+            Assert.IsTrue(stocks.Count > 0);
+        }
     }
 }

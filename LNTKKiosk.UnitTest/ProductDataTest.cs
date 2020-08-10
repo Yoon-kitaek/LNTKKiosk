@@ -35,5 +35,31 @@ namespace LNTKKiosk.UnitTest
             Assert.AreEqual(product.Name, "치킨불고기버거");
         }
 
+        [TestMethod]
+        public void GetDiscountRate()
+        {
+            Product product = DataRepository.Product.Get(1);
+
+            int discountRate = DataRepository.Product.GetDiscountRate(product);
+
+            Assert.AreEqual(10, discountRate);
+        }
+
+        [TestMethod]
+        public void SearchByCategoryId()
+        {
+            List<ProductPartial> productPartials = DataRepository.Product.SearchByCategoryId(10);
+
+            Assert.IsTrue(productPartials.Count > 0);
+        }
+
+        [TestMethod]
+        public void GetAllPartial()
+        {
+            List<ProductPartial> productPartials = DataRepository.Product.GetAllPartial();
+
+            Assert.IsTrue(productPartials.Count > 0);
+        }
+
     }
 }
