@@ -216,6 +216,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "EndPage";
             this.Text = "EndPage";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.EndPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

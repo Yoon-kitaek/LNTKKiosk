@@ -28,23 +28,12 @@ namespace LNTKCustomer
             
             //////
 
-            List<ShoppedItem> shoppingList = new List<ShoppedItem>();
-            ShoppedItem test1 = new ShoppedItem("몬스터X 라지 세트", 26, 1);
-            ShoppedItem test2 = new ShoppedItem("몬스터X 라지 세트", 20, 1);
-            ShoppedItem test3 = new ShoppedItem("몬스터X 라지 세트", 21, 1);
-            ShoppedItem test4 = new ShoppedItem("닭갈비버거", 27, 1);
-
-            shoppingList.Add(test1);
-            shoppingList.Add(test2);
-            shoppingList.Add(test3);
-            shoppingList.Add(test4);
-
-
+ 
 
 
             //Application.Run(new ShoppingCart(shoppingList));
             //Application.Run(new EndPage());
-            Application.Run(new CustomerMenu());
+            Application.Run(new WaitScreen());
           // Application.Run(new IngredientThumbnail());
         }
 
