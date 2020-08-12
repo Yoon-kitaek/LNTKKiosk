@@ -73,15 +73,21 @@ namespace LNTKKiosk.Data
                 {
                     List<Stock> stocks = GetByGroceryId(recipe.GroceryId)
                                         .OrderBy(x => x.ReceivedDate)
-                                        .SkipWhile(x => x.ExhaustedDate == null && (DateTime.Now - x.ReceivedDate).Days >= x.ExpirationDate)
+                                        .SkipWhile(x => x.ExhaustedDate != null || ((DateTime.Now - x.ReceivedDate).Days > x.ExpirationDate))
                                         .Take(recipe.Amount)
                                         .ToList();
 
+                    //if(stocks.Count == 0)
+                    //{
+                    //    Stock
+                    //}
                     foreach (var stock in stocks)
                     {
                         stock.ExhaustedDate = DateTime.Now;
+                        DataRepository.Stock.Update(stock);
                     }
                 }
+
             }
 
         
