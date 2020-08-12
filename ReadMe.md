@@ -110,6 +110,6 @@
  >#### 원인
   >상품 테이블의 속성중에 이미지가 있어 데이터로드시 속도 저하발생
  >#### 결과
-  >그리드 뷰에서는 이미지속성이 필요하지 않아 그리드뷰에서 필요한 속성만 가진 클래스를 만들고 필요한 속성만 선택하는 쿼리를 작성하여 해결
+  >그리드 뷰에서는 이미지속성이 필요하지 않아 그리드뷰에서 필요한 속성만 가진 클래스를 만들고 필요한 속성만 선택하는 쿼리를 작성하여 해결   
   >![Product Partial Class](Documents/ProductPartialClass.PNG)
   >![Product Partial](Documents/ProductPartial.PNG)
